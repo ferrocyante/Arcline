@@ -1,0 +1,272 @@
+
+/*-------------------------workspace icons , put your own workspace ids instead of these-----------------------------------------------*/
+toolbarbutton[zen-workspace-id="{24101381-c31f-4ef6-ba61-81518b479b8d}"] .zen-workspace-icon,
+toolbarbutton[zen-workspace-id="{45bbc387-2c63-42d0-911f-091d362ff294}"] .zen-workspace-icon,
+toolbarbutton[zen-workspace-id="{3b2f521e-425c-476c-992f-17d133613bc0}"] .zen-workspace-icon {
+    font-size: 0 !important;
+    position: relative !important;
+}
+
+toolbarbutton[zen-workspace-id="{24101381-c31f-4ef6-ba61-81518b479b8d}"] .zen-workspace-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z'/%3E%3Cpath d='M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E") !important;
+    background-size: contain !important;
+    width: 14px !important;
+    height: 14px !important;
+    filter: invert(0) brightness(90%) contrast(75%);
+    display: inline-block !important;
+}
+
+toolbarbutton[zen-workspace-id="{45bbc387-2c63-42d0-911f-091d362ff294}"] .zen-workspace-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z'/%3E%3Cpath d='M10 9l5 3l-5 3z'/%3E%3C/svg%3E") !important;    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    width: 14px !important;
+    height: 14px !important;
+    filter: invert(0) brightness(90%) contrast(75%);
+    display: inline-block !important;
+}
+
+toolbarbutton[zen-workspace-id="{3b2f521e-425c-476c-992f-17d133613bc0}"] .zen-workspace-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M7 8l-4 4l4 4'/%3E%3Cpath d='M17 8l4 4l-4 4'/%3E%3Cpath d='M14 4l-4 16'/%3E%3C/svg%3E") !important;
+    background-size: contain !important;
+    width: 18px !important;
+    height: 18px !important;
+  left: 0px !important;
+      filter: invert(0) brightness(90%) contrast(75%);
+    display: inline-block !important;
+  bottom:  0px !important;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+.subviewbutton[tooltiptext]:not([active="true"]):hover .zen-workspace-icon {
+  visibility: visible !important;
+ 
+  transform: scale(0.9);
+  opacity: 1 !important;
+}
+
+.subviewbutton[tooltiptext]:not([active="true"]):hover
+  .zen-workspace-icon::after {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+
+/*--------------------------workspace gap----------------------*/
+#zen-workspaces-button {
+  container-name: workspaces;
+  container-type: inline-size;
+  display: block;
+  width: 48% !important;
+  gap: 6px !important;
+  max-height: min-content;
+  background: transparent !important;
+  margin-top: 1px !important;
+  margin-left: 4px !important;
+}
+
+@container workspaces (width < 100px) {
+  .subviewbutton[tooltiptext]:not([active="true"]):not(:hover) {
+    width: 8px !important;
+    padding: 0px;
+  }
+
+  .subviewbutton[tooltiptext]:not([active="true"]):not(:hover)
+    .zen-workspace-icon {
+    visibility: hidden;
+    position: relative;
+    padding: 0;
+    width: 5px !important;
+    height: 5px !important;
+    padding: 0px;
+  }
+
+  .subviewbutton[tooltiptext]:not([active="true"]) .zen-workspace-icon::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: block;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: visible !important;
+    z-index: 1;
+    padding: 0;
+  }
+}
+
+/* Make the parent container a flexbox to handle resizing */
+#zen-workspaces-button {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  
+}
+
+/* Style for the toolbar buttons */
+#zen-workspaces-button .subviewbutton {
+  flex: 1;
+ 
+  min-width: 12%;
+  max-width: 100px;
+  height: auto;
+  padding: 10px;
+  margin: 2px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Adjust icon size relative to the button size */
+#zen-workspaces-button .subviewbutton .zen-workspace-icon {
+  transition: font-size 0.3s ease;
+}
+ 
+
+
+/* Workspace button animations */
+#zen-workspaces-button toolbarbutton {
+  transition: 
+    filter 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Panel animations */
+#PanelUI-zen-workspaces panelmultiview,
+#PanelUI-zen-workspaces panelview {
+  transition: 
+    opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Workspace list animations */
+#PanelUI-zen-workspaces-list toolbarbutton {
+  transition: 
+    background-color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Current workspace indicator animation */
+.zen-current-workspace-indicator::before {
+  transition: 
+    background 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    width 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    height 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  will-change: transform, background; /* Optimize animations */
+}
+
+/* Hover effects with subtle scale */
+#zen-workspaces-button toolbarbutton:hover {
+  transform: scale(1.05);
+}
+
+#PanelUI-zen-workspaces-list toolbarbutton:hover {
+  transform: translateX(4px);
+}
+
+/* Panel transitions */
+#PanelUI-zen-workspaces-view {
+  transition: 
+    opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Opening/closing animation for workspace panel */
+#PanelUI-zen-workspaces[animate] {
+  &[fade="in"] {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  &[fade="out"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth overflow transitions */
+#zen-workspaces-button[overflow] toolbarbutton {
+  transition: 
+    width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    margin 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Dragging animations */
+.zen-workspace-button.dragging {
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+
+  
+    Increase workspace name size in panel list */
+#PanelUI-zen-workspaces-list .zen-workspace-name {
+  font-size: 17px !important; /* Default: ~13px */
+  font-weight: 600 !important;
+}
+
+/* Increase current workspace indicator text */
+.zen-current-workspace-indicator-name {
+  filter: brightness(55%) !important;
+  margin-left: 2px !important;
+  font-size: 13.5px !important; /* Default: small (~11px) */
+  opacity: 0.8 !important;
+}
+
+/* Optional: Adjust icon size proportionally */
+#PanelUI-zen-workspaces-list .zen-workspace-icon {
+  width: 34px !important; /* Default: 30px */
+  height: 34px !important;
+  font-size: 17px !important; /* Icon/text inside */
+}
+
+
+:root {
+  /* Force override CSS variables */
+  --zen-indicator-bg-width: 0 !important;
+  --zen-indicator-bg-height: 0 !important;
+}
+
+/* Add parent selector specificity */
+#zen-current-workspace-indicator-container 
+.zen-current-workspace-indicator::before {
+  width: var(--zen-indicator-bg-width) !important;
+  height: var(--zen-indicator-bg-height) !important;
+  background: transparent !important;
+  opacity: 0 !important;
+  transition: none !important;
+}
+
+.tab-label-container {
+  overflow: hidden;
+
+  #tabbrowser-tabs:not([secondarytext-unsupported], [orient=vertical]) & {
+    height: 2.7em;
+  }
+
+  &[pinned] {
+    width: 0;
+  }
+
+  &[textoverflow] {
+    &[labeldirection=ltr],
+    &:not([labeldirection]):-moz-locale-dir(ltr),
+    &[labeldirection=rtl],
+    &:not([labeldirection]):-moz-locale-dir(rtl) {
+      mask-image: none !important; /* Remove fade gradient */
+      text-overflow: ellipsis; /* Show ellipsis instead of fade */
+    }
+  }
+}
+  
+
+

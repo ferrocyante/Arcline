@@ -1,0 +1,191 @@
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+#zen-media-controls-toolbar {
+  & toolbaritem {
+    flex-grow: 1;
+    padding: 0;
+    transition: padding 0.3s ease-out ;
+    position: absolute;
+    left: 2px !important;
+    width: 98.4% !important;
+  background: transparent !important;
+    
+    bottom: 0px !important;
+    padding: 4px !important;
+    border-radius: 12px !important;
+    
+backdrop-filter: brightness(85%) !important;
+    
+   
+   /* box-shadow: 0 0 18px rgba(255, 205, 212, 0.1) !important;*/
+  }
+}
+
+
+
+
+/* ==== "Miniplayer" ==== */
+/*----------------------------------animation shit ---------------------------------*/
+@keyframes appear-animation {
+  0% {
+    gap: 0;
+  }
+
+  40% {
+    gap: 9px;
+  }
+
+  100% {
+    gap: 6px;
+  }
+}
+
+#zen-media-current-time, #zen-media-duration {
+  font-variant-numeric: tabular-nums;
+}
+
+
+    toolbarbutton {
+      z-index: 999 !important;
+    }
+  }
+
+  &:hover {
+    @media (-moz-bool-pref: "natsumi.experiments.miniplayer-bounce") {
+      /* Hidden under a pref in case Cheff steals this */
+      & #zen-media-main-vbox {
+        animation: appear-animation 0.3s ease-in-out !important;
+      }
+    }
+  }
+
+  &:not(:hover) {
+    {
+      & #zen-media-main-vbox {
+        transition: gap 0.15s ease-in-out !important;
+      }
+    }
+
+    /*-----------------------------------------------*/
+    #zen-media-service-hbox {
+      padding-top: 0 !important;
+    }
+
+    & > toolbaritem {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+
+
+  #zen-media-title {
+    font-size: 17px !important;
+    margin-top: -5px !important;
+    height: auto !important;
+     margin-bottom: 2px !important;
+  }
+
+  #zen-media-artist {
+    font-size: 10px !important;
+   
+  }
+}
+.tab-text.tab-label {
+      font-size: 8px !important;
+    }
+
+#theme-Tab-Text-Size {
+    .tab-text.tab-label {
+      font-size: 22px !important;
+    }
+  }
+}
+
+#zen-media-info-vbox {
+  #zen-media-controls-toolbar:not([media-position-hidden='true']) & {
+    transition-delay: 0.01s !important;
+    transform: translateY(-0.4rem);
+  }
+  overflow-x: hidden;
+  overflow-x: visible;
+  white-space: nowrap;
+  /* Overflow inner box shadow from the left to simulate overflow */
+  mask-image: none !important;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0.6em;
+    background: none !important;
+    pointer-events: none;
+    top: 6px;
+    left: -2px;
+    height: calc(100% - 6px);
+    z-index: 1;
+  }
+
+  & label {
+    min-height: 16px;
+    margin-left: 0;
+    font-weight: 500;
+    animation: zen-marquee-h 10s ease-in-out infinite;
+  }
+}
+
+
+#zen-media-info-vbox {
+  mask-image: linear-gradient(to left, transparent, var(--zen-media-control-bg) 0.6em, var(--zen-media-control-bg) calc(100% - 0.6em), transparent) !important;
+
+  &::before {
+    display: none !important;
+  }
+}
+
+
+#zen-media-main-vbox {
+  margin-bottom: 1px !important;
+  margin-top: 1px !important;
+}
+
+
+#zen-media-progress-bar {
+    appearance: none;
+    width: 100%;
+    height: var(--progress-height);
+    margin: 0 8px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: height 0.15s ease-out;
+
+    &::-moz-range-track {
+      background: rgba(255, 255, 255, 0.2) !important;
+      border-radius: 999px;
+      height: 3px !important;
+    }
+
+    &::-moz-range-progress {
+      background:  rgba(76, 218, 218, 1.8) !important;
+      border-radius: 999px;
+      height: 3px !important;
+    }
+
+    &::-moz-range-thumb {
+      background: rgba(0, 55, 55, 1) !important;
+      border: none;
+      width: calc(var(--progress-height) * 2);
+      height: calc(var(--progress-height) * 2);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+}
+
+
+
+
