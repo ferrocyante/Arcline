@@ -1,26 +1,36 @@
-<h1 align="center">Arc-h</h1>
+<p align="center">
+    <h1 align="center">Arc-H 🌌</h2>
+</p>
+
+<p align="center">How I customizes my zen browser 🌸</p>
+
+![](https://github.com/ferrocyante/Arc-H/blob/main/extras/Screenshot%20(172).png?raw=true)
+
+![](https://github.com/ferrocyante/Arc-H/blob/main/extras/Screenshot%20(176).png?raw=true)
+
 
 ###
 
-<div align="center">
-  <img height="350" src="https://i.redd.it/5pt9jq6w33te1.png"  />
-</div>
-
-###
-
-<h2 align="left">❤️ What is Arc-h?</h2>
-
-###
-
-# 🦋 Arc-h Browser Theme  
+# 🍋‍🟩 Arc-h Browser Theme  
 
 **A modern, minimalist browser theme inspired by organic architecture**  
 
-## 🙏 Acknowledgments  
-Special thanks to **Mr. Green**, creator of the **Natsumi Browser**, for inspiring this project.  
 
 ## Stable Release Features
-- **Refined visual hierarchy** with improved contrast ratios
+
+- **URL-bar** with custom scaling animations
+
+
+
+https://github.com/user-attachments/assets/27ae1ab4-4ec8-4645-884f-98f808d4f06f
+
+
+
+- **ARC like tidy tabs** with improved animations
+
+https://github.com/user-attachments/assets/a1b63b7a-e32d-4d84-9132-584bff56f6bd
+
+
 - **Performance-optimized** CSS animations
 - **Cross-platform consistency** across Windows/Linux/macOS
 - **Enhanced compatibility** with Zen Browser v3.2+
@@ -42,6 +52,7 @@ Special thanks to **Mr. Green**, creator of the **Natsumi Browser**, for inspiri
 
 ### 3. Interface Optimization  
 1. Right-click tabs area → **Customize Toolbar** → Set **Density** to **Touch**
+![Screenshot 2025-04-16 172014](https://github.com/user-attachments/assets/f2197a98-3332-4db0-823b-ea666968634e)
 2. Enable **Single Toolbar Mode** in Zen Settings → Look & Feel
 3. Set `zen.theme.content-element-separation = 10` in `about:config`
 
@@ -52,6 +63,22 @@ Special thanks to **Mr. Green**, creator of the **Natsumi Browser**, for inspiri
 ### 5. Performance Considerations  
 - Hardware acceleration recommended for best animation performance
 - URL bar animations automatically disable during media playback
+
+### 6. Preferences
+- In `about:config` , make these prefernces according to your wish
+- `arch.traffic.lights` to get mac os like title bar button on windows
+- `arch.borders` for adding a white border around the browser
+- `arch.urlbar.scale` for adding scaling effect url bar search results
+- `arch.usable.blur.sidebar` to add a psuedo background behind tabs section(navigator tool box) in compact mode to ensure blur , you will need to adjust width according to you system
+- `arch.four.essen` for making essential always stay in 4x grid style
+- `arch.workspace.transition` very initial stage and can cause lagging very resource intensive
+- `arch.workspace.buttons` for making  inactive workspace button into circles arc style has some limitions can only work for 3 workspaces and width of tabs section should be fixed accordingly                   
+### Tutorial of setting preferences
+
+
+https://github.com/user-attachments/assets/29eaf351-5d33-4d09-8717-64eac22b3fd2
+
+
 
 <h2 align="left">💿 Installation</h2>
 
@@ -64,7 +91,7 @@ Special thanks to **Mr. Green**, creator of the **Natsumi Browser**, for inspiri
 <p align="left">1. Follow Zen's <a href="https://docs.zen-browser.app/guides/live-editing">Live Editing Guide</a> to create chrome folder<br>
 2. Download latest release from <a href="https://github.com/[yourusername]/arc-h/releases">Releases page</a><br>
 3. Extract these into your chrome folder:<br>
-   - /arc-h folder<br>
+   - arc-h folder<br>
    - arc-h-config.css<br>
    - userChrome.css<br>
    - userContent.css<br>
@@ -90,6 +117,10 @@ Special thanks to **Mr. Green**, creator of the **Natsumi Browser**, for inspiri
 
 <p align="left">• <a href="https://github.com/lukeyou05/tacky-borders">Tacky Borders</a> - Preconfigured rules included<br>
 • <a href="https://addons.mozilla.org/en-US/firefox/addon/zen-internet/">Zen Internet Extension</a> - For page transparency</p>
+
+## 🙏 Acknowledgments  
+Special thanks to **Mr. Green**, creator of the **Natsumi Browser**, for inspiring this project.  
+
 
 ###
 
