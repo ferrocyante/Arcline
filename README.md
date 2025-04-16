@@ -32,10 +32,10 @@ https://github.com/user-attachments/assets/a1b63b7a-e32d-4d84-9132-584bff56f6bd
 
 
 - **Performance-optimized** CSS animations
-- **Cross-platform consistency** across Windows/Linux/macOS
+- **platform consistency** across Windows11
 - **Enhanced compatibility** with Zen Browser v3.2+
 
-<p align="left">Arc-h is a professional-grade theme for Zen browser that reimagines the browser interface with focus-preserving design principles.<br><br>This userChrome customization offers:<br>- Adaptive transparency effects<br>- Ergonomic spacing system<br>- Unified visual language<br>- Configurable accent colors</p>
+<p align="left">Arc-h is a personal-grade theme for Zen browser that reimagines the browser interface with focus-preserving design principles.<br><br>This userChrome customization offers:<br>- Adaptive transparency effects<br>- Ergonomic spacing system<br>- Unified visual language<br>- Configurable accent colors</p>
 
 ###
 
