@@ -31,6 +31,7 @@ https://github.com/user-attachments/assets/27ae1ab4-4ec8-4645-884f-98f808d4f06f
 https://github.com/user-attachments/assets/a1b63b7a-e32d-4d84-9132-584bff56f6bd
 
 - **Pinned Extension** also supports pinning of extensions like essentials may have width conflict with `arch.four.essen` preference
+
 ![image](https://github.com/user-attachments/assets/b31d35ec-af3e-49ef-a149-ae545b720683)
 
 - **Performance-optimized** CSS animations
