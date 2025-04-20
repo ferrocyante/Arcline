@@ -16,6 +16,11 @@
 **A modern, minimalist browser theme inspired by organic architecture**  
 
 
+
+## Stable Release Coming Soon! ##
+
+
+
 ## Stable Release Features
 
 - **URL-bar** with custom scaling animations
