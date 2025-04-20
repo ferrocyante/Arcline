@@ -4,7 +4,7 @@
 
 <p align="center">How I customizes my zen browser 🌸</p>
 
-![image](https://github.com/user-attachments/assets/7038a05f-58bd-45d9-94a8-2d40acb4061f)
+![image](https://github.com/user-attachments/assets/150a3d3b-6484-4b5b-864e-aeba23096602)
 
 ###
 
