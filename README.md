@@ -4,9 +4,10 @@
 
 <p align="center">How I customizes my zen browser 🌸</p>
 
-![](https://github.com/ferrocyante/Arc-H/blob/main/extras/Screenshot%20(172).png?raw=true)
+![image](https://github.com/user-attachments/assets/e50aac9c-0df0-41a0-9101-214460422aa5)
 
-![](https://github.com/ferrocyante/Arc-H/blob/main/extras/Screenshot%20(176).png?raw=true)
+
+
 
 
 ###
