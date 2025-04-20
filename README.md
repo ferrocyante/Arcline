@@ -19,7 +19,7 @@
 
 ## Stable Release Coming Soon! ##
 
-
+ **CSS UPLOADED IS NOT OF STABLE RELEASE**  it is of beta , waiting for tab folders to get implemented on zen for stable release
 
 ## Stable Release Features
 
