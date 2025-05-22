@@ -16,6 +16,7 @@
     "property": "arch.borders",
     "label": "Add border around browser (makes window look like mac.)",
     "type": "dropdown",
+    "placeholder": false,
     "value": "number",
     "default": 1,
     "options": [
@@ -28,5 +29,11 @@
         "label": "Enabled"
       }
     ]
+  },
+  {
+    "property": "extensions.tab_sort.mistral_api_key",
+    "label": "Enable sort button.",
+    "type": "checkbox"
+    "defaultValue": true
   }
 ]
