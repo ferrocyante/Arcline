@@ -31,6 +31,56 @@
     ]
   },
   {
+    "property": "arch.background",
+    "label": "Add color to background.",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
+    "type": "separator",
+    "label": "Fonts"
+  },
+  {
+    "property": "arch.fonts.sf-pro",
+    "type": "dropdown",
+    "label": "Use SF Pro font.",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
+    "property": "mod.arch.font",
+    "type": "string",
+    "defaultValue": "SF Pro",
+    "placeholder": "Font name installed on your computer.",
+    "label": "Display font.",
+    "conditions": [
+      {"if":{"property":"arch.fonts.sf-pro","value":0}}
+    ]
+  },
+  {
     "type": "separator",
     "label": "AI"
   },
