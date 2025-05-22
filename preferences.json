@@ -31,9 +31,13 @@
     ]
   },
   {
+    "type": "separator",
+    "label": "AI"
+  },
+  {
     "property": "extensions.tab_sort.mistral_api_key",
-    "label": "Insert mistral api key for sort button.",
-    "type": "string",
-    "placeholder": "API Key."
+    "label": "Enable sort button.",
+    "type": "checkbox"
+    "defaultValue": true
   }
 ]
