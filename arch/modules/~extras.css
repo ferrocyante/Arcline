@@ -103,7 +103,9 @@
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
  /*------------------------------------------------------------------------------------------------------------------------------------*/
-      * {
+     
+ @media (-moz-pref("arch.background", 1)) {
+* {
   /* Colors */
   --bg-primary-color: var(--bg-accent-color, var(--zen-primary-color));
   --bg-colors-primary: color-mix(in srgb, var(--bg-primary-color) 50%, black 50%);
@@ -204,17 +206,8 @@
        
         background-color: var(--bg-mat-ga-background) !important;
 }
+}
 
-/*
-
-#zen-main-app-wrapper{
-   backdrop-filter: saturate(var(--bg-mat-hz-saturation)) contrast(var(--bg-mat-hz-contrast)) blur(var(--bg-mat-hz-blur-radius)) !important;
-       
-        background-color: var(--bg-mat-ga-background) !important;
-
-}*/
-
- 
 
 
 menupopup, panel[type="arrow"] {
