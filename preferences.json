@@ -1,0 +1,32 @@
+[
+  {
+    "property": "zen.view.experimental-force-window-controls-left",
+    "label": "Turn on experimental left window controls.",
+    "defaultValue": true,
+    "type": "checkbox"
+  },
+  {
+    "property": "browser.uidensity",
+    "label": "Browser density.",
+    "type": "string",
+    "value": "number",
+    "default": 2
+  },
+  {
+    "property": "arch.borders",
+    "label": "Add border around browser (makes window look like mac.)",
+    "type": "dropdown",
+    "value": "number",
+    "default": 1,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  }
+]
