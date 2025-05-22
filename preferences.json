@@ -58,7 +58,7 @@
     "label": "Use SF Pro font.",
     "placeholder": false,
     "value": "number",
-    "default": 0,
+    "default": 1,
     "options": [
       {
         "value": 0,
