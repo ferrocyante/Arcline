@@ -101,9 +101,7 @@
  
   
 }
-  .titlebar-restore:not(:hover):-moz-window-inactive {
-    !important;
-  }
+ 
 
   .titlebar-button > image {
     visibility: collapse !important;
