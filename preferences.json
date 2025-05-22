@@ -1,8 +1,20 @@
 [
   {
+    "property": "browser.tabs.allow_transparent_browser",
+    "label": "Allow browser to be transparent.",
+    "defaultValue": true,
+    "type": "checkbox"
+  },
+  {
     "property": "zen.view.experimental-force-window-controls-left",
     "label": "Turn on experimental left window controls.",
     "defaultValue": true,
+    "type": "checkbox"
+  },
+  {
+    "property": "browser.urlbar.scotchBonnet.enableOverride",
+    "label": "Enable ability to search directly through any search engine.",
+    "defaultValue": false,
     "type": "checkbox"
   },
   {
