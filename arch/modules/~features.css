@@ -394,12 +394,22 @@
 
 
   
-  
-  
 
-/*------------------------------------------------------------------------------------------------------------------------------------*/
-      *{
-  /* Colors */
+      
+   
+
+      
+
+/* Fix for transparent websites */
+/* Requires `sidebar-width-blur.js` - Check readme for instructions */
+
+
+
+
+
+    
+      :root {
+  
   --natsumi-primary-color: var(--natsumi-accent-color, var(--zen-primary-color));
   --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
   --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%);
@@ -460,12 +470,12 @@
     }
   }
 
+}
       
       
       
       
-      
-      
+        :root {
       
        
  --natsumi-primary-color: rgba(255,255,255,0.5);
@@ -500,18 +510,6 @@
 
       
       
-      
-      
-
-/* Fix for transparent websites */
-/* Requires `sidebar-width-blur.js` - Check readme for instructions */
-
-
-
-
-
-      
-      
     
         
 
@@ -519,7 +517,7 @@
 /* Compact sidebar with blurred transparent background */
 body:has([zen-compact-mode="true"]) #titlebar {
  
-     backdrop-filter: saturate(var(--natsumi-mat-hz-saturation)) contrast(var(--natsumi-mat-hz-contrast)) blur(var(--natsumi-mat-hz-blur-radius)) !important;
+     backdrop-filter: saturate(3) contrast(2) blur(100px) !important;
        
         background-color: var(--natsumi-mat-hz-background-tinted) !important;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) !important;
@@ -605,11 +603,6 @@ height: 34px !important;
 }
 
 
-
-  
-  
-  
-  
 
   
 }
