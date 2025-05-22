@@ -386,7 +386,7 @@
     
 }
 
-    @media (-moz-pref("arch.usable.blur.sidebar",1)) {
+   
 
 
 
@@ -398,7 +398,7 @@
   
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
-      * {
+      *{
   /* Colors */
   --natsumi-primary-color: var(--natsumi-accent-color, var(--zen-primary-color));
   --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
@@ -462,12 +462,12 @@
 
       
       
-      }
       
       
       
       
-       * {
+      
+       
  --natsumi-primary-color: rgba(255,255,255,0.5);
       --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
       --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%);
@@ -592,7 +592,7 @@ height: 34px !important;
   #urlbar-container:has(&) {
     border-radius: 12px !important;
    
-    left:  px !important;
+
    
 
     height: 34.5px !important;
@@ -616,7 +616,8 @@ height: 34px !important;
       
    
 
-#browser::after{
+#browser::after {
+  
    content: "" !important; /* <<<< ----- THIS IS THE CRITICAL FIX ----- */
   position: absolute !important; /* Recommended for pseudo-elements positioned with top/left/etc. */
   z-index: 0; /* Or -1 if it needs to be behind other content within #browser, adjust as needed */
@@ -629,7 +630,7 @@ height: 34px !important;
   margin-right: calc(var(--zen-element-separation)/2) 0 !important;
    margin-left: calc((var(--zen-element-separation) / 1.5) * 1) !important;
    margin-top: calc(var(--zen-element-separation)/0.76) !important;
-   margin-bottom: calc(var(--zen-element-separation)/) !important;
+   margin-bottom: calc(var(--zen-element-separation)) !important;
   height: calc(100% - (var(--zen-element-separation) * 3.365)) !important;
   top: 0px !important;
   background: linear-gradient(to right, light-dark(#eee, #444) 0px, light-dark(#eee, #444) calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 25px), transparent calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 100px)) !important;
@@ -656,152 +657,10 @@ body:has([zen-compact-mode="true"] [zen-user-show=""], [zen-compact-mode="true"]
   position: relative;
 }
 
-}
+
 
 
   
-
-/* Compact alerts */
-
-/*noinspection CssInvalidFunction*/
-#fullscreen-warning, #pointerlock-warning {
-  border-radius: 50px !important;
-  padding: 8px 10px !important;
-  background-color: var(--natsumi-mat-ga-background) !important;
-  border: 1px solid light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
-  box-shadow: 0 0 var(--natsumi-mat-ga-shadow-size) var(--natsumi-mat-ga-shadow-color) !important;
-  transition: opacity 0.2s ease, top 0.2s ease !important;
-  backdrop-filter: blur(10px) !important;
-  opacity: 0;
-  margin: 0 !important;
-  left: 50% !important;
-  translate: -50% 0 !important;
-
-  &:not([hidden]) {
-    display: flex !important;
-  }
-
-  &:not([onscreen]), &:is([hidden]) {
-    top: 20px !important;
-    opacity: 0;
-  }
-
-  /*noinspection CssInvalidFunction*/
-  .pointerlockfswarning-domain-text, .pointerlockfswarning-generic-text {
-    color: light-dark(black, white);
-    font-size: 14px !important;
-    margin-left: 10px !important;
-    margin-right: 0 !important;
-    padding-right: 5px !important;
-  }
-
-  &[onscreen] {
-    top: 30px !important;
-    opacity: 1;
-  }
-}
-
-/* Fullscreen alert */
-
-#fullscreen-warning {
-  &::before {
-    display: none !important;
-  }
-
-  #fullscreen-exit-button {
-    order: -1;
-    border: none !important;
-    background: transparent !important;
-    appearance: none !important;
-    border-radius: 6px !important;
-    color: transparent !important;
-    width: 24px !important;
-    height: 24px !important;
-    font-size: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    transition: background 0.3s ease !important;
-    position: relative !important;
-
-    /*noinspection CssInvalidFunction*/
-    &::before {
-      content: "";
-      width: 16px;
-      height: 16px;
-      position: absolute !important;
-      background-image: url('chrome://browser/skin/zen-icons/fullscreen.svg') !important;
-      -moz-context-properties: fill;
-      fill: light-dark(black, white) !important;
-      left: 50% !important;
-      top: 50% !important;
-      background-repeat: no-repeat;
-      background-position: center;
-      transform: translate(-50%, -50%) !important;
-    }
-
-    &:hover {
-      background: var(--toolbarbutton-hover-background) !important;
-    }
-
-    &:active {
-      background: var(--toolbarbutton-active-background) !important;
-    }
-
-    &:hover, &:active {
-      &::before {
-        background-image: url('chrome://browser/skin/zen-icons/fullscreen-exit.svg') !important;
-        transform: translate(-50%, -50%) scale(-100%, 100%) !important;
-        left: 50% !important;
-        top: 50% !important;
-      }
-    }
-  }
-
-  /*noinspection CssInvalidFunction*/
-  .pointerlockfswarning-domain-text, .pointerlockfswarning-generic-text {
-    color: light-dark(black, white);
-    font-size: 14px !important;
-    margin-left: 10px !important;
-    margin-right: 0 !important;
-  }
-}
-
-/* Pointer lock alert */
-
-#pointerlock-warning {
-  &::before {
-    content: "";
-    width: 24px;
-    height: 24px;
-    background-size: 16px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('chrome://browser/skin/zen-icons/security.svg') !important;
-  }
-
-  .pointerlockfswarning-domain-text, .pointerlockfswarning-generic-text {
-    margin-left: 2px !important;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
-
- 
 
 
 
