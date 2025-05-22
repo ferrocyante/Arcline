@@ -49,6 +49,24 @@
     ]
   },
   {
+    "property": "arch.essentials.grid",
+    "label": "Add grid to Essentials.",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
     "type": "separator",
     "label": "Fonts"
   },
