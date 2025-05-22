@@ -328,12 +328,13 @@ height: 34px !important;
  
 }
 
+@media (-moz-pref("arch.essential.grid", 1)) {
 .zen-essentials-container{ 
   display: grid !important;
   margin-right: 1px !important;
   grid-template-columns: 1fr 1fr 1fr 1fr !important; 
   
-  }
+  } }
 
 
 
