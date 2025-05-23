@@ -67,6 +67,24 @@
     ]
   },
   {
+    "property": "arch.pinned.extensions",
+    "label": "Add support for pinned extensions ( make sure you you disable it when you have not pinned any extension)",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
     "property": "arch.background",
     "label": "Add color to background.",
     "type": "dropdown",
