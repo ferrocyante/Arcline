@@ -1,5 +1,3 @@
-
-@-moz-document url-prefix("chrome:") {
 .tab-audio-button {
   display: none !important;
 }
@@ -1382,4 +1380,3 @@ findbar {
         background-color: var(--bg-mat-ga-background) !important;
 }
 }  
-}
