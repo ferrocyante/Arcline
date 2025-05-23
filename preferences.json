@@ -68,6 +68,10 @@
     ]
   },
   {
+    "type": "separator",
+    "label": "Sidebar Styles"
+  },
+  {
     "property": "arch.compact.sidebar.bg",
     "label": "Add different background to compact mode sidebar",
     "type": "dropdown",
@@ -96,6 +100,42 @@
   {
     "property": "arch.essentials.grid",
     "label": "Add grid to Essentials.",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
+    "property": "arch.close-button.equal-padding",
+    "label": "Add equal padding to close button for tabs.",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
+    "property": "arch.close-button.square-corners",
+    "label": "Makes close button for tabs look more square.",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
