@@ -253,26 +253,80 @@ margin-left: -4px !important;
 
 
 
+/* --- Styles for items within the ZEN media controls toolbar --- */
+
+/* Ensure the main toolbar has a positioning context if items are absolute */
 #zen-media-controls-toolbar {
-  & toolbaritem {
+    position: relative !important;
+    /* ... any other styles for the toolbar itself ... */
+}
+
+#zen-media-controls-toolbar toolbaritem {
+    /* Original layout and sizing styles */
     flex-grow: 1;
-    padding: 0;
-    transition: padding 0.3s ease-out ;
-    position: absolute;
+    position: absolute !important;
     left: 0.5px !important;
     width: 99.3% !important;
-  background: rgba(0,0,0,0.5) !important;
-    
     bottom: -11px !important;
     padding: 4px !important;
     border-radius: 12px !important;
-    filter: brightness(120%) !important;
-backdrop-filter: brightness(40%) blur(25px) saturate(1.1) contrast(1) !important;
-    
-   
-   
-  }
+
+    /* Toolbaritem itself MUST be transparent for backdrop-filter to see the ::before */
+    background: rgba(0,0,0,0.3) !important;
+
+    /* Filter for the item itself (if any) - separate from backdrop-filter */
+    filter: brightness(100%) !important;
+
+    /* Default state: no backdrop-filter or a very subtle one */
+    backdrop-filter: none !important; /* Or a minimal default like: blur(2px) opacity(0.1) */
+
+    /* Transitions for smooth effect */
+    transition: backdrop-filter 0.3s ease-out,
+                /* Add other properties you want to transition on toolbaritem itself */
+                padding 0.3s ease-out;
+
+    /* This is important for stacking context for the ::before */
+    z-index: 0; /* Or any value that establishes a stacking context */
 }
+
+/* The ::before pseudo-element will be our solid background for blurring */
+#zen-media-controls-toolbar toolbaritem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit; /* Inherit the parent's border-radius */
+
+    /* The solid background color that will be blurred */
+    background: #333333 !important; /* Or your desired background color */
+
+    /* Start hidden/transparent */
+    opacity: 0;
+    z-index: -1; /* Position it behind the toolbaritem's content */
+
+    /* Transition for the background appearance */
+    transition: opacity 0.1s ease-out;
+}
+
+/* --- HOVER STATES --- */
+
+#zen-media-controls-toolbar toolbaritem:hover {
+    /* Apply the strong backdrop-filter on hover */
+    backdrop-filter: brightness(20%) blur(100px) saturate(1) contrast(1) !important;
+    /* You can also change other properties of the toolbaritem on hover */
+    /* filter: brightness(110%) !important; */
+    /* padding: 6px !important; */
+}
+
+#zen-media-controls-toolbar toolbaritem:hover::before {
+    /* Make the solid background visible on hover */
+    opacity: 1;
+}
+
+
+
 
 
 
