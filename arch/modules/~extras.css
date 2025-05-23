@@ -104,110 +104,6 @@
 /*------------------------------------------------------------------------------------------------------------------------------------*/
  /*------------------------------------------------------------------------------------------------------------------------------------*/
      
- @media (-moz-pref("arch.background", 1)) {
-* {
-  /* Colors */
-  --bg-primary-color: var(--bg-accent-color, var(--zen-primary-color));
-  --bg-colors-primary: color-mix(in srgb, var(--bg-primary-color) 50%, black 50%);
-  --bg-colors-secondary: color-mix(in srgb, var(--bg-colors-primary) 20%, white 80%);
-  --bg-colors-tertiary: color-mix(in srgb, var(--bg-primary-color) 2%, white 98%);
-  --bg-colors-primary-foreground: color-mix(in srgb, var(--bg-primary-color) 80%, white 20%);
-
-  @media (prefers-color-scheme: dark) {
-    --bg-colors-primary: color-mix(in srgb, var(--bg-primary-color) 20%, var(--zen-dark-color-mix-base) 80%);
-    --bg-colors-secondary: color-mix(in srgb, var(--bg-primary-color) 30%, var(--zen-dark-color-mix-base) 70%);
-    --bg-colors-tertiary: color-mix(in srgb, var(--bg-primary-color) 1%, var(--zen-dark-color-mix-base) 99%);
-    --bg-colors-primary-foreground: color-mix(in srgb, var(--bg-primary-color) 80%, white 20%);
-
-    @media -moz-pref('zen.theme.color-prefs.colorful') {
-      --bg-colors-primary: color-mix(in srgb, var(--bg-primary-color) 50%, black 50%);
-      --bg-colors-secondary: color-mix(in srgb, var(--bg-primary-color) 40%, black 60%);
-      --bg-colors-tertiary: color-mix(in srgb, var(--bg-primary-color) 15%, black 85%);
-      --bg-colors-primary-foreground: color-mix(in srgb, var(--bg-primary-color) 80%, white 20%);
-    }
-  }
-
-  /* Material: Mistcrylic */
-  --bg-mat-mc-background: color-mix(in srgb, var(--bg-primary-color) 40%, rgba(255, 255, 255, 0.8));
-  --bg-mat-mc-shadow-color: rgba(0, 0, 0, 0.3);
-  --bg-mat-mc-border-color: rgba(255, 255, 255, 0.1);
-  --bg-mat-mc-shadow-size: 10px;
-  --bg-mat-mc-blur-radius: 15px;
-
-  @media (prefers-color-scheme: dark) {
-    --bg-mat-mc-background: color-mix(in srgb, var(--bg-colors-secondary) 50%, rgba(0, 0, 0, 0.8));
-  }
-
-  /* Material: Haze */
-  --bg-mat-hz-background: rgba(255, 255, 255, 0.8);
-  --bg-mat-hz-background-tinted: color-mix(in srgb, var(--bg-primary-color) 20%, rgba(255, 255, 255, 0.8));
-  --bg-mat-hz-blur-radius: 100px;
-  --bg-mat-hz-shadow-color: rgba(0, 0, 0, 0.3);
-  --bg-mat-hz-shadow-size: 10px;
-  --bg-mat-hz-saturation: 3;
-  --bg-mat-hz-contrast: 2;
-
-  @media (prefers-color-scheme: dark) {
-    --bg-mat-hz-background: rgba(0, 0, 0, 0.8);
-    --bg-mat-hz-background-tinted: color-mix(in srgb, var(--bg-colors-secondary) 20%, rgba(0, 0, 0, 0.8));
-  }
-
-  /* Material: Glass */
-  --bg-mat-ga-background: color-mix(in srgb, var(--bg-colors-secondary) 75%, transparent);
-  --bg-mat-ga-blur-radius: 10px;
-  --bg-mat-ga-shadow-size: 10px;
-  --bg-mat-ga-shadow-opacity: 75%;
-  --bg-mat-ga-shadow-color: color-mix(in srgb, var(--bg-colors-secondary) var(--bg-mat-ga-shadow-opacity), black);
-
-  @media (prefers-color-scheme: dark) {
-    --bg-mat-ga-shadow-color: color-mix(in srgb, var(--bg-colors-secondary) var(--bg-mat-ga-shadow-opacity), white);
-
-    @media -moz-pref("bg.theme.force-glass-dark-shadows") {
-      --bg-mat-ga-shadow-color: color-mix(in srgb, var(--bg-colors-secondary) var(--bg-mat-ga-shadow-opacity), black);
-    }
-  }
-
-       * {
- --bg-primary-color: color-mix(in srgb, var(--zen-primary-color) 69%, transparent 100%);
-
-      --bg-colors-primary: color-mix(in srgb, var(--bg-primary-color) 50%, black 50%);
-      --bg-colors-secondary: color-mix(in srgb, var(--bg-colors-primary) 20%, white 80%);
-
-      @media (prefers-color-scheme: dark) {
-        --bg-colors-primary: color-mix(in srgb, var(--bg-primary-color) 20%, #1d1d1d 80%);
-        --bg-colors-secondary: color-mix(in srgb, var(--bg-primary-color) 30%, #1d1d1d 70%);
-      }
-
-      /* Material: Haze */
-      --bg-mat-hz-background: rgba(255, 255, 255, 0.8);
-      --bg-mat-hz-background-tinted: color-mix(in srgb, var(--bg-primary-color) 30%, rgba(255, 255, 255, 0.8));
-      --bg-mat-hz-blur-radius: 100px;
-
-      @media (prefers-color-scheme: dark) {
-        --bg-mat-hz-background: rgba(0, 0, 0, 0.8);
-        --bg-mat-hz-background-tinted: color-mix(in srgb, var(--bg-colors-secondary) 40%, rgba(0, 0, 0, 0.8));
-      }
-
-      /* Material: Glass */
-      --bg-mat-ga-background: color-mix(in srgb, var(--bg-colors-secondary) 60%, transparent);
-      --bg-mat-ga-shadow-color: color-mix(in srgb, var(--bg-colors-secondary) 75%, light-dark(black, white));
-      --toolbarbutton-hover-background: color-mix(in srgb, light-dark(#1d1d1d, #ebebeb) 10%, transparent 90%);
-      --toolbarbutton-active-background: light-dark(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0.11));
-
-      @media -moz-pref("bg.theme.force-dark-shadows") {
-        --bg-mat-ga-shadow-color: color-mix(in srgb, var(--bg-colors-secondary) 75%, black);
-      }}
-
-      
-
-#browser{
- 
-  backdrop-filter: saturate(var(--bg-mat-hz-saturation)) contrast(var(--bg-mat-hz-contrast)) blur(var(--bg-mat-hz-blur-radius)) !important;
-       
-        background-color: var(--bg-mat-ga-background) !important;
-}
-}
-
 
 
 menupopup, panel[type="arrow"] {
@@ -1311,5 +1207,120 @@ findbar {
     margin-left: 6.5px !important;
       justify-content: flex-end !important;
   }
+
+
+
+
+
+
+ @media (-moz-pref("arch.background", 1)) {
+* {
+  /* Colors */
+  --bg-primary-color: var(--bg-accent-color, var(--zen-primary-color));
+  --bg-colors-primary: color-mix(in srgb, var(--bg-primary-color) 50%, black 50%);
+  --bg-colors-secondary: color-mix(in srgb, var(--bg-colors-primary) 20%, white 80%);
+  --bg-colors-tertiary: color-mix(in srgb, var(--bg-primary-color) 2%, white 98%);
+  --bg-colors-primary-foreground: color-mix(in srgb, var(--bg-primary-color) 80%, white 20%);
+
+  @media (prefers-color-scheme: dark) {
+    --bg-colors-primary: color-mix(in srgb, var(--bg-primary-color) 20%, var(--zen-dark-color-mix-base) 80%);
+    --bg-colors-secondary: color-mix(in srgb, var(--bg-primary-color) 30%, var(--zen-dark-color-mix-base) 70%);
+    --bg-colors-tertiary: color-mix(in srgb, var(--bg-primary-color) 1%, var(--zen-dark-color-mix-base) 99%);
+    --bg-colors-primary-foreground: color-mix(in srgb, var(--bg-primary-color) 80%, white 20%);
+
+    @media -moz-pref('zen.theme.color-prefs.colorful') {
+      --bg-colors-primary: color-mix(in srgb, var(--bg-primary-color) 50%, black 50%);
+      --bg-colors-secondary: color-mix(in srgb, var(--bg-primary-color) 40%, black 60%);
+      --bg-colors-tertiary: color-mix(in srgb, var(--bg-primary-color) 15%, black 85%);
+      --bg-colors-primary-foreground: color-mix(in srgb, var(--bg-primary-color) 80%, white 20%);
+    }
+  }
+
+  /* Material: Mistcrylic */
+  --bg-mat-mc-background: color-mix(in srgb, var(--bg-primary-color) 40%, rgba(255, 255, 255, 0.8));
+  --bg-mat-mc-shadow-color: rgba(0, 0, 0, 0.3);
+  --bg-mat-mc-border-color: rgba(255, 255, 255, 0.1);
+  --bg-mat-mc-shadow-size: 10px;
+  --bg-mat-mc-blur-radius: 15px;
+
+  @media (prefers-color-scheme: dark) {
+    --bg-mat-mc-background: color-mix(in srgb, var(--bg-colors-secondary) 50%, rgba(0, 0, 0, 0.8));
+  }
+
+  /* Material: Haze */
+  --bg-mat-hz-background: rgba(255, 255, 255, 0.8);
+  --bg-mat-hz-background-tinted: color-mix(in srgb, var(--bg-primary-color) 20%, rgba(255, 255, 255, 0.8));
+  --bg-mat-hz-blur-radius: 100px;
+  --bg-mat-hz-shadow-color: rgba(0, 0, 0, 0.3);
+  --bg-mat-hz-shadow-size: 10px;
+  --bg-mat-hz-saturation: 3;
+  --bg-mat-hz-contrast: 2;
+
+  @media (prefers-color-scheme: dark) {
+    --bg-mat-hz-background: rgba(0, 0, 0, 0.8);
+    --bg-mat-hz-background-tinted: color-mix(in srgb, var(--bg-colors-secondary) 20%, rgba(0, 0, 0, 0.8));
+  }
+
+  /* Material: Glass */
+  --bg-mat-ga-background: color-mix(in srgb, var(--bg-colors-secondary) 75%, transparent);
+  --bg-mat-ga-blur-radius: 10px;
+  --bg-mat-ga-shadow-size: 10px;
+  --bg-mat-ga-shadow-opacity: 75%;
+  --bg-mat-ga-shadow-color: color-mix(in srgb, var(--bg-colors-secondary) var(--bg-mat-ga-shadow-opacity), black);
+
+  @media (prefers-color-scheme: dark) {
+    --bg-mat-ga-shadow-color: color-mix(in srgb, var(--bg-colors-secondary) var(--bg-mat-ga-shadow-opacity), white);
+
+    @media -moz-pref("bg.theme.force-glass-dark-shadows") {
+      --bg-mat-ga-shadow-color: color-mix(in srgb, var(--bg-colors-secondary) var(--bg-mat-ga-shadow-opacity), black);
+    }
+  }
+
+       * {
+ --bg-primary-color: color-mix(in srgb, var(--zen-primary-color) 69%, transparent 100%);
+
+      --bg-colors-primary: color-mix(in srgb, var(--bg-primary-color) 50%, black 50%);
+      --bg-colors-secondary: color-mix(in srgb, var(--bg-colors-primary) 20%, white 80%);
+
+      @media (prefers-color-scheme: dark) {
+        --bg-colors-primary: color-mix(in srgb, var(--bg-primary-color) 20%, #1d1d1d 80%);
+        --bg-colors-secondary: color-mix(in srgb, var(--bg-primary-color) 30%, #1d1d1d 70%);
+      }
+
+      /* Material: Haze */
+      --bg-mat-hz-background: rgba(255, 255, 255, 0.8);
+      --bg-mat-hz-background-tinted: color-mix(in srgb, var(--bg-primary-color) 30%, rgba(255, 255, 255, 0.8));
+      --bg-mat-hz-blur-radius: 100px;
+
+      @media (prefers-color-scheme: dark) {
+        --bg-mat-hz-background: rgba(0, 0, 0, 0.8);
+        --bg-mat-hz-background-tinted: color-mix(in srgb, var(--bg-colors-secondary) 40%, rgba(0, 0, 0, 0.8));
+      }
+
+      /* Material: Glass */
+      --bg-mat-ga-background: color-mix(in srgb, var(--bg-colors-secondary) 60%, transparent);
+      --bg-mat-ga-shadow-color: color-mix(in srgb, var(--bg-colors-secondary) 75%, light-dark(black, white));
+      --toolbarbutton-hover-background: color-mix(in srgb, light-dark(#1d1d1d, #ebebeb) 10%, transparent 90%);
+      --toolbarbutton-active-background: light-dark(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0.11));
+
+      @media -moz-pref("bg.theme.force-dark-shadows") {
+        --bg-mat-ga-shadow-color: color-mix(in srgb, var(--bg-colors-secondary) 75%, black);
+      }}
+
+      
+
+#browser{
+ 
+  backdrop-filter: saturate(var(--bg-mat-hz-saturation)) contrast(var(--bg-mat-hz-contrast)) blur(var(--bg-mat-hz-blur-radius)) !important;
+       
+        background-color: var(--bg-mat-ga-background) !important;
+}
+}
+
+
+
+
+
+
 
 
