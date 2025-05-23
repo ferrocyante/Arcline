@@ -32,6 +32,23 @@
     "default": 5
   },
   {
+    "property": "zen.urlbar-behavior",
+    "label": "Url bar behavior (float by default.)",
+    "type": "dropdown",
+    "placeholder": false,
+    "defaultValue": "float",
+    "options": [
+      {
+        "value": "floating-on-type",
+        "label": "Disabled"
+      },
+      {
+        "value": "float",
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
     "property": "arch.borders",
     "label": "Add border around browser (makes window look like mac.)",
     "type": "dropdown",
