@@ -6,7 +6,7 @@
   #navigator-toolbox:not([animate='true']) #titlebar {
      
         &::before {
-        border-radius: 11px !important;
+       
           background: transparent !important;
         content: '';
           position: absolute;
