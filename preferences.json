@@ -25,6 +25,13 @@
     "default": 2
   },
   {
+    "property": "browser.urlbar.maxRichResults",
+    "label": "Url bar search result",
+    "type": "string",
+    "value": "number",
+    "default": 5
+  },
+  {
     "property": "arch.borders",
     "label": "Add border around browser (makes window look like mac.)",
     "type": "dropdown",
