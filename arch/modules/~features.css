@@ -226,7 +226,7 @@
  
   #tabbrowser-tabs {
     min-width: 100% !important;
-    height: calc(100% - 35px) !important;
+    height: calc(100% + 5px) !important;
   }
   
   #Zen-tabs-wrapper {
