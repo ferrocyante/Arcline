@@ -258,6 +258,13 @@
         --toolbarbutton-active-background: transparent !important;
         --toolbarbutton-hover-background: transparent !important;
       }
+
+      .toolbarbutton-badge {
+      display: none !important;
+    }
+
+
+      
     }
 
     >toolbarbutton:not([id="tabs-newtab-button"]),
