@@ -1,5 +1,5 @@
 
-@media (-moz-pref("arch.compact.sidebar.floating", 1))
+@media (-moz-pref("arch.compact.sidebar.attached", 1))
 {
 
 
