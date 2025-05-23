@@ -1,12 +1,10 @@
 
-@media (-moz-pref("arch.compact.sidebar.position", 1)){
+@media (-moz-pref("arch.compact.sidebar.position", 1))  
+
 {
 
 
-
-
-
-#navigator-toolbox:not([animate='true']) #titlebar {
+     #navigator-toolbox:not([animate='true']) #titlebar {
      
         &::before {
         border-radius: 2px !important;
@@ -27,7 +25,7 @@ body:has([zen-compact-mode="true"]) #titlebar {
  
   
   min-width: 15px !important;
-  border-radius: 0px !important;
+  border-radius: 2px !important;
 scale: 1 !important;
   padding: 8px !important;
     
@@ -135,5 +133,9 @@ body:has([zen-compact-mode="true"] [zen-user-show=""], [zen-compact-mode="true"]
   left: var(--zen-element-separation) !important;
 }
       
+      
+  
 }
+
+
   
