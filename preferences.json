@@ -49,12 +49,12 @@
     ]
   },
   {
-    "property": "arch.borders",
-    "label": "Add border around browser (makes window look like mac.)",
+    "property": "arch.pinned.extensions",
+    "label": "Add support for pinned extensions ( make sure you you disable it when you have not pinned any extension)",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
-    "default": 1,
+    "default": 0,
     "options": [
       {
         "value": 0,
@@ -67,12 +67,12 @@
     ]
   },
   {
-    "property": "arch.pinned.extensions",
-    "label": "Add support for pinned extensions ( make sure you you disable it when you have not pinned any extension)",
+    "property": "arch.borders",
+    "label": "Add border around browser (makes window look like mac.)",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
-    "default": 0,
+    "default": 1,
     "options": [
       {
         "value": 0,
