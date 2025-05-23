@@ -15,3 +15,7 @@
 @import "modules/~fonts.css";
 @import "modules/~url-bar.css";
 @import "modules/~workspace.css";
+@import "modules/sidebar-normal.css";
+@import "modules/sidebar-dark.css";
+@import "modules/sidebar-dark-tinted.css";
+@import "modules/sidebar-glass-tinted.css";
