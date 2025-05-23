@@ -212,10 +212,7 @@
   flex-direction: column;
 } 
 
-/* gap between urlbar and pinned extensions */
-#nav-bar {
-  margin-bottom: 8px !important; /* Adjust gap size as needed */
-}
+
 
 /* Pinned extensions */
 #TabsToolbar-customization-target {
