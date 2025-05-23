@@ -1,0 +1,235 @@
+
+@media (-moz-pref("arch.compact.sidebar.bg", 1)) {
+      ----------------------------------------------------------------------------------------------------------------------------------*/
+      *{
+  /* Colors */
+  --natsumi-primary-color: var(--natsumi-accent-color, var(--zen-primary-color));
+  --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
+  --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%);
+  --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 2%, white 98%);
+  --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
+
+  @media (prefers-color-scheme: dark) {
+    --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 20%, var(--zen-dark-color-mix-base) 80%);
+    --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 30%, var(--zen-dark-color-mix-base) 70%);
+    --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 1%, var(--zen-dark-color-mix-base) 99%);
+    --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
+
+    @media -moz-pref('zen.theme.color-prefs.colorful') {
+      --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
+      --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 40%, black 60%);
+      --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 15%, black 85%);
+      --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
+    }
+  }
+
+  /* Material: Mistcrylic */
+  --natsumi-mat-mc-background: color-mix(in srgb, var(--natsumi-primary-color) 40%, rgba(255, 255, 255, 0.8));
+  --natsumi-mat-mc-shadow-color: rgba(0, 0, 0, 0.3);
+  --natsumi-mat-mc-border-color: rgba(255, 255, 255, 0.1);
+  --natsumi-mat-mc-shadow-size: 10px;
+  --natsumi-mat-mc-blur-radius: 15px;
+
+  @media (prefers-color-scheme: dark) {
+    --natsumi-mat-mc-background: color-mix(in srgb, var(--natsumi-colors-secondary) 50%, rgba(0, 0, 0, 0.8));
+  }
+
+  /* Material: Haze */
+  --natsumi-mat-hz-background: rgba(255, 255, 255, 0.8);
+  --natsumi-mat-hz-background-tinted: color-mix(in srgb, var(--natsumi-primary-color) 20%, rgba(255, 255, 255, 0.8));
+  --natsumi-mat-hz-blur-radius: 100px;
+  --natsumi-mat-hz-shadow-color: rgba(0, 0, 0, 0.3);
+  --natsumi-mat-hz-shadow-size: 10px;
+  --natsumi-mat-hz-saturation: 3;
+  --natsumi-mat-hz-contrast: 2;
+
+  @media (prefers-color-scheme: dark) {
+    --natsumi-mat-hz-background: rgba(0, 0, 0, 0.8);
+    --natsumi-mat-hz-background-tinted: color-mix(in srgb, var(--natsumi-colors-secondary) 20%, rgba(0, 0, 0, 0.8));
+  }
+
+  /* Material: Glass */
+  --natsumi-mat-ga-background: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, transparent);
+  --natsumi-mat-ga-blur-radius: 10px;
+  --natsumi-mat-ga-shadow-size: 10px;
+  --natsumi-mat-ga-shadow-opacity: 75%;
+  --natsumi-mat-ga-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-mat-ga-shadow-opacity), black);
+
+  @media (prefers-color-scheme: dark) {
+    --natsumi-mat-ga-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-mat-ga-shadow-opacity), white);
+
+    @media -moz-pref("natsumi.theme.force-glass-dark-shadows") {
+      --natsumi-mat-ga-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-mat-ga-shadow-opacity), black);
+    }
+  }
+
+}
+      
+      
+      
+      
+        *{
+      
+       
+ --natsumi-primary-color: rgba(255,255,255,0.5);
+      --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
+      --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%);
+
+      @media (prefers-color-scheme: dark) {
+        --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 20%, #1d1d1d 80%);
+        --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 30%, #1d1d1d 70%);
+      }
+
+      /* Material: Haze */
+      --natsumi-mat-hz-background: rgba(255, 255, 255, 0.8);
+      --natsumi-mat-hz-background-tinted: color-mix(in srgb, var(--natsumi-primary-color) 30%, rgba(255, 255, 255, 0.8));
+      --natsumi-mat-hz-blur-radius: 100px;
+
+      @media (prefers-color-scheme: dark) {
+        --natsumi-mat-hz-background: rgba(0, 0, 0, 0.8);
+        --natsumi-mat-hz-background-tinted: color-mix(in srgb, var(--natsumi-colors-secondary) 40%, rgba(0, 0, 0, 0.8));
+      }
+
+      /* Material: Glass */
+      --natsumi-mat-ga-background: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, transparent);
+      --natsumi-mat-ga-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, light-dark(black, white));
+      --toolbarbutton-hover-background: color-mix(in srgb, light-dark(#1d1d1d, #ebebeb) 10%, transparent 90%);
+      --toolbarbutton-active-background: light-dark(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0.11));
+
+      @media -moz-pref("natsumi.theme.force-dark-shadows") {
+        --natsumi-mat-ga-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, black);
+      }}
+    
+
+      
+      
+    
+        
+
+/* === BLUR COMPACT SIDEBAR ================================================================================================ */
+/* Compact sidebar with blurred transparent background */
+body:has([zen-compact-mode="true"]) #titlebar {
+ 
+     backdrop-filter: saturate(3) contrast(2) blur(100px) !important;
+       
+        background-color: var(--natsumi-mat-hz-background-tinted) !important;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) !important;
+
+       
+   top: calc(var(--zen-element-separation) / 0.77)  !important;
+  margin-left: calc(var(--zen-element-separation) / 0.83)  !important;
+  
+ 
+   
+  min-width: 15px !important;
+  border-radius: 11px !important;
+scale: 1 !important;
+  padding: 8px !important;
+    
+height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
+
+  
+  .titlebar-buttonbox {
+    margin-right: 0px;
+    margin-left: 1px !important;
+  margin-top: 1px !important;
+  gap: 2.3px !important;
+  }
+
+  
+
+.zen-essentials-container{
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+  
+.zen-current-workspace-indicator[active="true"] {
+   
+   margin-left: 1px !important;
+ margin-top: 52px !important;
+  
+  top: 0px !important;
+    filter: invert(0) brightness(150%) contrast(105%);
+  scale:1;
+ 
+
+}
+
+#nav-bar {
+height: 34px !important;
+}
+  
+
+  
+ 
+  
+  
+  
+#urlbar:not([open]) {
+  #urlbar-background { border-radius: 12px !important;
+    height: 88% !important;
+    left:  0px !important;
+    width: 99% !important;
+    margin-bottom: 0px !important;
+    height: 35px !important;
+    margin-right: 0px !important;
+    margin-top: 6px !important;
+    
+  }}
+
+
+#urlbar[open][zen-floating-urlbar="true"] {
+  #urlbar-container:has(&) {
+    border-radius: 12px !important;
+   
+
+   
+
+    height: 34.5px !important;
+    min-height: 34.5px !important;
+    margin-right: 2px !important;
+    margin-left: 1.5px !important;
+    margin-top: 5px !important;
+    background: var(--toolbarbutton-hover-background);
+  }
+}
+
+
+
+  
+}
+      
+   
+
+#browser::after {
+  
+   content: "" !important; /* <<<< ----- THIS IS THE CRITICAL FIX ----- */
+  position: absolute !important; /* Recommended for pseudo-elements positioned with top/left/etc. */
+  z-index: 0; /* Or -1 if it needs to be behind other content within #browser, adjust as needed */
+  opacity: 0 !important;
+  left: calc((var(--zen-sidebar-width) - 0rem) * -1) !important;
+  width: calc(var(--zen-sidebar-width) + 6px) !important;
+  min-width: 15px !important;
+  border-radius: 11px !important;
+  
+  margin-right: calc(var(--zen-element-separation)/2) 0 !important;
+   margin-left: calc((var(--zen-element-separation) / 1.5) * 1) !important;
+   margin-top: calc(var(--zen-element-separation)/0.76) !important;
+   margin-bottom: calc(var(--zen-element-separation)) !important;
+  height: calc(100% - (var(--zen-element-separation) * 3.365)) !important;
+  top: 0px !important;
+  background: linear-gradient(to right, light-dark(#eee, #444) 0px, light-dark(#eee, #444) calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 25px), transparent calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 100px)) !important;
+ 
+  transition: left 0.2s cubic-bezier(0.175, 0.585, 0.32, 1) !important;
+  top: calc(var(--zen-element-separation) / 2) !important;
+}
+
+body:has([zen-compact-mode="true"] [zen-user-show=""], [zen-compact-mode="true"] #navigator-toolbox[zen-has-hover="true"]) #browser::after{
+  opacity: 1.2 !important;
+  left: var(--zen-element-separation) !important;
+}
+ 
+}
+      
+  
