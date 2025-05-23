@@ -219,56 +219,42 @@ transform-origin: center !important;
 
 
 
-/* Make space for the pseudo-element and allow positioning */
-#unified-extensions-button {
-    position: relative !important;
-    /* If your new icon is smaller/larger you might adjust padding, or let the pseudo-element overflow */
-}
 
-/* Hide the original Firefox hamburger icon */
-#unified-extensions-button .toolbarbutton-icon {
-    opacity: 0 !important; 
-     visibility: hidden !important; 
-}
 
-#unified-extensions-button::before {
+
+#unified-extensions-button::after {
     content:  url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='43' height='20' viewBox='0 0 43 20' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='addon on shit.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath opacity='0.7' d='M -2.514 39.042 L 11.846 39.042 C 13.589 39.042 14.452 38.178 14.452 36.468 L 14.452 26.333 C 14.452 24.623 13.589 23.76 11.846 23.76 L -2.514 23.76 C -4.249 23.76 -5.121 24.615 -5.121 26.333 L -5.121 36.468 C -5.121 38.187 -4.249 39.042 -2.514 39.042 Z M -2.498 37.705 C -3.328 37.705 -3.784 37.265 -3.784 36.402 L -3.784 26.4 C -3.784 25.536 -3.328 25.096 -2.498 25.096 L 1.204 25.096 L 1.204 37.705 L -2.498 37.705 Z M 11.829 25.096 C 12.651 25.096 13.116 25.536 13.116 26.4 L 13.116 36.402 C 13.116 37.265 12.651 37.705 11.829 37.705 L 2.508 37.705 L 2.508 25.096 L 11.829 25.096 Z M -0.389 28.176 C -0.14 28.176 0.084 27.952 0.084 27.711 C 0.084 27.462 -0.14 27.246 -0.389 27.246 L -2.174 27.246 C -2.423 27.246 -2.639 27.462 -2.639 27.711 C -2.639 27.952 -2.423 28.176 -2.174 28.176 L -0.389 28.176 Z M -0.389 30.326 C -0.14 30.326 0.084 30.102 0.084 29.853 C 0.084 29.604 -0.14 29.396 -0.389 29.396 L -2.174 29.396 C -2.423 29.396 -2.639 29.604 -2.639 29.853 C -2.639 30.102 -2.423 30.326 -2.174 30.326 L -0.389 30.326 Z M -0.389 32.467 C -0.14 32.467 0.084 32.26 0.084 32.011 C 0.084 31.762 -0.14 31.546 -0.389 31.546 L -2.174 31.546 C -2.423 31.546 -2.639 31.762 -2.639 32.011 C -2.639 32.26 -2.423 32.467 -2.174 32.467 L -0.389 32.467 Z' fill='%23F1F1F1'/%3E%3Crect opacity='0.1' x='12.957' y='0.763' width='1' height='18' fill='%23F1F1F1'/%3E%3Cpath opacity='0.6' d='M 25.846 12.039 C 26.096 12.039 26.287 11.949 26.49 11.746 L 29.307 8.863 C 29.455 8.718 29.522 8.546 29.522 8.339 C 29.522 7.918 29.178 7.566 28.76 7.566 C 28.553 7.566 28.358 7.652 28.197 7.82 L 25.854 10.254 L 23.498 7.82 C 23.338 7.656 23.143 7.566 22.932 7.566 C 22.514 7.566 22.17 7.918 22.17 8.339 C 22.17 8.546 22.24 8.714 22.385 8.867 L 25.205 11.746 C 25.408 11.953 25.604 12.039 25.846 12.039 Z' fill='%23F1F1F1'/%3E%3C/svg%3E%0A");
 
     /* --- Positioning the custom icon --- */
     /* Example: Center it within the button */
     position: relative !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-5%, -40%) !important;
+    top: 92% !important;
+    left: -14% !important;
 
+  scale: 1.4 !important;
+    transform: translate(-50%, -50%) !important;
+pointer-events: none !important;
     /* Ensure it's clickable if it covers the button area, though the button itself is the target */
-    pointer-events: none !important; /* Usually good so it doesn't interfere */
+    
 }
 
 
-/* Optional: Style your custom icon on hover if needed */
-#unified-extensions-button:hover::before {
-    color: var(--toolbarbutton-hover-icon-fill, var(--toolbarbutton-icon-fill-attention));
-}
+
 
 #unified-extensions-button{
 
   filter: grayscale(0) brightness(160%) contrast(100%)  !important;
+ scale: 0.8 !important;
+  padding-right: 0px !important;
+ max-width: 95px !important;
+ margin-right: -41px !important;
+  margin-left: 0px !important;
+list-style-image: none !important;
  
-   position: flex !important;
-
-
-
-  height: 25px !important;
-  width: 28px !important;
-  background-size: contain !important;
-  scale: 1 !important;
  
- padding-left: 4px !important;
+ 
  
 }
-
-
 
 
 
