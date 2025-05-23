@@ -1,7 +1,4 @@
- 
-
-
-@media (-moz-pref("arch.pinned.extensions", 1)){
+@media (-moz-pref("arch.pinned.extensions", 1)) {
 
 
 :root[customizing] #TabsToolbar-customization-target {
@@ -170,3 +167,5 @@
   
 }
 }
+
+
