@@ -68,6 +68,32 @@
     ]
   },
   {
+    "property": "arch.compact.sidebar.bg",
+    "label": "Add different background to compact mode sidebar",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 1,
+    "options": [
+      {
+        "value": 1,
+        "label": "normal"
+      },
+      {
+        "value": 2,
+        "label": "dark"
+      },
+       {
+        "value": 3,
+        "label": "dark-tinted"
+      },
+       {
+        "value": 4,
+        "label": "glass-tinted"
+      }  
+    ]
+  },
+  {
     "property": "arch.essentials.grid",
     "label": "Add grid to Essentials.",
     "type": "dropdown",
