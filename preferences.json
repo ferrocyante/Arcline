@@ -32,7 +32,7 @@
     "default": 5
   },
   {
-    "property": "zen.urlbar-behavior",
+    "property": "zen.urlbar.behavior",
     "label": "Url bar behavior (float by default.)",
     "type": "dropdown",
     "placeholder": false,
