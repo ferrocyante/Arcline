@@ -1,4 +1,11 @@
 
+@media (-moz-pref("arch.compact.sidebar.floating", 1))
+{
+
+
+
+
+
 #navigator-toolbox:not([animate='true']) #titlebar {
      
         &::before {
@@ -128,5 +135,5 @@ body:has([zen-compact-mode="true"] [zen-user-show=""], [zen-compact-mode="true"]
   left: var(--zen-element-separation) !important;
 }
       
-      
+}
   
