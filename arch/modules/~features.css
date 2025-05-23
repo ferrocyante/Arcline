@@ -234,39 +234,29 @@
 
 
 
-  @media (-moz-pref("arch.borders", 1)) {
-    #browser {
+ 
+    @media (-moz-pref("arch.borders", 1)) {
+#browser{
+  
+  
+ margin-top: -1.5px !important;
+ 
 
-
-      margin-top: -1.5px !important;
-      /*
+}
+    
+    #zen-main-app-wrapper{
+      padding: 0px !important;
+     margin-top: 0px !important;
   margin-left: -1px !important;
   margin-right: -1px !important;
  margin-bottom: -1px !important;
-  border-radius: 9.5px !important;
-  
-/*
-  border: 2px solid rgba(254, 257, 255, 0.3);
+       border: 2px solid rgba(215, 215, 217, 0.4);
  
-  
-     box-shadow: 
-    3px 5px 15px rgba(0, 0, 0, 0.8),
-   inset 0px 0.5px 0px rgba(254, 257, 255, 0.4) !important;*/
-
-
-
-    }
-
-    #zen-main-app-wrapper {
-      padding: 0 !important;
-      margin: 0 !important;
-      border: 3px solid rgba(215, 215, 217, 0.4);
-      border-top-width: 4px !important;
-
       border-radius: 8.9px !important;
     }
+    
+  
+    
+}
 
-
-
-  }
 
