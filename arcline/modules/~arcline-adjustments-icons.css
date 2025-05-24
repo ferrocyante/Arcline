@@ -1,0 +1,956 @@
+
+#tabbrowser-tabs {
+      .tabbrowser-tab {
+        #tab-label-input,
+        .tab-label {
+          font-size: 13.8px !important;
+        }}}
+
+
+
+
+
+
+.tab-background {
+  border-radius: 12px !important;
+
+ 
+  z-index: 0 !important;
+  position: relative;
+}
+
+.tab-background[selected] {
+
+}
+
+
+
+
+
+
+/*--------------icons of buttons --------------------------------------*/
+
+
+
+
+/* Place this code in your userChrome.css file */
+
+/* ------------------------------------------------------------------------- */
+/* EXAMPLE 1: Change Tab Margins when identity permission box is active      */
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* EXAMPLE 2: Style #permissions-granted-icon when box is active           */
+/*             (This icon is already styled by default when the box is active, */
+/*              but you can override or add more)                            */
+/* ------------------------------------------------------------------------- */
+#main-window[data-identity-permission-active="true"] #permissions-granted-icon {
+  /* Your specific styles from the previous request */
+  margin-left: -2px !important;
+  margin-right: -255px !important;
+  fill: white !important;
+  transform: translateX(18px) scale(0.95) !important; /* Combined scale */
+  filter: brightness(820%) !important;
+transform-origin: center !important;
+  /*
+  Regarding 'list-style-image':
+  The original CSS for `#permissions-granted-icon` already sets:
+  `list-style-image: url(chrome://browser/skin/permissions.svg);`
+  If you want to change it to your GitHub SVG:
+  */
+  list-style-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg viewBox='57.952 45.721 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' width='24' height='24' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='fill site.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M 79.333 52.766 C 79.951 54.14 79.742 62.673 79.374 61.856 C 79.682 64.781 77.666 67.257 74.386 66.594 C 74.386 67.084 65.698 67.668 65.698 66.844 C 62.491 67.434 60.687 64.663 60.96 61.773 C 60.02 61.896 59.172 53.097 60.752 52.891 C 60 50.79 61.408 49.653 62.911 49.017 C 61.256 49.908 60.6 51.643 60.604 54.565 C 60.604 54.81 60.612 60.977 60.612 60.565 C 61.666 64.546 62.267 66.796 66.871 66.752 L 72.871 66.692 C 77.481 66.645 79.119 64.989 79.112 60.379 L 79.104 54.379 C 79.099 51.406 78.415 49.675 76.694 48.833 C 78.388 49.671 79.517 51.074 79.333 52.766 Z M 72.873 68.192 L 66.873 68.252 C 61.444 68.307 59.12 66.01 59.112 60.58 L 59.104 54.58 C 59.096 49.15 61.413 46.807 66.843 46.752 L 72.843 46.692 C 78.272 46.637 80.596 48.934 80.604 54.364 L 80.612 60.364 C 80.62 65.794 78.303 68.137 72.873 68.192 Z M 76.983 61.287 C 76.982 60.877 76.642 60.54 76.232 60.545 L 72.332 60.584 C 71.922 60.588 71.583 60.931 71.583 61.341 C 71.584 61.751 71.924 62.088 72.334 62.084 L 76.234 62.045 C 76.644 62.04 76.984 61.697 76.983 61.287 Z M 65.931 61.398 L 65.931 61.397 C 65.931 60.378 66.76 59.541 67.778 59.531 C 68.797 59.52 69.629 60.342 69.63 61.362 C 69.632 62.382 68.803 63.22 67.783 63.231 C 66.764 63.241 65.934 62.41 65.931 61.4 C 65.931 61.399 65.931 61.399 65.931 61.398 Z M 63.23 60.675 C 62.82 60.68 62.481 61.023 62.481 61.433 C 62.482 61.843 62.822 62.18 63.232 62.175 L 64.516 62.162 C 64.859 63.648 66.193 64.747 67.785 64.731 C 69.635 64.712 71.133 63.187 71.13 61.347 C 71.127 59.497 69.625 58.012 67.775 58.031 C 66.184 58.046 64.854 59.17 64.515 60.662 L 63.23 60.675 Z M 76.972 54.127 C 76.971 53.717 76.631 53.38 76.221 53.385 L 74.937 53.398 C 74.594 51.912 73.26 50.815 71.668 50.83 C 69.818 50.849 68.32 52.364 68.323 54.214 C 68.326 56.064 69.828 57.549 71.678 57.53 C 73.27 57.515 74.601 56.39 74.94 54.898 L 76.223 54.885 C 76.633 54.88 76.972 54.547 76.972 54.127 Z M 73.522 54.162 C 73.522 54.173 73.522 54.184 73.523 54.195 C 73.506 55.2 72.684 56.02 71.675 56.03 C 70.656 56.041 69.824 55.229 69.823 54.199 C 69.821 53.179 70.65 52.341 71.67 52.33 C 72.679 52.32 73.503 53.124 73.523 54.129 C 73.522 54.14 73.522 54.151 73.522 54.162 Z M 67.871 54.219 C 67.87 53.809 67.53 53.472 67.12 53.476 L 63.22 53.515 C 62.81 53.52 62.47 53.863 62.471 54.273 C 62.472 54.683 62.812 55.02 63.222 55.015 L 67.122 54.976 C 67.532 54.972 67.871 54.639 67.871 54.219 Z' style='stroke: rgb(157, 90, 90); stroke-width: 0px; fill: rgb(255, 255, 255);'/%3E%3Crect x='-55.312' y='47.91' width='41.859' height='28.433' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);'/%3E%3Cpath d='M -24.239 20.421 L -24.247 14.421 C -24.255 8.991 -26.579 6.694 -32.008 6.749 L -38.008 6.809 C -43.438 6.864 -45.755 9.207 -45.747 14.637 L -45.739 20.637 C -45.731 26.067 -43.407 28.364 -37.978 28.309 L -31.978 28.249 C -26.548 28.194 -24.231 25.851 -24.239 20.421 Z M -44.247 14.622 C -44.254 10.012 -42.616 8.356 -38.006 8.309 L -32.006 8.249 C -27.396 8.202 -25.754 9.826 -25.747 14.436 L -25.739 20.436 C -25.732 25.046 -27.37 26.702 -31.98 26.749 L -37.98 26.809 C -42.59 26.856 -44.232 25.232 -44.239 20.622 L -44.247 14.622 Z' style='fill: rgb(255, 255, 255); transform-origin: -34.993px 17.529px;'/%3E%3Cpath d='M 67.884 27.942 L 67.875 20.838 C 67.866 14.41 65.134 11.69 58.753 11.755 L 51.702 11.826 C 45.32 11.891 42.597 14.666 42.606 21.093 L 42.615 28.197 C 42.624 34.625 45.356 37.345 51.737 37.28 L 58.789 37.209 C 65.17 37.144 67.893 34.369 67.884 27.942 Z M 44.369 21.077 C 44.361 15.618 46.286 13.658 51.704 13.601 L 58.756 13.531 C 64.174 13.476 66.103 15.397 66.112 20.856 L 66.121 27.958 C 66.129 33.417 64.204 35.376 58.786 35.434 L 51.734 35.504 C 46.316 35.559 44.387 33.639 44.378 28.179 L 44.369 21.077 Z' style='fill: rgb(255, 255, 255); stroke-width: 7px; transform-origin: 55.246px 24.516px;'/%3E%3C/svg%3E%0A") !important;
+
+}
+
+/* Default styles for #permissions-granted-icon if needed (it usually gets its style from browser.css) */
+/*
+#permissions-granted-icon {
+  fill: currentColor !important;
+  transform: translateX(0px) scale(1) !important;
+  filter: brightness(100%) !important;
+  list-style-image: url(chrome://browser/skin/permissions.svg) !important; // Default
+}
+*/
+
+
+/* CONDITIONAL STYLES for #pageAction-urlbar-copy-frame-url_jeffersonscher_com       */
+/* These styles will ONLY apply when data-identity-permission-active="true" is on #main-window */
+/* ------------------------------------------------------------------------------------- */
+#main-window[data-identity-permission-active="true"] #pageAction-urlbar-copy-frame-url_jeffersonscher_com {
+  
+transform-origin: center !important;
+  transform: translateX(-23px) scale(0.95) !important; /* Example: shift it and make it larger */
+
+  
+}
+
+/* Conditional HOVER effect for #pageAction-urlbar-copy-frame-url_jeffersonscher_com when permission box is active */
+#main-window[data-identity-permission-active="true"] #pageAction-urlbar-copy-frame-url_jeffersonscher_com:hover {
+  transform:  scale(0.95) rotate(-90deg) translateY(-25px) !important; /* Example modified hover */
+  transform-origin:  center !important;
+}
+
+
+
+#main-window[data-identity-permission-active="true"] #urlbar-zoom-button {
+  appearance: none;
+  transform: translateX(-18px) !important;
+  margin-right: 2px !important;
+  margin-top: 5px !important;
+  margin-left: -40px !important;
+  font-size: 0.7em !important;
+ padding-left: 8px !important;
+  padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  padding-right: 8px !important;
+  border-radius: var(--urlbar-icon-border-radius);
+  background: none !important;
+  background-color: light-dark(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.2)) !important;
+  color: var(--urlbar-box-text-color);
+  margin-block: calc((var(--urlbar-min-height) - 20px) / 2 - 1px - var(--urlbar-container-padding));
+  overflow: hidden !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#zen-sidepanel-button{
+  filter: invert(1) brightness(10%) contrast(95%) !important;
+}
+
+
+
+#new-tab-button
+{
+  list-style-image: none !important;
+ background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='plus.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M6 12h12M12 18V6' stroke-linecap='round' stroke-linejoin='round' style='stroke: rgb(255, 255, 255); stroke-width: 1.9px;'/%3E%3C/svg%3E%0A") !important;
+  filter: invert(0) brightness(85%) contrast(75%);
+  scale: 0.8;
+
+   margin-bottom: 0px !important;
+ margin-right: 1.2px !important;
+  margin-left: 4px !important;
+}
+
+
+#reload-button .toolbarbutton-icon{
+
+  filter: grayscale(1) brightness(100%) contrast(55%) !important;
+    list-style-image:  url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!--Generator: Apple Native CoreSVG 232.5--%3E%3C!DOCTYPE svg%0APUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='17.6172' height='23.3691'%3E%3Cg%3E%3Crect height='23.3691' opacity='0' width='17.6172' x='0' y='0'/%3E%3Cpath d='M0 12.3828C0 17.1777 3.84766 21.0254 8.63281 21.0254C13.418 21.0254 17.2559 17.1777 17.2559 12.3828C17.2559 11.9141 16.9238 11.5723 16.4453 11.5723C15.9863 11.5723 15.6836 11.9141 15.6836 12.3828C15.6836 16.3086 12.5488 19.4531 8.63281 19.4531C4.7168 19.4531 1.57227 16.3086 1.57227 12.3828C1.57227 8.4668 4.7168 5.33203 8.63281 5.33203C9.375 5.33203 10.0684 5.39062 10.6445 5.52734L7.72461 8.41797C7.57812 8.57422 7.5 8.76953 7.5 8.97461C7.5 9.42383 7.83203 9.75586 8.27148 9.75586C8.51562 9.75586 8.70117 9.67773 8.83789 9.53125L12.8613 5.48828C13.0371 5.32227 13.1055 5.12695 13.1055 4.90234C13.1055 4.6875 13.0176 4.47266 12.8613 4.31641L8.83789 0.234375C8.70117 0.078125 8.50586 0 8.27148 0C7.83203 0 7.5 0.351562 7.5 0.800781C7.5 1.00586 7.57812 1.20117 7.71484 1.35742L10.3125 3.92578C9.80469 3.82812 9.22852 3.75977 8.63281 3.75977C3.84766 3.75977 0 7.59766 0 12.3828Z' fill='%23000000' fill-opacity='0.85'/%3E%3C/g%3E%3C/svg%3E ")!important;
+ 
+  scale: 0.85 !important;
+  height: 28.8px !important;
+  filter: invert(1) opacity(1) !important;
+  
+}
+/* Make space for the pseudo-element and allow positioning */
+#PanelUI-menu-button {
+    position: relative !important;
+    /* If your new icon is smaller/larger you might adjust padding, or let the pseudo-element overflow */
+}
+
+/* Hide the original Firefox hamburger icon */
+#PanelUI-menu-button .toolbarbutton-icon {
+    opacity: 0 !important; 
+     visibility: hidden !important; 
+}
+
+#PanelUI-menu-button::before {
+    content:   url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='43' height='20' viewBox='0 0 43 20' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='panel_ui.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath opacity='0.7' d='M 14.178 17.164 L 28.538 17.164 C 30.281 17.164 31.145 16.301 31.145 14.591 L 31.145 4.456 C 31.145 2.746 30.281 1.883 28.538 1.883 L 14.178 1.883 C 12.443 1.883 11.571 2.738 11.571 4.456 L 11.571 14.591 C 11.571 16.309 12.443 17.164 14.178 17.164 Z M 14.195 15.828 C 13.364 15.828 12.908 15.388 12.908 14.525 L 12.908 4.522 C 12.908 3.659 13.364 3.219 14.195 3.219 L 17.897 3.219 L 17.897 15.828 L 14.195 15.828 Z M 28.522 3.219 C 29.343 3.219 29.808 3.659 29.808 4.522 L 29.808 14.525 C 29.808 15.388 29.343 15.828 28.522 15.828 L 19.2 15.828 L 19.2 3.219 L 28.522 3.219 Z M 16.303 6.299 C 16.552 6.299 16.776 6.074 16.776 5.834 C 16.776 5.585 16.552 5.369 16.303 5.369 L 14.518 5.369 C 14.269 5.369 14.053 5.585 14.053 5.834 C 14.053 6.074 14.269 6.299 14.518 6.299 L 16.303 6.299 Z M 16.303 8.448 C 16.552 8.448 16.776 8.224 16.776 7.975 C 16.776 7.726 16.552 7.519 16.303 7.519 L 14.518 7.519 C 14.269 7.519 14.053 7.726 14.053 7.975 C 14.053 8.224 14.269 8.448 14.518 8.448 L 16.303 8.448 Z M 16.303 10.59 C 16.552 10.59 16.776 10.383 16.776 10.134 C 16.776 9.885 16.552 9.669 16.303 9.669 L 14.518 9.669 C 14.269 9.669 14.053 9.885 14.053 10.134 C 14.053 10.383 14.269 10.59 14.518 10.59 L 16.303 10.59 Z' fill='%23F1F1F1'/%3E%3Crect opacity='0.1' x='45.326' y='-17.862' width='1' height='18' fill='%23F1F1F1'/%3E%3Cpath opacity='0.6' d='M 51.979 14.442 C 52.229 14.442 52.42 14.353 52.623 14.149 L 55.44 11.267 C 55.588 11.122 55.654 10.95 55.654 10.743 C 55.654 10.321 55.311 9.97 54.893 9.97 C 54.686 9.97 54.49 10.056 54.33 10.224 L 51.986 12.657 L 49.631 10.224 C 49.471 10.06 49.276 9.97 49.065 9.97 C 48.647 9.97 48.303 10.321 48.303 10.743 C 48.303 10.95 48.373 11.118 48.518 11.271 L 51.338 14.149 C 51.541 14.356 51.736 14.442 51.979 14.442 Z' fill='%23F1F1F1'/%3E%3C/svg%3E%0A") !important;
+
+
+    /* --- Positioning the custom icon --- */
+    /* Example: Center it within the button */
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-48%, -44%) !important;
+
+    /* Ensure it's clickable if it covers the button area, though the button itself is the target */
+    pointer-events: none !important; /* Usually good so it doesn't interfere */
+}
+
+
+/* Optional: Style your custom icon on hover if needed */
+#PanelUI-menu-button:hover::before {
+    color: var(--toolbarbutton-hover-icon-fill, var(--toolbarbutton-icon-fill-attention));
+}
+
+#PanelUI-menu-button{
+
+  filter: grayscale(1) brightness(160%) contrast(100%)  !important;
+ 
+   position: flex !important;
+
+
+
+  height: 25px !important;
+  width: 28px !important;
+  background-size: contain !important;
+  scale: 0.9 !important;
+ 
+ padding-left: 4px !important;
+ 
+}
+
+
+
+
+
+
+
+
+#unified-extensions-button::after {
+    content:  url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='43' height='20' viewBox='0 0 43 20' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='addon on shit.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath opacity='0.7' d='M -2.514 39.042 L 11.846 39.042 C 13.589 39.042 14.452 38.178 14.452 36.468 L 14.452 26.333 C 14.452 24.623 13.589 23.76 11.846 23.76 L -2.514 23.76 C -4.249 23.76 -5.121 24.615 -5.121 26.333 L -5.121 36.468 C -5.121 38.187 -4.249 39.042 -2.514 39.042 Z M -2.498 37.705 C -3.328 37.705 -3.784 37.265 -3.784 36.402 L -3.784 26.4 C -3.784 25.536 -3.328 25.096 -2.498 25.096 L 1.204 25.096 L 1.204 37.705 L -2.498 37.705 Z M 11.829 25.096 C 12.651 25.096 13.116 25.536 13.116 26.4 L 13.116 36.402 C 13.116 37.265 12.651 37.705 11.829 37.705 L 2.508 37.705 L 2.508 25.096 L 11.829 25.096 Z M -0.389 28.176 C -0.14 28.176 0.084 27.952 0.084 27.711 C 0.084 27.462 -0.14 27.246 -0.389 27.246 L -2.174 27.246 C -2.423 27.246 -2.639 27.462 -2.639 27.711 C -2.639 27.952 -2.423 28.176 -2.174 28.176 L -0.389 28.176 Z M -0.389 30.326 C -0.14 30.326 0.084 30.102 0.084 29.853 C 0.084 29.604 -0.14 29.396 -0.389 29.396 L -2.174 29.396 C -2.423 29.396 -2.639 29.604 -2.639 29.853 C -2.639 30.102 -2.423 30.326 -2.174 30.326 L -0.389 30.326 Z M -0.389 32.467 C -0.14 32.467 0.084 32.26 0.084 32.011 C 0.084 31.762 -0.14 31.546 -0.389 31.546 L -2.174 31.546 C -2.423 31.546 -2.639 31.762 -2.639 32.011 C -2.639 32.26 -2.423 32.467 -2.174 32.467 L -0.389 32.467 Z' fill='%23F1F1F1'/%3E%3Crect opacity='0.1' x='12.957' y='0.763' width='1' height='18' fill='%23F1F1F1'/%3E%3Cpath opacity='0.6' d='M 25.846 12.039 C 26.096 12.039 26.287 11.949 26.49 11.746 L 29.307 8.863 C 29.455 8.718 29.522 8.546 29.522 8.339 C 29.522 7.918 29.178 7.566 28.76 7.566 C 28.553 7.566 28.358 7.652 28.197 7.82 L 25.854 10.254 L 23.498 7.82 C 23.338 7.656 23.143 7.566 22.932 7.566 C 22.514 7.566 22.17 7.918 22.17 8.339 C 22.17 8.546 22.24 8.714 22.385 8.867 L 25.205 11.746 C 25.408 11.953 25.604 12.039 25.846 12.039 Z' fill='%23F1F1F1'/%3E%3C/svg%3E%0A");
+
+    /* --- Positioning the custom icon --- */
+    /* Example: Center it within the button */
+    position: relative !important;
+    top: 92% !important;
+    left: -14% !important;
+
+  scale: 1.4 !important;
+    transform: translate(-50%, -50%) !important;
+pointer-events: none !important;
+    /* Ensure it's clickable if it covers the button area, though the button itself is the target */
+    
+}
+
+
+
+
+#unified-extensions-button{
+
+  filter: grayscale(0) brightness(160%) contrast(100%)  !important;
+ scale: 0.8 !important;
+  padding-right: 0px !important;
+ max-width: 95px !important;
+ margin-right: -41px !important;
+  margin-left: 0px !important;
+list-style-image: none !important;
+ 
+ 
+ 
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#downloads-button{
+  margin-left: 0px !important;
+ margin-bottom: -3.5px !important;
+}
+
+
+#downloads-indicator-anchor
+
+{
+   
+	/* list-style-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!--Generator: Apple Native CoreSVG 175.5--%3E%3C!DOCTYPE svg%0APUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='18' height='19' viewBox='0 0 18 19'%3E%3Cpath clip-rule='evenodd' d='M3.77342 7.4349H8.70141C8.63186 7.23679 8.67512 7.01559 8.81597 6.85805L10.0141 5.51794C10.3596 5.13139 10.0611 4.52048 9.5438 4.55559L7.75033 4.67734C7.53091 4.69224 7.32204 4.58138 7.2114 4.39131L6.30711 2.83774C6.04627 2.38963 5.373 2.48476 5.24655 2.9876L4.80812 4.73091C4.75449 4.94419 4.58451 5.10859 4.36955 5.15507L2.61258 5.53503C2.1058 5.64462 1.98822 6.31434 2.42737 6.58999L3.77342 7.4349ZM10.2402 2.89143C10.6964 2.89143 11.0662 2.52158 11.0662 2.06534C11.0662 1.60911 10.6964 1.23926 10.2402 1.23926C9.78392 1.23926 9.41407 1.60911 9.41407 2.06534C9.41407 2.52158 9.78392 2.89143 10.2402 2.89143ZM12.0452 6.79187C11.7714 6.95107 11.4277 6.75551 11.4246 6.43877L11.3982 3.70215C11.3952 3.3836 11.7386 3.18163 12.0155 3.33916L14.4078 4.70021C14.6847 4.85774 14.6866 5.25617 14.4112 5.4163L12.0452 6.79187ZM3.21819 9.08708C3.21819 8.63084 3.58804 8.26099 4.04427 8.26099H13.9573C14.4136 8.26099 14.7834 8.63084 14.7834 9.08708V13.2175C14.7834 15.0425 13.304 16.5219 11.4791 16.5219H6.52254C4.69759 16.5219 3.21819 15.0425 3.21819 13.2175V9.08708ZM6.60878 10.3262C6.60878 9.86998 6.97863 9.50013 7.43487 9.50013H10.7392C11.1955 9.50013 11.5653 9.86998 11.5653 10.3262C11.5653 10.7824 11.1955 11.1523 10.7392 11.1523H7.43487C6.97863 11.1523 6.60878 10.7824 6.60878 10.3262Z' fill='black' fill-rule='evenodd'/%3E%3C/svg%3E") !important; */
+list-style-image:  none !important;
+   
+  height: 18px;
+  width: 22px;
+  margin-bottom: 6px !important;
+  scale: 0.048;
+ margin-left: -3px !important;
+  filter: invert(0) brightness(110%) contrast(75%);
+  
+}
+
+/* Make space for the pseudo-element and allow positioning */
+ #downloads-indicator-anchor{
+    position: relative !important;
+    /* If your new icon is smaller/larger you might adjust padding, or let the pseudo-element overflow */
+}
+
+
+
+#downloads-indicator-anchor::before {
+    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='3.048 2.032 500 500' xmlns:bx='https://boxy-svg.com' width='500px' height='500px'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='png' excluded='true'/%3E%3Cbx:file format='png' path='Untitled 2.png' excluded='true'/%3E%3Cbx:file format='pdf' excluded='true'%3E%3Cbx:page/%3E%3C/bx:file%3E%3Cbx:file format='jpeg' excluded='true'/%3E%3Cbx:file format='svg'/%3E%3Cbx:file format='png' path='Untitled 3.png' excluded='true'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M 117.019 229.189 L 358.157 229.189 C 370.419 229.189 380.359 239.378 380.359 251.948 L 380.359 359.696 C 380.359 361.892 380.056 364.016 379.49 366.025 L 379.49 376.137 C 379.49 422.439 342.874 459.973 297.705 459.973 L 175.73 459.973 C 130.562 459.973 93.946 422.439 93.946 376.137 L 93.946 318.55 C 93.946 314.379 94.243 310.281 94.817 306.275 L 94.817 251.948 C 94.817 239.378 104.756 229.189 117.019 229.189 Z M 163.119 286.634 L 163.119 298.372 C 163.119 308.337 170.999 316.415 180.72 316.415 L 293.541 316.415 C 303.261 316.415 311.142 308.337 311.142 298.372 L 311.142 286.634 C 311.142 276.67 303.261 268.592 293.541 268.592 L 180.72 268.592 C 170.999 268.592 163.119 276.67 163.119 286.634 Z' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);'/%3E%3Cpath d='M -269.92 -189.491 Q -252.676 -214.41 -233.996 -189.491 L -204.641 -150.333 Q -185.961 -125.414 -221.885 -125.414 L -278.336 -125.414 Q -314.26 -125.414 -297.017 -150.333 Z' bx:shape='triangle -314.26 -214.41 128.299 88.996 0.48 0.28 1@f64ec2de' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' transform='matrix(-1, 0, 0, -1, 0, 0)'/%3E%3Cpath d='M -192.578 148.485 Q -154.729 125.322 -114.7 148.485 L -53.312 184.008 Q -13.283 207.171 -91.161 207.171 L -210.592 207.171 Q -288.47 207.171 -250.621 184.008 Z' bx:shape='triangle -288.47 125.322 275.187 81.849 0.486 0.283 1@a4279517' style='fill: rgb(216, 216, 216);' transform='matrix(-1, 0, 0, 1, 0, -0.000008)'/%3E%3Cpath d='M -193.628 147.815 C -168.84 132.499 -142.9 132.494 -116.065 147.806 L -53.102 183.819 C -46.393 187.659 -42.055 191.078 -40.213 194.014 C -39.269 195.518 -38.936 197.044 -39.287 198.349 C -39.636 199.647 -40.695 200.872 -42.299 201.867 C -48.553 205.742 -64.621 207.669 -90.335 207.671 L -211.418 207.671 C -237.131 207.669 -253.446 205.744 -260.209 201.876 C -261.935 200.888 -263.133 199.69 -263.651 198.406 C -264.175 197.107 -264.045 195.573 -263.299 194.058 C -261.844 191.109 -257.946 187.673 -251.748 183.828 Z M -251.222 184.678 C -257.352 188.473 -261.031 191.721 -262.402 194.501 C -263.068 195.851 -263.163 196.943 -262.724 198.032 C -262.279 199.134 -261.325 200.085 -259.712 201.007 C -253.12 204.779 -237.073 206.673 -211.418 206.671 L -90.335 206.671 C -64.681 206.673 -48.901 204.781 -42.826 201.016 C -41.348 200.101 -40.545 199.177 -40.252 198.089 C -39.961 197.006 -40.206 195.906 -41.06 194.545 C -42.813 191.752 -46.951 188.486 -53.598 184.687 L -116.561 148.674 C -143.148 133.428 -168.577 133.424 -193.102 148.665 Z' style='' transform='matrix(-1, 0, 0, 1, 0, -0.000008000000889296643)'/%3E%3Cpath d='M 401.465 52.246 Q 422.91 20.192 446.142 52.246 L 482.649 102.618 Q 505.881 134.672 461.204 134.672 L 390.998 134.672 Q 346.321 134.672 367.766 102.618 Z' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0, 1, -1, 0, -45.44669, 50.293808)' bx:shape='triangle 346.321 20.192 159.56 114.48 0.48 0.28 1@850947fa'/%3E%3Cellipse style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' cx='278.361' cy='56.089' rx='35.604' ry='32.308'/%3E%3Cpath style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' d='M 123.465 146.514 L 140.608 128.052'/%3E%3Cpath style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' d='M 148.52 97.722 L 134.014 138.602'/%3E%3Cpath d='M 137.763 85.801 Q 140.895 51.242 178.448 85.801 L 237.459 140.109 Q 275.012 174.668 234.327 174.668 L 170.392 174.668 Q 129.707 174.668 132.84 140.109 Z' bx:shape='triangle 129.707 51.242 145.305 123.426 0.077 0.28 1@775fba0d' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0.991726, 0.128375, -0.128375, 0.991726, -3.073037, -6.853564)'/%3E%3C/svg%3E%0A");
+  
+  /* Example: Center it within the button */
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-40%, -44%) !important;
+
+    /* Ensure it's clickable if it covers the button area, though the button itself is the target */
+    pointer-events: none !important; /* Usually good so it doesn't interfere */
+}
+
+
+
+
+
+#nav-bar-overflow-button {
+  position: flex !important;
+
+  
+
+  scale: 0.1;
+}
+ 
+  
+
+/*-----------------------------------------------------------------adjust of navbars and tool bars --------------------*/
+ 
+
+
+/*adjust height of toolbar */
+#nav-bar {
+height: 34px !important;
+  min-height: 0px !important;
+  margin-top: 2px !important;
+  margin-left: 0px !important;
+  margin-bottom: 11px !important;
+  
+}
+  
+
+#urlbar:not([open]) {
+  #urlbar-background { border-radius: 12px !important;
+    height: 88% !important;
+    left:  0px !important;
+    width: 99% !important;
+    margin-bottom: 0px !important;
+    height: 35px !important;
+    margin-right: 0px !important;
+    margin-top: 0.5rem !important;
+    
+    
+  }}
+
+
+#urlbar[open][zen-floating-urlbar="true"] {
+  #urlbar-container:has(&) {
+    border-radius: 12px !important;
+   
+    left:  0px !important;
+   
+
+    height: 34.5px !important;
+    min-height: 34.5px !important;
+    margin-right: 2px !important;
+    margin-left: 1.5px !important;
+    margin-top: 5px !important;
+    background: var(--toolbarbutton-hover-background);
+  }
+}
+
+
+
+
+.zen-essentials-container{
+  margin-top: 0px !important;
+  margin-bottom: 3px !important;
+ 
+}
+
+
+
+
+
+
+#navigator-toolbox{
+  margin-bottom: -1px !important;
+ 
+ 
+}
+
+
+.zen-current-workspace-indicator[active="true"] {
+   
+   margin-left: 0px !important;
+ margin-top: 53px !important;
+  
+  top: 0px !important;
+    filter: invert(0) brightness(150%) contrast(105%);
+  scale:1;
+ 
+
+}
+
+.zen-current-workspace-indicator-icon{
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+*{
+    font-family: "SF Pro Text" !important;
+    font-size: auto !important;
+  font-weight: 400 !important;
+ 
+}
+
+
+
+
+
+
+
+
+#identity-permission-box{
+  margin-top: 3.2px !important;
+  filter: brightness(75%) !important;
+}
+
+
+#permissions-granted-icon{
+margin-left: -2px !important;
+  margin-right: -2px !important;
+  fill: white !important;
+transform-origin: center !important;
+  scale: 0.95 !important;
+  filter: brightness(820%) !important;
+  list-style-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg viewBox='57.952 45.721 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' width='24' height='24' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='fill site.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M 79.333 52.766 C 79.951 54.14 79.742 62.673 79.374 61.856 C 79.682 64.781 77.666 67.257 74.386 66.594 C 74.386 67.084 65.698 67.668 65.698 66.844 C 62.491 67.434 60.687 64.663 60.96 61.773 C 60.02 61.896 59.172 53.097 60.752 52.891 C 60 50.79 61.408 49.653 62.911 49.017 C 61.256 49.908 60.6 51.643 60.604 54.565 C 60.604 54.81 60.612 60.977 60.612 60.565 C 61.666 64.546 62.267 66.796 66.871 66.752 L 72.871 66.692 C 77.481 66.645 79.119 64.989 79.112 60.379 L 79.104 54.379 C 79.099 51.406 78.415 49.675 76.694 48.833 C 78.388 49.671 79.517 51.074 79.333 52.766 Z M 72.873 68.192 L 66.873 68.252 C 61.444 68.307 59.12 66.01 59.112 60.58 L 59.104 54.58 C 59.096 49.15 61.413 46.807 66.843 46.752 L 72.843 46.692 C 78.272 46.637 80.596 48.934 80.604 54.364 L 80.612 60.364 C 80.62 65.794 78.303 68.137 72.873 68.192 Z M 76.983 61.287 C 76.982 60.877 76.642 60.54 76.232 60.545 L 72.332 60.584 C 71.922 60.588 71.583 60.931 71.583 61.341 C 71.584 61.751 71.924 62.088 72.334 62.084 L 76.234 62.045 C 76.644 62.04 76.984 61.697 76.983 61.287 Z M 65.931 61.398 L 65.931 61.397 C 65.931 60.378 66.76 59.541 67.778 59.531 C 68.797 59.52 69.629 60.342 69.63 61.362 C 69.632 62.382 68.803 63.22 67.783 63.231 C 66.764 63.241 65.934 62.41 65.931 61.4 C 65.931 61.399 65.931 61.399 65.931 61.398 Z M 63.23 60.675 C 62.82 60.68 62.481 61.023 62.481 61.433 C 62.482 61.843 62.822 62.18 63.232 62.175 L 64.516 62.162 C 64.859 63.648 66.193 64.747 67.785 64.731 C 69.635 64.712 71.133 63.187 71.13 61.347 C 71.127 59.497 69.625 58.012 67.775 58.031 C 66.184 58.046 64.854 59.17 64.515 60.662 L 63.23 60.675 Z M 76.972 54.127 C 76.971 53.717 76.631 53.38 76.221 53.385 L 74.937 53.398 C 74.594 51.912 73.26 50.815 71.668 50.83 C 69.818 50.849 68.32 52.364 68.323 54.214 C 68.326 56.064 69.828 57.549 71.678 57.53 C 73.27 57.515 74.601 56.39 74.94 54.898 L 76.223 54.885 C 76.633 54.88 76.972 54.547 76.972 54.127 Z M 73.522 54.162 C 73.522 54.173 73.522 54.184 73.523 54.195 C 73.506 55.2 72.684 56.02 71.675 56.03 C 70.656 56.041 69.824 55.229 69.823 54.199 C 69.821 53.179 70.65 52.341 71.67 52.33 C 72.679 52.32 73.503 53.124 73.523 54.129 C 73.522 54.14 73.522 54.151 73.522 54.162 Z M 67.871 54.219 C 67.87 53.809 67.53 53.472 67.12 53.476 L 63.22 53.515 C 62.81 53.52 62.47 53.863 62.471 54.273 C 62.472 54.683 62.812 55.02 63.222 55.015 L 67.122 54.976 C 67.532 54.972 67.871 54.639 67.871 54.219 Z' style='stroke: rgb(157, 90, 90); stroke-width: 0px; fill: rgb(255, 255, 255);'/%3E%3Crect x='-55.312' y='47.91' width='41.859' height='28.433' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);'/%3E%3Cpath d='M -24.239 20.421 L -24.247 14.421 C -24.255 8.991 -26.579 6.694 -32.008 6.749 L -38.008 6.809 C -43.438 6.864 -45.755 9.207 -45.747 14.637 L -45.739 20.637 C -45.731 26.067 -43.407 28.364 -37.978 28.309 L -31.978 28.249 C -26.548 28.194 -24.231 25.851 -24.239 20.421 Z M -44.247 14.622 C -44.254 10.012 -42.616 8.356 -38.006 8.309 L -32.006 8.249 C -27.396 8.202 -25.754 9.826 -25.747 14.436 L -25.739 20.436 C -25.732 25.046 -27.37 26.702 -31.98 26.749 L -37.98 26.809 C -42.59 26.856 -44.232 25.232 -44.239 20.622 L -44.247 14.622 Z' style='fill: rgb(255, 255, 255); transform-origin: -34.993px 17.529px;'/%3E%3Cpath d='M 67.884 27.942 L 67.875 20.838 C 67.866 14.41 65.134 11.69 58.753 11.755 L 51.702 11.826 C 45.32 11.891 42.597 14.666 42.606 21.093 L 42.615 28.197 C 42.624 34.625 45.356 37.345 51.737 37.28 L 58.789 37.209 C 65.17 37.144 67.893 34.369 67.884 27.942 Z M 44.369 21.077 C 44.361 15.618 46.286 13.658 51.704 13.601 L 58.756 13.531 C 64.174 13.476 66.103 15.397 66.112 20.856 L 66.121 27.958 C 66.129 33.417 64.204 35.376 58.786 35.434 L 51.734 35.504 C 46.316 35.559 44.387 33.639 44.378 28.179 L 44.369 21.077 Z' style='fill: rgb(255, 255, 255); stroke-width: 7px; transform-origin: 55.246px 24.516px;'/%3E%3C/svg%3E%0A") !important;
+
+}
+
+
+
+
+
+#identity-icon-box{
+  margin-top: 3.2px !important;
+  filter:brightness(105%) !important;
+}
+
+
+
+
+#zen-split-views-box:not([hidden="true"]) {
+  display: flex !important;
+  margin-top: 4px !important;
+}
+
+
+
+.menupopup-arrowscrollbox {
+  border: none !important;
+
+  }
+
+
+
+
+/* sets the new tabs svg */
+
+
+/* makes the icons look nicer*/
+.zen-workspace-icon {
+  /*! filter: saturate(160%) brightness(80%) !important; */
+  opacity: 1 !important;
+}
+
+
+
+
+
+
+:root[zen-single-toolbar='true'] {
+   .urlbar-addon-page-action {
+    display: inherit !important;
+ 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Target by ID */
+#pageAction-urlbar-copy-frame-url_jeffersonscher_com 
+/* Target by Classes */
+ {
+    /* Vertical Positioning */
+
+   position: relative !important;
+    top: 0.15rem !important;
+  left: -2px !important;                              /* Adjust vertical position */
+    filter: brightness(1) opacity(1) !important;
+    /* Size Modification */
+    width: 15px !important; 
+    height: 13px !important; 
+    
+        image {
+          list-style-image:  url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!--Generator: Apple Native CoreSVG 175.5--%3E%3C!DOCTYPE svg%0APUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='19' height='19' viewBox='0 0 19 19'%3E%3Cpath d='M9.39066 6.80859C9.79504 6.40177 10.3904 6.19866 10.9163 6.42763C10.9914 6.46031 11.0636 6.49486 11.1328 6.53125C11.4453 6.69271 11.7084 6.88281 11.9219 7.10156C12.5782 7.7526 13.0157 8.47396 13.2344 9.26562C13.4532 10.0521 13.4532 10.8411 13.2344 11.6328C13.0157 12.4193 12.5808 13.138 11.9297 13.7891L9.17972 16.5391C8.53388 17.1849 7.81774 17.6172 7.03128 17.8359C6.24482 18.0547 5.45576 18.0547 4.66409 17.8359C3.87763 17.6224 3.15628 17.1849 2.50003 16.5234C1.84378 15.8724 1.40628 15.151 1.18753 14.3594C0.968781 13.5677 0.968781 12.7786 1.18753 11.9922C1.40628 11.2057 1.84118 10.487 2.49222 9.83594L3.93539 8.403C4.14666 8.19323 4.5917 8.41509 4.62503 8.71094V8.71094V8.71094C4.69723 9.34271 4.59526 10.022 4.14563 10.4716L3.69534 10.9219C3.26305 11.3542 2.97399 11.8281 2.82816 12.3438C2.68753 12.8594 2.69013 13.3776 2.83597 13.8984C2.9818 14.4193 3.27086 14.8958 3.70316 15.3281C4.13024 15.7604 4.6042 16.0469 5.12503 16.1875C5.64586 16.3281 6.16409 16.3255 6.67972 16.1797C7.19534 16.0391 7.6693 15.7552 8.10159 15.3281L10.7266 12.7031C11.1589 12.276 11.4453 11.8047 11.586 11.2891C11.7266 10.7682 11.724 10.2474 11.5782 9.72656C11.4375 9.20573 11.1511 8.72917 10.7188 8.29688C10.4896 8.07292 10.211 7.89062 9.88284 7.75C9.80469 7.71527 9.72358 7.68334 9.63952 7.65422C9.28916 7.53285 9.12926 7.07156 9.39066 6.80859V6.80859V6.80859ZM9.63284 12.1992C9.22709 12.6074 8.63299 12.8194 8.10291 12.5952C8.02677 12.563 7.95341 12.5286 7.88284 12.4922C7.57555 12.3255 7.31513 12.1328 7.10159 11.9141C6.44534 11.2578 6.00784 10.5365 5.78909 9.75C5.57034 8.95833 5.57034 8.16927 5.78909 7.38281C6.00784 6.59635 6.44274 5.8776 7.09378 5.22656L9.83597 2.48438C10.487 1.83333 11.2058 1.39844 11.9922 1.17969C12.7787 0.960938 13.5651 0.960938 14.3516 1.17969C15.1433 1.39323 15.8698 1.83073 16.5313 2.49219C17.1823 3.14844 17.6172 3.8724 17.836 4.66406C18.0547 5.45052 18.0547 6.23698 17.836 7.02344C17.6172 7.8099 17.1849 8.52604 16.5391 9.17188L15.0826 10.6181C14.8728 10.8263 14.432 10.6061 14.3985 10.3125V10.3125V10.3125C14.3268 9.67604 14.4304 8.99153 14.8833 8.53864L15.3282 8.09375C15.7604 7.66667 16.0469 7.19531 16.1875 6.67969C16.3282 6.15885 16.3256 5.64062 16.1797 5.125C16.0391 4.60417 15.7526 4.1276 15.3203 3.69531C14.8881 3.26302 14.4141 2.97656 13.8985 2.83594C13.3828 2.6901 12.8646 2.6901 12.3438 2.83594C11.8282 2.97656 11.3542 3.26042 10.9219 3.6875L8.29691 6.3125C7.86461 6.74479 7.57555 7.21875 7.42972 7.73438C7.28909 8.25 7.2917 8.76823 7.43753 9.28906C7.58336 9.80469 7.87243 10.2812 8.30472 10.7188C8.53388 10.9427 8.81253 11.1276 9.14066 11.2734C9.21808 11.3066 9.29841 11.337 9.38164 11.3647C9.73042 11.4807 9.89196 11.9385 9.63284 12.1992V12.1992V12.1992Z' fill='black'/%3E%3C/svg%3E ")!important;
+   }
+      
+
+ /* Flip + Scale */
+  transform:  scale(0.95) rotate(0deg)  !important;  
+transform-origin: center !important;
+    /* Styling Enhancements */
+  filter: brightness(75%) !important;
+  scale: 0.93 !important;
+   
+    margin-right: -2px !important; 
+   margin-left: 2px !important;
+    
+    /* Smooth Transition */
+    transition: all 0.3s ease !important;
+}
+
+
+
+/* Hover Effect */
+#pageAction-urlbar-copy-frame-url_jeffersonscher_com:hover {
+    transform: scale(1) rotate(-90deg)  !important;
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+    #home-button,
+    .tabs-home-button {
+        /* Optional mobile-specific adjustments */
+        width: 1px !important;
+        height: 1px !important;
+    }
+}
+
+
+
+#statuspanel {
+  display: none !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab:not([pinned]):is([visuallyselected]):not(:hover) .tab-close-button {
+  display: none !important;}
+
+  #back-button {
+    fill: black !important;
+    
+      filter: brightness(90%)  !important;
+    
+    scale: 1.28 !important;
+    padding-bottom: 3px !important;
+ 
+    
+    
+    list-style-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='back.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M 6.886 2.122 C 7.118 1.897 7.136 1.512 6.927 1.261 C 6.72 1.011 6.364 0.991 6.134 1.217 L 2.384 4.872 C 2.265 4.988 2.198 5.152 2.198 5.324 C 2.198 5.498 2.265 5.663 2.384 5.777 L 6.134 9.434 C 6.364 9.659 6.72 9.639 6.927 9.389 C 7.136 9.139 7.118 8.753 6.886 8.528 L 4.226 5.934 L 13.258 5.934 C 13.57 5.934 13.821 5.662 13.821 5.324 C 13.821 4.989 13.57 4.716 13.258 4.716 L 4.226 4.716 L 6.886 2.122 Z' style='fill-opacity: 0.82; fill: rgb(255, 255, 255);'/%3E%3C/svg%3E%0A")!important;
+
+
+}
+
+  #forward-button {
+    fill: white !important;
+    filter: brightness(85%)  !important;
+    scale: 1.3 !important;
+    
+    padding-bottom: 3px !important;
+  
+  list-style-image:  url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='forward.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M 6.886 2.122 C 7.118 1.897 7.136 1.512 6.927 1.261 C 6.72 1.011 6.364 0.991 6.134 1.217 L 2.384 4.872 C 2.265 4.988 2.198 5.152 2.198 5.324 C 2.198 5.498 2.265 5.663 2.384 5.777 L 6.134 9.434 C 6.364 9.659 6.72 9.639 6.927 9.389 C 7.136 9.139 7.118 8.753 6.886 8.528 L 4.226 5.934 L 13.258 5.934 C 13.57 5.934 13.821 5.662 13.821 5.324 C 13.821 4.989 13.57 4.716 13.258 4.716 L 4.226 4.716 L 6.886 2.122 Z' style='fill-opacity: 0.82; transform-box: fill-box; transform-origin: 50%25 50%25; fill: rgb(255, 254, 254);' transform='matrix(-1, 0, 0, -1, -0.000001, 0)'/%3E%3Cpath d='M 23.594 16.152 L 27.673 12.522 M 27.673 12.522 L 23.594 8.893 M 27.673 12.522 L 17.067 12.522' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' style='stroke-width: 1.5; stroke-opacity: 0.81; stroke: rgb(190, 35, 35);'/%3E%3C/svg%3E%0A")!important;
+  
+}
+  #reload-button {
+    filter: brightness(90%) !important;
+    scale: 1 !important;
+    list-style-image:  url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='0 0 16 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.57617 1.01987C8.31099 0.701658 7.83807 0.658665 7.51986 0.923838C7.20165 1.18901 7.15866 1.66193 7.42383 1.98014L8.49597 3.2667C8.33208 3.25563 8.1667 3.25 8 3.25C3.99594 3.25 0.75 6.49594 0.75 10.5C0.75 14.5041 3.99594 17.75 8 17.75C12.0041 17.75 15.25 14.5041 15.25 10.5C15.25 10.2183 15.0143 10 14.7326 10H14.2292C13.9599 10 13.75 10.2308 13.75 10.5C13.75 13.6756 11.1756 16.25 8 16.25C4.82436 16.25 2.25 13.6756 2.25 10.5C2.25 7.32437 4.82436 4.75 8 4.75C8.34186 4.75 8.67674 4.77984 9.0022 4.83704C9.08019 4.85075 9.15841 4.85357 9.23486 4.84664L7.42383 7.01987C7.15866 7.33807 7.20165 7.811 7.51986 8.07617C7.83807 8.34134 8.31099 8.29835 8.57617 7.98014L11.0762 4.98014C11.3079 4.70201 11.3079 4.298 11.0762 4.01987L8.57617 1.01987Z' fill='white' fill-opacity='0.4'/%3E%3C/svg%3E ") !important;
+    padding-bottom:  4px !important;
+  }
+
+
+  #tabbrowser-tabpanels[zen-split-view="true"] .browserSidebarContainer.deck-selected {
+    outline:  var(--zen-colors-border) !important;
+  }
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+#zen-sidebar-splitter{
+  
+  
+  opacity: 0 !important;
+}
+    
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+
+/*------------------------------------------------------------*/
+
+
+
+
+/
+
+/*----------icon withs important --------------------*/
+#zen-sidebar-icons-wrapper{
+	background-color: var(--zen-toolbar-element-bg) !important;
+	border-radius: 1em;
+	padding: 0rem !important; /*25rem*/
+}
+
+
+
+
+/* fix workspaces icons */
+
+toolbarbutton{
+	padding: 0.17rem !important;
+  
+}
+
+/*-------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/* Fix find in page */
+findbar *{
+	opacity: 1 !important;
+  background-color: none !important;
+}
+
+
+
+
+  
+/* Find */
+findbar{
+	transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.2s !important;
+
+		.findbar-textbox{
+			padding: 0.25em 1em !important;
+			border-radius: 1em !important;
+		}
+	&[hidden="true"]{
+	scale: 0 !important;
+		opacity: 0 !important;
+	}  
+}
+
+/* fix statusbar */
+#statuspanel { 
+	opacity: 1 !important;
+}
+
+findbar *{
+    opacity: 1 !important;
+}
+
+
+
+
+/*--------------------CONTEXT MENU------------------------------*/
+#tabContextMenu:has(
+    #context_reloadTab:not([hidden])
+    ):has(:is(#context_zen-add-essential, #context_zen-remove-essential):not([hidden])
+    ):has(:is(#context_pinTab, #context_unpinTab, #context_bookmarkTab):not([hidden])) {
+    :nth-child(1 of menuseparator) {
+        display: flex !important;
+        visibility: visible !important;
+        order: -1 !important;
+    }
+
+    #context_reloadTab,
+    :is(#context_zen-add-essential, #context_zen-remove-essential),
+    :is(#context_pinTab, #context_unpinTab),
+    #context_bookmarkTab {
+        order: -999 !important;
+        --height: 42px;
+        width: 25% !important;
+        height: var(--height) !important;
+        background-position: center !important;
+
+        .menu-text {
+            display: none !important;
+        }
+    }
+
+    #context_zen-remove-essential {
+        margin-left: 37.5% !important;
+        margin-top: calc(0px - var(--height)) !important;
+    }
+
+    #context_zen-add-essential {
+        margin-left: 50% !important;
+        margin-top: calc(0px - var(--height)) !important;
+    }
+
+    :is(#context_pinTab, #context_unpinTab) {
+        margin-left: 25% !important;
+        margin-top: calc(0px - var(--height)) !important;
+    }
+
+    #context_bookmarkTab {
+        margin-left: 75% !important;
+        margin-top: calc(0px - var(--height)) !important;
+    }
+}
+
+
+menuseparator {
+
+    /* Hide first separator */
+    &:first-of-type {
+        display: none !important;
+    }
+
+    /* Reduce separator opacity */
+    &::before {
+        opacity: 0.3;
+    }
+}
+
+/*---------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Remove new tab background color white tint in 1.8b+ */
+.browserStack browser {
+    background-color: transparent !important;
+ 
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+#tabbrowser-tabpanels:has(> [zen-split="true"]), #zen-splitview-overlay {
+  :root:not([zen-compact-mode="true"]):not([customizing]) & {
+    @media (-moz-bool-pref: "zen.view.compact.hide-toolbar") {
+      & {
+        margin-top: calc(var(--zen-split-column-gap) * -1);
+        margin-bottom: 3.5px !important;
+      }
+    }
+  }
+}
+
+
+#tabbrowser-tabpanels[zen-split-view="true"] {
+  display: flex;
+  flex-direction: row;
+  margin-top: calc(var(--zen-split-column-gap) * -1) !important;
+  
+}
+
+
+
+
+.urlbarView-favicon {
+  margin-left: px !important;
+
+}
+
+
+
+  
+  
+
+
+/* Style tabs within the Essentials container (and a related welcome sidebar) */
+.zen-essentials-container > .tabbrowser-tab,
+#zen-welcome-initial-essentials-browser-sidebar-essentials .tabbrowser-tab {
+  --toolbarbutton-inner-padding: 0; /* Reset padding */
+  max-width: unset; /* Allow stretching */
+  width: 100% !important; /* Force full width of grid cell */
+
+  /* Style background */
+  & .tab-background {
+    
+    transition: background 0.1s ease-in-out; /* Smooth background transition */
+  }
+
+  --tab-selected-bgcolor: light-dark(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.2));
+
+  &:not([visuallyselected], [multiselected='true']) .tab-background {
+    background: var(--zen-toolbar-element-bg); /* Use generic element background */
+    border: none; /* No border */
+  }
+
+  & .tab-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  & .tab-label-container,
+  & .tab-close-button {
+    display: none !important;
+  }
+
+  & .tab-icon-image,
+  & .tab-icon-overlay {
+    margin-inline-end: 0 !important;
+  }
+
+  &:hover .tab-background {
+    background: var(--tab-selected-bgcolor);
+  }
+
+  /* Optional blurred favicon background effect (if pref `zen.theme.essentials-favicon-bg` is enabled) */
+  @media -moz-pref('zen.theme.essentials-favicon-bg') {
+    &[visuallyselected] > .tab-stack > .tab-background {
+      /* Create a blurred background pseudo-element using the tab icon */
+      &::after {
+        content: '';
+        inset: -50%; /* Extend beyond bounds */
+        filter: blur(36px)  !important; /* Apply blur */
+        position: absolute;
+        background-size: contain;
+        background-clip: padding-box;
+        background-image: var(--zen-tab-icon); /* Use tab icon variable */
+        z-index: -1; /* Place behind content */
+        background-position: center;
+      }
+
+      background: transparent; /* Make main background transparent */
+      overflow: hidden; /* Clip pseudo-elements */
+      position: relative; /* Positioning context */
+      --zen-essential-bg-margin: 0px !important; /* Margin for inner layer */
+
+      /* Create an inner background layer for contrast */
+      &::before {
+        background: light-dark(rgba(255, 255, 255, 0.85), rgba(68, 64, 64, 0.85));
+        margin: var(--zen-essential-bg-margin); /* Apply margin */
+        border-radius: 12px !important; /* Adjust radius */
+        position: absolute;
+        inset: 0;
+        z-index: -2 !important; /* Position above ::after, below content */
+        content: '';
+        transition: background 0.1s ease-in-out; /* Smooth transition */
+      }
+    }
+
+    /* Slightly fade inner background on hover */
+    &[visuallyselected]:hover .tab-background::before {
+      background: light-dark(rgba(255, 255, 255, 0.8), rgba(68, 64, 64, 0.75));
+    }
+  }
+}
+
+
+  
+  @media (-moz-pref("arcline.essential.grid", 1)) {
+.zen-essentials-container{ 
+  display: grid !important;
+  margin-right: 1px !important;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important; 
+  
+  } }
+  
+    @media (-moz-pref("arcline.addon.visible", 1)){
+#unified-extensions-button,
+.unified-extensions-button {
+    opacity: 0 !important;
+  width: 16px !important;
+}
+
+}
+
+  
+  
+  
+  
+  
+  
+  
