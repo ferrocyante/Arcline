@@ -217,6 +217,28 @@
   },
   {
     "type": "separator",
+    "label": "Control Buttons Styles"
+  },
+  {
+    "property": "arch.control.buttons",
+    "label": "helps in switching from control buttons postions",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 1,
+    "options": [
+      {
+        "value": 1,
+        "label": "left"
+      },
+      {
+        "value": 1,
+        "label": "right"
+      }
+    ]
+  },
+  {
+    "type": "separator",
     "label": "Fonts"
   },
   {
