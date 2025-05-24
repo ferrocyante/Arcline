@@ -60,7 +60,7 @@
     "force": true
   },
   {
-    "property": "arch.pinned.extensions",
+    "property": "arcline.pinned.extensions",
     "label": "Add support for pinned extensions ( make sure you  disable it when you have not pinned any extension)",
     "type": "dropdown",
     "placeholder": false,
@@ -78,7 +78,7 @@
     ]
   },
   {
-    "property": "arch.compact.mode.full.screen.mode",
+    "property": "arcline.compact.mode.full.screen.mode",
     "label": "Add a support for marginless full screen compact mode",
     "type": "dropdown",
     "placeholder": false,
@@ -96,7 +96,7 @@
     ]
   },
   {
-    "property": "arch.borders",
+    "property": "arcline.borders",
     "label": "Add border around browser (makes window look like mac.)",
     "type": "dropdown",
     "placeholder": false,
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "property": "arch.background",
+    "property": "arcline.background",
     "label": "Add color to background.",
     "type": "dropdown",
     "placeholder": false,
@@ -136,7 +136,7 @@
     "label": "Sidebar Styles"
   },
   {
-    "property": "arch.compact.sidebar.bg",
+    "property": "arcline.compact.sidebar.bg",
     "label": "Add different background to compact mode sidebar",
     "type": "dropdown",
     "placeholder": false,
@@ -162,7 +162,7 @@
     ]
   },
    {
-    "property": "arch.compact.sidebar.position",
+    "property": "arcline.compact.sidebar.position",
     "label": "Changes compact mode sidebar style",
     "type": "dropdown",
     "placeholder": false,
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "property": "arch.essentials.grid",
+    "property": "arcline.essentials.grid",
     "label": "Add grid to Essentials.",
     "type": "dropdown",
     "placeholder": false,
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "property": "arch.close-button.equal-padding",
+    "property": "arcline.close-button.equal-padding",
     "label": "Add equal padding to close button for tabs.",
     "type": "dropdown",
     "placeholder": false,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "property": "arch.close-button.square-corners",
+    "property": "arcline.close-button.square-corners",
     "label": "Makes close button for tabs look more square.",
     "type": "dropdown",
     "placeholder": false,
@@ -238,7 +238,7 @@
     "label": "Control Buttons Styles"
   },
   {
-    "property": "arch.control.button",
+    "property": "arcline.control.button",
     "label": "helps in switching from control buttons postions",
     "type": "dropdown",
     "placeholder": false,
@@ -260,7 +260,7 @@
     "label": "Fonts"
   },
   {
-    "property": "arch.fonts.sf-pro",
+    "property": "arcline.fonts.sf-pro",
     "type": "dropdown",
     "label": "Use SF Pro font.",
     "placeholder": false,
@@ -278,7 +278,7 @@
     ]
   },
   {
-    "property": "mod.arch.font",
+    "property": "mod.arcline.font",
     "type": "string",
     "defaultValue": "SF Pro",
     "placeholder": "Font name installed on your computer.",
