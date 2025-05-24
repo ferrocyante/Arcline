@@ -3,76 +3,28 @@
     "property": "browser.tabs.allow_transparent_browser",
     "label": "Allow browser to be transparent.",
     "default": true,
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "boolean",
-    "options": [
-      {
-        "value": false,
-        "label": "Disabled"
-      },
-      {
-        "value": true,
-        "label": "Enabled"
-      }
-    ],
+    "type": "checkbox",
     "force": true
   },
   {
     "property": "zen.view.experimental-force-window-controls-left",
     "label": "Turn on experimental left window controls.",
     "default": true,
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "boolean",
-    "options": [
-      {
-        "value": false,
-        "label": "Disabled"
-      },
-      {
-        "value": true,
-        "label": "Enabled"
-      }
-    ],
+    "type": "checkbox",
     "force": true
   },
   {
     "property": "browser.tabs.groups.enabled",
     "label": "Turn on browser tab groups.",
     "default": true,
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "boolean",
-    "options": [
-      {
-        "value": false,
-        "label": "Disabled"
-      },
-      {
-        "value": true,
-        "label": "Enabled"
-      }
-    ],
+    "type": "checkbox",
     "force": true
   },
   {
     "property": "browser.urlbar.scotchBonnet.enableOverride",
     "label": "Enable ability to search directly through any search engine.",
     "default": false,
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "boolean",
-    "options": [
-      {
-        "value": false,
-        "label": "Disabled"
-      },
-      {
-        "value": true,
-        "label": "Enabled"
-      }
-    ]
+    "type": "checkbox"
   },
   {
     "property": "browser.uidensity",
