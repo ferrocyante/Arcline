@@ -78,6 +78,24 @@
     ]
   },
   {
+    "property": "arch.compact.mode.full.screen.mode",
+    "label": "Add a support for marginless full screen compact mode",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
     "property": "arch.borders",
     "label": "Add border around browser (makes window look like mac.)",
     "type": "dropdown",
