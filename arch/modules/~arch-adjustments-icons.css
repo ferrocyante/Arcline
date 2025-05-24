@@ -930,7 +930,7 @@ menuseparator {
 
 
   
-  @media (-moz-pref("arch.essential.grid", 1)) {
+  @media (-moz-pref("arcline.essential.grid", 1)) {
 .zen-essentials-container{ 
   display: grid !important;
   margin-right: 1px !important;
@@ -938,7 +938,7 @@ menuseparator {
   
   } }
   
-    @media (-moz-pref("arch.addon.visible", 1)){
+    @media (-moz-pref("arcline.addon.visible", 1)){
 #unified-extensions-button,
 .unified-extensions-button {
     opacity: 0 !important;
