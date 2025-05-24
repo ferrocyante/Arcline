@@ -8,7 +8,7 @@
   },
   {
     "property": "zen.view.experimental-force-window-controls-left",
-    "label": "Turn on experimental left window controls.",
+    "label": "Turn on experimental left window controls.(requires restart to take effect))",
     "default": true,
     "type": "checkbox",
     "force": true
