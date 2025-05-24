@@ -8,7 +8,7 @@
   },
   {
     "property": "zen.view.experimental-force-window-controls-left",
-    "label": "Turn on experimental left window controls.(requires restart to take effect))",
+    "label": "Turn on experimental left window controls. (requires restart to take effect))",
     "default": true,
     "type": "checkbox",
     "force": true
@@ -50,18 +50,18 @@
     "options": [
       {
         "value": "floating-on-type",
-        "label": "Disabled"
+        "label": "floating-on-type"
       },
       {
         "value": "float",
-        "label": "Enabled"
+        "label": "float"
       }
     ],
     "force": true
   },
   {
     "property": "arch.pinned.extensions",
-    "label": "Add support for pinned extensions ( make sure you you disable it when you have not pinned any extension)",
+    "label": "Add support for pinned extensions ( make sure you  disable it when you have not pinned any extension)",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
