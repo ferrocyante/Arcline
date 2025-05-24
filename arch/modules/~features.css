@@ -154,7 +154,7 @@
 
 
  
-    @media (-moz-pref("arch.borders", 1)) {
+    @media (-moz-pref("arcline.borders", 1)) {
 #browser{
   
   
