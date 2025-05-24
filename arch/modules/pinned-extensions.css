@@ -5,7 +5,7 @@
   padding: 4px 0px !important;
 
   /* Feel free to delete this. This is the number of toolbar buttons you want at the top * 32px + 1px */
- min-width: calc(32px * 5 + 8px) !important;
+ min-width: calc(32px * 5 + 1px) !important;
 } 
 :root[customizing] #TabsToolbar-customization-target {
   visibility: visible !important;
