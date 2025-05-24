@@ -1,5 +1,5 @@
 <p align="center">
-    <h1 align="center">Arc-H 🌌</h2>
+    <h1 align="center">Arcline 🌌</h2>
 </p>
 
 <p align="center">How I customizes my zen browser 🌸</p>
@@ -8,7 +8,7 @@
 
 ###
 
-# 🍋‍🟩 Arc-h Browser Theme  
+# 🍋‍🟩 Arcline Browser Theme  
 
 **A modern, minimalist browser theme inspired by organic architecture**  
 
