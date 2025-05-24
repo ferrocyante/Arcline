@@ -220,7 +220,7 @@
     "label": "Control Buttons Styles"
   },
   {
-    "property": "arch.control.buttons",
+    "property": "arch.control.button",
     "label": "helps in switching from control buttons postions",
     "type": "dropdown",
     "placeholder": false,
