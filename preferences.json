@@ -12,6 +12,12 @@
     "type": "checkbox"
   },
   {
+    "property": "browser.tabs.groups.enabled",
+    "label": "Turn on browser tab groups.",
+    "defaultValue": true,
+    "type": "checkbox"
+  },
+  {
     "property": "browser.urlbar.scotchBonnet.enableOverride",
     "label": "Enable ability to search directly through any search engine.",
     "defaultValue": false,
