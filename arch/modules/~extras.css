@@ -582,13 +582,13 @@ findbar {
   border-radius: 20px !important;
 }
 
-@media (-moz-pref("arch.close-button.equal-padding", 1)) {
+@media (-moz-pref("arcline.close-button.equal-padding", 1)) {
   .tab-close-button {
     margin-right: 4px !important;
   }
 }
 
-@media (-moz-pref("arch.close-button.square-corners", 1)) {
+@media (-moz-pref("arcline.close-button.square-corners", 1)) {
   .tab-close-button {
     border-radius: 7px !important;
   }
@@ -814,7 +814,7 @@ findbar {
 
 
 
- @media (-moz-pref("arch.background", 1)) {
+ @media (-moz-pref("arcline.background", 1)) {
 * {
   /* Colors */
   --bg-primary-color: var(--bg-accent-color, var(--zen-primary-color));
