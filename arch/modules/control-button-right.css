@@ -1,6 +1,6 @@
 
 
-@media (-moz-pref("arch.control.button", 2)) {
+@media (-moz-pref("arcline.control.button", 2)) {
 
 #PanelUI-menu-button{
   
