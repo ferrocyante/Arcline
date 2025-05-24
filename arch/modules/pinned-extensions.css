@@ -1,4 +1,4 @@
-@media (-moz-pref("arch.pinned.extensions", 1)) {
+@media (-moz-pref("arcline.pinned.extensions", 1)) {
 
 #zen-sidebar-top-buttons-customization-target {
   align-items: flex-start !important;
