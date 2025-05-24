@@ -1,5 +1,5 @@
 
-@media (-moz-pref("arch.compact.mode.full.screen.mode", 1)) {
+@media (-moz-pref("arcline.compact.mode.full.screen.mode", 1)) {
 
   :root[zen-compact-mode="true"]:not([customizing]) {
       #zen-appcontent-wrapper:not(:has(#tabbrowser-tabpanels[zen-split-view]), :has(#zen-sidebar-web-panel:not([hidden]):not([pinned]))) {
@@ -29,7 +29,7 @@
       }
   }
 
-      @media (-moz-pref("arch.compact.sidebar.position", 1))     {
+      @media (-moz-pref("arcline.compact.sidebar.position", 1))     {
 
 
 
