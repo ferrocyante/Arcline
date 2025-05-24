@@ -1,5 +1,5 @@
  
- @media (-moz-pref("arch.control.buttons", 1)) {
+ @media (-moz-pref("arch.control.button", 1)) {
  
  
  /* Move Window Control Buttons to Left Side (macOS Style) */
