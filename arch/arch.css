@@ -22,4 +22,7 @@
 @import "modules/sidebar-attached.css";
 @import "modules/sidebar-floating.css";
 @import "modules/pinned-extensions.css";
+@import "modules/control-button-right.css";
+@import "modules/control-button-left.css";
+
 
