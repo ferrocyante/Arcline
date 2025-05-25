@@ -927,12 +927,14 @@ menuseparator {
   
   } }
   
-    @media (-moz-pref("arcline.addon.visible", 1)){
+   
+    @media (-moz-pref("arch.addon.visible", 1)){
 #unified-extensions-button,
 .unified-extensions-button {
     opacity: 0 !important;
   width: 16px !important;
-	 padding-right: 40px !important;
+  margin-left: -8px !important;
+  padding-right: 55px !important;
 }
 
 }
