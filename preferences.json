@@ -180,8 +180,26 @@
     ]
   },
   {
-    "property": "arcline.essentials.grid",
-    "label": "Add grid to Essentials.",
+    "property": "arcline.essential.always.four.in.a.row",
+    "label": "make esssentials to be always four in a row",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+   {
+    "property": "arcline.addon.visible",
+    "label": "set addon/extension button opacity to zero, button will be still there just invisible",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
