@@ -928,7 +928,7 @@ menuseparator {
   } }
   
    
-    @media (-moz-pref("arch.addon.visible", 1)){
+    @media (-moz-pref("arcline.addon.visible", 1)){
 	    
 	    
 	    #unified-extensions-button,
