@@ -42,6 +42,14 @@
     "default": 5
   },
   {
+    "property": "widget.windows.mica.toplevel-backdrop",
+    "label": "darkens tone of browser",
+    "type": "string",
+    "value": "number",
+    "default": 2,
+    "force": true
+  },
+  {
     "property": "zen.urlbar.behavior",
     "label": "Url bar behavior (float by default.)",
     "type": "dropdown",
