@@ -3,7 +3,7 @@
       .tabbrowser-tab {
         #tab-label-input,
         .tab-label {
-          font-size: 13.65px !important;
+          font-size: 13.7px !important;
         }}}
 
 
@@ -929,7 +929,9 @@ menuseparator {
   
    
     @media (-moz-pref("arch.addon.visible", 1)){
-#unified-extensions-button,
+	    
+	    
+	    #unified-extensions-button,
 .unified-extensions-button {
     opacity: 0 !important;
   width: 16px !important;
