@@ -31,7 +31,7 @@
     "label": "Browser density.",
     "type": "string",
     "value": "number",
-    "default": 2,
+    "default": 1,
     "force": true
   },
   {
