@@ -50,6 +50,14 @@
     "force": true
   },
   {
+    "property": "zen.theme.content-element-separation",
+    "label": "border of browser (10 is best)",
+    "type": "string",
+    "value": "number",
+    "default": 10,
+    "force": true
+  },
+  {
     "property": "zen.urlbar.behavior",
     "label": "Url bar behavior (float by default.)",
     "type": "dropdown",
