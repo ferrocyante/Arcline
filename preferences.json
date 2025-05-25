@@ -31,7 +31,7 @@
     "label": "Browser density.",
     "type": "string",
     "value": "number",
-    "default": 1,
+    "default": 2,
     "force": true
   },
   {
@@ -46,7 +46,7 @@
     "label": "darkens tone of browser",
     "type": "string",
     "value": "number",
-    "default": 2,
+    "default": 1,
     "force": true
   },
   {
