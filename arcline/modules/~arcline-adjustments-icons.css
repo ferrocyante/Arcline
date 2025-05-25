@@ -571,8 +571,8 @@ transform-origin: center !important;
     
       filter: brightness(85%)  !important;
     
-    scale: 0.95 !important;
-    padding-bottom: 4px !important;
+    scale: 1 !important;
+    padding-bottom: 3px !important;
  
     
     
@@ -584,9 +584,9 @@ transform-origin: center !important;
   #forward-button {
     fill: white !important;
     filter: brightness(85%)  !important;
-    scale: 0.95 !important;
+    scale: 1 !important;
     
-    padding-bottom: 4px !important;
+    padding-bottom: 3px !important;
   
   list-style-image:  url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 10L14 5.5M14 5.5L9 1M14 5.5H1' stroke='white' stroke-opacity='0.8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ") !important;
 }
