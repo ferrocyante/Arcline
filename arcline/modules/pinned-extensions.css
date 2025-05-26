@@ -1,5 +1,33 @@
 @media (-moz-pref("arcline.pinned.extensions", 1)) {
 
+ 
+    #back-button {
+   margin-top: 5px !important;
+}
+
+
+  #forward-button{
+    
+    margin-top: 5px  !important;
+  }
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
 #zen-sidebar-top-buttons-customization-target {
   align-items: flex-start !important;
   padding: 4px 0px !important;
