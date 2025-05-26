@@ -43,10 +43,10 @@
   },
   {
     "property": "widget.windows.mica.toplevel-backdrop",
-    "label": "darkens tone of browser",
+    "label": "lightens tone of browser for value 1",
     "type": "string",
     "value": "number",
-    "default": 1,
+    "default": 2,
     "force": true
   },
   {
