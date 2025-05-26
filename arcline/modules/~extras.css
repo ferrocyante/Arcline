@@ -33,6 +33,339 @@
 
 
 
+/* --- Styles for items within the ZEN media controls toolbar --- */
+
+/* Ensure the main toolbar has a positioning context if items are absolute */
+#zen-media-controls-toolbar {
+    position: relative !important;
+    /* ... any other styles for the toolbar itself ... */
+}
+
+#zen-media-controls-toolbar toolbaritem {
+    /* Original layout and sizing styles */
+    flex-grow: 1;
+    position: absolute !important;
+    left: 0.5px !important;
+    width: 99.3% !important;
+    bottom: -11px !important;
+    padding: 4px !important;
+    border-radius: 12px !important;
+
+    /* Toolbaritem itself MUST be transparent for backdrop-filter to see the ::before */
+    background: rgba(0,0,0,0.3) !important;
+
+    /* Filter for the item itself (if any) - separate from backdrop-filter */
+    filter: brightness(100%) !important;
+
+    /* Default state: no backdrop-filter or a very subtle one */
+    backdrop-filter: none !important; /* Or a minimal default like: blur(2px) opacity(0.1) */
+
+    /* Transitions for smooth effect */
+    transition: backdrop-filter 0.3s ease-out,
+                /* Add other properties you want to transition on toolbaritem itself */
+                padding 0.3s ease-out;
+
+    /* This is important for stacking context for the ::before */
+    z-index: 0; /* Or any value that establishes a stacking context */
+}
+
+/* The ::before pseudo-element will be our solid background for blurring */
+#zen-media-controls-toolbar toolbaritem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit; /* Inherit the parent's border-radius */
+
+    /* The solid background color that will be blurred */
+    background: #333333 !important; /* Or your desired background color */
+
+    /* Start hidden/transparent */
+    opacity: 0;
+    z-index: -1; /* Position it behind the toolbaritem's content */
+
+    /* Transition for the background appearance */
+    transition: opacity 0.1s ease-out;
+}
+
+/* --- HOVER STATES --- */
+
+#zen-media-controls-toolbar toolbaritem:hover {
+    /* Apply the strong backdrop-filter on hover */
+    backdrop-filter: brightness(20%) blur(100px) saturate(1) contrast(1) !important;
+    /* You can also change other properties of the toolbaritem on hover */
+    /* filter: brightness(110%) !important; */
+    /* padding: 6px !important; */
+}
+
+#zen-media-controls-toolbar toolbaritem:hover::before {
+    /* Make the solid background visible on hover */
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==== "Miniplayer" ==== */
+/*----------------------------------animation shit ---------------------------------*/
+@keyframes appear-animation {
+  0% {
+    gap: 0;
+  }
+
+  40% {
+    gap: 9px;
+  }
+
+  100% {
+    gap: 6px;
+  }
+}
+
+#zen-media-current-time, #zen-media-duration {
+  font-variant-numeric: tabular-nums;
+}
+
+
+    toolbarbutton {
+      z-index: 999 !important;
+    }
+  }
+
+  &:hover {
+    @media (-moz-bool-pref: "natsumi.experiments.miniplayer-bounce") {
+      /* Hidden under a pref in case Cheff steals this */
+      & #zen-media-main-vbox {
+        animation: appear-animation 0.3s ease-in-out !important;
+      }
+    }
+  }
+
+  &:not(:hover) {
+    {
+      & #zen-media-main-vbox {
+        transition: gap 0.15s ease-in-out !important;
+      }
+    }
+
+    /*-----------------------------------------------*/
+    #zen-media-service-hbox {
+      padding-top: 0 !important;
+    }
+
+    & > toolbaritem {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+
+
+  #zen-media-title {
+    font-size: 17px !important;
+    margin-top: -4px !important;
+    height: auto !important;
+     margin-bottom: 2px !important;
+  }
+
+  #zen-media-artist {
+    font-size: 10px !important;
+   
+  }
+}
+.tab-text.tab-label {
+      font-size: 8px !important;
+    }
+
+#theme-Tab-Text-Size {
+    .tab-text.tab-label {
+      font-size: 22px !important;
+    }
+  }
+}
+
+#zen-media-info-vbox {
+  #zen-media-controls-toolbar:not([media-position-hidden='true']) & {
+    transition-delay: 0.01s !important;
+    transform: translateY(-0.4rem);
+  }
+  overflow-x: hidden;
+  overflow-x: visible;
+  white-space: nowrap;
+  /* Overflow inner box shadow from the left to simulate overflow */
+  mask-image: none !important;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0.6em;
+    background: none !important;
+    pointer-events: none;
+    top: 6px;
+    left: -2px;
+    height: calc(100% - 6px);
+    z-index: 1;
+  }
+
+  & label {
+    min-height: 16px;
+    margin-left: 0;
+    font-weight: 500;
+    animation: zen-marquee-h 10s ease-in-out infinite;
+  }
+}
+
+
+#zen-media-info-vbox {
+  mask-image: linear-gradient(to left, transparent, var(--zen-media-control-bg) 0.6em, var(--zen-media-control-bg) calc(100% - 0.6em), transparent) !important;
+
+  &::before {
+    display: none !important;
+  }
+}
+
+
+#zen-media-main-vbox {
+  margin-bottom: 1px !important;
+  margin-top: 1px !important;
+}
+
+
+#zen-media-progress-bar {
+    appearance: none;
+    width: 100%;
+    height: var(--progress-height);
+    margin: 0 8px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: height 0.15s ease-out;
+
+    &::-moz-range-track {
+      background: rgba(255, 255, 255, 0.2) !important;
+      border-radius: 999px;
+      height: 3px !important;
+    }
+
+    &::-moz-range-progress {
+      background:  rgba(76, 218, 218, 1.8) !important;
+      border-radius: 999px;
+      height: 3px !important;
+    }
+
+    &::-moz-range-thumb {
+      background: rgba(0, 55, 55, 1) !important;
+      border: none;
+      width: calc(var(--progress-height) * 2);
+      height: calc(var(--progress-height) * 2);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+/*---------------------------------------------*/
+
+
+
+
+.sidebar-panel {
+  background: transparent !important;
+  font-weight: 600 !important;
+  opacity: 0.7 !important;
+}
+
+
+/* Transparent Findbar */
+findbar {
+  background: none !important;
+ 
+}
+
+
+
+
+
+
+.tab-text{
+  width: 98% !important;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 1 !important;
+  
+   filter:  brightness(100%)  !important;
+  
+}
+
+
+
+#tabbrowser-tabs {
+  & .tabbrowser-tab {
+    
+
+
+    &[pinned]:not([pending='true']):not([zen-essential]) {
+     
+
+        & .tab-icon-stack {
+   
+  
+    scale: 1.1 !important;
+    margin-left: 2px !important;}
+   
+    & .tab-label {
+      margin-left: 1px !important;
+     
+    }
+      }
+    } }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #tabbrowser-arrowscrollbox[orient="vertical"] #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button,
 #vertical-tabs-newtab-button {
   appearance: none;
