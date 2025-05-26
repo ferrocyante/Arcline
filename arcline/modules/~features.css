@@ -1,3 +1,17 @@
+
+
+#translations-button-icon {
+ 
+  display: none !important;
+}
+
+#translations-button{
+  display: none !important;
+}
+
+
+
+
 /* ============ COMPACT EXTENSIONS (Credit: KiKaraage) ================== */
 #unified-extensions-view{
   
