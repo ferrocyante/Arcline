@@ -25,6 +25,9 @@
   position: relative;
 }
 
+.tab-background[selected] {
+
+}
 
 
 
@@ -264,11 +267,14 @@ list-style-image: none !important;
 
 
 
-
+#downloads-indicator-finish-box,#downloads-indicator-start-image,#downloads-indicator-progress-inner,#downloads-indicator-progress-outer,#downloads-indicator-finish-image{
+  display: none !important;
+}
 
 #downloads-button{
   margin-left: 0px !important;
  margin-bottom: -3.5px !important;
+  list-style-image: none !important;
 }
 
 
@@ -282,21 +288,14 @@ list-style-image: none !important;
   
   height: 24px;
   width: 28px;
- margin-top: -3px !important;
+ margin-top: -2px !important;
+  margin-bottom: -1px !important;
   scale: 1;
   margin-right: -5px !important;
- margin-left: -3px !important;
+ margin-left: -4px !important;
   filter: invert(0) brightness(110%) contrast(75%);
   list-style-image: none !important;
 }
-
-/* Make space for the pseudo-element and allow positioning */
- #downloads-indicator-anchor{
-    position: relative !important;
-    /* If your new icon is smaller/larger you might adjust padding, or let the pseudo-element overflow */
-}
-
-
 
 
 
