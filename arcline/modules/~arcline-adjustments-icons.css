@@ -226,8 +226,8 @@ transform-origin: center !important;
     /* --- Positioning the custom icon --- */
     /* Example: Center it within the button */
     position: relative !important;
-    top: 98% !important;
-    left: -14% !important;
+    top: 100% !important;
+    left: -18% !important;
 width: 2px !important;
   scale: 1.4 !important;
     transform: translate(-1520%, -50%) !important;
