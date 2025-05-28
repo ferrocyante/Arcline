@@ -172,6 +172,8 @@ margin-left: -4px !important;
 
 
 
+#zen-media-controls-toolbar toolbaritem {
+  border-radius: 12px !important; }
 
 
 
@@ -179,23 +181,6 @@ margin-left: -4px !important;
 
 
 
-
-
-
-
-
-
-
-/* Zen 1.12.6b Fix */
-:root[customizing] #TabsToolbar-customization-target {
-  visibility: visible !important;
-}
-
-.zen-workspace-pinned-tabs-section {
-  display: flex !important;
-  flex-direction: column;
-
-}
 
 
 
