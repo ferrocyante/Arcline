@@ -116,5 +116,5 @@ body:has([zen-compact-mode="true"]) #titlebar {
         background-color: var(--natsumi-mat-hz-background) !important;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) !important;
 }
-       
+    }  
   
