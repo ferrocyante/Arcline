@@ -1,5 +1,5 @@
 
-@media (-moz-pref("arcline.compact.sidebar.bg", 1)) {
+@media (-moz-pref("arcline.compact.sidebar.bg", 0)) {
      
       *{
   /* Colors */
