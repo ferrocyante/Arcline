@@ -257,7 +257,7 @@ list-style-image: none !important;
   width: 28px;
  margin-top: -2px !important;
   margin-bottom: -1px !important;
-  scale: 1;
+  scale: 0.975 ;
   margin-right: -5px !important;
  margin-left: -4px !important;
   filter: invert(0) brightness(110%) contrast(75%);
