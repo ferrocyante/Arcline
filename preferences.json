@@ -323,37 +323,6 @@
   },
   {
     "type": "separator",
-    "label": "Tidy Downloads"
-  },
-  {
-    "property": "extensions.downloads.disable_autohide",
-    "type": "checkbox",
-    "label": "Disable automatic card hiding after 20 seconds",
-    "defaultValue": false
-  },
-  {
-    "property": "extensions.downloads.enable_ai_renaming",
-    "type": "checkbox", 
-    "label": "Enable AI-powered file renaming (requires API key below)",
-    "defaultValue": true
-  },
-    {
-    "property": "extensions.downloads.enable_debug",
-    "type": "checkbox",
-    "label": "Enable debugging logs in browser console (Ctrl + Shift + J)",
-    "defaultValue": false
-  },
-  {
-    "property": "extensions.downloads.debug_ai_only",
-    "type": "checkbox",
-    "label": "Show only AI renaming debug logs",
-    "defaultValue": true,
-    "conditions": [
-      {"if": {"property": "extensions.downloads.enable_debug", "value": true}}
-    ]
-  },
-  {
-    "type": "separator",
     "label": "AI"
   },
   {
@@ -361,11 +330,5 @@
     "label": "Insert mistral api key for sort button.",
     "type": "string",
     "placeholder": "API Key."
-  },
-  {
-    "property": "extensions.downloads.mistral_api_key",
-    "label": "Mistral API key for AI-powered download renaming",
-    "type": "string",
-    "placeholder": "Enter your Mistral API key here"
   }
 ]
