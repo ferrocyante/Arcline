@@ -60,12 +60,8 @@
   transform: translateX(18px) scale(0.95) !important; /* Combined scale */
   filter: brightness(820%) !important;
 transform-origin: center !important;
-  /*
-  Regarding 'list-style-image':
-  The original CSS for `#permissions-granted-icon` already sets:
-  `list-style-image: url(chrome://browser/skin/permissions.svg);`
-  If you want to change it to your GitHub SVG:
-  */
+  
+  
   list-style-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg viewBox='57.952 45.721 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' width='24' height='24' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='fill site.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M 79.333 52.766 C 79.951 54.14 79.742 62.673 79.374 61.856 C 79.682 64.781 77.666 67.257 74.386 66.594 C 74.386 67.084 65.698 67.668 65.698 66.844 C 62.491 67.434 60.687 64.663 60.96 61.773 C 60.02 61.896 59.172 53.097 60.752 52.891 C 60 50.79 61.408 49.653 62.911 49.017 C 61.256 49.908 60.6 51.643 60.604 54.565 C 60.604 54.81 60.612 60.977 60.612 60.565 C 61.666 64.546 62.267 66.796 66.871 66.752 L 72.871 66.692 C 77.481 66.645 79.119 64.989 79.112 60.379 L 79.104 54.379 C 79.099 51.406 78.415 49.675 76.694 48.833 C 78.388 49.671 79.517 51.074 79.333 52.766 Z M 72.873 68.192 L 66.873 68.252 C 61.444 68.307 59.12 66.01 59.112 60.58 L 59.104 54.58 C 59.096 49.15 61.413 46.807 66.843 46.752 L 72.843 46.692 C 78.272 46.637 80.596 48.934 80.604 54.364 L 80.612 60.364 C 80.62 65.794 78.303 68.137 72.873 68.192 Z M 76.983 61.287 C 76.982 60.877 76.642 60.54 76.232 60.545 L 72.332 60.584 C 71.922 60.588 71.583 60.931 71.583 61.341 C 71.584 61.751 71.924 62.088 72.334 62.084 L 76.234 62.045 C 76.644 62.04 76.984 61.697 76.983 61.287 Z M 65.931 61.398 L 65.931 61.397 C 65.931 60.378 66.76 59.541 67.778 59.531 C 68.797 59.52 69.629 60.342 69.63 61.362 C 69.632 62.382 68.803 63.22 67.783 63.231 C 66.764 63.241 65.934 62.41 65.931 61.4 C 65.931 61.399 65.931 61.399 65.931 61.398 Z M 63.23 60.675 C 62.82 60.68 62.481 61.023 62.481 61.433 C 62.482 61.843 62.822 62.18 63.232 62.175 L 64.516 62.162 C 64.859 63.648 66.193 64.747 67.785 64.731 C 69.635 64.712 71.133 63.187 71.13 61.347 C 71.127 59.497 69.625 58.012 67.775 58.031 C 66.184 58.046 64.854 59.17 64.515 60.662 L 63.23 60.675 Z M 76.972 54.127 C 76.971 53.717 76.631 53.38 76.221 53.385 L 74.937 53.398 C 74.594 51.912 73.26 50.815 71.668 50.83 C 69.818 50.849 68.32 52.364 68.323 54.214 C 68.326 56.064 69.828 57.549 71.678 57.53 C 73.27 57.515 74.601 56.39 74.94 54.898 L 76.223 54.885 C 76.633 54.88 76.972 54.547 76.972 54.127 Z M 73.522 54.162 C 73.522 54.173 73.522 54.184 73.523 54.195 C 73.506 55.2 72.684 56.02 71.675 56.03 C 70.656 56.041 69.824 55.229 69.823 54.199 C 69.821 53.179 70.65 52.341 71.67 52.33 C 72.679 52.32 73.503 53.124 73.523 54.129 C 73.522 54.14 73.522 54.151 73.522 54.162 Z M 67.871 54.219 C 67.87 53.809 67.53 53.472 67.12 53.476 L 63.22 53.515 C 62.81 53.52 62.47 53.863 62.471 54.273 C 62.472 54.683 62.812 55.02 63.222 55.015 L 67.122 54.976 C 67.532 54.972 67.871 54.639 67.871 54.219 Z' style='stroke: rgb(157, 90, 90); stroke-width: 0px; fill: rgb(255, 255, 255);'/%3E%3Crect x='-55.312' y='47.91' width='41.859' height='28.433' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);'/%3E%3Cpath d='M -24.239 20.421 L -24.247 14.421 C -24.255 8.991 -26.579 6.694 -32.008 6.749 L -38.008 6.809 C -43.438 6.864 -45.755 9.207 -45.747 14.637 L -45.739 20.637 C -45.731 26.067 -43.407 28.364 -37.978 28.309 L -31.978 28.249 C -26.548 28.194 -24.231 25.851 -24.239 20.421 Z M -44.247 14.622 C -44.254 10.012 -42.616 8.356 -38.006 8.309 L -32.006 8.249 C -27.396 8.202 -25.754 9.826 -25.747 14.436 L -25.739 20.436 C -25.732 25.046 -27.37 26.702 -31.98 26.749 L -37.98 26.809 C -42.59 26.856 -44.232 25.232 -44.239 20.622 L -44.247 14.622 Z' style='fill: rgb(255, 255, 255); transform-origin: -34.993px 17.529px;'/%3E%3Cpath d='M 67.884 27.942 L 67.875 20.838 C 67.866 14.41 65.134 11.69 58.753 11.755 L 51.702 11.826 C 45.32 11.891 42.597 14.666 42.606 21.093 L 42.615 28.197 C 42.624 34.625 45.356 37.345 51.737 37.28 L 58.789 37.209 C 65.17 37.144 67.893 34.369 67.884 27.942 Z M 44.369 21.077 C 44.361 15.618 46.286 13.658 51.704 13.601 L 58.756 13.531 C 64.174 13.476 66.103 15.397 66.112 20.856 L 66.121 27.958 C 66.129 33.417 64.204 35.376 58.786 35.434 L 51.734 35.504 C 46.316 35.559 44.387 33.639 44.378 28.179 L 44.369 21.077 Z' style='fill: rgb(255, 255, 255); stroke-width: 7px; transform-origin: 55.246px 24.516px;'/%3E%3C/svg%3E%0A") !important;
 
 }
@@ -151,6 +147,7 @@ transform-origin: center !important;
 #new-tab-button
 {
   list-style-image: none !important;
+  background-size: contain !important;
  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='plus.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M6 12h12M12 18V6' stroke-linecap='round' stroke-linejoin='round' style='stroke: rgb(255, 255, 255); stroke-width: 1.9px;'/%3E%3C/svg%3E%0A") !important;
   filter: invert(0) brightness(85%) contrast(75%);
   scale: 0.8;
@@ -190,6 +187,7 @@ transform-origin: center !important;
 }
 
 
+
 /* Optional: Style your custom icon on hover if needed */
 #PanelUI-menu-button:hover::before {
     color: var(--toolbarbutton-hover-icon-fill, var(--toolbarbutton-icon-fill-attention));
@@ -225,11 +223,11 @@ transform-origin: center !important;
     /* --- Positioning the custom icon --- */
     /* Example: Center it within the button */
     position: relative !important;
-    top: 98% !important;
-    left: -14% !important;
-
+    top: 100% !important;
+    left: -18% !important;
+width: 2px !important;
   scale: 1.4 !important;
-    transform: translate(-50%, -50%) !important;
+    transform: translate(-1520%, -50%) !important;
 pointer-events: none !important;
     /* Ensure it's clickable if it covers the button area, though the button itself is the target */
     
@@ -239,12 +237,12 @@ pointer-events: none !important;
 
 
 #unified-extensions-button{
-
+ 
   filter: grayscale(0) brightness(160%) contrast(100%)  !important;
- scale: 0.8 !important;
-  padding-right: 0px !important;
+ scale: 0.75 !important;
+  
  max-width: 95px !important;
- margin-right: -41px !important;
+ margin-right: -8px !important;
   margin-left: 0px !important;
 list-style-image: none !important;
  
@@ -265,11 +263,14 @@ list-style-image: none !important;
 
 
 
-
+#downloads-indicator-finish-box,#downloads-indicator-start-image,#downloads-indicator-progress-inner,#downloads-indicator-progress-outer,#downloads-indicator-finish-image{
+  display: none !important;
+}
 
 #downloads-button{
   margin-left: 0px !important;
  margin-bottom: -3.5px !important;
+  list-style-image: none !important;
 }
 
 
@@ -278,36 +279,18 @@ list-style-image: none !important;
 {
    
 	/* list-style-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!--Generator: Apple Native CoreSVG 175.5--%3E%3C!DOCTYPE svg%0APUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='18' height='19' viewBox='0 0 18 19'%3E%3Cpath clip-rule='evenodd' d='M3.77342 7.4349H8.70141C8.63186 7.23679 8.67512 7.01559 8.81597 6.85805L10.0141 5.51794C10.3596 5.13139 10.0611 4.52048 9.5438 4.55559L7.75033 4.67734C7.53091 4.69224 7.32204 4.58138 7.2114 4.39131L6.30711 2.83774C6.04627 2.38963 5.373 2.48476 5.24655 2.9876L4.80812 4.73091C4.75449 4.94419 4.58451 5.10859 4.36955 5.15507L2.61258 5.53503C2.1058 5.64462 1.98822 6.31434 2.42737 6.58999L3.77342 7.4349ZM10.2402 2.89143C10.6964 2.89143 11.0662 2.52158 11.0662 2.06534C11.0662 1.60911 10.6964 1.23926 10.2402 1.23926C9.78392 1.23926 9.41407 1.60911 9.41407 2.06534C9.41407 2.52158 9.78392 2.89143 10.2402 2.89143ZM12.0452 6.79187C11.7714 6.95107 11.4277 6.75551 11.4246 6.43877L11.3982 3.70215C11.3952 3.3836 11.7386 3.18163 12.0155 3.33916L14.4078 4.70021C14.6847 4.85774 14.6866 5.25617 14.4112 5.4163L12.0452 6.79187ZM3.21819 9.08708C3.21819 8.63084 3.58804 8.26099 4.04427 8.26099H13.9573C14.4136 8.26099 14.7834 8.63084 14.7834 9.08708V13.2175C14.7834 15.0425 13.304 16.5219 11.4791 16.5219H6.52254C4.69759 16.5219 3.21819 15.0425 3.21819 13.2175V9.08708ZM6.60878 10.3262C6.60878 9.86998 6.97863 9.50013 7.43487 9.50013H10.7392C11.1955 9.50013 11.5653 9.86998 11.5653 10.3262C11.5653 10.7824 11.1955 11.1523 10.7392 11.1523H7.43487C6.97863 11.1523 6.60878 10.7824 6.60878 10.3262Z' fill='black' fill-rule='evenodd'/%3E%3C/svg%3E") !important; */
-list-style-image:  none !important;
-   
-  height: 18px;
-  width: 22px;
-  margin-bottom: 6px !important;
-  scale: 0.048;
- margin-left: -3px !important;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='3.048 2.032 500 500' xmlns:bx='https://boxy-svg.com' width='500px' height='420px'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='png' excluded='true'/%3E%3Cbx:file format='png' path='Untitled 2.png' excluded='true'/%3E%3Cbx:file format='pdf' excluded='true'%3E%3Cbx:page/%3E%3C/bx:file%3E%3Cbx:file format='jpeg' excluded='true'/%3E%3Cbx:file format='svg'/%3E%3Cbx:file format='png' path='Untitled 3.png' excluded='true'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M 117.019 229.189 L 358.157 229.189 C 370.419 229.189 380.359 239.378 380.359 251.948 L 380.359 359.696 C 380.359 361.892 380.056 364.016 379.49 366.025 L 379.49 376.137 C 379.49 422.439 342.874 459.973 297.705 459.973 L 175.73 459.973 C 130.562 459.973 93.946 422.439 93.946 376.137 L 93.946 318.55 C 93.946 314.379 94.243 310.281 94.817 306.275 L 94.817 251.948 C 94.817 239.378 104.756 229.189 117.019 229.189 Z M 163.119 286.634 L 163.119 298.372 C 163.119 308.337 170.999 316.415 180.72 316.415 L 293.541 316.415 C 303.261 316.415 311.142 308.337 311.142 298.372 L 311.142 286.634 C 311.142 276.67 303.261 268.592 293.541 268.592 L 180.72 268.592 C 170.999 268.592 163.119 276.67 163.119 286.634 Z' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);'/%3E%3Cpath d='M -269.92 -189.491 Q -252.676 -214.41 -233.996 -189.491 L -204.641 -150.333 Q -185.961 -125.414 -221.885 -125.414 L -278.336 -125.414 Q -314.26 -125.414 -297.017 -150.333 Z' bx:shape='triangle -314.26 -214.41 128.299 88.996 0.48 0.28 1@f64ec2de' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' transform='matrix(-1, 0, 0, -1, 0, 0)'/%3E%3Cpath d='M -192.578 148.485 Q -154.729 125.322 -114.7 148.485 L -53.312 184.008 Q -13.283 207.171 -91.161 207.171 L -210.592 207.171 Q -288.47 207.171 -250.621 184.008 Z' bx:shape='triangle -288.47 125.322 275.187 81.849 0.486 0.283 1@a4279517' style='fill: rgb(216, 216, 216);' transform='matrix(-1, 0, 0, 1, 0, -0.000008)'/%3E%3Cpath d='M -193.628 147.815 C -168.84 132.499 -142.9 132.494 -116.065 147.806 L -53.102 183.819 C -46.393 187.659 -42.055 191.078 -40.213 194.014 C -39.269 195.518 -38.936 197.044 -39.287 198.349 C -39.636 199.647 -40.695 200.872 -42.299 201.867 C -48.553 205.742 -64.621 207.669 -90.335 207.671 L -211.418 207.671 C -237.131 207.669 -253.446 205.744 -260.209 201.876 C -261.935 200.888 -263.133 199.69 -263.651 198.406 C -264.175 197.107 -264.045 195.573 -263.299 194.058 C -261.844 191.109 -257.946 187.673 -251.748 183.828 Z M -251.222 184.678 C -257.352 188.473 -261.031 191.721 -262.402 194.501 C -263.068 195.851 -263.163 196.943 -262.724 198.032 C -262.279 199.134 -261.325 200.085 -259.712 201.007 C -253.12 204.779 -237.073 206.673 -211.418 206.671 L -90.335 206.671 C -64.681 206.673 -48.901 204.781 -42.826 201.016 C -41.348 200.101 -40.545 199.177 -40.252 198.089 C -39.961 197.006 -40.206 195.906 -41.06 194.545 C -42.813 191.752 -46.951 188.486 -53.598 184.687 L -116.561 148.674 C -143.148 133.428 -168.577 133.424 -193.102 148.665 Z' style='' transform='matrix(-1, 0, 0, 1, 0, -0.000008000000889296643)'/%3E%3Cpath d='M 401.465 52.246 Q 422.91 20.192 446.142 52.246 L 482.649 102.618 Q 505.881 134.672 461.204 134.672 L 390.998 134.672 Q 346.321 134.672 367.766 102.618 Z' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0, 1, -1, 0, -45.44669, 50.293808)' bx:shape='triangle 346.321 20.192 159.56 114.48 0.48 0.28 1@850947fa'/%3E%3Cellipse style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' cx='278.361' cy='56.089' rx='35.604' ry='32.308'/%3E%3Cpath style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' d='M 123.465 146.514 L 140.608 128.052'/%3E%3Cpath style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' d='M 148.52 97.722 L 134.014 138.602'/%3E%3Cpath d='M 137.763 85.801 Q 140.895 51.242 178.448 85.801 L 237.459 140.109 Q 275.012 174.668 234.327 174.668 L 170.392 174.668 Q 129.707 174.668 132.84 140.109 Z' bx:shape='triangle 129.707 51.242 145.305 123.426 0.077 0.28 1@775fba0d' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0.991726, 0.128375, -0.128375, 0.991726, -3.073037, -6.853564)'/%3E%3C/svg%3E%0A");
+  background-size: contain !important;
+  
+  height: 24px;
+  width: 28px;
+ margin-top: -2px !important;
+  margin-bottom: -1px !important;
+  scale: 1;
+  margin-right: -5px !important;
+ margin-left: -4px !important;
   filter: invert(0) brightness(110%) contrast(75%);
-  
-}
-
-/* Make space for the pseudo-element and allow positioning */
- #downloads-indicator-anchor{
-    position: relative !important;
-    /* If your new icon is smaller/larger you might adjust padding, or let the pseudo-element overflow */
-}
-
-
-
-#downloads-indicator-anchor::before {
-    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='3.048 2.032 500 500' xmlns:bx='https://boxy-svg.com' width='500px' height='500px'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='png' excluded='true'/%3E%3Cbx:file format='png' path='Untitled 2.png' excluded='true'/%3E%3Cbx:file format='pdf' excluded='true'%3E%3Cbx:page/%3E%3C/bx:file%3E%3Cbx:file format='jpeg' excluded='true'/%3E%3Cbx:file format='svg'/%3E%3Cbx:file format='png' path='Untitled 3.png' excluded='true'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M 117.019 229.189 L 358.157 229.189 C 370.419 229.189 380.359 239.378 380.359 251.948 L 380.359 359.696 C 380.359 361.892 380.056 364.016 379.49 366.025 L 379.49 376.137 C 379.49 422.439 342.874 459.973 297.705 459.973 L 175.73 459.973 C 130.562 459.973 93.946 422.439 93.946 376.137 L 93.946 318.55 C 93.946 314.379 94.243 310.281 94.817 306.275 L 94.817 251.948 C 94.817 239.378 104.756 229.189 117.019 229.189 Z M 163.119 286.634 L 163.119 298.372 C 163.119 308.337 170.999 316.415 180.72 316.415 L 293.541 316.415 C 303.261 316.415 311.142 308.337 311.142 298.372 L 311.142 286.634 C 311.142 276.67 303.261 268.592 293.541 268.592 L 180.72 268.592 C 170.999 268.592 163.119 276.67 163.119 286.634 Z' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);'/%3E%3Cpath d='M -269.92 -189.491 Q -252.676 -214.41 -233.996 -189.491 L -204.641 -150.333 Q -185.961 -125.414 -221.885 -125.414 L -278.336 -125.414 Q -314.26 -125.414 -297.017 -150.333 Z' bx:shape='triangle -314.26 -214.41 128.299 88.996 0.48 0.28 1@f64ec2de' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' transform='matrix(-1, 0, 0, -1, 0, 0)'/%3E%3Cpath d='M -192.578 148.485 Q -154.729 125.322 -114.7 148.485 L -53.312 184.008 Q -13.283 207.171 -91.161 207.171 L -210.592 207.171 Q -288.47 207.171 -250.621 184.008 Z' bx:shape='triangle -288.47 125.322 275.187 81.849 0.486 0.283 1@a4279517' style='fill: rgb(216, 216, 216);' transform='matrix(-1, 0, 0, 1, 0, -0.000008)'/%3E%3Cpath d='M -193.628 147.815 C -168.84 132.499 -142.9 132.494 -116.065 147.806 L -53.102 183.819 C -46.393 187.659 -42.055 191.078 -40.213 194.014 C -39.269 195.518 -38.936 197.044 -39.287 198.349 C -39.636 199.647 -40.695 200.872 -42.299 201.867 C -48.553 205.742 -64.621 207.669 -90.335 207.671 L -211.418 207.671 C -237.131 207.669 -253.446 205.744 -260.209 201.876 C -261.935 200.888 -263.133 199.69 -263.651 198.406 C -264.175 197.107 -264.045 195.573 -263.299 194.058 C -261.844 191.109 -257.946 187.673 -251.748 183.828 Z M -251.222 184.678 C -257.352 188.473 -261.031 191.721 -262.402 194.501 C -263.068 195.851 -263.163 196.943 -262.724 198.032 C -262.279 199.134 -261.325 200.085 -259.712 201.007 C -253.12 204.779 -237.073 206.673 -211.418 206.671 L -90.335 206.671 C -64.681 206.673 -48.901 204.781 -42.826 201.016 C -41.348 200.101 -40.545 199.177 -40.252 198.089 C -39.961 197.006 -40.206 195.906 -41.06 194.545 C -42.813 191.752 -46.951 188.486 -53.598 184.687 L -116.561 148.674 C -143.148 133.428 -168.577 133.424 -193.102 148.665 Z' style='' transform='matrix(-1, 0, 0, 1, 0, -0.000008000000889296643)'/%3E%3Cpath d='M 401.465 52.246 Q 422.91 20.192 446.142 52.246 L 482.649 102.618 Q 505.881 134.672 461.204 134.672 L 390.998 134.672 Q 346.321 134.672 367.766 102.618 Z' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0, 1, -1, 0, -45.44669, 50.293808)' bx:shape='triangle 346.321 20.192 159.56 114.48 0.48 0.28 1@850947fa'/%3E%3Cellipse style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' cx='278.361' cy='56.089' rx='35.604' ry='32.308'/%3E%3Cpath style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' d='M 123.465 146.514 L 140.608 128.052'/%3E%3Cpath style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);' d='M 148.52 97.722 L 134.014 138.602'/%3E%3Cpath d='M 137.763 85.801 Q 140.895 51.242 178.448 85.801 L 237.459 140.109 Q 275.012 174.668 234.327 174.668 L 170.392 174.668 Q 129.707 174.668 132.84 140.109 Z' bx:shape='triangle 129.707 51.242 145.305 123.426 0.077 0.28 1@775fba0d' style='fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-box: fill-box; transform-origin: 50%25 50%25;' transform='matrix(0.991726, 0.128375, -0.128375, 0.991726, -3.073037, -6.853564)'/%3E%3C/svg%3E%0A");
-  
-  /* Example: Center it within the button */
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-40%, -44%) !important;
-
-    /* Ensure it's clickable if it covers the button area, though the button itself is the target */
-    pointer-events: none !important; /* Usually good so it doesn't interfere */
+  list-style-image: none !important;
 }
 
 
@@ -578,17 +561,16 @@ transform-origin: center !important;
       filter: brightness(85%)  !important;
      width: 28px !important;
     height: 12.5px !important;
-    padding-bottom: 1px !important;
+   
     list-style-image: none !important;
     background-repeat: none !important;
   background-size:    contain !important;
     
-    transform: translate(-5%,-6%) !important;
+    transform: translate(5%, 0.5%) !important;
 
     scale: 0.85 !important;
     padding-bottom: 1px !important;
- 
-    
+  
     
     background-image:   url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='15' height='7' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='final back.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M6.50172 1.55747C6.80961 1.28038 6.83456 0.806158 6.55747 0.498275C6.28038 0.190393 5.80616 0.165434 5.49828 0.442528L0.498276 4.94253C0.340241 5.08476 0.25 5.28738 0.25 5.5C0.25 5.71261 0.340241 5.91524 0.498276 6.05747L5.49828 10.5575C5.80616 10.8346 6.28038 10.8096 6.55747 10.5017C6.83456 10.1938 6.80961 9.71962 6.50172 9.44253L2.95447 6.25H15C15.4142 6.25 15.75 5.91421 15.75 5.5C15.75 5.08578 15.4142 4.75 15 4.75H2.95447L6.50172 1.55747Z' style='fill-opacity: 0.85; fill: rgb(232, 232, 232);'/%3E%3C/svg%3E%0A")!important;
 
@@ -596,20 +578,21 @@ transform-origin: center !important;
 
 
   #forward-button {
-    fill: white !important;
+    fill: black !important;
     filter: brightness(85%)  !important;
-    scale: 0.92 !important;
+    scale: 0.82 !important;
     width: 28px !important;
-    height: 13px !important;
-    padding-bottom: 1px !important;
+    height: 14px !important;
+    
     list-style-image: none !important;
     background-repeat: none !important;
-  background-size:    contain !important;
+  background-size:  contain !important;
     
-    transform: translate(-5%,-1%) !important;
+  
 
-    
-  background-image:  url("data:image/svg+xml,%3Csvg width='23' height='10' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 10L14 5.5M14 5.5L9 1M14 5.5H1' stroke='white' stroke-opacity='0.8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ") !important;
+   background-image:   url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='15' height='7' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='final back.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath d='M6.50172 1.55747C6.80961 1.28038 6.83456 0.806158 6.55747 0.498275C6.28038 0.190393 5.80616 0.165434 5.49828 0.442528L0.498276 4.94253C0.340241 5.08476 0.25 5.28738 0.25 5.5C0.25 5.71261 0.340241 5.91524 0.498276 6.05747L5.49828 10.5575C5.80616 10.8346 6.28038 10.8096 6.55747 10.5017C6.83456 10.1938 6.80961 9.71962 6.50172 9.44253L2.95447 6.25H15C15.4142 6.25 15.75 5.91421 15.75 5.5C15.75 5.08578 15.4142 4.75 15 4.75H2.95447L6.50172 1.55747Z' style='fill-opacity: 0.85; fill: rgb(232, 232, 232);'/%3E%3C/svg%3E%0A")!important;
+ transform:  rotate(180deg)  translate(0%,-0.5%)  !important;  
+
 }
 
 
@@ -620,7 +603,7 @@ transform-origin: center !important;
     filter: brightness(95%) !important;
     scale: 1.1 !important;
     list-style-image:  url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='0 0 16 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.57617 1.01987C8.31099 0.701658 7.83807 0.658665 7.51986 0.923838C7.20165 1.18901 7.15866 1.66193 7.42383 1.98014L8.49597 3.2667C8.33208 3.25563 8.1667 3.25 8 3.25C3.99594 3.25 0.75 6.49594 0.75 10.5C0.75 14.5041 3.99594 17.75 8 17.75C12.0041 17.75 15.25 14.5041 15.25 10.5C15.25 10.2183 15.0143 10 14.7326 10H14.2292C13.9599 10 13.75 10.2308 13.75 10.5C13.75 13.6756 11.1756 16.25 8 16.25C4.82436 16.25 2.25 13.6756 2.25 10.5C2.25 7.32437 4.82436 4.75 8 4.75C8.34186 4.75 8.67674 4.77984 9.0022 4.83704C9.08019 4.85075 9.15841 4.85357 9.23486 4.84664L7.42383 7.01987C7.15866 7.33807 7.20165 7.811 7.51986 8.07617C7.83807 8.34134 8.31099 8.29835 8.57617 7.98014L11.0762 4.98014C11.3079 4.70201 11.3079 4.298 11.0762 4.01987L8.57617 1.01987Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E ") !important;
-    padding-bottom:  4px !important;
+    padding-bottom:  2px !important;
   }
 
   #tabbrowser-tabpanels[zen-split-view="true"] .browserSidebarContainer.deck-selected {
@@ -962,7 +945,7 @@ menuseparator {
     opacity: 0 !important;
   width: 16px !important;
   margin-left: -8px !important;
-  padding-right: 55px !important;
+  padding-right: 25px !important;
 }
 
 }
