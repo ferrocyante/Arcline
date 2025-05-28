@@ -1,7 +1,7 @@
 
 
 @media (-moz-pref("arcline.compact.sidebar.bg", 2)) {
-      ----------------------------------------------------------------------------------------------------------------------------------*/
+   
       *{
   /* Colors */
   --natsumi-primary-color: var(--natsumi-accent-color, var(--zen-primary-color));
@@ -117,4 +117,4 @@ body:has([zen-compact-mode="true"]) #titlebar {
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) !important;
 
 }
-  
+}
