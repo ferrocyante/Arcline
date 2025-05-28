@@ -157,22 +157,22 @@
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
-    "default": 1,
+    "default": 0,
     "options": [
       {
-        "value": 1,
+        "value": 0,
         "label": "normal"
       },
       {
-        "value": 2,
+        "value": 1,
         "label": "dark"
       },
        {
-        "value": 3,
+        "value": 2,
         "label": "dark-tinted"
       },
        {
-        "value": 4,
+        "value": 3,
         "label": "glass-tinted"
       }  
     ]
@@ -183,14 +183,14 @@
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
-    "default": 1,
+    "default": 0,
     "options": [
       {
-        "value": 1,
+        "value": 0,
         "label": "attached"
       },
       {
-        "value": 2,
+        "value": 1,
         "label": "floating"
       }  
     ]
