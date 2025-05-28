@@ -24,6 +24,71 @@
 
 
 
+#zen-media-controls-toolbar toolbaritem {
+  
+  border-radius: 12px !important;}
+
+/*---------------------------------------------*/
+
+
+
+
+.sidebar-panel {
+  background: transparent !important;
+  font-weight: 600 !important;
+  opacity: 0.7 !important;
+}
+
+
+/* Transparent Findbar */
+findbar {
+  background: none !important;
+ 
+}
+
+
+
+
+
+
+.tab-text{
+  width: 98% !important;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 1 !important;
+  
+   filter:  brightness(100%)  !important;
+  
+}
+
+
+
+#tabbrowser-tabs {
+  & .tabbrowser-tab {
+    
+
+
+    &[pinned]:not([pending='true']):not([zen-essential]) {
+     
+
+        & .tab-icon-stack {
+   
+  
+    scale: 1.1 !important;
+    margin-left: 2px !important;}
+   
+    & .tab-label {
+      margin-left: 1px !important;
+     
+    }
+      }
+    } }
+
+  
+
+
 
 
 
@@ -184,18 +249,6 @@ margin-left: -4px !important;
 
 
 
-
-
-/* Zen 1.12.6b Fix */
-:root[customizing] #TabsToolbar-customization-target {
-  visibility: visible !important;
-}
-
-.zen-workspace-pinned-tabs-section {
-  display: flex !important;
-  flex-direction: column;
-
-}
 
 
 
