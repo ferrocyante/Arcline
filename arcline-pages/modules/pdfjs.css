@@ -446,79 +446,38 @@ Edit the natsumi-config.css file instead.
   }
 }
 
-/* global */
-/* ==== Global tweaks ==== */
-
-* {
-  /*noinspection CssInvalidFunction*/
-  @media (-moz-bool-pref: "natsumi.global.highlight-accent-color") {
-    &::-moz-selection, &::selection {
-      background: var(--natsumi-primary-color) !important;
-
-      @media (prefers-color-scheme: dark) {
-        background: color-mix(in srgb, var(--natsumi-colors-primary) 60%, white) !important;
-      }
-    }
+:root {
+  --pdf-js-pseudobg-bg: #dedede;
+  @media (prefers-color-scheme: dark) {
+    --pdf-js-pseudobg-bg: #2e2e2e;
   }
 }
 
-
-/* ... (previous PDF viewer CSS code) ... */
-
-@media not (-moz-bool-pref: "natsumi.pdfjs.disabled") {
-  html[mozdisallowselectionprint]:has(head link:nth-of-type(1)[href^="resource://pdf.js"]) {
-
-    /* ... (all other existing PDF viewer styles like body, #viewerContainer, #toolbarContainer etc.) ... */
-
-    /* ==== YOUR NEW PERSISTENT PSEUDO-ELEMENT ==== */
-    #outerContainer::before { /* Or body::before, or #viewerContainer::before */
-        content: "" !important;
-        position: fixed !important; /* Use fixed to cover the entire viewport */
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important; /* Full viewport width */
-        height: 100vh !important; /* Full viewport height */
-        z-index: -1 !important;   /* Place it behind other content */
-
-        /* --- STYLING OPTIONS --- */
-
-        /* Option 1: Solid Color Background */
-        background-color: var(--natsumi-colors-tertiary, #f0f0f0) !important; /* Example: Use a theme color or a specific color */
-
-        /* Option 2: Subtle Gradient */
-        /* background-image: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.01)) !important; */
-
-        /* Option 3: Texture (requires an image) */
-        /* background-image: url("path/to/your/texture.png") !important; */
-        /* background-repeat: repeat !important; */
-
-        /* Option 4: Match the theme's glass background idea but solid */
-        /* background-color: var(--natsumi-glass-background) !important; */ /* This might be too transparent on its own if that variable is semi-transparent */
-        /* If using natsumi-glass-background and it's transparent, you might want a more opaque version: */
-        /* background-color: color-mix(in srgb, var(--natsumi-colors-secondary) 90%, transparent) !important; */
-
-
-        /* Ensure it doesn't interfere with pointer events if it's just a background */
-        pointer-events: none !important;
-
-        /* Optional: Add a very subtle transition if its properties might change (unlikely for a static background) */
-        /* transition: background-color 0.3s ease; */
-    }
-
-    /*
-       If you choose #viewerContainer::before, make sure #viewerContainer has position: relative;
-       If you choose #outerContainer::before, make sure #outerContainer has position: relative;
-       If you choose body::before, no extra positioning on body is usually needed for 'fixed'.
-    */
-    #outerContainer { /* If using #outerContainer::before */
-        position: relative; /* Ensures z-index on ::before works as expected within this container */
-                            /* and ::before is contained if you were to use position:absolute */
-    }
-
-
-    /* ... (rest of the PDF viewer CSS) ... */
-
-  }
+#mainContainer::before {
+  content: '' !important;
+  position: absolute !important;
+  background: var(--pdf-js-pseudobg-bg) !important;
+  top: 5px !important;
+  left: 50% !important;
+  transform: translate(-50%, 0);
+  width: calc(100% - 10px) !important;
+  max-width: min(var(--natsumi-pdfjs-topbar-max-width), calc(100% - 10px)) !important;
+  border-radius: 10px;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  height: calc(var(--toolbar-height)) !important;
+  z-index: -10000 !important;
 }
 
-/* ... (global tweaks CSS) ... */
+.sidebarOpen::before {
+  content: '';
+  background: var(--pdf-js-pseudobg-bg) !important;
+  position: absolute !important;
+  height: calc(100% - 62px) !important;
+  left: 5px !important;
+  top: auto !important;
+  bottom: 5px !important;
+  border-radius: 10px !important;
+  width: var(--sidebar-width) !important;
+
+}
