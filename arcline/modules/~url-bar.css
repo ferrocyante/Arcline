@@ -195,7 +195,7 @@ body:has(#urlbar[open]) #browser::before {
 
 
 .urlbar-input {
-    font-size: 14px !important;
+    font-size: 13.5px !important;
    /* color: #FFFFFF !important;*/
 
   /*  padding-right: 12px !important;*/
