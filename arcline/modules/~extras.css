@@ -178,13 +178,14 @@ margin-bottom: -12px !important;
 
 }
 
+@media not (-moz-pref("arcline.pinned.extensions", 1)) {
+  
 
-#tabbrowser-tabs {
+ #tabbrowser-tabs {
    
     min-height: calc(100% + 4px) !important;
   }
-
-
+}
 
 
 
