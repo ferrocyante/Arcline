@@ -1,0 +1,112 @@
+@media (-moz-pref("arcline.pinned.extensions", 1)) {
+
+#zen-sidebar-top-buttons-customization-target {
+  align-items: flex-start !important;
+  padding: 4px 0px !important;
+
+  /* Feel free to delete this. This is the number of toolbar buttons you want at the top * 32px + 1px */
+ min-width: calc(32px * 5 + 1px) !important;
+} 
+:root[customizing] #TabsToolbar-customization-target {
+  visibility: visible !important;
+}
+
+.zen-workspace-pinned-tabs-section {
+  display: flex !important;
+  flex-direction: column;
+} 
+
+
+
+/* Pinned extensions */
+#TabsToolbar-customization-target {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: calc(var(--zen-toolbox-padding) - 3px) !important;
+ 
+  #tabbrowser-tabs {
+    min-width: 100% !important;
+    height: calc(100% - 35px) !important;
+  }
+  
+  #Zen-tabs-wrapper {
+    max-height: 700px !important;
+  }
+  
+  .unified-extensions-item-action-button {
+    padding: 0px !important;
+  }
+  
+ 
+
+ 
+
+#zen-sidebar-bottom-buttons {
+  background: transparent;
+  gap: 5px;
+  align-items: center;
+  padding-top: var(--zen-element-separation);
+  --toolbarbutton-inner-padding: 5px;
+ 
+  
+}
+
+/* gap between urlbar and pinned extensions */
+#nav-bar {
+  margin-bottom: 8px !important; /* Adjust gap size as needed */
+}
+
+  
+  /* Pinned Extensions */
+  .unified-extensions-item {
+    margin-inline: 2px !important;
+    border-bottom: 0px !important;
+    margin-top: 0px !important;
+    padding: 0px !important;
+    height: 32px !important;
+    width: 32px !important;
+    flex-grow: 1 !important;
+    order: -1 !important;
+    background-color: light-dark(rgba(255,255,255,0.4), rgba(255,255,255,0.1)) !important;
+   
+    border-radius: 11.5px !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+  }
+
+  .unified-extensions-item:hover {
+    background-color: light-dark(rgba(255,255,255,0.5), rgba(255,255,255,0.2)) !important;
+   
+  }
+
+  toolbarbutton:not([id="tabs-newtab-button"]) {
+    toolbarbutton,
+    stack {
+      --toolbarbutton-active-background: transparent !important;
+      --toolbarbutton-hover-background: transparent !important;
+    }
+
+    
+     .toolbarbutton-badge {
+      display: none !important;
+    }
+  }
+
+  >toolbarbutton:not([id="tabs-newtab-button"]),
+  >toolbaritem {
+    background-color: light-dark(rgba(255,255,255,0.4), rgba(0,0,0,0.4)) !important;
+  
+    border-radius: 13px !important;
+    margin: 2px !important;
+    order: -1 !important;
+    flex-grow: 1 !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+  }
+
+ 
+}
+
+
+}
+
+
