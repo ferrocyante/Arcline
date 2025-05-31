@@ -94,6 +94,24 @@
     ]
   },
   {
+    "property": "arcline.tab.grps",
+    "label": "Add support for animated tab grp icon by rwx",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 1,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
     "property": "arcline.compact.mode.full.screen.mode",
     "label": "Add a support for marginless full screen compact mode",
     "type": "dropdown",
