@@ -130,8 +130,8 @@
     ]
   },
   {
-    "property": "arcline.background",
-    "label": "Add color to background.",
+    "property": "arcline.pinned.tabs.bg",
+    "label": "Add background to pinned tabs.",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
