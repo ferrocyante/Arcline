@@ -98,7 +98,7 @@ tab-group[style="--tab-group-color: var(--tab-group-color-yellow); --tab-group-c
   --icon-transition-easing: cubic-bezier(0, 0, 0, 0.1);
 
   /* Heights */
-  --group-max-height-open: 150vh;
+  --group-max-height-open: 300vh;
   --group-max-height-closed: 37.6px;
 }
 
