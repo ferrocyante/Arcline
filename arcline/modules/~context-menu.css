@@ -1,3 +1,6 @@
+
+@media (-moz-pref("arcline.context.menu", 1)) {
+
 @media (prefers-color-scheme: dark) {
 
 
@@ -231,5 +234,9 @@ menuseparator {
 
 #context_closeTabOptions,#context_closeTab ,#context_openANewTab, #context_moveTabOptions, #context_zen-replace-pinned-url-with-current , #context_zen-reset-pinned-tab {
   display: none !important;
+}
+
+
+
 }
 }
