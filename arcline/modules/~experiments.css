@@ -317,7 +317,7 @@ tab-group:not([split-view-group])[collapsed] tab {
 tab-group:not([split-view-group]):not([collapsed]) {
     transition: max-height 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 
-    max-height: 25rem !important;
+    max-height: 85rem !important;
     
    
     scrollbar-width: none !important;
