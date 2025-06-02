@@ -232,42 +232,6 @@
     ]
   },
   {
-    "property": "arcline.close-button.equal-padding",
-    "label": "Add equal padding to close button for tabs.",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
-    ]
-  },
-  {
-    "property": "arcline.close-button.square-corners",
-    "label": "Makes close button for tabs look more square.",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
-    ]
-  },
-  {
     "type": "separator",
     "label": "Control Buttons Styles"
   },
