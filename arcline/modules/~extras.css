@@ -177,44 +177,6 @@ margin-bottom: -12px !important;
 
 
 
-/*Styling for Tab close button*/
-.tab-close-button {
-  width: 18px !important;
-  height: 18px !important;
-  padding: 5px !important;
-  border-radius: 20px !important;
-}
-
-@media (-moz-pref("arcline.close-button.equal-padding", 1)) {
-  .tab-close-button {
-    margin-right: 4px !important;
-  }
-}
-
-@media (-moz-pref("arcline.close-button.square-corners", 1)) {
-  .tab-close-button {
-    border-radius: 7px !important;
-  }
-}
-
-/*Tab close button colors, also for hover*/
-.close-icon {
-  background-color: color-mix(
-    in srgb,
-    currentColor 10%,
-    transparent
-  ) !important;
-}
-
-.close-icon:hover {
-  transition: 0.1s !important;
-  background-color: color-mix(
-    in srgb,
-    currentColor 30%,
-    transparent
-  ) !important;
-}
-
 
 
  #zen-media-focus-button {
