@@ -99,10 +99,10 @@ footer{
   /* Exclude about:reader */
   @-moz-document regexp("about:(?!reader).*") {
     @font-face {
-      font-family: "SF Pro";
+      font-family: "SFProText-Regular";
     }
     * {
-      font-family: "SF Pro", system-ui;
+      font-family: "SFProText-Regular", system-ui;
     }
   }
 }
