@@ -40,6 +40,7 @@
     "type": "string",
     "value": "number",
     "default": 5
+    "force": true
   },
   {
     "property": "widget.windows.mica.toplevel-backdrop",
