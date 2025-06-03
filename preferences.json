@@ -8,10 +8,11 @@
   },
   {
     "property": "zen.view.experimental-force-window-controls-left",
-    "label": "Turn on experimental left window controls. (requires restart to take effect))",
+    "label": "Turn on experimental left window controls.",
     "default": true,
     "type": "checkbox",
-    "force": true
+    "force": true,
+    "restart": true
   },
   {
     "property": "browser.tabs.groups.enabled",
