@@ -2,7 +2,7 @@
     <h1 align="center">Arcline 🌌</h2>
 </p>
 
-<p align="center">How I customizes my zen browser 🌸</p>
+<p align="center">How I customize my zen browser 🌸</p>
 
 ![image](https://github.com/user-attachments/assets/150a3d3b-6484-4b5b-864e-aeba23096602)
 
@@ -17,7 +17,7 @@
 ## 🌶️ Stable Release Coming Soon! ##
 
  **CSS UPLOADED IS NOT OF STABLE RELEASE**  it is of beta , waiting for tab folders to get implemented on zen for stable release
-
+_Please see bottom of readme for simple installation._
 ## Stable Release Features
 
 - **URL-bar** with custom scaling animations
@@ -122,6 +122,16 @@ https://github.com/user-attachments/assets/29eaf351-5d33-4d09-8717-64eac22b3fd2
 
 <p align="left">• <a href="https://github.com/lukeyou05/tacky-borders">Tacky Borders</a> - Preconfigured rules included<br>
 • <a href="https://addons.mozilla.org/en-US/firefox/addon/zen-internet/">Zen Internet Extension</a> - For page transparency</p>
+
+## Simple Installation
+1. Install latest version of [Sine](https://github.com/CosmoCreeper/Sine/releases/tag/v1.1.8) by following all prompted instructions.
+2. Restart Zen Browser.
+3. Open settings and go the the "Sine" tab.
+4. Locate the local installation section.
+5. Install `ferrocyante/Arcline`.
+6. Restart Zen Browser.
+7. Customize the settings to match your prefrences.
+8. Enjoy!
 
 ## 🙏 Acknowledgments  
 Special thanks to **Mr. Green**, creator of the **Natsumi Browser**, for inspiring this project.  
