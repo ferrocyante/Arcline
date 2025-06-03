@@ -1,5 +1,21 @@
 {
   "id": "53cfe9d6-9079-46f8-b42f-453c46ebf0fa",
   "js": true,
-  "modules": "Anoms12/Zen-Tidy-Downloads"
+  "modules": "Anoms12/Zen-Tidy-Downloads",
+  "name": "Arcline",
+  "description": "How I Customize my Zen Browser",
+  "homepage": "https://github.com/ferrocyante/Arcline",
+  "preferences": "https://raw.githubusercontent.com/ferrocyante/Arcline/refs/heads/main/preferences.json",
+  "readme": "https://raw.githubusercontent.com/ferrocyante/Arcline/refs/heads/main/README.md",
+  "image": "https://raw.githubusercontent.com/ferrocyante/Arcline/main/image.jpg",
+  "author": "Anoms12",
+  "version": "9",
+  "tags": [
+    "Theme",
+    "Arcline",
+    "Tab Folders",
+    "fx-autoconfig"
+    ],
+    "createdAt": "2025-06-03",
+    "updatedAt": "2025-06-03"
 }
