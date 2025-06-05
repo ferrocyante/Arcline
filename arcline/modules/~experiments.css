@@ -405,7 +405,7 @@ tab-group:not([split-view-group]) {
     border-radius: calc(var(--zen-border-radius) + 2px) !important;
 
     & .tab-group-custom-icon {
-      margin: 2px 4px 0 4px !important;
+      margin: 2px 4px 0 2px !important;
     }
 
     &:hover {
