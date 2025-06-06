@@ -389,10 +389,7 @@ tab-group:not([split-view-group]) {
   border-radius: calc(var(--zen-border-radius) + 2px) !important;
   overflow: scroll;
 
-  &:not([collapsed]) .tab-group-label-container {
-    background: var(--tab-selected-bgcolor) !important;
-    box-shadow: var(--tab-selected-shadow);
-  }
+ 
 
   & .tab-group-label-container {
     position: sticky !important;
