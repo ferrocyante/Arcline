@@ -27,7 +27,7 @@
   #urlbar:not([focused])[textoverflow="left"][domaindir="rtl"] > .urlbar-input-container > .urlbar-input-box > & {
     mask-image: none !important;
   }
-}
+
 
  #urlbar:not([focused]) .urlbar-input-container , .urlbar-input-box   {
     mask-image: none !important;
