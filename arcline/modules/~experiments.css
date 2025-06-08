@@ -413,7 +413,7 @@ tab-group:not([split-view-group]) {
       background: transparent !important;
       color: var(--sidebar-text-color) !important;
       display: flex !important;
-      padding-left: 0px !important;
+      padding-right: 0px !important;
     }
   }
 
@@ -694,6 +694,10 @@ tab-group:not([split-view-group]) {
         display: none !important;
     }
 }
+
+
+
+
 
 
 
