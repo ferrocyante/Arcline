@@ -1062,8 +1062,8 @@ browser, .browserSidebarContainer.deck-selected {
 
 #urlbar[open][zen-floating-urlbar='true'] {
  
-  left: 59% !important;
-  max-width: 550px !important;
+  left: 57% !important;
+  max-width: 650px !important;
   border-radius: 25px !important;
   
   
