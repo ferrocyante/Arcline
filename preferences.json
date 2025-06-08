@@ -96,6 +96,24 @@
     ]
   },
   {
+    "property": "arcline.url.bar.scale",
+    "label": "Add support for scale effect in og arcline url bar",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
     "property": "arcline.pinned.extensions",
     "label": "Add support for pinned extensions ( make sure you  disable it when you have not pinned any extension)",
     "type": "dropdown",
