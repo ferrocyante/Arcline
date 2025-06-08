@@ -7,7 +7,7 @@
   }
 }
 
-
+@media (-moz-pref("arcline.url.bar", 0))  {
  /* The following rules apply overflow masks to the unfocused urlbar
      This mask may be overriden when a Contextual Feature Recommendation is shown. */
   #urlbar:not([focused])[textoverflow="both"] > .urlbar-input-container > .urlbar-input-box > & {
@@ -741,6 +741,8 @@ body:has(#urlbar[open]) #browser::before {
     }
 }
   
+}
+
 }
 
 
