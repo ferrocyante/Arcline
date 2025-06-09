@@ -225,7 +225,10 @@
 
   /*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
   @media (-moz-pref("arcline.force.blur", 1)) {
-
+/* Required for blur rendering */
+browser {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
 
 browser {
     will-change: transform;
