@@ -2,13 +2,13 @@
 
  
     #back-button {
-   margin-top: 0.5px !important;
+   margin-top: -1px !important;
 }
 
 
   #forward-button{
     
-    margin-top: 0px  !important;
+    margin-top: -0.5px  !important;
   }
 
 
