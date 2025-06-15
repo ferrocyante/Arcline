@@ -6,6 +6,81 @@
     border-radius: 60px !important;
   }
 }
+
+/*--------------------------------------------------------*/
+#urlbar-label-box {
+    background: color-mix(in srgb, var(--zen-primary-color) 50%, transparent 50%) !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+  margin-top: 3px !important;
+  scale: 0.89 !important;
+  margin-left: -9px !important;
+    border-radius: 18px !important;
+    padding: 7px 8px !important;
+    scale: 0.8 !important;
+}
+
+.urlbar-input {
+  padding-top: 4px !important;
+    font-size: 13.1px !important;
+   /* color: #FFFFFF !important;*/
+
+  /*  padding-right: 12px !important;*/
+   font-weight: 510 !important;
+/* padding-top: 0px !important;*/
+ 
+  
+  
+}
+
+
+  #urlbar-searchmode-switcher {
+  margin-top: 6.4px !important;
+    height: 2rem !important;
+    margin-right: 5px !important;
+    margin-left: -3px !important;
+    min-height: 2px !important;
+ border-radius: 9px !important;
+    padding: 5px !important;
+    scale: 0.8 !important;
+ background-color: light-dark(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.15)) !important;
+
+   text-align: center !important;
+}
+
+
+#searchmode-switcher-chicklet {
+   background-color: light-dark(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.15)) !important;
+  border-start-end-radius: var(--toolbarbutton-border-radius);
+  border-end-end-radius: var(--urlbar-icon-border-radius);
+  align-items: center;
+  scale: 0.9 !important;
+margin-left: -4px !important;
+  padding-left: 8px !important;
+  margin-top: 0.35rem !important;
+  border-radius: 9px !important;
+
+
+   
+  margin-inline-end: var(--urlbar-searchmodeswitcher-margin-inline-end);
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------*/
 @media (-moz-pref("arcline.url.bar", 0))  {
 
  /* The following rules apply overflow masks to the unfocused urlbar
@@ -33,39 +108,6 @@
     mask-image: none !important;
     margin-top: -0.04rem !important;
   }
-
-  #urlbar-searchmode-switcher {
-  margin-top: 0.34rem !important;
-    height: 2rem !important;
-    margin-left: -3px !important;
-    min-height: 2px !important;
- border-radius: 9px !important;
-    padding: 5px !important;
-    scale: 0.8 !important;
- background-color: light-dark(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.15)) !important;
-    padding-top: 1.1rem !important;
-      padding-bottom: 1.1rem !important;
-   text-align: center !important;
-}
-
-
-#searchmode-switcher-chicklet {
-   background-color: light-dark(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.15)) !important;
-  border-start-end-radius: var(--toolbarbutton-border-radius);
-  border-end-end-radius: var(--urlbar-icon-border-radius);
-  align-items: center;
-  scale: 0.9 !important;
-margin-left: -4px !important;
-  padding-left: 8px !important;
-  margin-top: 0.35rem !important;
-  border-radius: 9px !important;
-  height: 2rem !important;
-   padding-top: 1.1rem !important;
-      padding-bottom: 1.1rem !important;
-   
-  margin-inline-end: var(--urlbar-searchmodeswitcher-margin-inline-end);
-  display: none;
-}
 
 
 
@@ -336,32 +378,15 @@ body:has(#urlbar[open]) #browser::before {
 
 
 .urlbar-input {
-    font-size: 13.5px !important;
-   /* color: #FFFFFF !important;*/
 
-  /*  padding-right: 12px !important;*/
-   font-weight: 510 !important;
-/* padding-top: 0px !important;*/
   filter: brightness(85%) !important;
-  margin-top: 2px !important;
+ 
   
 }
 
 
 
 
-
-#urlbar-label-box {
-    background: color-mix(in srgb, var(--zen-primary-color) 50%, transparent 50%) !important;
-    font-weight: 600 !important;
-    color: #fff !important;
-  margin-top: 3px !important;
-  scale: 0.89 !important;
-  margin-left: -9px !important;
-    border-radius: 18px !important;
-    padding: 7px 8px !important;
-    scale: 0.8 !important;
-}
 
 
 
@@ -663,14 +688,9 @@ body:has(#urlbar[open]) #browser::before {
 
 
 .urlbar-input {
-    font-size: 13.5px !important;
-   /* color: #FFFFFF !important;*/
-
-  /*  padding-right: 12px !important;*/
-   font-weight: 510 !important;
-/* padding-top: 0px !important;*/
+ 
   filter: brightness(75%) !important;
-  margin-top: 2px !important;
+
   
 }
 
@@ -678,17 +698,6 @@ body:has(#urlbar[open]) #browser::before {
 
 
 
-#urlbar-label-box {
-    background: color-mix(in srgb, var(--zen-primary-color) 50%, transparent 50%) !important;
-    font-weight: 600 !important;
-    color: #fff !important;
-  margin-top: 3px !important;
-  scale: 0.89 !important;
-  margin-left: -9px !important;
-    border-radius: 18px !important;
-    padding: 7px 8px !important;
-    scale: 0.8 !important;
-}
 
 
 

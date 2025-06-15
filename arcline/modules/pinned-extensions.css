@@ -1,26 +1,17 @@
 @media (-moz-pref("arcline.pinned.extensions", 1)) {
 
  
-   #back-button {
-
-      position: relative !important;
-      
-      top: -1px !important;
+    #back-button {
+   margin-top: 0.5px !important;
 }
 
 
   #forward-button{
     
-    margin-top: 0px  !important;
+    margin-top: -0.5px  !important;
   }
 
 
-  #reload-button{
-    margin-top: 0.2px !important;
-  }
-  
-  
-  
 
   
   

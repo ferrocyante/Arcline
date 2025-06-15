@@ -342,119 +342,152 @@ tab-group:not([split-view-group]) {
 
 @media (-moz-pref("arcline.tab.grps", 1)) {
 
-
- /* userChrome.css to style folder icon */
 * {
-  --zen-workspace-color-bg: light-dark(color-mix(in srgb, var(--zen-primary-color) 50%, white 50%),color-mix(in srgb, var(--zen-primary-color) 50%, black 50%)) !important;
-  --zen-workspace-color-fg: light-dark(color-mix(in srgb, var(--zen-primary-color) 50%, white 50%), color-mix(in srgb, var(--zen-primary-color) 60%, black 40%)) !important;
-  --zen-workspace-color-stroke: light-dark(color-mix(in srgb, var(--zen-primary-color) 40%, black 60%), color-mix(in srgb, var(--zen-primary-color) 40%, white 60%)) !important;
-}
+		--zen-workspace-color-bg: light-dark(color-mix(in srgb, var(--zen-primary-color) 50%, white 50%),color-mix(in srgb, var(--zen-primary-color) 50%, black 50%)) !important;
+		--zen-workspace-color-fg: light-dark(color-mix(in srgb, var(--zen-primary-color) 20%, white 80%), color-mix(in srgb, var(--zen-primary-color) 80%, black 20%)) !important;
+		--zen-workspace-color-stroke: light-dark(color-mix(in srgb, var(--zen-primary-color) 40%, black 60%), color-mix(in srgb, var(--zen-primary-color) 40%, white 60%)) !important;
+	}
+	#tabbrowser-tabs[movingtab] tab-group:not([split-view-group]) {
+		overflow: visible;
 
-#tabbrowser-tabs[movingtab] tab-group:not([split-view-group]) {
-  overflow: visible;
-  &:not([collapsed]) {
-    max-height: inherit !important;
-  }
-}
-.tab-group-label-container {
-  #tabbrowser-tabs[orient="vertical"] & {
-    tab-group:not([collapsed]) > & {
-      padding-block-end: 0 !important;
-    }
-  }
-}
-#tabbrowser-tabs[movingtab]:not([movingtab-createGroup],
-[movingtab-ungroup]) .tabbrowser-tab:is(:active,
-[multiselected]) {
-  margin-left: 10px;
-}
-#tabbrowser-tabs[movingtab-addToGroup]:not([movingtab-createGroup],
-[movingtab-ungroup]) tab-group:not([split-view-group]) {
-  background: color-mix(
-    in srgb,
-    var(--tab-group-color-invert) 22%,
-    transparent
-  ) !important;
-}
-#tabbrowser-tabs:is([movingtab-createGroup],
-[movingtab-ungroup]) tab-group .tabbrowser-tab:is([selected],
-[multiselected]) {
-  margin-left: 0;
-}
-tab-group:not([split-view-group]) {
-  display: flex !important;
-  flex-direction: column !important;
-  margin: 2px 2px 0px 2px !important;
-  max-height: var(--group-max-height-open) !important;
-  border-radius: calc(var(--zen-border-radius) + 2px) !important;
-  overflow: scroll;
+		&:not([collapsed]) {
+			max-height: inherit !important;
+		}
+	}
 
- 
+	.tab-group-label-container {
+		#tabbrowser-tabs[orient="vertical"] & {
+			tab-group:not([collapsed])>& {
+				padding-block-end: 0 !important;
+			}
+		}
+	}
 
-  & .tab-group-label-container {
-    position: sticky !important;
-    top: 0;
-    flex-direction: row !important;
-    --tab-group-color-pale: transparent !important;
-    --tab-group-color: transparent !important;
-    margin: 0 !important;
-    height: 36px !important;
-    border-radius: calc(var(--zen-border-radius) + 2px) !important;
+	#tabbrowser-tabs[movingtab]:not([movingtab-createGroup],
+		[movingtab-ungroup]) .tabbrowser-tab:is(:active,
+		[multiselected]) {
+		margin-left: 10px;
+	}
 
-    & .tab-group-custom-icon {
-      margin: 2px 4px 0 2px !important;
-    }
+	#tabbrowser-tabs:is([movingtab-createGroup],
+		[movingtab-ungroup]) tab-group .tabbrowser-tab:is([selected],
+		[multiselected]) {
+		margin-left: 0;
+	}
 
-    &:hover {
-      background-color: var(--tab-hover-background-color) !important;
-    }
+	#tab-group-rename-input {
+		border: none !important;
+		background: transparent !important;
+		height: 36px !important;
+		padding: 0 0 8px 0 !important;
+		box-sizing: border-box !important;
+	}
 
-    & > label {
-      background: transparent !important;
-      color: var(--sidebar-text-color) !important;
-      display: flex !important;
-      padding-right: 0px !important;
-    }
-  }
+	tab-group:not([split-view-group]) {
+		display: flex !important;
+		flex-direction: column !important;
+		margin: 2px 2px 0px 2px !important;
+		border-radius: calc(var(--zen-border-radius) + 2px) !important;
+		overflow: scroll;
 
-  & tab:not([zen-glance-tab]) {
-    margin-left: 10px !important;
-    overflow: visible;
-    opacity: 1 !important;
+		&:not([collapsed]) .tab-group-label-container {
+			background: var(--tab-selected-bgcolor) !important;
+			box-shadow: var(--tab-selected-shadow);
+		}
 
-    .tab-group-line {
-      --tab-group-color-invert: transparent !important;
-      --tab-group-color: transparent !important;
-    }
-
-    .tab-background:active {
-      backdrop-filter: blur(10px) !important;
-    }
-
-    @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
-      margin-left: 0 !important;
-    }
-  }
-
-  tab::before {
-    background: none !important;
-  }
-
-  &[collapsed] {
-    max-height: var(--group-max-height-closed) !important;
-    margin-bottom: 2px !important;
-    overflow: visible;
-    background: none !important;
-  }
-
-  tab-group:has(tab[hidden]) {
-    display: none !important;
-  }
-}
+		.tab-group-icon {
+			transition: margin .3s ease;
+			flex-shrink: 0;
+		}
 
 
+		&[has-focus] .tab-group-icon {
+			margin: -3px 0px 0px 0px;
+		}
+
+		&:not([has-focus]) .tab-group-icon {
+			margin: 0px 4px 0px 4px;
+		}
+
+		&:hover .tab-group-button {
+			list-style-image: url('chrome://browser/skin/zen-icons/menu.svg');
+		}
+
+		& .tab-group-button {
+			--toolbarbutton-inner-padding: 4px;
+			margin-left: auto !important;
+			flex-shrink: 0;
+
+			&:hover,
+			&[open] {
+				list-style-image: url('chrome://browser/skin/zen-icons/menu.svg');
+			}
+		}
+
+		& .tab-group-label-container {
+			position: sticky !important;
+			top: 0;
+			flex-direction: row !important;
+			--tab-group-color-pale: transparent !important;
+			--tab-group-color: transparent !important;
+			margin: 0 !important;
+			height: 34px !important;
+			border-radius: calc(var(--zen-border-radius) + 2px) !important;
 
 
+			&:hover {
+				background-color: var(--tab-hover-background-color) !important;
+			}
+
+			&>label {
+				background: transparent !important;
+				color: var(--sidebar-text-color) !important;
+				flex-grow: 1 !important;
+				flex-shrink: 1 !important;
+				min-width: 0 !important;
+				white-space: nowrap !important;
+				overflow: hidden !important;
+				text-overflow: ellipsis !important;
+			}
+		}
+
+		& tab:not([zen-glance-tab]) {
+			margin-left: 10px !important;
+			overflow: visible;
+			opacity: 1 !important;
+
+			.tab-group-line {
+				--tab-group-color-invert: transparent !important;
+				--tab-group-color: transparent !important;
+			}
+
+			.tab-background:active {
+				backdrop-filter: blur(10px) !important;
+			}
+
+			@media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
+				margin-left: 0 !important;
+			}
+		}
+
+		tab::before {
+			background: none !important;
+		}
+
+		&[collapsed] {
+			margin-bottom: 2px !important;
+			overflow: visible;
+			background: none !important;
+
+			& .tab-group-icon {
+				margin: -3px 0px 0px 0px;
+			}
+		}
+
+		tab-group:has(tab[hidden]) {
+			display: none !important;
+		}
+	}
 /* Combined CSS - Decoupled Tab Motion from Group Animation */
 
 /* --- Global Animation Variables --- */

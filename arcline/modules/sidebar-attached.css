@@ -68,7 +68,10 @@ height: 34px !important;
  
   
   
+
+
   
+
 #urlbar:not([open]) {
   #urlbar-background { border-radius: 12px !important;
     height: 88% !important;
@@ -77,26 +80,29 @@ height: 34px !important;
     margin-bottom: 0px !important;
     height: 35px !important;
     margin-right: 0px !important;
-    margin-top: 6px !important;
+    margin-top: 5px !important;
+    
     
   }}
 
 
 #urlbar[open][zen-floating-urlbar="true"] {
   #urlbar-container:has(&) {
-    border-radius: 2px !important;
+    border-radius: 12px !important;
    
-
+    left:  0px !important;
    
 
     height: 34.5px !important;
-    min-height: 34.5px !important;
+    min-height: 34px !important;
     margin-right: 2px !important;
     margin-left: 1.5px !important;
-    margin-top: 5px !important;
+    margin-top: 2.5px !important;
     background: var(--toolbarbutton-hover-background);
   }
 }
+
+
 
 
 

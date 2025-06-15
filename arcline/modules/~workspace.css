@@ -1,3 +1,35 @@
+/* ==== Zen ‑ cleanup overrides ===================================== */
+
+/* 1️⃣  Nuke borders and outlines on the workspace buttons */
+#zen-workspaces-button toolbarbutton,
+.zen-current-workspace-indicator-icon,
+#zen-workspaces-button toolbarbutton[dragged='true'],
+#zen-workspace-creation .zen-workspace-creation-icon-label::before {
+  border: none !important;
+  outline: none !important;
+}
+
+
+
+/* 3️⃣  Remove the dashed “drop” outline shown while re‑ordering */
+#zen-workspaces-button toolbarbutton[dragged='true'] {
+  outline: none !important;
+}
+
+/* 4️⃣  Optional: turn off hover backdrop the pseudo‑elements sat on */
+#zen-workspaces-button toolbarbutton:hover,
+#zen-workspaces-button toolbarbutton[active='true'] {
+  background: transparent !important;
+}
+
+
+
+
+
+
+
+
+
 /* ------------------------------ Workspace buttons (Highly Customizable Mac OS Dock Effect) ------------------------------ */
 @media (prefers-color-scheme: light) {
 :root {
