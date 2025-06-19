@@ -60,7 +60,7 @@ height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
 
   
   #reload-button{
-       transform: translate(-8%, 0.5%) !important;
+       transform: translate(-8%, 1%) !important;
   }
 
 /*adjust height of toolbar */

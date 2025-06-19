@@ -351,11 +351,14 @@ tab-group:not([split-view-group]) {
 		overflow: visible;
 
 		&:not([collapsed]) {
+     
 			max-height: inherit !important;
 		}
 	}
 
 	.tab-group-label-container {
+    
+    
 		#tabbrowser-tabs[orient="vertical"] & {
 			tab-group:not([collapsed])>& {
 				padding-block-end: 0 !important;
@@ -387,15 +390,19 @@ tab-group:not([split-view-group]) {
 		display: flex !important;
 		flex-direction: column !important;
 		margin: 2px 2px 0px 2px !important;
-		border-radius: calc(var(--zen-border-radius) + 2px) !important;
+ 
+		border-radius: calc(var(--zen-border-radius) + 0px) !important;
 		overflow: scroll;
 
 		&:not([collapsed]) .tab-group-label-container {
-			background: var(--tab-selected-bgcolor) !important;
+			background:  transparent !important;
+      background-color: transparent !important;
 			box-shadow: var(--tab-selected-shadow);
 		}
 
 		.tab-group-icon {
+      margin-left: -2.5px !important;
+      scale: 0.77 !important;
 			transition: margin .3s ease;
 			flex-shrink: 0;
 		}
@@ -406,7 +413,7 @@ tab-group:not([split-view-group]) {
 		}
 
 		&:not([has-focus]) .tab-group-icon {
-			margin: 0px 4px 0px 4px;
+			margin: -2px 4px 0px 4px;
 		}
 
 		&:hover .tab-group-button {
@@ -415,6 +422,7 @@ tab-group:not([split-view-group]) {
 
 		& .tab-group-button {
 			--toolbarbutton-inner-padding: 4px;
+      margin-right: 4px !important;
 			margin-left: auto !important;
 			flex-shrink: 0;
 
@@ -427,21 +435,25 @@ tab-group:not([split-view-group]) {
 		& .tab-group-label-container {
 			position: sticky !important;
 			top: 0;
+     
 			flex-direction: row !important;
 			--tab-group-color-pale: transparent !important;
 			--tab-group-color: transparent !important;
-			margin: 0 !important;
-			height: 34px !important;
-			border-radius: calc(var(--zen-border-radius) + 2px) !important;
+     background-color: transparent !important;
+			min-height: 37.5px !important;
+     
+			border-radius: calc(var(--zen-border-radius) + 0px) !important;
 
 
 			&:hover {
-				background-color: var(--tab-hover-background-color) !important;
+        background: none !important;
+				background-color: none !important;
+        box-shadow: none !important;
 			}
 
 			&>label {
 				background: transparent !important;
-				color: var(--sidebar-text-color) !important;
+		
 				flex-grow: 1 !important;
 				flex-shrink: 1 !important;
 				min-width: 0 !important;
@@ -471,6 +483,7 @@ tab-group:not([split-view-group]) {
 		}
 
 		tab::before {
+      
 			background: none !important;
 		}
 
@@ -528,7 +541,7 @@ tab-group:not([split-view-group]) {
   display: flex !important; flex-direction: column !important;
   overflow: hidden !important; /* Keep this if tabs should be clipped */
   border-radius: calc(var(--border-radius-medium) + 2px) !important;
-  margin: 2px 2px 0px 2px !important;
+  margin: 2px 2px 8px 2px !important;
 
   /* --- Group Animation (Uses SLOW visual timing) --- */
   max-height: var(--group-max-height-open) !important;
@@ -548,7 +561,7 @@ tab-group:not([split-view-group]) {
     transition: background-color 0.2s ease !important;
     transform: translateY(0px) !important;
     &:hover { background-color: var(--tab-hover-background-color) !important; }
-    &:after { display: none !important; }
+    &:after { display: none !important; padding-bottom: 5px !important;margin-bottom: 5px !important;}
 
   } /* End Label Container */
 
