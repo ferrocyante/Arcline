@@ -322,6 +322,24 @@ toolbarbutton[zen-workspace-id="{3a41c5b7-ec17-4682-82fa-5a1eaf5a4ce4}"].subview
 
 
 @media not (-moz-pref("arcline.superpin", 1)) {
+
+
+  .zen-current-workspace-indicator[active="true"] {
+   
+   margin-left: 0px !important;
+ margin-top: 53px !important;
+  
+  top: 0px !important;
+    filter: invert(0) brightness(150%) contrast(105%);
+  scale:1;
+ 
+
+}
+
+.zen-workspaces-actions{
+  margin-top: 11px !important;
+}
+
 /* Increase current workspace indicator text */
 .zen-current-workspace-indicator-name {
   filter: brightness(75%) !important;
