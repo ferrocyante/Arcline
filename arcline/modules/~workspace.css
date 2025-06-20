@@ -315,13 +315,13 @@ toolbarbutton[zen-workspace-id="{3a41c5b7-ec17-4682-82fa-5a1eaf5a4ce4}"].subview
 }
 
 
-
+/*******LIGHT ENDS****************************/
 
 /*---------------------------------------------------------------------------------------------------------*/
 
 
 
-
+@media not (-moz-pref("arcline.superpin", 1)) {
 /* Increase current workspace indicator text */
 .zen-current-workspace-indicator-name {
   filter: brightness(75%) !important;
@@ -345,7 +345,7 @@ toolbarbutton[zen-workspace-id="{3a41c5b7-ec17-4682-82fa-5a1eaf5a4ce4}"].subview
   --zen-indicator-bg-height: 0 !important;
 }
 
-
+}
 .zen-current-workspace-indicator::before {
   width: var(--zen-indicator-bg-width) !important;
   height: var(--zen-indicator-bg-height) !important;
@@ -771,21 +771,6 @@ toolbarbutton[zen-workspace-id="{3a41c5b7-ec17-4682-82fa-5a1eaf5a4ce4}"].subview
 
 
 
-/* Increase current workspace indicator text */
-.zen-current-workspace-indicator-name {
-  filter: brightness(75%) !important;
-  margin-left: 0px !important;
-  margin-top: 11px !important;
-  font-size: 13.5px !important; /* Default: small (~11px) */
-  opacity: 0.8 !important;
-}
-
-/* Optional: Adjust icon size proportionally */
-#PanelUI-zen-workspaces-list .zen-workspace-icon {
-  width: 34px !important; /* Default: 30px */
-  height: 34px !important;
-  font-size: 17px !important; /* Icon/text inside */
-}
 
 
 :root {
