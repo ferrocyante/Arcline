@@ -204,8 +204,8 @@
     ]
   },
   {
-    "property": "arcline.pinned.tabs.bg",
-    "label": "Add background to pinned tabs.",
+    "property": "arcline.superpin",
+    "label": "Add support for super pin mod.",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
