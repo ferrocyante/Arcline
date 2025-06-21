@@ -84,8 +84,8 @@ tab[usercontextid]:not([usercontextid="0"])[selected="true"] .tab-background {
  * - Replace the usercontextid="X" below with your actual IDs.
  */
 
-/* --- Container 1: Red Palette --- */
-tab[usercontextid="1"] .tab-background {
+/* --- Container 4: Red Palette --- */
+tab[usercontextid="4"] .tab-background {
   background-color: #f44336 !important;
   background-image: repeating-linear-gradient(
     45deg, #b71c1c 0, #b71c1c 5px, transparent 5px, transparent 10px
@@ -108,8 +108,8 @@ tab[usercontextid="3"] .tab-background {
   ) !important;
 }
 
-/* --- Container 4: Blue Palette --- */
-tab[usercontextid="4"] .tab-background {
+/* --- Container 1: Blue Palette --- */
+tab[usercontextid="1"] .tab-background {
   background-color: #2196f3 !important;
   background-image: repeating-linear-gradient(
     45deg, #0d47a1 0, #0d47a1 5px, transparent 5px, transparent 10px
