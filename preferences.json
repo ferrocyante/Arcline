@@ -131,6 +131,24 @@
       }
     ]
   },
+   {
+    "property": "arcline.container",
+    "label": "Add support for arcline container style",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
   {
     "property": "arcline.compact.mode.full.screen.mode",
     "label": "Add a support for marginless full screen compact mode",
