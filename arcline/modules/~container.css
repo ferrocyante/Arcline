@@ -108,6 +108,13 @@ tab[usercontextid="3"] .tab-background {
   ) !important;
 }
 
+ tab[usercontextid="5"] .tab-background {
+  background-color: #9c27b0 !important; /* Lighter purple */
+  background-image: repeating-linear-gradient(
+    45deg, #4a148c 0, #4a148c 5px, transparent 5px, transparent 10px
+  ) !important; /* Darker purple */
+}
+
 /* --- Container 1: Blue Palette --- */
 tab[usercontextid="1"] .tab-background {
   background-color: #2196f3 !important;
