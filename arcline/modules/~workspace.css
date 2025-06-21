@@ -897,7 +897,7 @@ tab-group[split-view-group] {
 
     & .tab-content {
       min-width: 62px !important;
-     margin-left: -6px !important;
+     margin-left: -1px !important;
       :root[zen-sidebar-expanded='true'] & {
         justify-content: unset !important;
       }
