@@ -39,7 +39,14 @@ height: calc(100% - (var(--zen-element-separation) * 1)) !important;
   gap: 2.3px !important;
   }
 
-  
+   #PanelUI-menu-button {
+    margin-top: 0.2px !important;
+    /* If your new icon is smaller/larger you might adjust padding, or let the pseudo-element overflow */
+}
+
+  #back-button, #forward-button , #reload-button{
+    margin-bottom: 0px !important;
+  }
 
 .zen-essentials-container{
   margin-top: 0px !important;
