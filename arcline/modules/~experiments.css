@@ -412,11 +412,11 @@ tab-group:not([split-view-group]) {
 
 
 		&[has-active] .tab-group-icon {
-			margin: 0px 0px 0px 0px;
+			margin: 0px 0px 0px  0px;
 		}
 
 		&:not([has-active]) .tab-group-icon {
-			margin: 0px 4px 0px 0px;
+			margin: 0px -1px 0px 0px;
       scale: 0.92 !important;
 		}
 
