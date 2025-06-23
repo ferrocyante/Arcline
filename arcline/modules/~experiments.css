@@ -342,25 +342,27 @@ tab-group:not([split-view-group]) {
 
 @media (-moz-pref("arcline.tab.grps", 1)) {
 
-* {
-		--zen-workspace-color-bg: light-dark(color-mix(in srgb, var(--zen-primary-color) 50%, white 50%),color-mix(in srgb, var(--zen-primary-color) 50%, black 50%)) !important;
+@media not (-moz-pref("mod.zen-groups.css")) {
+	* {
+		--zen-workspace-color-bg: light-dark(color-mix(in srgb, var(--zen-primary-color) 50%, white 50%), color-mix(in srgb, var(--zen-primary-color) 50%, black 50%)) !important;
 		--zen-workspace-color-fg: light-dark(color-mix(in srgb, var(--zen-primary-color) 20%, white 80%), color-mix(in srgb, var(--zen-primary-color) 80%, black 20%)) !important;
 		--zen-workspace-color-stroke: light-dark(color-mix(in srgb, var(--zen-primary-color) 40%, black 60%), color-mix(in srgb, var(--zen-primary-color) 40%, white 60%)) !important;
 	}
+
 	#tabbrowser-tabs[movingtab] tab-group:not([split-view-group]) {
 		overflow: visible;
 
 		&:not([collapsed]) {
-     
 			max-height: inherit !important;
 		}
 	}
 
 	.tab-group-label-container {
-    
-    
 		#tabbrowser-tabs[orient="vertical"] & {
 			tab-group:not([collapsed])>& {
+        background: transparent !important;
+        box-shadow: none !important;
+        margin-bottom: 1px !important;
 				padding-block-end: 0 !important;
 			}
 		}
@@ -382,49 +384,52 @@ tab-group:not([split-view-group]) {
 		border: none !important;
 		background: transparent !important;
 		height: 36px !important;
-		padding: 0 0 8px 0 !important;
+		padding: 0 0 2px 0 !important;
 		box-sizing: border-box !important;
 	}
 
 	tab-group:not([split-view-group]) {
 		display: flex !important;
+    
+    
 		flex-direction: column !important;
-		margin: 2px 2px 0px 2px !important;
- 
-		border-radius: calc(var(--zen-border-radius) + 0px) !important;
-		overflow: scroll;
+	
+		border-radius: calc(var(--zen-border-radius) + 2px) !important;
 
 		&:not([collapsed]) .tab-group-label-container {
-			background:  transparent !important;
-      background-color: transparent !important;
+      margin-bottom: 1.2px !important;
+      margin-top: 0.6px !important;
+			background: var(--tab-selected-bgcolor) !important;
 			box-shadow: var(--tab-selected-shadow);
 		}
 
 		.tab-group-icon {
-      margin-left: -2.5px !important;
-      scale: 0.77 !important;
+			width: 35px;
+			height: 35px;
 			transition: margin .3s ease;
 			flex-shrink: 0;
 		}
 
 
-		&[has-focus] .tab-group-icon {
-			margin: -3px 0px 0px 0px;
+		&[has-active] .tab-group-icon {
+			margin: 0px 0px 0px 0px;
 		}
 
-		&:not([has-focus]) .tab-group-icon {
-			margin: -2px 4px 0px 4px;
+		&:not([has-active]) .tab-group-icon {
+			margin: 0px 4px 0px 0px;
+      scale: 0.92 !important;
 		}
 
-		&:hover .tab-group-button {
+		&:hover .tab-group-action-button {
 			list-style-image: url('chrome://browser/skin/zen-icons/menu.svg');
 		}
 
-		& .tab-group-button {
+		& .tab-group-action-button {
 			--toolbarbutton-inner-padding: 4px;
-      margin-right: 4px !important;
+      margin-right: 5px !important;
 			margin-left: auto !important;
 			flex-shrink: 0;
+      
 
 			&:hover,
 			&[open] {
@@ -432,28 +437,39 @@ tab-group:not([split-view-group]) {
 			}
 		}
 
+		&:hover .tab-group-tabs-button {
+			list-style-image: url('chrome://browser/skin/zen-icons/search-glass.svg');
+		}
+
+		& .tab-group-tabs-button {
+			--toolbarbutton-inner-padding: 4px;
+			margin-left: auto !important;
+			flex-shrink: 0;
+
+			&:hover,
+			&[open] {
+				list-style-image: url('chrome://browser/skin/zen-icons/search-glass.svg');
+			}
+		}
+
 		& .tab-group-label-container {
 			position: sticky !important;
 			top: 0;
-     
 			flex-direction: row !important;
 			--tab-group-color-pale: transparent !important;
 			--tab-group-color: transparent !important;
-     background-color: transparent !important;
-			min-height: 37.5px !important;
-     
-			border-radius: calc(var(--zen-border-radius) + 0px) !important;
+			margin: 0 !important;
+			height: 36px !important;
+			border-radius: calc(var(--zen-border-radius) + 2px) !important;
 
 
 			&:hover {
-        background: none !important;
-				background-color: none !important;
-        box-shadow: none !important;
+				background-color: transparent !important;
 			}
 
 			&>label {
 				background: transparent !important;
-		
+				color: var(--sidebar-text-color) !important;
 				flex-grow: 1 !important;
 				flex-shrink: 1 !important;
 				min-width: 0 !important;
@@ -483,24 +499,125 @@ tab-group:not([split-view-group]) {
 		}
 
 		tab::before {
-      
 			background: none !important;
 		}
 
 		&[collapsed] {
-			margin-bottom: 2px !important;
 			overflow: visible;
 			background: none !important;
-
-			& .tab-group-icon {
-				margin: -3px 0px 0px 0px;
-			}
 		}
 
 		tab-group:has(tab[hidden]) {
 			display: none !important;
 		}
 	}
+
+
+	/* Popup for Zen Groups Tabs List */
+	#zen-group-tabs-popup {
+		--arrowpanel-padding: 0;
+		background-color: var(--toolbar-bgcolor);
+		border-radius: var(--arrowpanel-border-radius);
+		--arrowpanel-border-color: var(--chrome-content-separator-color);
+		width: 250px;
+	}
+
+	#zen-group-tabs-popup #zen-group-tabs-search {
+		background-color: var(--toolbox-field-background-color) !important;
+		border: 1px solid var(--toolbox-field-border-color) !important;
+		border-radius: var(--toolbox-field-border-radius, 4px) !important;
+		color: var(--toolbox-field-color) !important;
+		margin: 0 !important;
+		padding: 5px 8px !important;
+		font-size: 1em;
+	}
+
+	#zen-group-tabs-popup #zen-group-tabs-search:focus-within {
+		border-color: gray !important;
+	}
+
+	#zen-group-tabs-popup .tabs-list-scrollbox {
+		padding: 4px;
+		overflow: scroll;
+		max-height: 450px;
+	}
+
+	.tabs-list-item {
+		position: relative;
+		height: 46px;
+		margin: 2px;
+		border-radius: var(--border-radius-medium);
+		margin-inline: var(--tab-block-margin);
+		cursor: default;
+	}
+
+	.tabs-list-item-background {
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+	}
+
+	.tabs-list-item-content {
+		position: relative;
+		display: flex;
+		align-items: center;
+		direction: ltr;
+		mask-image: linear-gradient(to left, transparent, black var(--tab-label-mask-size));
+		height: 46px;
+		width: 218px;
+		margin-inline: var(--tab-block-margin);
+	}
+
+	.tabs-list-item:hover .tabs-list-item-background {
+		background-color: var(--tab-hover-background-color);
+		outline-color: var(--tab-hover-outline-color);
+	}
+
+	.tabs-list-item[selected="true"] .tabs-list-item-background {
+		background-color: rgba(255, 255, 255, 0.12);
+		box-shadow: var(--tab-selected-shadow);
+		outline-color: var(--tab-selected-outline-color);
+		border-color: transparent;
+	}
+
+	.tabs-list-item-icon {
+		width: 16px;
+		height: 16px;
+		margin-left: 6px;
+		margin-right: 6px;
+		flex-shrink: 0;
+	}
+
+
+	.tabs-list-item-labels {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex: 1;
+		min-width: 0;
+	}
+
+
+	.tabs-list-item-label,
+	.tab-list-item-secondary-label {
+		max-width: 200px;
+		margin-left: 4px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.tabs-list-item-label {
+		color: var(--lwt-text-color);
+	}
+
+	.tab-list-item-secondary-label {
+		color: var(--lwt-text-color);
+		opacity: 0.9;
+		font-size: 0.8em;
+	}
+
+}
 /* Combined CSS - Decoupled Tab Motion from Group Animation */
 
 /* --- Global Animation Variables --- */
@@ -541,7 +658,7 @@ tab-group:not([split-view-group]) {
   display: flex !important; flex-direction: column !important;
   overflow: hidden !important; /* Keep this if tabs should be clipped */
   border-radius: calc(var(--border-radius-medium) + 2px) !important;
-  margin: 2px 2px 8px 2px !important;
+ 
 
   /* --- Group Animation (Uses SLOW visual timing) --- */
   max-height: var(--group-max-height-open) !important;
