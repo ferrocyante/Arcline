@@ -322,24 +322,6 @@ toolbarbutton[zen-workspace-id="{3a41c5b7-ec17-4682-82fa-5a1eaf5a4ce4}"].subview
 
 
 @media not (-moz-pref("arcline.superpin", 1)) {
-
-
-  .zen-current-workspace-indicator[active="true"] {
-   
-   margin-left: 0px !important;
- margin-top: 53px !important;
-  
-  top: 0px !important;
-    filter: invert(0) brightness(150%) contrast(105%);
-  scale:1;
- 
-
-}
-
-.zen-workspaces-actions{
-  margin-top: 11px !important;
-}
-
 /* Increase current workspace indicator text */
 .zen-current-workspace-indicator-name {
   filter: brightness(75%) !important;
@@ -521,8 +503,8 @@ tab-group[split-view-group] {
 
   /* --- Inactive Indicator Dot --- */
   --zen-dock-inactive-dot-size: 8px;
-  --zen-dock-inactive-dot-color: rgba(280, 280, 280, 1); /* Light grey dot, adjust as needed */
-  --zen-dock-inactive-dot-hover-color: rgba(220, 220, 220, 1);
+  --zen-dock-inactive-dot-color: var(--toolbox-textcolor); /* Light grey dot, adjust as needed */
+  --zen-dock-inactive-dot-hover-color: var(--toolbox-textcolor);
 
   /* --- Animation Transitions (Speed & Easing) --- */
   --zen-dock-transition-duration: 0.1s;
@@ -663,65 +645,119 @@ tab-group[split-view-group] {
   display: none !important;
 }
 
+/*
+  =======================================================
+  Part 1: Define Your Color Variable (if not already defined)
+  This is the single source of truth for your icon colors.
+  =======================================================
+*/
+:root {
+  --toolbox-textcolor: #FFFFFF; /* <-- EDIT THIS COLOR (e.g., white) */
+}
+
+
+/*
+  =======================================================
+  Part 2: The Updated Styles for All Four Buttons
+  Each rule now uses a mask for its shape and gets its
+  color from the --toolbox-textcolor variable.
+  =======================================================
+*/
+
+/* --- Button 1: Briefcase Icon --- */
 toolbarbutton[zen-workspace-id="{3603ab2a-ffc8-415e-9ae2-be8cb2b72bf3}"].subviewbutton .zen-workspace-icon {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z'/%3E%3Cpath d='M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E") !important;
-    background-size: contain !important;
-   font-size: 0 !important; /* Hides text if you're using background-image */
-    background-repeat: no-repeat !important;
+  /* Color the icon using the CSS variable */
+  background-color: var(--toolbox-textcolor);
+  
+  /* Use a monochrome version of the SVG as a mask */
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z'/%3E%3Cpath d='M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z'/%3E%3Cpath d='M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+
+  /* --- Original layout and mask properties --- */
+  background-image: none !important; /* Replaced by mask */
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  font-size: 0 !important;
   margin-bottom: 0px !important;
-    background-position: center center !important;
-    width: 16px !important; /* Adjust desired visible size of SVG */
-    height: 16px !important;
+  width: 16px !important;
+  height: 16px !important;
   min-height: 16px !important;
   min-width: 16px !important;
-    /* filter: invert(0) brightness(90%) contrast(75%); /* This will be overridden by JS for dock effect */
-    display: inline-block !important;
+  display: inline-block !important;
 }
 
+/* --- Button 2: Play Icon --- */
 toolbarbutton[zen-workspace-id="{45bbc387-2c63-42d0-911f-091d362ff294}"].subviewbutton .zen-workspace-icon {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z'/%3E%3Cpath d='M10 9l5 3l-5 3z'/%3E%3C/svg%3E") !important;
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-   font-size: 0 !important; /* Hides text if you're using background-image */
-    background-position: center center !important;
-    width: 16px !important;
-   margin-bottom: 0px !important;
-    height: 16px !important;
-    min-height: 16px !important;
+  background-color: var(--toolbox-textcolor);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='black' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z'/%3E%3Cpath d='M10 9l5 3l-5 3z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='black' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z'/%3E%3Cpath d='M10 9l5 3l-5 3z' fill='black'/%3E%3C/svg%3E");
+  
+  /* --- Original layout and mask properties --- */
+  background-image: none !important;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  font-size: 0 !important;
+  margin-bottom: 0px !important;
+  width: 16px !important;
+  height: 16px !important;
+  min-height: 16px !important;
   min-width: 16px !important;
-    display: inline-block !important;
+  display: inline-block !important;
 }
 
+/* --- Button 3: Code Icon --- */
 toolbarbutton[zen-workspace-id="{3b2f521e-425c-476c-992f-17d133613bc0}"].subviewbutton .zen-workspace-icon {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M7 8l-4 4l4 4'/%3E%3Cpath d='M17 8l4 4l-4 4'/%3E%3Cpath d='M14 4l-4 16'/%3E%3C/svg%3E") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-   font-size: 0 !important; /* Hides text if you're using background-image */
-    background-position: center center !important;
-    width: 16px !important;
-   margin-bottom: 0px !important;
-    height: 16px !important;
-    min-height: 16px !important;
+  background-color: var(--toolbox-textcolor);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M7 8l-4 4l4 4'/%3E%3Cpath d='M17 8l4 4l-4 4'/%3E%3Cpath d='M14 4l-4 16'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M7 8l-4 4l4 4'/%3E%3Cpath d='M17 8l4 4l-4 4'/%3E%3Cpath d='M14 4l-4 16'/%3E%3C/svg%3E");
+
+  /* --- Original layout and mask properties --- */
+  background-image: none !important;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  font-size: 0 !important;
+  margin-bottom: 0px !important;
+  width: 16px !important;
+  height: 16px !important;
+  min-height: 16px !important;
   min-width: 16px !important;
-    display: inline-block !important;
+  display: inline-block !important;
 }
 
+/* --- Button 4: Complex Moon/Planet Icon --- */
 toolbarbutton[zen-workspace-id="{3a41c5b7-ec17-4682-82fa-5a1eaf5a4ce4}"].subviewbutton .zen-workspace-icon {
-/*    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512px" height="640px"><g><path d="M96.298,265.705C101.315,349.55,170.887,416,255.988,416c37.957,0,72.818-13.227,100.25-35.311 C317.23,369.554,274,353.922,229.562,334.617C180.731,313.404,134.957,289.677,96.298,265.705z" style="fill: rgb(221, 215, 215);"/><path d="M107.381,196.629c39.911,27.11,92.07,55.13,147.679,79.287c43.591,18.938,87.113,34.555,125.859,45.164 c6.496,1.779,12.834,3.406,18.988,4.883c1.685-3.462,3.249-6.994,4.688-10.591c7.341-18.358,11.386-38.393,11.386-59.372 c0-3.26-0.109-6.493-0.301-9.705C410.661,162.45,341.09,96,255.988,96c-37.956,0-72.817,13.227-100.248,35.311 c-18.296,14.729-33.284,33.398-43.67,54.726C110.383,189.499,108.819,193.032,107.381,196.629z" style="fill: rgb(221, 215, 215);"/><path d="M429.667,284.531c-1.256,11.562-2.377,13.627-5.891,24.695c16.878,12.039,31.032,23.706,41.137,33.938 c3.285,3.328,5.875,6.225,7.912,8.702c-1.684,0.084-3.557,0.133-5.631,0.133c-21.886,0-54.026-5.5-90.501-15.488 c-39.467-10.806-83.73-26.685-128.008-45.92c-58.931-25.6-114.158-55.541-155.51-84.307c-19.081-13.275-35.027-26.226-46.113-37.45 c-3.285-3.328-5.875-6.225-7.912-8.702c1.683-0.084,3.556-0.133,5.632-0.133c15.308,0,35.637,2.694,58.952,7.729 c5.825-10.004,6.979-12.701,14.663-21.409C92.663,137,66.625,130.522,44.784,128c-24.403-2.818-40.34,5.521-43.984,17.14 C-10.274,180.457,95,258.718,235.936,319.942C330.498,361.022,417.104,384,467.194,384c24.565,0,40.338-5.521,43.982-17.141 C517.516,346.643,486.965,320,429.667,284.531z" style="fill: rgb(221, 215, 215);"/></g></svg>');   */
-  
-  filter: invert(1) !important;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-41.222 -54.294 613.548 640"><g fill="currentColor"><path d="M 91.271 252.645 C 96.483 342.1 168.745 412.994 257.138 412.994 C 296.563 412.994 332.773 398.883 361.266 375.321 C 320.749 363.442 275.847 346.764 229.69 326.167 C 178.971 303.534 131.427 278.221 91.271 252.645 Z" transform="matrix(0.999984, -0.005574, 0.005574, 0.999984, 0, 0)"/><path d="M 107.381 187.016 C 148.332 216.141 201.851 246.244 258.909 272.196 C 303.636 292.542 348.293 309.32 388.049 320.717 C 394.714 322.628 401.217 324.376 407.532 325.963 C 409.261 322.244 410.865 318.449 412.342 314.585 C 419.874 294.862 424.025 273.338 424.025 250.8 C 424.025 247.298 423.913 243.824 423.716 240.374 C 418.566 150.297 347.182 78.908 259.861 78.908 C 220.916 78.908 185.146 93.118 157 116.843 C 138.228 132.667 122.849 152.724 112.192 175.637 C 110.461 179.356 108.856 183.152 107.381 187.016 Z"/><path d="M 454.044 262.782 C 452.686 275.703 451.471 278.011 447.668 290.38 C 465.938 303.834 481.258 316.873 492.198 328.308 C 495.753 332.027 498.557 335.266 500.762 338.032 C 498.939 338.126 496.912 338.182 494.666 338.182 C 470.975 338.182 436.185 332.034 396.701 320.871 C 353.978 308.797 306.066 291.051 258.136 269.553 C 194.344 240.944 134.563 207.484 89.8 175.336 C 69.147 160.5 51.884 146.026 39.884 133.483 C 36.328 129.763 33.524 126.526 31.319 123.756 C 33.141 123.663 35.168 123.608 37.416 123.608 C 53.986 123.608 75.991 126.617 101.229 132.245 C 107.534 121.066 108.783 118.05 117.104 108.32 C 89.246 97.905 61.061 90.665 37.418 87.847 C 11.001 84.696 -6.25 94.018 -10.195 107.001 C -22.181 146.472 91.775 233.933 244.335 302.356 C 346.696 348.265 440.445 373.945 494.666 373.945 C 521.257 373.945 538.331 367.776 542.276 354.789 C 549.139 332.196 516.069 302.421 454.044 262.782 Z"/></g></svg>');
-  background-size: contain !important;
-    background-repeat: no-repeat !important;
-   font-size: 0 !important; /* Hides text if you're using background-image */
-    background-position: center center !important;
-    width: 38px !important;
-   margin-bottom: -1px !important;
-    height: 38px !important;
-  
-    min-height: 17px !important;
+  background-color: var(--toolbox-textcolor);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-41.222 -54.294 613.548 640'%3E%3Cg fill='black'%3E%3Cpath d='M 91.271 252.645 C 96.483 342.1 168.745 412.994 257.138 412.994 C 296.563 412.994 332.773 398.883 361.266 375.321 C 320.749 363.442 275.847 346.764 229.69 326.167 C 178.971 303.534 131.427 278.221 91.271 252.645 Z' transform='matrix(0.999984, -0.005574, 0.005574, 0.999984, 0, 0)'/%3E%3Cpath d='M 107.381 187.016 C 148.332 216.141 201.851 246.244 258.909 272.196 C 303.636 292.542 348.293 309.32 388.049 320.717 C 394.714 322.628 401.217 324.376 407.532 325.963 C 409.261 322.244 410.865 318.449 412.342 314.585 C 419.874 294.862 424.025 273.338 424.025 250.8 C 424.025 247.298 423.913 243.824 423.716 240.374 C 418.566 150.297 347.182 78.908 259.861 78.908 C 220.916 78.908 185.146 93.118 157 116.843 C 138.228 132.667 122.849 152.724 112.192 175.637 C 110.461 179.356 108.856 183.152 107.381 187.016 Z'/%3E%3Cpath d='M 454.044 262.782 C 452.686 275.703 451.471 278.011 447.668 290.38 C 465.938 303.834 481.258 316.873 492.198 328.308 C 495.753 332.027 498.557 335.266 500.762 338.032 C 498.939 338.126 496.912 338.182 494.666 338.182 C 470.975 338.182 436.185 332.034 396.701 320.871 C 353.978 308.797 306.066 291.051 258.136 269.553 C 194.344 240.944 134.563 207.484 89.8 175.336 C 69.147 160.5 51.884 146.026 39.884 133.483 C 36.328 129.763 33.524 126.526 31.319 123.756 C 33.141 123.663 35.168 123.608 37.416 123.608 C 53.986 123.608 75.991 126.617 101.229 132.245 C 107.534 121.066 108.783 118.05 117.104 108.32 C 89.246 97.905 61.061 90.665 37.418 87.847 C 11.001 84.696 -6.25 94.018 -10.195 107.001 C -22.181 146.472 91.775 233.933 244.335 302.356 C 346.696 348.265 440.445 373.945 494.666 373.945 C 521.257 373.945 538.331 367.776 542.276 354.789 C 549.139 332.196 516.069 302.421 454.044 262.782 Z'/%3E%3C/g%3E%3C/svg%3E");
+ 
+
+  /* --- Original layout and mask properties --- */
+  background-image: none !important;
+  filter: none !important; /* Replaced by mask */
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  font-size: 0 !important;
+  margin-bottom: -1px !important;
+  width: 38px !important;
+  height: 38px !important;
+  min-height: 17px !important;
   min-width: 17px !important;
-    display: inline-block !important;
+  display: inline-block !important;
 }
 
 /* --- Your Existing Layout/Responsive CSS (Integrated carefully) --- */
@@ -897,7 +933,7 @@ tab-group[split-view-group] {
 
     & .tab-content {
       min-width: 62px !important;
-     margin-left: -1px !important;
+     margin-left: -2px !important;
       :root[zen-sidebar-expanded='true'] & {
         justify-content: unset !important;
       }
