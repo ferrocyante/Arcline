@@ -364,6 +364,13 @@ height: 34px !important;
 
 
 
+#zen-create-new-button{
+  margin-top: 4px !important;
+ scale: 1 !important;
+  position: relative !important;
+  bottom: 1px !important;
+}
+
 
 
 
