@@ -32,49 +32,6 @@
 
 
  
-    @media (prefers-color-scheme: light) {
-
-
-
-#tabbrowser-arrowscrollbox[orient="vertical"] #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button,
-#vertical-tabs-newtab-button {
-  appearance: none;
-  border-radius: 12px !important;
-  height: 0.5rem !important;
- min-height: 38px !important;
-  filter: brightness(190%)  !important;
-  line-height: var(--tab-label-line-height);
-  border-radius: var(--border-radius-medium);
-  padding-left: 9px !important;
-  width: var(--tab-collapsed-background-width);
-  margin-inline: 0px !important;
-
-  #tabbrowser-tabs[orient="vertical"]:not([expanded]) & > .toolbarbutton-text {
-    display: flex;
-   
-  }
-
-  &:hover {
-    border-radius: 12px !important;
-    height: 8px !important;
-    background-color: var(--tab-hover-background-color);
-    outline-color: var(--tab-hover-outline-color);
-  }
-
-  &:focus-visible {
-    outline: var(--focus-outline);
-    outline-offset: var(--focus-outline-inset);
-  }
-
-  > .toolbarbutton-text {
-    text-align: start;
-    margin-left: 5px !important;
-    padding-inline-start: var(--tab-icon-end-margin);
-  }
-}
-
-    
-}
     
     
     
@@ -140,7 +97,7 @@
 
 #zen-media-controls-toolbar toolbaritem {
   border-radius: 12px !important; 
-margin-bottom: -12px !important;
+margin-bottom: -8px !important;
 
 }
 
