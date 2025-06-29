@@ -222,33 +222,7 @@ browser {
 
 
 
- @media (prefers-color-scheme: light) {
-    @media (-moz-pref("arcline.borders", 1)) {
-#browser{
-  
-  
- margin-top: -1.5px !important;
  
-
-}
-    
-    #zen-main-app-wrapper{
-      padding: 0px !important;
-     margin-top: 0px !important;
-  margin-left: -1px !important;
-  margin-right: -1px !important;
- margin-bottom: -1px !important;
-       border: 2px solid rgba(255, 255, 255, calc(var(--zen-gradient-opacity) + 0.3));
- 
-      border-radius: 8.9px !important;
-    }
-    
-  
-    
-}
-
-
-}
 
 
 
