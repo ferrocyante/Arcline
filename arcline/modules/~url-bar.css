@@ -35,7 +35,7 @@
 
 
   #urlbar-searchmode-switcher {
-  margin-top: 4.1px !important;
+  margin-top: 4.7px !important;
     height: 2rem !important;
     margin-right: 5px !important;
     margin-left: -3px !important;
@@ -251,7 +251,7 @@ margin-left: -4px !important;
   position: absolute;
   pointer-events: none !important;
   
-padding-bottom: 5rem !important;
+padding-bottom: 4.8rem !important;
   /* --- Appearance --- */
   background-color: var(--toolbar-bgcolor, #f0f0f0) !important;
   border-radius: 14px !important;

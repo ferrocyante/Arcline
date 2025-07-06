@@ -8,6 +8,7 @@
           #zen-tabbox-wrapper {
               margin: 0 !important;
           }
+       
         #zen-appcontent-navbar-wrapper{
         display: none !important;
           
@@ -28,12 +29,17 @@
           }
       }
   }
+   #browser{
+      margin-right: 0.5px !important;
+      border-radius: 9px !important;
+
+    }
+
 
       @media (-moz-pref("arcline.compact.sidebar.position", 0))     {
 
 
-
-
+ 
      #navigator-toolbox:not([animate='true']) #titlebar {
      
         &::before {
@@ -49,7 +55,7 @@ body:has([zen-compact-mode="true"]) #titlebar {
    
 
        
-   top: -4px   !important;
+   top: -7px   !important;
   margin-left: -4px  !important;
   
  
@@ -59,7 +65,7 @@ body:has([zen-compact-mode="true"]) #titlebar {
 scale: 1 !important;
  
     
-min-height: calc(100% + (var(--zen-element-separation) * 1)) !important;
+min-height: calc(100% + (var(--zen-element-separation) * 0.9)) !important;
 
   
   .titlebar-buttonbox {
@@ -144,7 +150,7 @@ height: 34px !important;
   left: calc((var(--zen-sidebar-width) - 0px) * -1) !important;
   width: calc(var(--zen-sidebar-width) + 6px) !important;
   min-width: 15px !important;
-  border-radius: 2px !important;
+  border-radius: 12px !important;
   
   margin-right: calc(var(--zen-element-separation)/8)  !important;
    margin-left: calc((var(--zen-element-separation) / 1) * -1) !important;
@@ -205,24 +211,6 @@ height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
   }
 
   
-
-.zen-essentials-container{
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-
-  
-.zen-current-workspace-indicator[active="true"] {
-   
-   margin-left: 1px !important;
- margin-top: 52px !important;
-  
-  top: 0px !important;
-    filter: invert(0) brightness(150%) contrast(105%);
-  scale:1;
- 
-
-}
 
 #nav-bar {
 height: 34px !important;
