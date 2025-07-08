@@ -16,6 +16,7 @@
 @import "modules/~url-bar.css";
 @import "modules/~workspace.css";
 @import "modules/~context-menu.css";
+@import "modules/~container.css";
 @import "modules/sidebar-normal.css";
 @import "modules/sidebar-dark.css";
 @import "modules/sidebar-dark-tinted.css";
@@ -28,5 +29,4 @@
 @import "modules/compact-mode-full-screen-mode.css";
 @import "modules/pip.css";
 @import "modules/findbar.css";
-
 
