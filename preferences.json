@@ -1,35 +1,34 @@
 [
   {
+    "type": "text",
+    "label": "⚙️ Arc-line Theme Settings",
+    "margin": "20px 0 25px 0",
+    "size": "24px"
+  },
+
+  {
+    "type": "text",
+    "label": "🔧 Core Firefox Behavior",
+    "margin": "10px 0 15px 0",
+    "size": "20px"
+  },
+  {
     "property": "browser.tabs.allow_transparent_browser",
-    "label": "Allow browser to be transparent.",
+    "label": "Allow browser to be transparent",
     "default": true,
     "type": "checkbox",
     "force": true
-  },
-  {
-    "property": "zen.view.experimental-force-window-controls-left",
-    "label": "Turn on experimental left window controls.",
-    "default": true,
-    "type": "checkbox",
-    "force": true,
-    "restart": true
   },
   {
     "property": "browser.tabs.groups.enabled",
-    "label": "Turn on browser tab groups.",
+    "label": "Enable browser tab groups",
     "default": true,
     "type": "checkbox",
     "force": true
   },
   {
-    "property": "browser.urlbar.scotchBonnet.enableOverride",
-    "label": "Enable ability to search directly through any search engine.",
-    "default": false,
-    "type": "checkbox"
-  },
-  {
     "property": "browser.uidensity",
-    "label": "Browser density.",
+    "label": "Browser density (0=Normal, 1=Compact, 2=Touch)",
     "type": "string",
     "value": "number",
     "default": 2,
@@ -37,7 +36,7 @@
   },
   {
     "property": "browser.urlbar.maxRichResults",
-    "label": "Url bar search result",
+    "label": "URL bar search results count",
     "type": "string",
     "value": "number",
     "default": 5,
@@ -45,7 +44,7 @@
   },
   {
     "property": "widget.non-native-theme.scrollbar.size.override",
-    "label": "Size of scroll bar (-1 to remove completely)",
+    "label": "Scrollbar size (-1 to remove completely)",
     "type": "string",
     "value": "number",
     "default": 0,
@@ -53,374 +52,304 @@
   },
   {
     "property": "widget.windows.mica.toplevel-backdrop",
-    "label": "darkens tone of browser",
+    "label": "Windows Mica backdrop style (darkens browser tone)",
     "type": "string",
     "value": "number",
     "default": 1,
     "force": true
   },
   {
+    "property": "browser.urlbar.scotchBonnet.enableOverride",
+    "label": "Enable ability to search directly through any search engine",
+    "default": false,
+    "type": "checkbox"
+  },
+
+  {
+    "type": "text",
+    "label": "🪟 Window & Layout",
+    "margin": "30px 0 15px 0",
+    "size": "20px"
+  },
+  {
+    "property": "zen.view.experimental-force-window-controls-left",
+    "label": "EXPERIMENTAL: Force window controls to the left",
+    "default": true,
+    "type": "checkbox",
+    "force": true,
+    "restart": true
+  },
+  {
+    "property": "arcline.control.button",
+    "label": "Window control buttons position",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 1,
+    "options": [
+      { "value": 1, "label": "Left" },
+      { "value": 2, "label": "Right" }
+    ]
+  },
+
+  {
+    "type": "text",
+    "label": "🌐 URL Bar",
+    "margin": "30px 0 15px 0",
+    "size": "20px"
+  },
+  {
+    "type": "separator",
+    "label": "⚠️ Important Note",
+    "margin": "0 0 5px 0"
+  },
+  {
+    "type": "text",
+    "label": "For URL bar icons to align correctly, this companion extension is recommended: https://addons.mozilla.org/en-US/firefox/addon/arc-like-copy-link/",
+    "size": "13px",
+    "margin": "0 0 15px 0"
+  },
+  {
+    "property": "zen.urlbar.behavior",
+    "label": "URL bar behavior",
+    "type": "dropdown",
+    "placeholder": false,
+    "defaultValue": "float",
+    "options": [
+      { "value": "float", "label": "Float (Default)" },
+      { "value": "floating-on-type", "label": "Floating on Type" }
+    ],
+    "force": true
+  },
+  {
+    "property": "arcline.url.bar",
+    "label": "Enable original Arc-line URL bar style",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
+    ]
+  },
+  {
+    "property": "arcline.url.bar.scale",
+    "label": "Enable scale effect for original Arc-line URL bar",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
+    ]
+  },
+
+  {
+    "type": "text",
+    "label": "📑 Sidebar",
+    "margin": "30px 0 15px 0",
+    "size": "20px"
+  },
+  {
+    "property": "arcline.compact.sidebar.bg",
+    "label": "Compact sidebar background style",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Normal" },
+      { "value": 1, "label": "Dark" },
+      { "value": 2, "label": "Dark Tinted" },
+      { "value": 3, "label": "Glass Tinted" }
+    ]
+  },
+  {
+    "property": "arcline.compact.sidebar.position",
+    "label": "Compact sidebar position",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Attached" },
+      { "value": 1, "label": "Floating" }
+    ]
+  },
+  {
+    "property": "arcline.essential.always.four.in.a.row",
+    "label": "Force essentials to always be four in a row",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
+    ]
+  },
+
+  {
+    "type": "text",
+    "label": "🎨 General Styles & Effects",
+    "margin": "30px 0 15px 0",
+    "size": "20px"
+  },
+  {
     "property": "zen.theme.content-element-separation",
-    "label": "border of browser (10 is best)",
+    "label": "Content/browser border separation (10 is best)",
     "type": "string",
     "value": "number",
     "default": 10,
     "force": true
   },
   {
-    "type": "separator",
-    "label": "NOTE"
-  },
-  {
-  "type": "text",
-  "label": "Copy url bar link extension (without extension some icons in url bar may get miss alligned ) :    https://addons.mozilla.org/en-US/firefox/addon/arc-like-copy-link/  "
-  },
-  {
-    "type": "separator",
-    "label": "url-bar styles"
-  },
-  {
-    "property": "zen.urlbar.behavior",
-    "label": "Url bar behavior (float by default.)",
-    "type": "dropdown",
-    "placeholder": false,
-    "defaultValue": "float",
-    "options": [
-      {
-        "value": "floating-on-type",
-        "label": "floating-on-type"
-      },
-      {
-        "value": "float",
-        "label": "float"
-      }
-    ],
-    "force": true
-  },
-  {
-    "property": "arcline.url.bar",
-    "label": "Add support for og arcline url bar",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
-    ]
-  },
-  {
-    "property": "arcline.url.bar.scale",
-    "label": "Add support for scale effect in og arcline url bar",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
-    ]
-  },
-  {
-    "type": "separator",
-    "label": "external-support styles"
-  },
-  {
-    "property": "arcline.superpin",
-    "label": "Add support for super pin mod.",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
-    ]
-  },
-  {
-    "property": "arcline.pinned.extensions",
-    "label": "Add support for pinned extensions ( make sure you  disable it when you have not pinned any extension)",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
-    ]
-  },
-   {
-    "property": "arcline.tab.grps",
-    "label": "Add a support for rwx animated tab group icons",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
-    ]
-  },
-  {
-    "type": "separator",
-    "label": "other styles"
-  },
-   {
     "property": "arcline.container",
-    "label": "Add support for arcline container style",
+    "label": "Enable Arc-line container tab styling",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
     "default": 1,
     "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
-    ]
-  },
-  {
-    "property": "arcline.compact.mode.full.screen.mode",
-    "label": "Add a support for marginless full screen compact mode",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
     ]
   },
   {
     "property": "arcline.borders",
-    "label": "Add different style of borders",
+    "label": "Border style",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
     "default": 0,
     "options": [
-      {
-        "value": 0,
-        "label": "disabled"
-      },
-      {
-        "value": 1,
-        "label": "dynamic"
-      },
-       {
-        "value": 2,
-        "label": "dual"
-      },
-       {
-        "value": 3,
-        "label": "faded"
-      }  
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Dynamic" },
+      { "value": 2, "label": "Dual" },
+      { "value": 3, "label": "Faded" }
     ]
   },
   {
     "property": "arcline.force.blur",
-    "label": "Add support for clip path in case your blur is not working toggle this on",
+    "label": "Enable clip-path blur fix (if blur doesn't work)",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
     "default": 0,
     "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
     ]
   },
   {
-    "type": "separator",
-    "label": "Sidebar Styles"
-  },
-  {
-    "property": "arcline.compact.sidebar.bg",
-    "label": "Add different background to compact mode sidebar",
+    "property": "arcline.compact.mode.full.screen.mode",
+    "label": "Enable marginless fullscreen compact mode",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
     "default": 0,
     "options": [
-      {
-        "value": 0,
-        "label": "normal"
-      },
-      {
-        "value": 1,
-        "label": "dark"
-      },
-       {
-        "value": 2,
-        "label": "dark-tinted"
-      },
-       {
-        "value": 3,
-        "label": "glass-tinted"
-      }  
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
     ]
   },
-   {
-    "property": "arcline.compact.sidebar.position",
-    "label": "Changes compact mode sidebar style",
+
+  {
+    "type": "text",
+    "label": "🧩 External Mod Support",
+    "margin": "30px 0 15px 0",
+    "size": "20px"
+  },
+  {
+    "property": "arcline.superpin",
+    "label": "Enable Super Pin mod support",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
     "default": 0,
     "options": [
-      {
-        "value": 0,
-        "label": "attached"
-      },
-      {
-        "value": 1,
-        "label": "floating"
-      }  
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
     ]
   },
   {
-    "property": "arcline.essential.always.four.in.a.row",
-    "label": "make esssentials to be always four in a row",
+    "property": "arcline.pinned.extensions",
+    "label": "Enable Pinned Extensions mod support (disable if none are pinned)",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
     "default": 0,
     "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
     ]
   },
-   {
+  {
+    "property": "arcline.tab.grps",
+    "label": "Enable RWX animated tab group icons support",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
+    ]
+  },
+  {
     "property": "arcline.addon.visible",
-    "label": "set addon/extension button opacity to zero, button will be still there just invisible",
+    "label": "Make addon/extension button invisible (but still clickable)",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
     "default": 0,
     "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
     ]
   },
+
   {
-    "type": "separator",
-    "label": "Control Buttons Styles"
-  },
-  {
-    "property": "arcline.control.button",
-    "label": "helps in switching from control buttons postions",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 1,
-    "options": [
-      {
-        "value": 1,
-        "label": "left"
-      },
-      {
-        "value": 2,
-        "label": "right"
-      }
-    ]
-  },
-  {
-    "type": "separator",
-    "label": "Fonts"
+    "type": "text",
+    "label": "🔤 Fonts",
+    "margin": "30px 0 15px 0",
+    "size": "20px"
   },
   {
     "property": "arcline.fonts.sf-pro",
     "type": "dropdown",
-    "label": "Use SF Pro font.",
+    "label": "Use SF Pro font (if installed)",
     "placeholder": false,
     "value": "number",
     "default": 1,
     "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
     ]
   },
   {
     "property": "mod.arcline.font",
     "type": "string",
     "defaultValue": "SF Pro",
-    "placeholder": "Font name installed on your computer.",
-    "label": "Display font.",
+    "placeholder": "Font name installed on your computer",
+    "label": "Custom display font name",
     "conditions": [
       {"if":{"property":"arch.fonts.sf-pro","value":0}}
     ]
   },
+
   {
-    "type": "separator",
-    "label": "AI"
+    "type": "text",
+    "label": "🤖 AI Features",
+    "margin": "30px 0 15px 0",
+    "size": "20px"
   },
   {
     "property": "extensions.tab_sort.mistral_api_key",
-    "label": "Insert mistral api key for sort button.",
+    "label": "Mistral API key for tab sorting button",
     "type": "string",
-    "placeholder": "API Key."
+    "placeholder": "API Key"
   }
 ]
