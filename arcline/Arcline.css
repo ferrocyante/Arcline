@@ -30,3 +30,6 @@
 @import "modules/pip.css";
 @import "modules/findbar.css";
 
+@import "modules/~single-dynamic-white";
+@import "modules/~dual-white-black";
+@import "modules/~single-faded-white";
