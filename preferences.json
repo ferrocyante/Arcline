@@ -65,7 +65,7 @@
   },
   {
   "type": "text",
-  "label": "Copy url bar link extension (without extension some icons in url bar may get miss alligned ) :  |  https://addons.mozilla.org/en-US/firefox/addon/arc-like-copy-link/  |"
+  "label": "Copy url bar link extension (without extension some icons in url bar may get miss alligned ) :    https://addons.mozilla.org/en-US/firefox/addon/arc-like-copy-link/  "
   },
   {
     "type": "separator",
