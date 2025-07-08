@@ -9,7 +9,7 @@
   {
     "type": "text",
     "label": "🔧 Core Firefox Behavior",
-    "margin": "10px 0 15px 0",
+    "margin": "30px 0 15px 0",
     "size": "20px"
   },
   {
@@ -67,7 +67,7 @@
 
   {
     "type": "text",
-    "label": "🪟 Window & Layout",
+    "label": "🚦Control buttons layout",
     "margin": "30px 0 15px 0",
     "size": "20px"
   },
@@ -99,13 +99,8 @@
     "size": "20px"
   },
   {
-    "type": "separator",
-    "label": "⚠️ Important Note",
-    "margin": "0 0 5px 0"
-  },
-  {
     "type": "text",
-    "label": "For URL bar icons to align correctly, this companion extension is recommended: https://addons.mozilla.org/en-US/firefox/addon/arc-like-copy-link/",
+    "label": " ⚠️ For URL bar icons to align correctly, this companion extension is recommended: https://addons.mozilla.org/en-US/firefox/addon/arc-like-copy-link/",
     "size": "13px",
     "margin": "0 0 15px 0"
   },
