@@ -412,7 +412,7 @@ tab-group:not([split-view-group]) {
 
 
 		&[has-active] .tab-group-icon {
-			margin: 0px 0px 0px 0px;
+			margin: 0px 0px 0px  2.5px;
 		}
 
 		&:not([has-active]) .tab-group-icon {
@@ -670,7 +670,10 @@ tab-group:not([split-view-group]) {
 
   /* --- Label Container (Styling remains the same) --- */
   & .tab-group-label-container {
- 
+    flex: 0 0 auto !important; position: sticky !important; top: 0 !important; z-index: 1000 !important;
+    padding: 0px !important; --tab-group-color-pale: transparent !important; --tab-group-color: transparent !important;
+    margin: 0 !important; height: var(--group-max-height-closed) !important;
+   
     margin-bottom: 2px !important; border-radius: calc(var(--border-radius-medium) + 2px) !important;
     transition: background-color 0.2s ease !important;
     transform: translateY(0px) !important;

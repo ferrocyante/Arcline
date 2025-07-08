@@ -19,7 +19,7 @@ body:has([zen-compact-mode="true"]) #titlebar {
    
 
        
-   top: calc(var(--zen-element-separation) / 3.8)  !important;
+   top: calc(var(--zen-element-separation) / 1.9)  !important;
   margin-left: calc(var(--zen-element-separation) / 1.7)  !important;
   
  
@@ -34,19 +34,12 @@ height: calc(100% - (var(--zen-element-separation) * 1)) !important;
   
   .titlebar-buttonbox {
     margin-right: 0px;
-    margin-left: -1px !important;
+    margin-left: 1px !important;
   margin-top: 1px !important;
   gap: 2.3px !important;
   }
 
-  
-
-.zen-essentials-container{
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-  
-  #PanelUI-menu-button {
+   #PanelUI-menu-button {
     margin-top: 0.2px !important;
     /* If your new icon is smaller/larger you might adjust padding, or let the pseudo-element overflow */
 }
@@ -54,6 +47,12 @@ height: calc(100% - (var(--zen-element-separation) * 1)) !important;
   #back-button, #forward-button , #reload-button{
     margin-bottom: 0px !important;
   }
+
+.zen-essentials-container{
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
   
 .zen-current-workspace-indicator[active="true"] {
    

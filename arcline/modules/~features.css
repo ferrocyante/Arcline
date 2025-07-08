@@ -7,14 +7,12 @@ browser {
 
 
 
-
 @media (prefers-color-scheme: dark) {
 
 #zen-media-controls-toolbar toolbaritem::before {
  content: '' !important;
   position: absolute !important;
-    background: linear-gradient(to right, light-dark(#eee, #444) 0px, light-dark(#eee, #444) calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 25px), transparent calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 100px)) !important;
- 
+  background: transparent !important;
   top: 0px !important;
   left: 50% !important;
   transform: translate(-50%, 0);
@@ -32,18 +30,18 @@ browser {
   & > toolbaritem::before {
      content: '' !important;
   position: absolute !important;
-    background: linear-gradient(to right, light-dark(#eee, #444) 0px, light-dark(#eee, #444) calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 25px), transparent calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 100px)) !important;
- 
+  background: transparent !important;
+    --zen-media-control-bg: var(--toolbox-textcolor) !important;
     flex-grow: 1;
    
-    border-radius: 13px !important;
+    border-radius: 11px !important;
     transition: padding 0.3s ease-out;
      z-index: -10000 !important;
     left: 0;
-    bottom: 0px;
-    padding-left: 6px !important;
+    bottom: 0.5px;
+    padding-left: 5px !important;
     padding-right: 6px !important;
-    padding-bottom: 0.1px !important;
+    padding-bottom: 0px !important;
    
     border-radius: var(--border-radius-medium);
     box-shadow: none !important;
@@ -57,25 +55,6 @@ browser {
 
 
 
-#zen-media-controls-toolbar{
-  & > toolbaritem {
-    --zen-media-control-bg: light-dark(rgba(255, 255, 255, 0.5Z), rgba(0, 0, 0, 0.07)) !important;
-    flex-grow: 1;
-    padding: 0;
-    transition: padding 0.3s ease-out;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 4px 6px;
-    border-radius: var(--border-radius-medium);
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: var(--zen-media-control-bg);
-   
-    backdrop-filter: saturate(1) contrast(1) blur(20px) !important;
-    width: 100%;
-  }
-
-}
 
 
 
@@ -243,33 +222,7 @@ browser {
 
 
 
- @media (prefers-color-scheme: light) {
-    @media (-moz-pref("arcline.borders", 1)) {
-#browser{
-  
-  
- margin-top: -1.5px !important;
  
-
-}
-    
-    #zen-main-app-wrapper{
-      padding: 0px !important;
-     margin-top: 0px !important;
-  margin-left: -1px !important;
-  margin-right: -1px !important;
- margin-bottom: -1px !important;
-       border: 2px solid rgba(255, 255, 255, calc(var(--zen-gradient-opacity) + 0.3));
- 
-      border-radius: 8.9px !important;
-    }
-    
-  
-    
-}
-
-
-}
 
 
 
@@ -284,68 +237,15 @@ browser {
 
 }
     
-    #browser::before{
-      margin-top: 5px !important;
-    }
-    #browser{
-      margin-right: 0px !important;
-      overflow: hidden !important;
-      
-      margin-top: 0px !important;
-      margin-left: 0px !important;
-   
-      border-radius: 9px !important;
-
-    }
-
     #zen-main-app-wrapper{
       padding: 0px !important;
      margin-top: 0px !important;
   margin-left: -1px !important;
-  margin-right: -0.8px !important;
+  margin-right: -1px !important;
  margin-bottom: -1px !important;
        border: 2px solid rgba(215, 215, 217,  calc(var(--zen-gradient-opacity) + 0.4));
- scale: 1 !important;
-      border-radius: 9px !important;
-    }
-    
-  
-    
-}
-  
-}
-
- @media (-moz-pref("arcline.borders", 2)) {
-#browser{
-  
-  
- margin-top: -1.5px !important;
  
-
-}
-    
-  
-    #browser{
-      margin-right: 0px !important;
-      overflow: hidden !important;
-     
-      margin-top: 0px !important;
-      margin-left: 0px !important;
-   
-      border-radius: 7px !important;
-
-    }
-
-    #zen-main-app-wrapper{
-      padding: 0px !important;
-     margin-top: 1.5px !important;
-  margin-left: 1px !important;
-  margin-right: 1px !important;
-       outline: 5px solid rgba(0, 0, 0, 1) !important;
- margin-bottom: 1px !important;
-       border: 1px solid rgba(215, 215, 217,  calc(var(--zen-gradient-opacity) + 0.4));
- scale: 1 !important;
-      border-radius: 5px !important;
+      border-radius: 8.9px !important;
     }
     
   

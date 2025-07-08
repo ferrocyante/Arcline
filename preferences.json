@@ -187,7 +187,7 @@
   },
   {
     "property": "arcline.borders",
-    "label": "Add border around browser (helps in getting mac like finsih)",
+    "label": "Add border around browser (makes window look like mac.)",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
@@ -199,11 +199,7 @@
       },
       {
         "value": 1,
-        "label": "adds white border (use tacky border , windhawk for black border )"
-      }
-      {
-        "value": 2,
-        "label": "dual borders ( windows default borders still present)"
+        "label": "Enabled"
       }
     ]
   },

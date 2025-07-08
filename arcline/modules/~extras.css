@@ -239,7 +239,6 @@ margin-bottom: -8px !important;
     transition: width 0.15s ease-in-out; /* Add transition for width */
     min-width: 0; /* Allow shrinking below intrinsic size */
     margin-right: 0; /* Reduced from 8px to decrease space between line and buttons */
-    
   }
   
   /* Shrink SVG width on separator hover */
@@ -249,12 +248,11 @@ margin-bottom: -8px !important;
   
   /* Update SVG line selectors to path */
   .vertical-pinned-tabs-container-separator svg path {
-    stroke: light-dark(rgba(1, 1, 1, 0.13), rgba(255, 255, 255, 0.2)) !important; /* Line color */
+    stroke: light-dark(rgba(1, 1, 1, 0.15), rgba(255, 255, 255, 0.2)); /* Line color */
     stroke-width: 1px !important; /* Reduced from 1.5px to make thinner line */
     vector-effect: non-scaling-stroke; /* Keep stroke width consistent on scaling */
     fill: none; /* Ensure path isn't filled */
     transition: stroke 0.15s ease-in-out; /* Add transition for color */
-    
   }
   
   /* Optional: Change path color slightly on hover */
@@ -324,8 +322,6 @@ margin-bottom: -8px !important;
       height: 12px !important; /* Reduced from 14px */
       margin-right: 2px !important; /* Reduced from 4px */
       fill: currentColor !important;
-    filter: brightness(88888%) !important;
-    color: var(--toolbox-textcolor) !important;
   }
   
   #clear-button .arrow-icon {
@@ -333,14 +329,10 @@ margin-bottom: -8px !important;
       height: 12px !important; /* Reduced from 14px */
       margin-right: 2px !important; /* Reduced from 4px */
       stroke: currentColor !important;
-    
-    filter: invert(0) brightness(1000) !important;
-    color: var(--toolbox-textcolor) !important;
   }
   
   #sort-button .toolbarbutton-text,
   #clear-button .toolbarbutton-text {
-    color: var(--toolbox-textcolor) !important;
       margin-left: 1px !important; /* Reduced from 2px */
   }
   

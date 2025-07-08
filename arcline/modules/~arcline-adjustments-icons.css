@@ -10,8 +10,7 @@
 #urlbar-zoom-button {
   appearance: none;
   margin-right: 0px !important;
-   margin-top: 6.2px !important;
-
+   margin-top: 5px !important;
   font-size: 0.7em !important;
  padding-left: 8px !important;
   padding-top: 4px !important;
@@ -168,7 +167,7 @@ height: 34px !important;
     margin-bottom: 0px !important;
     height: 35px !important;
     margin-right: 0px !important;
-    margin-top: 5.8px !important;
+    margin-top: 5px !important;
     
     
   }}
@@ -185,7 +184,7 @@ height: 34px !important;
     min-height: 34px !important;
     margin-right: 2px !important;
     margin-left: 1.5px !important;
-    margin-top: 3.5px !important;
+    margin-top: 2.5px !important;
     background: var(--toolbarbutton-hover-background);
   }
 }
@@ -203,25 +202,17 @@ height: 34px !important;
 
 
 
+
 #navigator-toolbox{
-  margin-bottom: 3px !important;
+  margin-bottom: -1px !important;
  
- margin-top: 3px !important;
-}
-
-zen-workspace {
-  & > arrowscrollbox {
-    max-height: 100%;
-    overflow: hidden;
-    position: relative;
-    margin-top: -10px;
-  }
+ 
 }
 
 
-.zen-workspaces-actions{
-  margin-top: -8px !important;
-}
+
+
+
 
 
 *{
@@ -265,10 +256,7 @@ zen-workspace {
 
 
 /* sets the new tabs svg */
-#zen-create-new-button{
-  
-  margin-bottom: -2px !important;
-}
+
 
 /* makes the icons look nicer*/
 .zen-workspace-icon {
@@ -375,6 +363,13 @@ zen-workspace {
 
 
 
+
+#zen-create-new-button{
+  margin-top: 4px !important;
+ scale: 1 !important;
+  position: relative !important;
+  bottom: 1px !important;
+}
 
 
 
@@ -766,7 +761,7 @@ height: 19px !important;
 
 
 
-
+/
 
 /*----------icon withs important --------------------*/
 #zen-sidebar-icons-wrapper{
@@ -779,6 +774,7 @@ height: 19px !important;
 
 
 /* fix workspaces icons */
+
 toolbarbutton{
 	padding: 0.17rem !important;
   
