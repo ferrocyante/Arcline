@@ -2,7 +2,9 @@
  /* Container indicator in URL bar */
   #userContext-icons {
    scale: 0.9 !important;
-   margin-top: 3px !important;
+   margin-top: 2px !important;
+    margin-right: -4px !important;
+   
   }
 
 
