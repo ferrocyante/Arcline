@@ -9,7 +9,7 @@
   {
     "type": "text",
     "label": "🔧 Core Firefox Behavior",
-    "margin": "30px 0 15px 0",
+    "margin": "30px 0 30px 0",
     "size": "20px"
   },
   {
@@ -67,8 +67,8 @@
 
   {
     "type": "text",
-    "label": "🚦Control buttons layout",
-    "margin": "30px 0 15px 0",
+    "label": "🚥 Control buttons layout",
+    "margin": "30px 0 30px 0",
     "size": "20px"
   },
   {
@@ -95,7 +95,7 @@
   {
     "type": "text",
     "label": "🌐 URL Bar",
-    "margin": "30px 0 15px 0",
+    "margin": "30px 0 30px 0",
     "size": "20px"
   },
   {
@@ -189,7 +189,7 @@
   {
     "type": "text",
     "label": "🎨 General Styles & Effects",
-    "margin": "30px 0 15px 0",
+    "margin": "30px 0 30px 0",
     "size": "20px"
   },
   {
@@ -254,7 +254,7 @@
   {
     "type": "text",
     "label": "🧩 External Mod Support",
-    "margin": "30px 0 15px 0",
+    "margin": "30px 0 30px 0",
     "size": "20px"
   },
   {
@@ -309,7 +309,7 @@
   {
     "type": "text",
     "label": "🔤 Fonts",
-    "margin": "30px 0 15px 0",
+    "margin": "30px 0 30px 0",
     "size": "20px"
   },
   {
@@ -338,7 +338,7 @@
   {
     "type": "text",
     "label": "🤖 AI Features",
-    "margin": "30px 0 15px 0",
+    "margin": "30px 0 30px 0",
     "size": "20px"
   },
   {
