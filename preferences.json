@@ -60,6 +60,18 @@
     "force": true
   },
   {
+    "type": "separator",
+    "label": "NOTE"
+  },
+  {
+  "type": "text",
+  "label": "Copy url bar link extension (without extension some icons in url bar may get miss alligned ) :  |  https://addons.mozilla.org/en-US/firefox/addon/arc-like-copy-link/  |
+  },
+  {
+    "type": "separator",
+    "label": "url-bar styles"
+  },
+  {
     "property": "zen.urlbar.behavior",
     "label": "Url bar behavior (float by default.)",
     "type": "dropdown",
@@ -114,6 +126,28 @@
     ]
   },
   {
+    "type": "separator",
+    "label": "external-support styles"
+  },
+  {
+    "property": "arcline.superpin",
+    "label": "Add support for super pin mod.",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
     "property": "arcline.pinned.extensions",
     "label": "Add support for pinned extensions ( make sure you  disable it when you have not pinned any extension)",
     "type": "dropdown",
@@ -130,6 +164,28 @@
         "label": "Enabled"
       }
     ]
+  },
+   {
+    "property": "arcline.tab.grps",
+    "label": "Add a support for rwx animated tab group icons",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      {
+        "value": 0,
+        "label": "Disabled"
+      },
+      {
+        "value": 1,
+        "label": "Enabled"
+      }
+    ]
+  },
+  {
+    "type": "separator",
+    "label": "other styles"
   },
    {
     "property": "arcline.container",
@@ -152,24 +208,6 @@
   {
     "property": "arcline.compact.mode.full.screen.mode",
     "label": "Add a support for marginless full screen compact mode",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
-    ]
-  },
-   {
-    "property": "arcline.tab.grps",
-    "label": "Add a support for rwx animated tab group icons",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
@@ -214,24 +252,6 @@
   {
     "property": "arcline.force.blur",
     "label": "Add support for clip path in case your blur is not working toggle this on",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      {
-        "value": 0,
-        "label": "Disabled"
-      },
-      {
-        "value": 1,
-        "label": "Enabled"
-      }
-    ]
-  },
-  {
-    "property": "arcline.superpin",
-    "label": "Add support for super pin mod.",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
