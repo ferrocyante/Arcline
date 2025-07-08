@@ -20,10 +20,9 @@
 }
 
 .urlbar-input {
-  padding-top: 2px !important;
-    font-size: 13.1px !important;
+  padding-top: 2.7px !important;
+    font-size: 13px !important;
    /* color: #FFFFFF !important;*/
-
   /*  padding-right: 12px !important;*/
    font-weight: 510 !important;
 /* padding-top: 0px !important;*/
@@ -36,14 +35,16 @@
   #urlbar-searchmode-switcher {
   margin-top: 4.7px !important;
     height: 2rem !important;
-    margin-right: 5px !important;
-    margin-left: -3px !important;
+    margin-right: -2px !important;
+    
+     
+  transform: translate(-18%, -1%) !important;
     min-height: 2px !important;
  border-radius: 9px !important;
     padding-top: 13px !important;
     padding-right: 5px !important;
     padding-bottom: 13px !important;
-    padding-left: 6px !important;;
+    padding-left: 5px !important;;
     scale: 0.8 !important;
  background-color: light-dark(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.15)) !important;
 
@@ -52,19 +53,11 @@
 
 
 #searchmode-switcher-chicklet {
-   background-color: light-dark(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.15)) !important;
-  border-start-end-radius: var(--toolbarbutton-border-radius);
-  border-end-end-radius: var(--urlbar-icon-border-radius);
-  align-items: center;
-  scale: 0.9 !important;
-margin-left: -4px !important;
-  padding-left: 8px !important;
-  margin-top: 0.35rem !important;
-  border-radius: 9px !important;
+   
 
 
    
-  margin-inline-end: var(--urlbar-searchmodeswitcher-margin-inline-end);
+ 
   display: none !important; 
 }
 
@@ -139,10 +132,10 @@ margin-left: -4px !important;
   
   /* --- Keep all your original layout styles --- */
   scale: 0.65 !important;
-  margin-top: 0.1rem !important;
+  margin-top: 1.2px !important;
   height: 32px !important;
   width: 33px !important;
-  margin-right: -6px !important;
+  margin-right: -4px !important;
 }
 
   
@@ -262,14 +255,14 @@ padding-bottom: 4.8rem !important;
 
   /* --- Positioning & Size --- */
   margin-top: 15.04rem !important; /* Your fixed vertical position */
-  left: 50% !important;           /* Using left/transform for robustness */
+  left: 50.1% !important;           /* Using left/transform for robustness */
   transform: translateX(-50%) !important;
   width: min(90%, 56.86rem) !important;
 
   /* --- DYNAMIC HEIGHT --- */
   /* Use the JS variable, fallback to your fixed height if variable isn't set */
   height: var(--urlbar-view-dynamic-height, 39rem) !important;
-
+transition: height 0.5s ease-in-out; /* or whatever duration/timing you like */
   /* --- Stacking & Visibility --- */
   z-index: -1 !important;
   opacity: 0 !important; /* Start hidden */
