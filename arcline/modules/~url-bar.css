@@ -1,6 +1,5 @@
 
 
-
 @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
   html {
     border-radius: 60px !important;
@@ -42,8 +41,9 @@
     min-height: 2px !important;
  border-radius: 9px !important;
     padding-top: 13px !important;
+    padding-right: 5px !important;
     padding-bottom: 13px !important;
-    padding-left: 5px !important;;
+    padding-left: 6px !important;;
     scale: 0.8 !important;
  background-color: light-dark(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.15)) !important;
 
@@ -65,7 +65,7 @@ margin-left: -4px !important;
 
    
   margin-inline-end: var(--urlbar-searchmodeswitcher-margin-inline-end);
-  display: none;
+  display: none !important; 
 }
 
 
@@ -106,7 +106,7 @@ margin-left: -4px !important;
 
 
 
-@media (prefers-color-scheme: dark) {
+
 
   
   
@@ -138,7 +138,7 @@ margin-left: -4px !important;
   fill: none !important;
   
   /* --- Keep all your original layout styles --- */
-  scale: 0.7 !important;
+  scale: 0.65 !important;
   margin-top: 0.1rem !important;
   height: 32px !important;
   width: 33px !important;
@@ -377,7 +377,7 @@ body:has(#urlbar[open]) #browser::before {
     }
 }
   
-}
+
 
 }
 
