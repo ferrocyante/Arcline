@@ -191,7 +191,7 @@
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
-    "default": 1,
+    "default": 0,
     "options": [
       {
         "value": 0,
