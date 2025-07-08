@@ -362,7 +362,7 @@ tab-group:not([split-view-group]) {
 			tab-group:not([collapsed])>& {
         background: transparent !important;
         box-shadow: none !important;
-        margin-bottom: 1px !important;
+        margin-bottom: 2px !important;
 				padding-block-end: 0 !important;
 			}
 		}
@@ -397,7 +397,7 @@ tab-group:not([split-view-group]) {
 		border-radius: calc(var(--zen-border-radius) + 2px) !important;
 
 		&:not([collapsed]) .tab-group-label-container {
-      margin-bottom: 1.2px !important;
+      margin-bottom: .2px !important;
       margin-top: 0.6px !important;
 			background: var(--tab-selected-bgcolor) !important;
 			box-shadow: var(--tab-selected-shadow);
@@ -412,12 +412,12 @@ tab-group:not([split-view-group]) {
 
 
 		&[has-active] .tab-group-icon {
-			margin: 0px 0px 0px  2.5px;
+			margin: 0px 0px 0px 0px;
 		}
 
 		&:not([has-active]) .tab-group-icon {
 			margin: 0px -1px 0px 0px;
-      scale: 0.92 !important;
+      scale: 0.95 !important;
 		}
 
 		&:hover .tab-group-action-button {
@@ -670,10 +670,7 @@ tab-group:not([split-view-group]) {
 
   /* --- Label Container (Styling remains the same) --- */
   & .tab-group-label-container {
-    flex: 0 0 auto !important; position: sticky !important; top: 0 !important; z-index: 1000 !important;
-    padding: 0px !important; --tab-group-color-pale: transparent !important; --tab-group-color: transparent !important;
-    margin: 0 !important; height: var(--group-max-height-closed) !important;
-   
+ 
     margin-bottom: 2px !important; border-radius: calc(var(--border-radius-medium) + 2px) !important;
     transition: background-color 0.2s ease !important;
     transform: translateY(0px) !important;
@@ -686,7 +683,7 @@ tab-group:not([split-view-group]) {
   /* --- Tabs within Group --- */
   & tab:not([zen-glance-tab]) {
     margin-left: 14px !important; overflow: hidden !important; position: relative;
-
+margin-bottom: -2.1px !important;
     /* --- Tab Transition (Uses FAST motion timing) --- */
     transition:
       /* Apply FAST duration/easing to tab transform/opacity */
