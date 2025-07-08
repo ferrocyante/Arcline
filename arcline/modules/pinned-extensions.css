@@ -81,14 +81,14 @@
     width: 32px !important;
     flex-grow: 1 !important;
     order: -1 !important;
-    
+       background: var(--zen-toolbar-element-bg) !important;
    
     border-radius: 11.5px !important;
     transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
   }
 
   .unified-extensions-item:hover {
-    background-color: var(--toolbox-textcolor) !important;
+    background-color: var(--toolbarbutton-hover-background) !important;
    
   }
 
