@@ -1,3 +1,4 @@
+@media not (-moz-pref("arcline.compact.mode.full.screen.mode", 1)) {
 
 @media (-moz-pref("arcline.compact.sidebar.position", 0))  
 
@@ -19,7 +20,7 @@ body:has([zen-compact-mode="true"]) #titlebar {
    
 
        
-   top: calc(var(--zen-element-separation) / 3.8)  !important;
+   top: calc(var(--zen-element-separation) / 2)  !important;
   margin-left: calc(var(--zen-element-separation) / 1.7)  !important;
   
  
@@ -35,80 +36,13 @@ height: calc(100% - (var(--zen-element-separation) * 1)) !important;
   .titlebar-buttonbox {
     margin-right: 0px;
     margin-left: -1px !important;
-  margin-top: 1px !important;
+  margin-top: -1px !important;
   gap: 2.3px !important;
   }
 
   
 
-.zen-essentials-container{
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-  
-  #PanelUI-menu-button {
-    margin-top: 0.2px !important;
-    /* If your new icon is smaller/larger you might adjust padding, or let the pseudo-element overflow */
-}
-
-  #back-button, #forward-button , #reload-button{
-    margin-bottom: 0px !important;
-  }
-  
-.zen-current-workspace-indicator[active="true"] {
-   
-   margin-left: 1px !important;
- margin-top: 52px !important;
-  
-  top: 0px !important;
-    filter: invert(0) brightness(150%) contrast(105%);
-  scale:1;
  
-
-}
-
-#nav-bar {
-height: 34px !important;
-}
-  
-
-  
- 
-  
-  
-
-
-  
-
-#urlbar:not([open]) {
-  #urlbar-background { border-radius: 12px !important;
-    height: 88% !important;
-    left:  0px !important;
-    width: 99% !important;
-    margin-bottom: 0px !important;
-    height: 35px !important;
-    margin-right: 0px !important;
-    margin-top: 5px !important;
-    
-    
-  }}
-
-
-#urlbar[open][zen-floating-urlbar="true"] {
-  #urlbar-container:has(&) {
-    border-radius: 12px !important;
-   
-    left:  0px !important;
-   
-
-    height: 34.5px !important;
-    min-height: 34px !important;
-    margin-right: 2px !important;
-    margin-left: 1.5px !important;
-    margin-top: 2.5px !important;
-    background: var(--toolbarbutton-hover-background);
-  }
-}
 
 
 
@@ -126,7 +60,7 @@ height: 34px !important;
   z-index: 0; /* Or -1 if it needs to be behind other content within #browser, adjust as needed */
   opacity: 0 !important;
   left: calc((var(--zen-sidebar-width) - 0px) * -1) !important;
-  width: calc(var(--zen-sidebar-width) + 6px) !important;
+  width: calc(var(--zen-sidebar-width) + 5.8px) !important;
   min-width: 15px !important;
   border-radius: 2px !important;
   
@@ -152,4 +86,4 @@ body:has([zen-compact-mode="true"] [zen-user-show=""], [zen-compact-mode="true"]
 }
 
 
-  
+}
