@@ -254,10 +254,10 @@ padding-bottom: 4.8rem !important;
      
 
   /* --- Positioning & Size --- */
-  margin-top: 15.04rem !important; /* Your fixed vertical position */
-  left: 50.1% !important;           /* Using left/transform for robustness */
+  top: 14.5rem !important; /* Your fixed vertical position */
+  left: 50% !important;           /* Using left/transform for robustness */
   transform: translateX(-50%) !important;
-  width: min(90%, 56.86rem) !important;
+  width: min(90%, 56.8rem) !important;
 
   /* --- DYNAMIC HEIGHT --- */
   /* Use the JS variable, fallback to your fixed height if variable isn't set */
