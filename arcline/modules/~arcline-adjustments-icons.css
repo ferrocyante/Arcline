@@ -10,7 +10,7 @@
 #urlbar-zoom-button {
   appearance: none;
   margin-right: 0px !important;
-   margin-top: 6.2px !important;
+   margin-top: 6px !important;
 
   font-size: 0.7em !important;
  padding-left: 8px !important;
@@ -49,8 +49,8 @@ transform-origin: center !important;
 #main-window[data-identity-permission-active="true"] #pageAction-urlbar-udaygirhepunje41arc-like-copy-link_gmail_com {
   
 transform-origin: center !important;
- 
-  transform: translate(-20px , -1px) scale(1.05) !important; /* Example: shift it and make it larger */
+ margin-left: 0px !important;
+  transform: translate(-18px , 0px) scale(1.05) !important; /* Example: shift it and make it larger */
 
   
 }
@@ -61,19 +61,22 @@ transform-origin: center !important;
   transform-origin:  center !important;
 }
 
+ #main-window[data-identity-permission-active="true"] #userContext-icons {
+   margin-left: -19px !important;
+    transform: translateX(-26px) !important;
 
-
+}
 #main-window[data-identity-permission-active="true"] #urlbar-zoom-button {
   appearance: none;
   transform: translateX(-18px) !important;
   margin-right: 2px !important;
   margin-top: 5px !important;
-  margin-left: -40px !important;
+  margin-left: -32px !important;
   font-size: 0.7em !important;
- padding-left: 8px !important;
+ padding-left: 6px !important;
   padding-top: 4px !important;
     padding-bottom: 4px !important;
-  padding-right: 8px !important;
+  padding-right: 5px !important;
   border-radius: var(--urlbar-icon-border-radius);
   background: none !important;
   background-color: light-dark(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.2)) !important;
@@ -168,7 +171,7 @@ height: 34px !important;
     margin-bottom: 0px !important;
     height: 35px !important;
     margin-right: 0px !important;
-    margin-top: 5.8px !important;
+    margin-top: 5.28px !important;
     
     
   }}
@@ -301,6 +304,7 @@ zen-workspace {
   The Correct and Fully Dynamic Style for the Link Icon
   =======================================================
 */
+
 #pageAction-urlbar-udaygirhepunje41arc-like-copy-link_gmail_com {
   /* 1. Set the background color using your variable. This provides the icon's color. */
   background-color: var(--toolbox-textcolor);
@@ -321,13 +325,13 @@ zen-workspace {
 
   /* --- Layout & Transform --- */
   position: relative !important;
-  top: 0.15rem !important;
+  top: 1px  !important;
   left: -2px !important;
   width: 15px !important;
   height: 13px !important;
   transform-origin: center !important;
   scale: 1.05 !important;
-  margin-right: -2px !important;
+  margin-right: -4px !important;
   
   margin-left: 2px !important;
   transition: all 0.3s ease !important;
