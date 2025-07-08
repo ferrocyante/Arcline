@@ -67,7 +67,7 @@
 
   {
     "type": "text",
-    "label": "🚥 Control buttons layout",
+    "label": "🎮 Control buttons layout",
     "margin": "30px 0 30px 0",
     "size": "20px"
   },
@@ -85,7 +85,7 @@
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
-    "default": 1,
+    "default": 2,
     "options": [
       { "value": 1, "label": "Left" },
       { "value": 2, "label": "Right" }
