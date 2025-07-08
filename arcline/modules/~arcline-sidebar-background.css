@@ -1,5 +1,5 @@
 
-@import "arcline-sidebar-background/~sidebar-dark.css";
-@import "arcline-sidebar-background/~sidebar-dark-tinted.css";
-@import "arcline-sidebar-background/~sidebar-normal.css";
-@import "arcline-sidebar-background/~sidebar-glass tinted.css";
+@import "modules/arcline-sidebar-background/~sidebar-dark.css";
+@import "modules/arcline-sidebar-background/~sidebar-dark-tinted.css";
+@import "modules/arcline-sidebar-background/~sidebar-normal.css";
+@import "modules/arcline-sidebar-background/~sidebar-glass tinted.css";
