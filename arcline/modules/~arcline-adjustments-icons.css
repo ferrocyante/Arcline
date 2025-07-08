@@ -573,10 +573,10 @@ scale: 1.6 !important;
   mask-position: center;
   position: relative !important;
   top: 0% !important;
-  left: -78% !important;
+  left: -75% !important;
   width: 2px !important;
   opacity: 1 !important;
- 
+
   height: 100%; /* Make sure it has height */
   scale: 32.4 !important;
  
@@ -670,7 +670,7 @@ list-style-image: none !important;
   list-style-image: none !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
- transform: translate(0%, 16%) !important;
+ transform: translate(0%, 18%) !important;
   padding-bottom: 12px !important;
 
 }
@@ -689,9 +689,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   background-size: contain !important;
  margin-left: -3px !important;
   column-fill: none !important; /* This property isn't standard for buttons */
- transform: translate(0%, -9%) !important;
+ transform: translate(0%, -5%) !important;
   /* The rotation is preserved to flip the arrow */
-  padding-top: 8px !important;
+  padding-top: 6px !important;
 }
 
 
@@ -702,7 +702,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   fill-opacity: 0.8 !important; /* Matches the original SVG's opacity */
   
   /* The SVG has been modified to use 'context-fill' and 'context-fill-opacity' */
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='0 0 16 18' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.57617 1.01987C8.31099 0.701658 7.83807 0.658665 7.51986 0.923838C7.20165 1.18901 7.15866 1.66193 7.42383 1.98014L8.49597 3.2667C8.33208 3.25563 8.1667 3.25 8 3.25C3.99594 3.25 0.75 6.49594 0.75 10.5C0.75 14.5041 3.99594 17.75 8 17.75C12.0041 17.75 15.25 14.5041 15.25 10.5C15.25 10.2183 15.0143 10 14.7326 10H14.2292C13.9599 10 13.75 10.2308 13.75 10.5C13.75 13.6756 11.1756 16.25 8 16.25C4.82436 16.25 2.25 13.6756 2.25 10.5C2.25 7.32437 4.82436 4.75 8 4.75C8.34186 4.75 8.67674 4.77984 9.0022 4.83704C9.08019 4.85075 9.15841 4.85357 9.23486 4.84664L7.42383 7.01987C7.15866 7.33807 7.20165 7.811 7.51986 8.07617C7.83807 8.34134 8.31099 8.29835 8.57617 7.98014L11.0762 4.98014C11.3079 4.70201 11.3079 4.298 11.0762 4.01987L8.57617 1.01987Z'/%3E%3C/svg%3E ") !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='2 0 12 30' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.57617 1.01987C8.31099 0.701658 7.83807 0.658665 7.51986 0.923838C7.20165 1.18901 7.15866 1.66193 7.42383 1.98014L8.49597 3.2667C8.33208 3.25563 8.1667 3.25 8 3.25C3.99594 3.25 0.75 6.49594 0.75 10.5C0.75 14.5041 3.99594 17.75 8 17.75C12.0041 17.75 15.25 14.5041 15.25 10.5C15.25 10.2183 15.0143 10 14.7326 10H14.2292C13.9599 10 13.75 10.2308 13.75 10.5C13.75 13.6756 11.1756 16.25 8 16.25C4.82436 16.25 2.25 13.6756 2.25 10.5C2.25 7.32437 4.82436 4.75 8 4.75C8.34186 4.75 8.67674 4.77984 9.0022 4.83704C9.08019 4.85075 9.15841 4.85357 9.23486 4.84664L7.42383 7.01987C7.15866 7.33807 7.20165 7.811 7.51986 8.07617C7.83807 8.34134 8.31099 8.29835 8.57617 7.98014L11.0762 4.98014C11.3079 4.70201 11.3079 4.298 11.0762 4.01987L8.57617 1.01987Z'/%3E%3C/svg%3E ") !important;
 
   /* --- Cleanup and Layout --- */
   filter: none !important;
@@ -710,8 +710,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
-  scale: 0.6 !important;
-  transform: translate(0%, -8.33%) !important;
+padding-bottom: 12px !important;
+  transform: translate(0%, 18%) !important;
 }
   
   
