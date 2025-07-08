@@ -187,7 +187,7 @@
   },
   {
     "property": "arcline.borders",
-    "label": "Add border around browser (makes window look like mac.)",
+    "label": "Add border around browser ",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
@@ -197,9 +197,17 @@
         "value": 0,
         "label": "Disabled"
       },
-      {
+       {
         "value": 1,
-        "label": "Enabled"
+        "label": "style 1"
+      }
+       {
+        "value": 2,
+        "label": "style 2"
+      }
+      {
+        "value": 3,
+        "label": "style 3"
       }
     ]
   },
