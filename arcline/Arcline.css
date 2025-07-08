@@ -17,10 +17,10 @@
 @import "modules/~workspace.css";
 @import "modules/~context-menu.css";
 @import "modules/~container.css";
-
-@import "modules/~arcline-sidebar-background";
-@import "modules/~arcline-borders.css";
-
+@import "modules/sidebar-normal.css";
+@import "modules/sidebar-dark.css";
+@import "modules/sidebar-dark-tinted.css";
+@import "modules/sidebar-glass-tinted.css";
 @import "modules/sidebar-attached.css";
 @import "modules/sidebar-floating.css";
 @import "modules/pinned-extensions.css";
@@ -29,5 +29,4 @@
 @import "modules/compact-mode-full-screen-mode.css";
 @import "modules/pip.css";
 @import "modules/findbar.css";
-
 
