@@ -1,0 +1,24 @@
+
+
+@media (-moz-pref("arcline.control.button", 2)) {
+
+#PanelUI-menu-button{
+  
+  margin-left: 3px !important;
+}
+
+
+.titlebar-buttonbox-container{
+ padding: 8px !important;
+  margin-right: 8px !important;
+}
+
+
+
+.titlebar-buttonbox {
+  gap: 18px !important;
+
+
+}
+
+}

@@ -1,0 +1,662 @@
+/* ==== Zen ‑ cleanup overrides ===================================== */
+
+/* 1️⃣  Nuke borders and outlines on the workspace buttons */
+#zen-workspaces-button toolbarbutton,
+.zen-current-workspace-indicator-icon,
+#zen-workspaces-button toolbarbutton[dragged='true'],
+#zen-workspace-creation .zen-workspace-creation-icon-label::before {
+  border: none !important;
+  outline: none !important;
+}
+
+
+
+/* 3️⃣  Remove the dashed “drop” outline shown while re‑ordering */
+#zen-workspaces-button toolbarbutton[dragged='true'] {
+  outline: none !important;
+}
+
+/* 4️⃣  Optional: turn off hover backdrop the pseudo‑elements sat on */
+#zen-workspaces-button toolbarbutton:hover,
+#zen-workspaces-button toolbarbutton[active='true'] {
+  background: transparent !important;
+}
+
+
+
+
+
+
+
+
+
+
+/*******LIGHT ENDS****************************/
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+
+
+@media not (-moz-pref("arcline.superpin", 1)) {
+/* Increase current workspace indicator text */
+.zen-current-workspace-indicator-name {
+  filter: brightness(75%) !important;
+  margin-left: 0px !important;
+  margin-top: -8px !important;
+  font-size: 13.5px !important; /* Default: small (~11px) */
+  opacity: 0.8 !important;
+}
+
+/* Optional: Adjust icon size proportionally */
+#PanelUI-zen-workspaces-list .zen-workspace-icon {
+  width: 34px !important; /* Default: 30px */
+  height: 34px !important;
+  font-size: 17px !important; /* Icon/text inside */
+}
+
+
+:root {
+  /* Force override CSS variables */
+  --zen-indicator-bg-width: 0 !important;
+  --zen-indicator-bg-height: 0 !important;
+}
+
+}
+.zen-current-workspace-indicator::before {
+  width: var(--zen-indicator-bg-width) !important;
+  height: var(--zen-indicator-bg-height) !important;
+  background: transparent !important;
+  opacity: 0 !important;
+  transition: none !important;
+}
+
+.tab-label-container {
+  overflow: hidden;
+
+  #tabbrowser-tabs:not([secondarytext-unsupported], [orient=vertical]) & {
+    height: 2.7em;
+  }
+
+  &[pinned] {
+    width: 0;
+  }
+
+  &[textoverflow] {
+    &[labeldirection=ltr],
+    &:not([labeldirection]):-moz-locale-dir(ltr),
+    &[labeldirection=rtl],
+    &:not([labeldirection]):-moz-locale-dir(rtl) {
+      mask-image: none !important; /* Remove fade gradient */
+      text-overflow: ellipsis; /* Show ellipsis instead of fade */
+    }
+  }
+}
+  
+
+
+
+
+/*-----------------------------------split veiw modifications-----------------------------------*/
+
+tab-group[split-view-group] {
+  display: flex;
+  flex-wrap: nowrap;
+  border-radius: 12px !important;
+  padding: 0 2px;
+  margin-inline: var(--tab-block-margin);
+  margin-block: var(--tab-block-margin);
+  min-height: var(--tab-min-height);
+  outline: var(--tab-outline);
+  outline-offset: var(--tab-outline-offset);
+  outline-color: var(--tab-selected-outline-color);
+  transition: scale 0.1s ease;
+  align-items: center;
+  --zen-split-view-active-tab-bg: color-mix(in srgb, var(--zen-toolbar-element-bg), transparent 40%);
+
+  :root:not([zen-sidebar-expanded='true']) & {
+    padding: 0 2px;
+    --tab-min-height: 30px;
+    --tab-collapsed-width: 38px;
+    margin: 0 auto;
+    --tab-min-width: 34px;
+  }
+
+  & > .tabbrowser-tab {
+    --tab-selected-bgcolor: var(--zen-split-view-active-tab-bg);
+    --tab-hover-background-color: transparent;
+    --tab-selected-shadow: none;
+    --border-radius-medium: var(--tab-border-radius);
+    --zen-active-tab-scale: 1;
+
+    :root[zen-sidebar-expanded='true'] & {
+      --tab-min-height: 28px;
+    }
+
+    container-type: inline-size;
+    container-name: browser-tab;
+
+    flex: 1 !important;
+    padding-inline: 2px !important;
+    overflow: clip;
+
+    &:not(:last-child)::after {
+      content: '';
+      width: 1px;
+      height: 16px;
+      background-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    :root:not([zen-sidebar-expanded='true']) &:not(:last-child)::after {
+      width: 16px;
+      height: 1px;
+      top: auto;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    & .tab-content {
+      min-width: 62px !important;
+     margin-left: -6px !important;
+      :root[zen-sidebar-expanded='true'] & {
+        justify-content: unset !important;
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+/*------------------------------------------------------------------------------------*/
+  
+  
+  
+  
+  
+  
+  
+  @media (prefers-color-scheme: dark) {
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+:root {
+  /* --- Base Icon Appearance & Dock Effect Tuning --- */
+  --zen-dock-icon-base-width: 40px;       /* Default width of icons */
+  --zen-dock-icon-base-height: 40px;      /* Default height of icons */
+  --zen-dock-icon-margin: 0 3px;          /* Horizontal margin between icons */
+  --zen-dock-icon-border-radius: 12px;    /* Corner rounding for icons */
+ --zen-dock-inactive-icon-mode: 'dot'; /* or 'dot' */
+  /* --- Initial Icon State (Inactive & Non-Hovered) --- */
+  --zen-dock-icon-initial-opacity: 0.65;    /* Slightly lower opacity for less emphasis */
+  --zen-dock-icon-initial-grayscale: 100%;  /* Full grayscale for inactive icons */
+  --zen-dock-icon-active-opacity: 0.85;     /* Opacity for the active (but not hovered) workspace */
+  --zen-dock-icon-active-grayscale: 20%;    /* Slight grayscale for active (but not hovered) */
+
+  /* --- Inactive Indicator Dot --- */
+  --zen-dock-inactive-dot-size: 8px;
+  --zen-dock-inactive-dot-color: var(--toolbox-textcolor); /* Light grey dot, adjust as needed */
+  --zen-dock-inactive-dot-hover-color: var(--toolbox-textcolor);
+
+  /* --- Animation Transitions (Speed & Easing) --- */
+  --zen-dock-transition-duration: 0.1s;
+  --zen-dock-transition-easing-transform: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  --zen-dock-transition-easing-opacity: ease-out;
+  --zen-dock-transition-easing-filter: ease-out;
+
+  /* --- (Optional) Dock Container --- */
+  --zen-dock-container-padding: 5px 0;
+  /* --zen-dock-container-background: rgba(0,0,0,0.05); */ /* For debugging container area */
+}
+
+#zen-workspaces-button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Aligns icons to bottom for upward scaling */
+  padding: var(--zen-dock-container-padding);
+  /* background-color: var(--zen-dock-container-background); */
+  -moz-box-direction: normal !important; /* Ensure horizontal layout for Zen */
+ gap: var(--zen-dock-dynamic-gap) !important;/* JS adds margin to buttons, so gap isn't strictly needed here */
+}
+
+
+.subviewbutton {
+  /* ... your existing styles ... */
+  transition: transform 0.1s ease-out,
+              opacity 0.1s ease-out,
+              filter 0.1s ease-out,
+              /* Potentially add margin transition if not using gap and applying margins */
+              width 0.1s ease-out, /* If their perceived width changes affecting spacing */
+              height 0.1s ease-out;
+}
+
+#zen-workspaces-button .subviewbutton {
+  width: var(--zen-dock-icon-base-width);
+  height: var(--zen-dock-icon-base-height);
+  margin: var(--zen-dock-icon-margin);
+  padding: 0 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* For pseudo-elements and z-index */
+
+  background: none !important;
+  border-radius: var(--zen-dock-icon-border-radius) !important;
+
+  /* Default state for JS to override during animation */
+  transform: scale(1.0);
+  transform-origin: bottom center !important;
+
+  transition-property: transform, opacity, filter !important;
+  transition-duration: var(--zen-dock-transition-duration) !important;
+  transition-timing-function:
+    var(--zen-dock-transition-easing-transform), /* For transform */
+    var(--zen-dock-transition-easing-opacity),   /* For opacity */
+    var(--zen-dock-transition-easing-filter)    /* For filter */ !important;
+  z-index: 1;
+}
+
+/* --- Initial state controlled by JS, but these are fallbacks / base for active tab --- */
+#zen-workspaces-button .subviewbutton {
+  opacity: var(--zen-dock-icon-initial-opacity) !important;
+  filter: grayscale(var(--zen-dock-icon-initial-grayscale)) !important;
+}
+
+#zen-workspaces-button .subviewbutton[active="true"] {
+  opacity: var(--zen-dock-icon-active-opacity) !important;
+  filter: grayscale(var(--zen-dock-icon-active-grayscale)) !important;
+}
+
+
+/* --- Styling for Inactive Workspace Buttons (Grey Dot) --- */
+#zen-workspaces-button .subviewbutton:not([active="true"]) .zen-workspace-icon {
+  /* Hide actual icon content by default for inactive, non-hovered buttons */
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.8); /* Start slightly smaller if desired */
+  transition: opacity var(--zen-dock-transition-duration) ease-out,
+              visibility 0s var(--zen-dock-transition-duration), /* Delay hiding */
+              transform var(--zen-dock-transition-duration) var(--zen-dock-transition-easing-transform);
+}
+
+#zen-workspaces-button .subviewbutton:not([active="true"])::before {
+  content: "";
+  display: block;
+  width: var(--zen-dock-inactive-dot-size);
+  height: var(--zen-dock-inactive-dot-size);
+  background-color: var(--zen-dock-inactive-dot-color);
+  border-radius: 60%;
+  filter: brightness(80%) !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: opacity var(--zen-dock-transition-duration) ease-out,
+              transform var(--zen-dock-transition-duration) ease-out,
+              background-color var(--zen-dock-transition-duration) ease-out;
+  pointer-events: none; /* So it doesn't interfere with button hover */
+}
+
+/* --- Icon Reveal on Hover for Inactive Buttons --- */
+#zen-workspaces-button .subviewbutton:not([active="true"]):hover .zen-workspace-icon {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1); /* Icon appears at its normal defined size or slightly larger */
+  transition-delay: 0s !important; /* Ensure icon shows immediately on hover */
+}
+
+#zen-workspaces-button .subviewbutton:not([active="true"]):hover::before {
+  /* Hide the grey dot when hovering over an inactive button */
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5); /* Optional shrink effect */
+  background-color: var(--zen-dock-inactive-dot-hover-color); /* Optional color change on hover */
+}
+
+/* --- Ensure active workspace icons are always visible and no dot --- */
+#zen-workspaces-button .subviewbutton[active="true"] .zen-workspace-icon {
+  visibility: visible !important;
+  margin-top: 0px !important;
+  opacity: 1 !important; /* Or use var(--zen-dock-icon-active-opacity) if you want JS to fully control hover */
+  transform: scale(1) !important; /* Reset any scaling from inactive state */
+}
+
+#zen-workspaces-button .subviewbutton[active="true"]::before {
+  /* No dot for active buttons */
+  opacity: 0 !important;
+  transform: translate(-50%, -50%) scale(0) !important;
+}
+
+
+/* --- YOUR CUSTOM ICON STYLES --- */
+/* These rules define the actual background images for your icons. */
+/* The visibility and display are handled by the generic rules above. */
+
+.zen-current-workspace-indicator-icon{
+  display: none !important;
+}
+
+/*
+  =======================================================
+  Part 1: Define Your Color Variable (if not already defined)
+  This is the single source of truth for your icon colors.
+  =======================================================
+*/
+:root {
+  --toolbox-textcolor: #FFFFFF; /* <-- EDIT THIS COLOR (e.g., white) */
+}
+
+
+/*
+  =======================================================
+  Part 2: The Updated Styles for All Four Buttons
+  Each rule now uses a mask for its shape and gets its
+  color from the --toolbox-textcolor variable.
+  =======================================================
+*/
+
+/* --- Button 1: Briefcase Icon --- */
+toolbarbutton[zen-workspace-id="{3603ab2a-ffc8-415e-9ae2-be8cb2b72bf3}"].subviewbutton .zen-workspace-icon {
+  /* Color the icon using the CSS variable */
+  background-color: var(--toolbox-textcolor);
+  
+  /* Use a monochrome version of the SVG as a mask */
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z'/%3E%3Cpath d='M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z'/%3E%3Cpath d='M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+
+  /* --- Original layout and mask properties --- */
+  background-image: none !important; /* Replaced by mask */
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  font-size: 0 !important;
+  margin-bottom: 0px !important;
+  width: 16px !important;
+  height: 16px !important;
+  min-height: 16px !important;
+  min-width: 16px !important;
+  display: inline-block !important;
+}
+
+/* --- Button 2: Play Icon --- */
+toolbarbutton[zen-workspace-id="{45bbc387-2c63-42d0-911f-091d362ff294}"].subviewbutton .zen-workspace-icon {
+  background-color: var(--toolbox-textcolor);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='black' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z'/%3E%3Cpath d='M10 9l5 3l-5 3z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='black' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z'/%3E%3Cpath d='M10 9l5 3l-5 3z' fill='black'/%3E%3C/svg%3E");
+  
+  /* --- Original layout and mask properties --- */
+  background-image: none !important;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  font-size: 0 !important;
+  margin-bottom: 0px !important;
+  width: 16px !important;
+  height: 16px !important;
+  min-height: 16px !important;
+  min-width: 16px !important;
+  display: inline-block !important;
+}
+
+/* --- Button 3: Code Icon --- */
+toolbarbutton[zen-workspace-id="{3b2f521e-425c-476c-992f-17d133613bc0}"].subviewbutton .zen-workspace-icon {
+  background-color: var(--toolbox-textcolor);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M7 8l-4 4l4 4'/%3E%3Cpath d='M17 8l4 4l-4 4'/%3E%3Cpath d='M14 4l-4 16'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M7 8l-4 4l4 4'/%3E%3Cpath d='M17 8l4 4l-4 4'/%3E%3Cpath d='M14 4l-4 16'/%3E%3C/svg%3E");
+
+  /* --- Original layout and mask properties --- */
+  background-image: none !important;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  font-size: 0 !important;
+  margin-bottom: 0px !important;
+  width: 16px !important;
+  height: 16px !important;
+  min-height: 16px !important;
+  min-width: 16px !important;
+  display: inline-block !important;
+}
+
+/* --- Button 4: Complex Moon/Planet Icon --- */
+toolbarbutton[zen-workspace-id="{3a41c5b7-ec17-4682-82fa-5a1eaf5a4ce4}"].subviewbutton .zen-workspace-icon {
+  background-color: var(--toolbox-textcolor);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-41.222 -54.294 613.548 640'%3E%3Cg fill='black'%3E%3Cpath d='M 91.271 252.645 C 96.483 342.1 168.745 412.994 257.138 412.994 C 296.563 412.994 332.773 398.883 361.266 375.321 C 320.749 363.442 275.847 346.764 229.69 326.167 C 178.971 303.534 131.427 278.221 91.271 252.645 Z' transform='matrix(0.999984, -0.005574, 0.005574, 0.999984, 0, 0)'/%3E%3Cpath d='M 107.381 187.016 C 148.332 216.141 201.851 246.244 258.909 272.196 C 303.636 292.542 348.293 309.32 388.049 320.717 C 394.714 322.628 401.217 324.376 407.532 325.963 C 409.261 322.244 410.865 318.449 412.342 314.585 C 419.874 294.862 424.025 273.338 424.025 250.8 C 424.025 247.298 423.913 243.824 423.716 240.374 C 418.566 150.297 347.182 78.908 259.861 78.908 C 220.916 78.908 185.146 93.118 157 116.843 C 138.228 132.667 122.849 152.724 112.192 175.637 C 110.461 179.356 108.856 183.152 107.381 187.016 Z'/%3E%3Cpath d='M 454.044 262.782 C 452.686 275.703 451.471 278.011 447.668 290.38 C 465.938 303.834 481.258 316.873 492.198 328.308 C 495.753 332.027 498.557 335.266 500.762 338.032 C 498.939 338.126 496.912 338.182 494.666 338.182 C 470.975 338.182 436.185 332.034 396.701 320.871 C 353.978 308.797 306.066 291.051 258.136 269.553 C 194.344 240.944 134.563 207.484 89.8 175.336 C 69.147 160.5 51.884 146.026 39.884 133.483 C 36.328 129.763 33.524 126.526 31.319 123.756 C 33.141 123.663 35.168 123.608 37.416 123.608 C 53.986 123.608 75.991 126.617 101.229 132.245 C 107.534 121.066 108.783 118.05 117.104 108.32 C 89.246 97.905 61.061 90.665 37.418 87.847 C 11.001 84.696 -6.25 94.018 -10.195 107.001 C -22.181 146.472 91.775 233.933 244.335 302.356 C 346.696 348.265 440.445 373.945 494.666 373.945 C 521.257 373.945 538.331 367.776 542.276 354.789 C 549.139 332.196 516.069 302.421 454.044 262.782 Z'/%3E%3C/g%3E%3C/svg%3E");
+ 
+
+  /* --- Original layout and mask properties --- */
+  background-image: none !important;
+  filter: none !important; /* Replaced by mask */
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  font-size: 0 !important;
+  margin-bottom: -1px !important;
+  width: 18px !important;
+  height: 18px !important;
+  min-height: 17px !important;
+  min-width: 17px !important;
+  display: inline-block !important;
+}
+
+/* --- Your Existing Layout/Responsive CSS (Integrated carefully) --- */
+
+  #zen-workspaces-button {
+    /* container-name: workspaces; /* Already defined for #zen-workspaces-button */
+    /* container-type: inline-size; */
+    /* display: block; /* Overridden by flex above for centering, block might be for different parent structure */
+    /* width: 45% !important; /* This might conflict with centering logic if you want full width dock */
+    /* gap: 14px !important; /* My CSS uses margin on items, this can be adjusted */
+    max-height: min-content;
+    /* background: transparent !important; */
+    margin-top: 0px !important;
+    margin-bottom: -2px !important;
+    margin-left: 4px !important;
+  }
+  
+   
+/*
+ * Your Custom CSS to override Zen Browser's default dock/workspace button styles
+ * Goal: Always show actual icons, remove default "dot" indicators for inactive/overflowed states.
+ */
+
+#zen-workspaces-button {
+  /* Ensure icons are always displayed by default within toolbarbuttons,
+     even if our JS makes them very dim/grayscale in 'dot' mode. */
+
+  /* Override overflow behavior to keep icons visible */
+  &[overflow] {
+    & toolbarbutton:not([active='true']),
+    & toolbarbutton[active='true']:has(~ toolbarbutton:hover), /* If active is to the left of hover */
+    &:has(toolbarbutton:hover) toolbarbutton[active='true']:not(:hover) /* If active is to the right of hover, or just any non-hovered active */
+    {
+      &:not(:hover) {
+        /* Keep the icon visible */
+        & .zen-workspace-icon {
+          display: flex !important; /* Or 'inline-flex', 'block' etc. */
+        }
+
+        /* Remove the dot pseudo-element */
+        &::after {
+          display: none !important;
+          content: none !important; /* Belt and suspenders */
+        }
+
+        /* You might still want them to shrink, but not turn into a dot */
+        /* The width rule can stay if you like the shrinking:
+           width: min(var(--zen-overflowed-workspace-button-width), 25px);
+           If not, you can override it or let your JS scale handle it.
+        */
+      }
+    }
+  }
+}
+
+
+  
+  
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+:root {
+  /* Force override CSS variables */
+  --zen-indicator-bg-width: 0 !important;
+  --zen-indicator-bg-height: 0 !important;
+}
+
+
+.zen-current-workspace-indicator::before {
+  width: var(--zen-indicator-bg-width) !important;
+  height: var(--zen-indicator-bg-height) !important;
+  background: transparent !important;
+  opacity: 0 !important;
+  transition: none !important;
+}
+
+.tab-label-container {
+  overflow: hidden;
+
+  #tabbrowser-tabs:not([secondarytext-unsupported], [orient=vertical]) & {
+    height: 2.7em;
+  }
+
+  &[pinned] {
+    width: 0;
+  }
+
+  &[textoverflow] {
+    &[labeldirection=ltr],
+    &:not([labeldirection]):-moz-locale-dir(ltr),
+    &[labeldirection=rtl],
+    &:not([labeldirection]):-moz-locale-dir(rtl) {
+      mask-image: none !important; /* Remove fade gradient */
+      text-overflow: ellipsis; /* Show ellipsis instead of fade */
+    }
+  }
+}
+  
+
+
+
+
+/*-----------------------------------split veiw modifications-----------------------------------*/
+
+tab-group[split-view-group] {
+  display: flex;
+  flex-wrap: nowrap;
+  border-radius: 12px !important;
+  padding: 0 2px;
+  margin-inline: var(--tab-block-margin);
+  margin-block: var(--tab-block-margin);
+  min-height: var(--tab-min-height);
+  outline: var(--tab-outline);
+  outline-offset: var(--tab-outline-offset);
+  outline-color: var(--tab-selected-outline-color);
+  transition: scale 0.1s ease;
+  align-items: center;
+  --zen-split-view-active-tab-bg: color-mix(in srgb, var(--zen-toolbar-element-bg), transparent 40%);
+
+  :root:not([zen-sidebar-expanded='true']) & {
+    padding: 0 2px;
+    --tab-min-height: 30px;
+    --tab-collapsed-width: 38px;
+    margin: 0 auto;
+    --tab-min-width: 34px;
+  }
+
+  & > .tabbrowser-tab {
+    --tab-selected-bgcolor: var(--zen-split-view-active-tab-bg);
+    --tab-hover-background-color: transparent;
+    --tab-selected-shadow: none;
+    --border-radius-medium: var(--tab-border-radius);
+    --zen-active-tab-scale: 1;
+
+    :root[zen-sidebar-expanded='true'] & {
+      --tab-min-height: 28px;
+    }
+
+    container-type: inline-size;
+    container-name: browser-tab;
+
+    flex: 1 !important;
+    padding-inline: 2px !important;
+    overflow: clip;
+
+    &:not(:last-child)::after {
+      content: '';
+      width: 1px;
+      height: 16px;
+      background-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    :root:not([zen-sidebar-expanded='true']) &:not(:last-child)::after {
+      width: 16px;
+      height: 1px;
+      top: auto;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    & .tab-content {
+      min-width: 62px !important;
+     margin-left: -2px !important;
+      :root[zen-sidebar-expanded='true'] & {
+        justify-content: unset !important;
+      }
+    }
+  }
+  
+  
+
+    }
+  }
