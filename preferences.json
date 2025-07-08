@@ -44,6 +44,14 @@
     "force": true
   },
   {
+    "property": "widget.non-native-theme.scrollbar.size.override",
+    "label": "Size of scroll bar (-1 to remove completely)",
+    "type": "string",
+    "value": "number",
+    "default": 0,
+    "force": true
+  },
+  {
     "property": "widget.windows.mica.toplevel-backdrop",
     "label": "darkens tone of browser",
     "type": "string",
