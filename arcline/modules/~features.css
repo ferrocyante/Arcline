@@ -12,6 +12,30 @@ browser {
 
 
 
+/* Transparent glance styling */
+.zen-glance-background > vbox {
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 4%,
+    transparent 7%,
+    transparent 93.5%,
+    black 96%,
+    black 100%
+  );
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+.zen-glance-overlay > vbox {
+  background-color: light-dark(#fff7, #0002) !important;
+  margin-top: 0.5% !important;
+  margin-bottom: 0.5% !important;
+  height: 98% !important;
+  border-radius: 0.5em !important;
+}
+
+
 
 
 /* ============ COMPACT EXTENSIONS (Credit: KiKaraage) ================== */
