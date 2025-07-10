@@ -646,10 +646,11 @@ scale: 1.6 !important;
   filter: none;
   height: 24px;
   width: 28px;
-  margin-top: -5.5px !important;
-  margin-bottom: 0px !important;
+  margin-top: -4px !important;
+  margin-bottom: -2px !important;
   scale: 0.9;
-  margin-right: -5px !important;
+  transform-origin: center !important;
+  margin-right: -6px !important;
   margin-left: -6px !important;
 }
 
