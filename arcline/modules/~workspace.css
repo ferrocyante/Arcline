@@ -25,8 +25,21 @@
 
 
 
+@media  (-moz-pref("arcline.workspace.icon", 1)) {
 
 
+.zen-current-workspace-indicator-icon{
+ margin-bottom: 9px !important;
+  scale: 1 !important;
+}
+}
+
+@media  (-moz-pref("arcline.workspace.icon", 0)) {
+  
+.zen-current-workspace-indicator-icon{
+  display: none !important;
+}
+}
 
 
 
@@ -189,7 +202,7 @@ tab-group[split-view-group] {
   
   
   
-  @media (prefers-color-scheme: dark) {
+
   
   
   
@@ -357,9 +370,7 @@ tab-group[split-view-group] {
 /* These rules define the actual background images for your icons. */
 /* The visibility and display are handled by the generic rules above. */
 
-.zen-current-workspace-indicator-icon{
-  display: none !important;
-}
+
 
 /*
   =======================================================
@@ -659,4 +670,4 @@ tab-group[split-view-group] {
   
 
     }
-  }
+  
