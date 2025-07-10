@@ -52,7 +52,7 @@
   },
   {
     "property": "widget.windows.mica.toplevel-backdrop",
-    "label": "Windows Mica backdrop style (darkens browser tone)",
+    "label": "Windows Mica backdrop style (1=light(default) 0=darkened)",
     "type": "string",
     "value": "number",
     "default": 1,
@@ -100,8 +100,8 @@
   },
   {
     "type": "text",
-    "label": " ⚠️ For URL bar icons to align correctly, this companion extension is recommended: https://addons.mozilla.org/en-US/firefox/addon/arc-like-copy-link/",
-    "size": "13px",
+    "label": " ⚠️ For URL bar icons to align correctly, url link copy addon  :   https://addons.mozilla.org/en-US/firefox/addon/arc-like-copy-link/   ",
+    "size": "18px",
     "margin": "0 0 15px 0"
   },
   {
@@ -185,6 +185,18 @@
       { "value": 1, "label": "Enabled" }
     ]
   },
+  {
+    "property": "arcline.workspace.icon",
+    "label": "display workspace icon before workspace name",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
+    ]
+  },
 
   {
     "type": "text",
@@ -229,6 +241,18 @@
   {
     "property": "arcline.force.blur",
     "label": "Enable clip-path blur fix (if blur doesn't work)",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
+    ]
+  },
+  {
+    "property": "arcline.addon.visible",
+    "label": "Make addon/extension button invisible (but still clickable)",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
@@ -293,18 +317,7 @@
       { "value": 1, "label": "Enabled" }
     ]
   },
-  {
-    "property": "arcline.addon.visible",
-    "label": "Make addon/extension button invisible (but still clickable)",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      { "value": 0, "label": "Disabled" },
-      { "value": 1, "label": "Enabled" }
-    ]
-  },
+  
 
   {
     "type": "text",
