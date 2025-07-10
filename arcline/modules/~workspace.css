@@ -305,7 +305,7 @@ tab-group[split-view-group] {
   filter: grayscale(var(--zen-dock-icon-active-grayscale)) !important;
 }
 
-
+@media  (-moz-pref("arcline.workspace.bottom.icon", 0)) {
 /* --- Styling for Inactive Workspace Buttons (Grey Dot) --- */
 #zen-workspaces-button .subviewbutton:not([active="true"]) .zen-workspace-icon {
   /* Hide actual icon content by default for inactive, non-hovered buttons */
@@ -335,6 +335,14 @@ tab-group[split-view-group] {
               background-color var(--zen-dock-transition-duration) ease-out;
   pointer-events: none; /* So it doesn't interfere with button hover */
 }
+}
+
+
+
+
+
+
+
 
 /* --- Icon Reveal on Hover for Inactive Buttons --- */
 #zen-workspaces-button .subviewbutton:not([active="true"]):hover .zen-workspace-icon {
