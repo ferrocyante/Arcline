@@ -63,7 +63,7 @@ transform-origin: center !important;
 
  #main-window[data-identity-permission-active="true"] #userContext-icons {
    margin-left: -19px !important;
-    transform: translateX(-26px) !important;
+    transform: translateX(-24px) !important;
 
 }
 #main-window[data-identity-permission-active="true"] #urlbar-zoom-button {
@@ -548,63 +548,56 @@ scale: 1.6 !important;
   
   
   
-  
+#unified-extensions-button {
+  position: relative !important;
+  filter: grayscale(0) brightness(160%) contrast(100%) !important;
+  scale: 0.55 !important;
+  max-width: 95px !important;
+  margin-right: -8px !important;
+  margin-left: -2px !important;
+  list-style-image: none !important;
+}
 
-
-
-
-/*
-  =======================================================
-  The Correct and Fully Dynamic Style for the Extensions Button
-  =======================================================
-*/
-#unified-extensions-button::after {
-  /* 1. Make the pseudo-element an empty, styleable box. */
-  content: '' !important;
-  display: block !important; /* Essential for a pseudo-element to have a background/mask */
-
-  /* 2. Set the background color using your variable. This is what gives the icon its color. */
+/* Vertical bar (with adjustable opacity & spacing) */
+#unified-extensions-button::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -7px; /* ← Increase this to push bar right */
+  width: 1.2px;
+  height: 32px;
   background-color: var(--toolbox-textcolor);
+  opacity: 0.3; /* ← Adjust for fade */
+  pointer-events: none;
+  z-index: 1;
+}
 
-  /* 3. Apply the icon's SHAPE as a mask. This cuts out the background color. */
-  -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='32' height='20' viewBox='19.205 0.22 28.202 19.78' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' width='111.800000000001' height='52' excluded='true'/%3E%3Cbx:file format='svg' path='extension button.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath opacity='0.7' d='M -10.406 18.395 L 3.955 18.395 C 5.698 18.395 6.561 17.531 6.561 15.821 L 6.561 5.686 C 6.561 3.976 5.698 3.113 3.955 3.113 L -10.406 3.113 C -12.141 3.113 -13.012 3.968 -13.012 5.686 L -13.012 15.821 C -13.012 17.54 -12.141 18.395 -10.406 18.395 Z M -10.389 17.058 C -11.219 17.058 -11.676 16.618 -11.676 15.755 L -11.676 5.752 C -11.676 4.889 -11.219 4.449 -10.389 4.449 L -6.687 4.449 L -6.687 17.058 L -10.389 17.058 Z M 3.938 4.449 C 4.76 4.449 5.225 4.889 5.225 5.752 L 5.225 15.755 C 5.225 16.618 4.76 17.058 3.938 17.058 L -5.384 17.058 L -5.384 4.449 L 3.938 4.449 Z M -8.281 7.529 C -8.032 7.529 -7.808 7.305 -7.808 7.064 C -7.808 6.815 -8.032 6.599 -8.281 6.599 L -10.066 6.599 C -10.315 6.599 -10.53 6.815 -10.53 7.064 C -10.53 7.305 -10.315 7.529 -10.066 7.529 L -8.281 7.529 Z M -8.281 9.679 C -8.032 9.679 -7.808 9.455 -7.808 9.206 C -7.808 8.957 -8.032 8.749 -8.281 8.749 L -10.066 8.749 C -10.315 8.749 -10.53 8.957 -10.53 9.206 C -10.53 9.455 -10.315 9.679 -10.066 9.679 L -8.281 9.679 Z M -8.281 11.82 C -8.032 11.82 -7.808 11.613 -7.808 11.364 C -7.808 11.115 -8.032 10.899 -8.281 10.899 L -10.066 10.899 C -10.315 10.899 -10.53 11.115 -10.53 11.364 C -10.53 11.613 -10.315 11.82 -10.066 11.82 L -8.281 11.82 Z' fill='%23F1F1F1'/%3E%3Crect opacity='0.1' x='27.376' y='1' width='1' height='18' style='fill: currentcolor;'/%3E%3Cpath opacity='0.6' d='M 37.048 12.512 C 37.298 12.512 37.489 12.422 37.692 12.219 L 40.509 9.336 C 40.657 9.191 40.723 9.02 40.723 8.813 C 40.723 8.391 40.38 8.039 39.962 8.039 C 39.755 8.039 39.559 8.125 39.399 8.293 L 37.055 10.727 L 34.7 8.293 C 34.54 8.129 34.345 8.039 34.134 8.039 C 33.716 8.039 33.372 8.391 33.372 8.813 C 33.372 9.02 33.442 9.188 33.587 9.34 L 36.407 12.219 C 36.61 12.426 36.805 12.512 37.048 12.512 Z' style='fill: currentcolor;'/%3E%3C/svg%3E");
-  /* 4. Keep all your original positioning and sizing styles */
-  -webkit-mask-size: contain;
-  mask-size: contain;
+/* Icon with arrow (pure mask, no bar baked in) */
+#unified-extensions-button::after {
+  content: '';
+  display: block !important;
+  width: 24px !important;
+  height: 24px !important;
+  background-color: var(--toolbox-textcolor) !important;
+
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='18.07 -0.726 30.22 20.726'><path d='M -10.406 18.395 L 3.955 18.395 C 5.698 18.395 6.561 17.531 6.561 15.821 L 6.561 5.686 C 6.561 3.976 5.698 3.113 3.955 3.113 L -10.406 3.113 C -12.141 3.113 -13.012 3.968 -13.012 5.686 L -13.012 15.821 C -13.012 17.54 -12.141 18.395 -10.406 18.395 Z' fill='white'/><path d='M -8.281 11.82 L -10.066 11.82 C -10.315 11.82 -10.53 11.613 -10.53 11.364 C -10.53 11.115 -10.315 10.899 -10.066 10.899 L -8.281 10.899 C -8.032 10.899 -7.808 11.115 -7.808 11.364 C -7.808 11.613 -8.032 11.82 -8.281 11.82 Z' fill='white'/><path d='M -8.281 9.679 L -10.066 9.679 C -10.315 9.679 -10.53 9.455 -10.53 9.206 C -10.53 8.957 -10.315 8.749 -10.066 8.749 L -8.281 8.749 C -8.032 8.749 -7.808 8.957 -7.808 9.206 C -7.808 9.455 -8.032 9.679 -8.281 9.679 Z' fill='white'/><path d='M -8.281 7.529 L -10.066 7.529 C -10.315 7.529 -10.53 7.305 -10.53 7.064 C -10.53 6.815 -10.315 6.599 -10.066 6.599 L -8.281 6.599 C -8.032 6.599 -7.808 6.815 -7.808 7.064 C -7.808 7.305 -8.032 7.529 -8.281 7.529 Z' fill='white'/><path d='M 3.938 4.449 C 4.76 4.449 5.225 4.889 5.225 5.752 L 5.225 15.755 C 5.225 16.618 4.76 17.058 3.938 17.058 L -5.384 17.058 L -5.384 4.449 Z' fill='white'/><path d='M -10.389 17.058 C -11.219 17.058 -11.676 16.618 -11.676 15.755 L -11.676 5.752 C -11.676 4.889 -11.219 4.449 -10.389 4.449 L -6.687 4.449 L -6.687 17.058 Z' fill='white'/><path d='M 37.048 12.985 C 37.298 12.985 37.489 12.875 37.692 12.624 L 40.509 9.07 C 40.657 8.892 40.723 8.681 40.723 8.426 C 40.723 7.905 40.38 7.471 39.962 7.471 C 39.755 7.471 39.559 7.577 39.399 7.785 L 37.055 10.784 L 34.7 7.785 C 34.54 7.583 34.345 7.471 34.134 7.471 C 33.716 7.471 33.372 7.905 33.372 8.426 C 33.372 8.681 33.442 8.888 33.587 9.075 L 36.407 12.624 C 36.61 12.879 36.805 12.985 37.048 12.985 Z' fill='white'/></svg>");
+  margin-right: -25px !important;
+
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
-  position: relative !important;
-  top: 0% !important;
-  left: -75% !important;
-  width: 2px !important;
-  opacity: 1 !important;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 
-  height: 100%; /* Make sure it has height */
-  scale: 32.4 !important;
- 
   pointer-events: none !important;
+  opacity: 1 !important;
+  position: relative !important;
+  top: -1px !important;
+  left: -125% !important;
+  scale: 2.2 !important;
+  z-index: 2;
 }
-
-#unified-extensions-button{
- 
-  filter: grayscale(0) brightness(160%) contrast(100%)  !important;
- scale: 0.75 !important;
-  
- max-width: 95px !important;
- margin-right: -8px !important;
-  margin-left: 0px !important;
-list-style-image: none !important;
- 
- 
- 
- 
-}
-
-
-
-
 
 
 
@@ -667,15 +660,16 @@ list-style-image: none !important;
   fill: var(--toolbox-textcolor) !important;
   
   /* 2. Keep the original background-image that uses 'context-fill' */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-6 -1 30 28' fill='context-fill' fill-opacity='context-fill-opacity'%3E%3Cpath d='M14.375 8 3.048 8l4.308-4.308a.626.626 0 0 0-.885-.885L1 8.281l0 .689 5.472 5.473a.623.623 0 0 0 .884 0 .628.628 0 0 0 0-.885L3.048 9.25l11.327 0a.625.625 0 0 0 0-1.25z'/%3E%3C/svg%3E") !important;
-
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-6 -6 30 20' fill='context-fill' fill-opacity='context-fill-opacity'%3E%3Cpath d='M14.375 8 3.048 8l4.308-4.308a.626.626 0 0 0-.885-.885L1 8.281l0 .689 5.472 5.473a.623.623 0 0 0 .884 0 .628.628 0 0 0 0-.885L3.048 9.25l11.327 0a.625.625 0 0 0 0-1.25z'/%3E%3C/svg%3E") !important;
+top: 0px !important;
+  position: relative !important;
   /* --- Cleanup and Layout --- */
   filter: none !important; /* Remove the old filter */
   list-style-image: none !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
- transform: translate(0%, 18%) !important;
-  padding-bottom: 12px !important;
+ transform: translate(0%, 31%) !important;
+  padding-bottom: 48px !important;
 
 }
 
@@ -685,17 +679,19 @@ list-style-image: none !important;
   /* Same as the back button, the 'fill' property provides the color. */
   fill: var(--toolbox-textcolor) !important;
 
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -8 30 28' fill='context-fill' fill-opacity='context-fill-opacity'%3E%3Cpath transform='rotate(180 9.5 8.7)' d='M14.375 8 3.048 8l4.308-4.308a.626.626 0 0 0-.885-.885L1 8.281l0 .689 5.472 5.473a.623.623 0 0 0 .884 0 .628.628 0 0 0 0-.885L3.048 9.25l11.327 0a.625.625 0 0 0 0-1.25z'/%3E%3C/svg%3E") !important;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -5 29 29' fill='context-fill' fill-opacity='context-fill-opacity'%3E%3Cpath transform='rotate(180 9.5 8.7)' d='M14.375 8 3.048 8l4.308-4.308a.626.626 0 0 0-.885-.885L1 8.281l0 .689 5.472 5.473a.623.623 0 0 0 .884 0 .628.628 0 0 0 0-.885L3.048 9.25l11.327 0a.625.625 0 0 0 0-1.25z'/%3E%3C/svg%3E") !important;
   /*  --- Cleanup and Layout --- */
   filter: none !important;
+  position: relative !important;
+  top: 1px !important;
   list-style-image: none !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
- margin-left: -3px !important;
+ margin-left: -1px !important;
   column-fill: none !important; /* This property isn't standard for buttons */
- transform: translate(0%, -5%) !important;
+ transform: translate(0%, 0%) !important;
   /* The rotation is preserved to flip the arrow */
-  padding-top: 6px !important;
+  padding-top: 2px !important;
 }
 
 
@@ -706,7 +702,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   fill-opacity: 0.8 !important; /* Matches the original SVG's opacity */
   
   /* The SVG has been modified to use 'context-fill' and 'context-fill-opacity' */
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='2 0 12 30' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.57617 1.01987C8.31099 0.701658 7.83807 0.658665 7.51986 0.923838C7.20165 1.18901 7.15866 1.66193 7.42383 1.98014L8.49597 3.2667C8.33208 3.25563 8.1667 3.25 8 3.25C3.99594 3.25 0.75 6.49594 0.75 10.5C0.75 14.5041 3.99594 17.75 8 17.75C12.0041 17.75 15.25 14.5041 15.25 10.5C15.25 10.2183 15.0143 10 14.7326 10H14.2292C13.9599 10 13.75 10.2308 13.75 10.5C13.75 13.6756 11.1756 16.25 8 16.25C4.82436 16.25 2.25 13.6756 2.25 10.5C2.25 7.32437 4.82436 4.75 8 4.75C8.34186 4.75 8.67674 4.77984 9.0022 4.83704C9.08019 4.85075 9.15841 4.85357 9.23486 4.84664L7.42383 7.01987C7.15866 7.33807 7.20165 7.811 7.51986 8.07617C7.83807 8.34134 8.31099 8.29835 8.57617 7.98014L11.0762 4.98014C11.3079 4.70201 11.3079 4.298 11.0762 4.01987L8.57617 1.01987Z'/%3E%3C/svg%3E ") !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='2 -3 12 34' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.57617 1.01987C8.31099 0.701658 7.83807 0.658665 7.51986 0.923838C7.20165 1.18901 7.15866 1.66193 7.42383 1.98014L8.49597 3.2667C8.33208 3.25563 8.1667 3.25 8 3.25C3.99594 3.25 0.75 6.49594 0.75 10.5C0.75 14.5041 3.99594 17.75 8 17.75C12.0041 17.75 15.25 14.5041 15.25 10.5C15.25 10.2183 15.0143 10 14.7326 10H14.2292C13.9599 10 13.75 10.2308 13.75 10.5C13.75 13.6756 11.1756 16.25 8 16.25C4.82436 16.25 2.25 13.6756 2.25 10.5C2.25 7.32437 4.82436 4.75 8 4.75C8.34186 4.75 8.67674 4.77984 9.0022 4.83704C9.08019 4.85075 9.15841 4.85357 9.23486 4.84664L7.42383 7.01987C7.15866 7.33807 7.20165 7.811 7.51986 8.07617C7.83807 8.34134 8.31099 8.29835 8.57617 7.98014L11.0762 4.98014C11.3079 4.70201 11.3079 4.298 11.0762 4.01987L8.57617 1.01987Z'/%3E%3C/svg%3E ") !important;
 
   /* --- Cleanup and Layout --- */
   filter: none !important;
@@ -715,7 +711,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   background-repeat: no-repeat !important;
   background-position: center !important;
 padding-bottom: 12px !important;
-  transform: translate(0%, 18%) !important;
+  transform: translate(0%, 12%) !important;
+  position: relative !important;
+  top: 0px !important;
 }
   
   
