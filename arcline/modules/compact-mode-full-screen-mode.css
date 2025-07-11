@@ -106,10 +106,29 @@ min-height: calc(100% + (var(--zen-element-separation) * 1)) !important;
   top: calc(var(--zen-element-separation) / 2) !important;
 }
 
-body:has([zen-compact-mode="true"] [zen-user-show=""], [zen-compact-mode="true"] #navigator-toolbox[zen-has-hover="true"]) #browser::after{
-  opacity: 1.2 !important;
-  left: var(--zen-element-separation) !important;
-}
+  body:has([zen-compact-mode="true"]) {
+    &:has(
+      #navigator-toolbox[zen-has-hover="true"],
+      #navigator-toolbox[zen-user-show],
+      #navigator-toolbox[has-popup-menu],
+     
+      [panelopen],
+      #downloadsPanel-mainView[visible],
+      .tabbrowser-tab[visuallyselected="true"],
+      #customizationui-widget-panel[panelopen],
+      .zen-current-workspace-indicator #tab-label-input
+    ) #browser::after {
+      opacity: 1.2 !important;
+      left: var(--zen-element-separation) !important;
+    }
+
+    /* Optional: Hide pseudo background when sidebar is inactive */
+    &:has(#navigator-toolbox[zen-has-empty-tab]) #browser::after {
+      opacity: 0 !important;
+    }
+  }      
+
+
       
 }
 
@@ -189,10 +208,29 @@ height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
   top: calc(var(--zen-element-separation) / 2) !important;
 }
 
-body:has([zen-compact-mode="true"] [zen-user-show=""], [zen-compact-mode="true"] #navigator-toolbox[zen-has-hover="true"]) #browser::after{
-  opacity: 1.2 !important;
-  left: var(--zen-element-separation) !important;
-}
+  body:has([zen-compact-mode="true"]) {
+    &:has(
+      #navigator-toolbox[zen-has-hover="true"],
+      #navigator-toolbox[zen-user-show],
+      #navigator-toolbox[has-popup-menu],
+     
+      [panelopen],
+      #downloadsPanel-mainView[visible],
+      .tabbrowser-tab[visuallyselected="true"],
+      #customizationui-widget-panel[panelopen],
+      .zen-current-workspace-indicator #tab-label-input
+    ) #browser::after {
+      opacity: 1.2 !important;
+      left: var(--zen-element-separation) !important;
+    }
+
+    /* Optional: Hide pseudo background when sidebar is inactive */
+    &:has(#navigator-toolbox[zen-has-empty-tab]) #browser::after {
+      opacity: 0 !important;
+    }
+  }
+
+
 }
       
 
