@@ -108,7 +108,8 @@
 
 /* === BLUR COMPACT SIDEBAR ================================================================================================ */
 /* Compact sidebar with blurred transparent background */
-body:has([zen-compact-mode="true"]) #titlebar {
+body:has([zen-compact-mode="true"]) #navigator-toolbox:not([animate='true']) #titlebar {
+ 
  
      backdrop-filter: saturate(3) contrast(2) blur(100px) !important;
        
