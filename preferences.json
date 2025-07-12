@@ -383,7 +383,7 @@
   "property": "media.border.filter_opacity",
   "label": "Border opacity",
   "type": "string",
-  "defaultValue": "0.2"
+  "defaultValue": "0.4"
   },
   {
   "property": "media.player.filter_blur",
