@@ -382,43 +382,43 @@
   {
   "property": "media.border.filter_opacity",
   "label": "Border opacity",
-  "type": "string"
+  "type": "string",
   "defaultValue": "0.2"
   },
   {
   "property": "media.player.filter_blur",
   "label": "Media player blur",
-  "type": "string"
+  "type": "string",
   "defaultValue": "5px"
   },
   {
   "property": "art.work.filter_blur",
   "label": "Art work blur",
-  "type": "string"
+  "type": "string",
   "defaultValue": "65px"
   },
   {
   "property": "art.work.filter_brightness",
   "label": "Art work brightness",
-  "type": "string"
+  "type": "string",
   "defaultValue": "0.5"
   },
   {
   "property": "art.work.filter_saturate",
   "label": "Art work saturation",
-  "type": "string"
+  "type": "string",
   "defaultValue": "1"
   },
   {
   "property": "art.work.filter_contrast",
   "label": "Art work contrast",
-  "type": "string"
+  "type": "string",
   "defaultValue": "0.9"
   },
    {
   "property": "art.work.filter_opacity",
   "label": "Art work opacity",
-  "type": "string"
+  "type": "string",
   "defaultValue": "0.8"
   },
   
