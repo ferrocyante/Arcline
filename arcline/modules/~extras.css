@@ -95,7 +95,7 @@
 
 * {
   
-     --zen-media-control-bg: light-dark(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.87)) !important;
+     --zen-media-control-bg: light-dark(rgba(255, 255, 255, var(--media-default-filter_opacity)), rgba(0, 0, 0, var(--media-default-filter_opacity))) !important;
   
 }
 
@@ -111,7 +111,7 @@
 #zen-media-controls-toolbar > toolbaritem {
  
   isolation: isolate !important;
-  background-color: var(--zen-media-control-bg, light-dark(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.75))) !important;
+  background-color: var(--zen-media-control-bg, light-dark(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05))) !important
 }
 
 /* 
@@ -180,7 +180,7 @@ border: 1px solid rgba(128, 128, 128, var(--media-border-filter_opacity));
   justify-self: center !important;
 
   /* Neo Zen dark background color */
-  background: light-dark(rgba(250, 250, 220, 1), rgba(10, 10, 10, 1)) !important;
+  background: light-dark(rgba(220, 220, 220, 1), rgba(10, 10, 10, 1)) !important;
 border-radius: 13px !important;
   width: 97%;
   height: 112px;
