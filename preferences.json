@@ -379,6 +379,12 @@
       { "value": 1, "label": "Enabled" }
     ]
   },
+   {
+  "property": "media.default.filter_opacity",
+  "label": "ZEn media default background (black) opacity",
+  "type": "string",
+  "defaultValue": "0.47"
+  },
   {
   "property": "media.border.filter_opacity",
   "label": "Border opacity",
