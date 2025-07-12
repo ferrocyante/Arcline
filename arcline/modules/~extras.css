@@ -89,8 +89,126 @@
     
     
 /*------------------------------------------------------------------------------------------------------------------------------------*/
- /*------------------------------------------------------------------------------------------------------------------------------------*/
-     
+ 
+
+@media  (-moz-pref("arcline.media.player", 1)) {
+
+* {
+  
+     --zen-media-control-bg: light-dark(rgba(255, 255, 255, 0.47), rgba(0, 0, 0, 0.87)) !important;
+  
+}
+
+/* ========================================================================= */
+/*  Zen Media Cover Art Styling (v7 - Isolated Clipping Container Method)    */
+/* ========================================================================= */
+
+/* 
+  Make the toolbar item a positioning context for its pseudo-elements.
+  We will also make its background slightly more transparent to let the
+  artwork's color blend through nicely.
+*/
+#zen-media-controls-toolbar > toolbaritem {
+ 
+  isolation: isolate !important;
+  background-color: var(--zen-media-control-bg, light-dark(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.75))) !important;
+}
+
+/* 
+  STEP 1: Create the Clipping Frame.
+  This pseudo-element's ONLY job is to clip its child (`::after`).
+  It's an invisible frame that sits behind the buttons.
+*/
+#zen-media-controls-toolbar > toolbaritem::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1; /* Sits behind the buttons, but on top of ::after */
+  border-radius: 12px !important;
+  /* The key: This clips the artwork, but does NOT affect the music notes */
+border: 1px solid rgba(128, 128, 128, var(--media-border-filter_opacity));
+  outline: 1px solid rgba(10, 10, 10, 1) !important;
+  /* Match the theme's corner rounding */
+  border-radius: 12px;
+}
+
+/* 
+  STEP 2: The Artwork.
+  This is positioned relative to the clipping frame (`::before`).
+  We make it oversized to contain the blur spill.
+*/
+#zen-media-controls-toolbar > toolbaritem::after {
+  content: "";
+  position: absolute;
+  z-index: -2; /* Sits behind everything, at the very back */
+  
+  /* Make it larger than the frame to hide blur edges */
+  top: 0px; left: 0px; right: 0px; bottom: 0px;
+  
+  background-image: var(--zen-cover-art-url);
+  background-size: cover;
+  background-position: center;
+   clip-path: inset(0 round 12px);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+  /* --- YOUR CONFIGURATION --- */
+  filter: 
+    blur(var(--art-work-filter_blur))
+    brightness(var(--art-work-filter_brightness))
+    saturate(var(--art-work-filter_saturate))
+    contrast(var(--art-work-filter_contrast))
+    opacity(var(--art-work-filter_opacity));
+  
+ 
+}
+
+/* This rule activates the artwork when the JS provides a URL */
+#zen-media-controls-toolbar > toolbaritem[style*="--zen-cover-art-url"]::after {
+  opacity: 1;
+}
+
+
+
+
+/* Base style: pseudo background under TabsToolbar */
+#TabsToolbar::before {
+  content: "";
+  position: absolute !important;
+  z-index: -1 !important;
+  align-self: center !important;
+  justify-self: center !important;
+
+  /* Neo Zen dark background color */
+  background: light-dark(rgba(250, 250, 220, 1), rgba(10, 10, 10, 1)) !important;
+border-radius: 13px !important;
+  width: 97%;
+  height: 112px;
+  bottom: 36px; /* Simulates var(--zen-toolbox-padding) */
+  left: auto;
+  right: auto;
+  top: auto;
+
+  border-radius: 12px; /* Matches Neo-Border-Radius */
+  opacity: 0;
+  visibility: visible !important;
+
+  transition: bottom 0.3s ease 100ms, height 0.8s ease, opacity 0.3s ease;
+}
+
+
+:root:not([zen-compact-mode="true"]) #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
+  opacity: 1 !important;
+}
+
+/* Compact layout (two-toolbar mode active) */
+:root:not([zen-single-toolbar="true"])[zen-compact-mode="true"] #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
+  opacity: 1 !important;
+}
+
+
+
+
 
 
 
@@ -98,8 +216,34 @@
 #zen-media-controls-toolbar toolbaritem {
   border-radius: 12px !important; 
 margin-bottom: -8px !important;
+backdrop-filter: saturate(1) contrast(1) blur(var(--media-player-filter_blur)) !important;
+}
+#zen-media-info-vbox {
+ 
+ 
+  &::before {
+    
+    background: transparent !important;
+   
+ 
+  }}
+
+
 
 }
+
+
+#zen-media-controls-toolbar toolbaritem {
+  border-radius: 12px !important; 
+margin-bottom: -8px !important;
+
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+     
+
+
+
+
 
 @media not (-moz-pref("arcline.pinned.extensions", 1)) {
   
@@ -109,7 +253,6 @@ margin-bottom: -8px !important;
     min-height: calc(100% + 4px) !important;
   }
 }
-
 
 
 
@@ -130,73 +273,6 @@ margin-bottom: -8px !important;
    filter:  brightness(100%)  !important;
   
 }
-
-
-
-
-
-
- #zen-media-focus-button {
-    align-self: center;
-    transition:
-      opacity 0.2s ease,
-      transform 0.2s ease;
-    position: relative;
-
-    & image {
-      &:-moz-broken {
-        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3C/svg%3E") !important;
-        background: color-mix(in srgb, var(--zen-primary-color) 70%, transparent 30%);
-      }
-    }
-  }
-
-
-
-
-#zen-media-info-vbox {
-  #zen-media-controls-toolbar:not([media-position-hidden]) & {
-    transition-delay: 0.01s !important;
-  }
-  overflow-x: hidden;
-
-  overflow-x: visible;
-
-  white-space: nowrap
-  /* Overflow inner box shadow from the left to simulate overflow */
- 
-  min-width: 1px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 0.6em;
-    background: none !important;
-    background: linear-gradient(to right, var(--zen-media-control-bg) 0%, transparent 100%);
-    pointer-events: none;
-    top: 6px;
-    left: 0;
-    height: calc(100% - 6px);
-    z-index: 1;
-  }
-
-  & label {
-    min-height: 16px;
-    margin-left: 0;
-    font-weight: 500;
-    position: relative; /* For the animation */
-
-    &[overflow] {
-      animation: zen-back-and-forth-text 10s infinite ease-in-out;
-    }
-  }
-}
-
-
-
-
-
-
 
 
 
