@@ -95,7 +95,7 @@
 
 * {
   
-     --zen-media-control-bg: light-dark(rgba(255, 255, 255, var(--media-default-filter_opacity)), rgba(0, 0, 0, var(--media-default-filter_opacity))) !important;
+     --media-control-bg: light-dark(rgba(255, 255, 255, var(--media-default-filter_opacity)), rgba(0, 0, 0, var(--media-default-filter_opacity))) !important;
   
 }
 
@@ -111,7 +111,7 @@
 #zen-media-controls-toolbar > toolbaritem {
  
   isolation: isolate !important;
-  background-color: var(--zen-media-control-bg, light-dark(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05))) !important
+ 
 }
 
 /* 
@@ -216,6 +216,7 @@ border-radius: 13px !important;
 #zen-media-controls-toolbar toolbaritem {
   border-radius: 12px !important; 
 margin-bottom: -8px !important;
+  background-color: var(--media-control-bg) !important;
 backdrop-filter: saturate(1) contrast(1) blur(var(--media-player-filter_blur)) !important;
 }
 #zen-media-info-vbox {
