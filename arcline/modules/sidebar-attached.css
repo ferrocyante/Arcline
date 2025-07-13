@@ -61,7 +61,7 @@ height: calc(100% - (var(--zen-element-separation) * 1)) !important;
   opacity: 0 !important;
   left: calc((var(--zen-sidebar-width) - 0px) * -1) !important;
   width: calc(var(--zen-sidebar-width) + 5.8px) !important;
-  min-width: 10px !important;
+  min-width: 1px !important;
   border-radius: 2px !important;
   
   margin-right: calc(var(--zen-element-separation)/1)  !important;
