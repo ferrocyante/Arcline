@@ -117,6 +117,18 @@
     "force": true
   },
   {
+  "property": "url.bar.position_top",
+  "label": " position of  url bar from top ",
+  "type": "string",
+  "defaultValue": "50px"
+  },
+  {
+  "property": "url.psuedo.position_top",
+  "label": "position of url bar psuedo layer from top",
+  "type": "string",
+  "defaultValue": "50px"
+  },
+  {
     "property": "arcline.url.bar",
     "label": "Enable original Arc-line URL bar style",
     "type": "dropdown",
