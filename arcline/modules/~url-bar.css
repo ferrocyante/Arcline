@@ -173,7 +173,7 @@
 
 
 #urlbar[open][zen-floating-urlbar='true'] {
-   top: calc(var(--my-global-zen-top) + 50px) !important;
+   top: calc(var(--my-global-zen-top) + var(--url-bar-position_top)) !important;
 
   min-width: 57rem !important;
   
@@ -254,7 +254,7 @@ padding-bottom: 5rem !important;
      
 
   /* --- Positioning & Size --- */
-   top: calc(var(--my-global-zen-top) + 44.5px) !important;
+   top: calc(var(--my-global-zen-top) + var(--url-psuedo-position_top)) !important;
  
   left: 50% !important;           /* Using left/transform for robustness */
   transform: translateX(-50%) !important;
