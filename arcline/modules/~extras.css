@@ -183,7 +183,7 @@ border: 1px solid rgba(128, 128, 128, var(--media-border-filter_opacity));
   background: light-dark(rgba(220, 220, 220, 1), rgba(10, 10, 10, 1)) !important;
 border-radius: 13px !important;
   width: 97%;
-  height: 112px;
+  height: 111px;
   bottom: 36px; /* Simulates var(--zen-toolbox-padding) */
   left: auto;
   right: auto;
