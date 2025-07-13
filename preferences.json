@@ -126,7 +126,7 @@
   "property": "url.psuedo.position_top",
   "label": "position of url bar psuedo layer from top",
   "type": "string",
-  "defaultValue": "50px"
+  "defaultValue": "52px"
   },
   {
     "property": "arcline.url.bar",
