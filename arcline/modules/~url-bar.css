@@ -210,7 +210,7 @@
 /* Acrylic/Mica floating Urlbar */
 #urlbar[zen-floating-urlbar="true"] #urlbar-background {
     background: rgba(20, 20, 20, 0.69) !important;
-  
+   border-radius: 1.7rem !important;
     backdrop-filter: blur(64px) brightness(1) saturate(1.1) contrast(1.1) !important;
 }
 
