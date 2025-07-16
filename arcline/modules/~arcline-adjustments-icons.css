@@ -106,11 +106,6 @@ transform-origin: center !important;
 
 
 
-/* Make space for the pseudo-element and allow positioning */
-#PanelUI-menu-button {
-    position: relative !important;
-    /* If your new icon is smaller/larger you might adjust padding, or let the pseudo-element overflow */
-}
 
 /* Hide the original Firefox hamburger icon */
 #PanelUI-menu-button .toolbarbutton-icon {
@@ -492,18 +487,15 @@ zen-workspace {
   background-color: var(--toolbox-textcolor);
 
   /* 3. Apply the icon's SHAPE as a mask. This cuts out the background color. */
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='23' height='28' viewBox='11 2 21 17' fill='black' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 14.178 17.164 L 28.538 17.164 C 30.281 17.164 31.145 16.301 31.145 14.591 L 31.145 4.456 C 31.145 2.746 30.281 1.883 28.538 1.883 L 14.178 1.883 C 12.443 1.883 11.571 2.738 11.571 4.456 L 11.571 14.591 C 11.571 16.309 12.443 17.164 14.178 17.164 Z M 14.195 15.828 C 13.364 15.828 12.908 15.388 12.908 14.525 L 12.908 4.522 C 12.908 3.659 13.364 3.219 14.195 3.219 L 17.897 3.219 L 17.897 15.828 L 14.195 15.828 Z M 28.522 3.219 C 29.343 3.219 29.808 3.659 29.808 4.522 L 29.808 14.525 C 29.808 15.388 29.343 15.828 28.522 15.828 L 19.2 15.828 L 19.2 3.219 L 28.522 3.219 Z M 16.303 6.299 C 16.552 6.299 16.776 6.074 16.776 5.834 C 16.776 5.585 16.552 5.369 16.303 5.369 L 14.518 5.369 C 14.269 5.369 14.053 5.585 14.053 5.834 C 14.053 6.074 14.269 6.299 14.518 6.299 L 16.303 6.299 Z M 16.303 8.448 C 16.552 8.448 16.776 8.224 16.776 7.975 C 16.776 7.726 16.552 7.519 16.303 7.519 L 14.518 7.519 C 14.269 7.519 14.053 7.726 14.053 7.975 C 14.053 8.224 14.269 8.448 14.518 8.448 L 16.303 8.448 Z M 16.303 10.59 C 16.552 10.59 16.776 10.383 16.776 10.134 C 16.776 9.885 16.552 9.669 16.303 9.669 L 14.518 9.669 C 14.269 9.669 14.053 9.885 14.053 10.134 C 14.053 10.383 14.269 10.59 14.518 10.59 L 16.303 10.59 Z'/%3E%3Crect x='45.326' y='-17.862' width='1' height='18'/%3E%3Cpath d='M 51.979 14.442 C 52.229 14.442 52.42 14.353 52.623 14.149 L 55.44 11.267 C 55.588 11.122 55.654 10.95 55.654 10.743 C 55.654 10.321 55.311 9.97 54.893 9.97 C 54.686 9.97 54.49 10.056 54.33 10.224 L 51.986 12.657 L 49.631 10.224 C 49.471 10.06 49.276 9.97 49.065 9.97 C 48.647 9.97 48.303 10.321 48.303 10.743 C 48.303 10.95 48.373 11.118 48.518 11.271 L 51.338 14.149 C 51.541 14.356 51.736 14.442 51.979 14.442 Z'/%3E%3C/svg%3E") !important;
- 
-
+  -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='43' height='20' viewBox='-1 -4.5 69 30' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='extension button.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath opacity='0.7' d='M 26.059 18.418 L 40.42 18.418 C 42.163 18.418 43.026 17.554 43.026 15.844 L 43.026 5.709 C 43.026 3.999 42.163 3.136 40.42 3.136 L 26.059 3.136 C 24.324 3.136 23.453 3.991 23.453 5.709 L 23.453 15.844 C 23.453 17.563 24.324 18.418 26.059 18.418 Z M 26.076 17.081 C 25.246 17.081 24.789 16.641 24.789 15.778 L 24.789 5.775 C 24.789 4.912 25.246 4.472 26.076 4.472 L 29.778 4.472 L 29.778 17.081 L 26.076 17.081 Z M 40.403 4.472 C 41.225 4.472 41.69 4.912 41.69 5.775 L 41.69 15.778 C 41.69 16.641 41.225 17.081 40.403 17.081 L 31.081 17.081 L 31.081 4.472 L 40.403 4.472 Z M 28.184 7.552 C 28.433 7.552 28.657 7.328 28.657 7.087 C 28.657 6.838 28.433 6.622 28.184 6.622 L 26.399 6.622 C 26.15 6.622 25.935 6.838 25.935 7.087 C 25.935 7.328 26.15 7.552 26.399 7.552 L 28.184 7.552 Z M 28.184 9.702 C 28.433 9.702 28.657 9.478 28.657 9.229 C 28.657 8.98 28.433 8.772 28.184 8.772 L 26.399 8.772 C 26.15 8.772 25.935 8.98 25.935 9.229 C 25.935 9.478 26.15 9.702 26.399 9.702 L 28.184 9.702 Z M 28.184 11.843 C 28.433 11.843 28.657 11.636 28.657 11.387 C 28.657 11.138 28.433 10.922 28.184 10.922 L 26.399 10.922 C 26.15 10.922 25.935 11.138 25.935 11.387 C 25.935 11.636 26.15 11.843 26.399 11.843 L 28.184 11.843 Z' fill='%23F1F1F1'/%3E%3C/svg%3E");
   /* --- Sizing and Positioning --- */
   /* We must give the pseudo-element a size */
   width: 100% !important;
   height: 100% !important;
-
+scale: 2.1 !important;
   /* Keep all your original positioning styles */
   position: absolute !important;
-  top: 3% !important;
-  left: -2.5% !important;
+ 
 
   pointer-events: none !important;
 
@@ -518,28 +510,10 @@ zen-workspace {
 }
 
 
-
-/* Optional: Style your custom icon on hover if needed */
-#PanelUI-menu-button:hover::before {
-    color: var(--toolbarbutton-hover-icon-fill, var(--toolbarbutton-icon-fill-attention));
-}
-
-#PanelUI-menu-button{
-
-  filter: grayscale(1) brightness(160%) contrast(100%)  !important;
- 
-   position: flex !important;
-
-
-
-  height: 25px !important;
-  width: 28px !important;
-  background-size: contain !important;
-  scale: 0.9 !important;
- 
-  margin-left:   -2px !important;
- 
-}
+  #PanelUI-button{
+    position: relative !important;
+    filter: grayscale(0) brightness(160%) contrast(990%) !important;
+  }
 
 
 
@@ -551,10 +525,10 @@ zen-workspace {
   
 #unified-extensions-button {
   position: relative !important;
-  filter: grayscale(0) brightness(160%) contrast(100%) !important;
+  filter: grayscale(0) brightness(160%) contrast(180%) !important;
   scale: 0.55 !important;
   max-width: 95px !important;
-  margin-right: -8px !important;
+  margin-right: -6px !important;
   margin-left: -2px !important;
   list-style-image: none !important;
 }
@@ -564,7 +538,7 @@ zen-workspace {
   content: '';
   position: absolute;
   top: 0px;
-  left: -7px; /* ← Increase this to push bar right */
+  left: -5px; /* ← Increase this to push bar right */
   width: 1.2px;
   height: 32px;
   background-color: var(--toolbox-textcolor);
@@ -577,11 +551,12 @@ zen-workspace {
 #unified-extensions-button::after {
   content: '';
   display: block !important;
-  width: 24px !important;
+  width: 22px !important;
   height: 24px !important;
   background-color: var(--toolbox-textcolor) !important;
 
-  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='18.07 -0.726 30.22 20.726'><path d='M -10.406 18.395 L 3.955 18.395 C 5.698 18.395 6.561 17.531 6.561 15.821 L 6.561 5.686 C 6.561 3.976 5.698 3.113 3.955 3.113 L -10.406 3.113 C -12.141 3.113 -13.012 3.968 -13.012 5.686 L -13.012 15.821 C -13.012 17.54 -12.141 18.395 -10.406 18.395 Z' fill='white'/><path d='M -8.281 11.82 L -10.066 11.82 C -10.315 11.82 -10.53 11.613 -10.53 11.364 C -10.53 11.115 -10.315 10.899 -10.066 10.899 L -8.281 10.899 C -8.032 10.899 -7.808 11.115 -7.808 11.364 C -7.808 11.613 -8.032 11.82 -8.281 11.82 Z' fill='white'/><path d='M -8.281 9.679 L -10.066 9.679 C -10.315 9.679 -10.53 9.455 -10.53 9.206 C -10.53 8.957 -10.315 8.749 -10.066 8.749 L -8.281 8.749 C -8.032 8.749 -7.808 8.957 -7.808 9.206 C -7.808 9.455 -8.032 9.679 -8.281 9.679 Z' fill='white'/><path d='M -8.281 7.529 L -10.066 7.529 C -10.315 7.529 -10.53 7.305 -10.53 7.064 C -10.53 6.815 -10.315 6.599 -10.066 6.599 L -8.281 6.599 C -8.032 6.599 -7.808 6.815 -7.808 7.064 C -7.808 7.305 -8.032 7.529 -8.281 7.529 Z' fill='white'/><path d='M 3.938 4.449 C 4.76 4.449 5.225 4.889 5.225 5.752 L 5.225 15.755 C 5.225 16.618 4.76 17.058 3.938 17.058 L -5.384 17.058 L -5.384 4.449 Z' fill='white'/><path d='M -10.389 17.058 C -11.219 17.058 -11.676 16.618 -11.676 15.755 L -11.676 5.752 C -11.676 4.889 -11.219 4.449 -10.389 4.449 L -6.687 4.449 L -6.687 17.058 Z' fill='white'/><path d='M 37.048 12.985 C 37.298 12.985 37.489 12.875 37.692 12.624 L 40.509 9.07 C 40.657 8.892 40.723 8.681 40.723 8.426 C 40.723 7.905 40.38 7.471 39.962 7.471 C 39.755 7.471 39.559 7.577 39.399 7.785 L 37.055 10.784 L 34.7 7.785 C 34.54 7.583 34.345 7.471 34.134 7.471 C 33.716 7.471 33.372 7.905 33.372 8.426 C 33.372 8.681 33.442 8.888 33.587 9.075 L 36.407 12.624 C 36.61 12.879 36.805 12.985 37.048 12.985 Z' fill='white'/></svg>");
+  mask-image:  url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='43' height='20' viewBox='0 3.6 20.335 9.648' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='small arrow downwards.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath opacity='0.6' d='M 9.907 11.279 C 10.157 11.279 10.348 11.189 10.551 10.986 L 13.368 8.103 C 13.516 7.958 13.582 7.787 13.582 7.58 C 13.582 7.158 13.239 6.806 12.821 6.806 C 12.614 6.806 12.418 6.892 12.258 7.06 L 9.914 9.494 L 7.559 7.06 C 7.399 6.896 7.204 6.806 6.993 6.806 C 6.575 6.806 6.231 7.158 6.231 7.58 C 6.231 7.787 6.301 7.955 6.446 8.107 L 9.266 10.986 C 9.469 11.193 9.664 11.279 9.907 11.279 Z' style='fill: currentcolor;'/%3E%3C/svg%3E");
+  
   margin-right: -25px !important;
 
   -webkit-mask-repeat: no-repeat;
@@ -594,9 +569,9 @@ zen-workspace {
   pointer-events: none !important;
   opacity: 1 !important;
   position: relative !important;
-  top: -1px !important;
-  left: -125% !important;
-  scale: 2.2 !important;
+
+  left: -100% !important;
+  scale: 2 !important;
   z-index: 2;
 }
 

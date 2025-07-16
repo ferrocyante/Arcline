@@ -26,17 +26,17 @@ body:has([zen-compact-mode="true"]) #titlebar {
    
   min-width: 15px !important;
   border-radius: 11px !important;
-scale: 1 !important;
-  padding: 8px !important;
+
+ 
     
 height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
 
   
   .titlebar-buttonbox {
-    margin-right: 0px;
-    margin-left: 1px !important;
-  margin-top: 1px !important;
-  gap: 2.3px !important;
+    margin-right: -4px !important;
+    margin-left: -2px !important;
+  margin-top: 0px !important;
+  gap: 0px !important;
   }
 
   
