@@ -247,7 +247,7 @@
 padding-bottom: 5rem !important;
   /* --- Appearance --- */
   background-color: var(--toolbar-bgcolor, #f0f0f0) !important;
-  border-radius: 14px !important;
+  border-radius: 1.7rem !important;
     background: linear-gradient(to right, light-dark(#eee, #666) 0px, light-dark(#eee, #666)) !important;
 
       
