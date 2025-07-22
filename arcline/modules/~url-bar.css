@@ -176,11 +176,7 @@
    top: calc(var(--my-global-zen-top) + var(--url-bar-position_top)) !important;
 
   min-width: 57rem !important;
-  
 
-
-
-  
   
 
 
@@ -250,7 +246,7 @@ padding-bottom: 5rem !important;
   border-radius: 1.7rem !important;
     background: linear-gradient(to right, light-dark(#eee, #666) 0px, light-dark(#eee, #666)) !important;
 
-      
+    
      
 
   /* --- Positioning & Size --- */
@@ -258,7 +254,7 @@ padding-bottom: 5rem !important;
  
   left: 50% !important;           /* Using left/transform for robustness */
   transform: translateX(-50%) !important;
-  width: min(90%, 56.8rem) !important;
+  width: min(90%, 56.5em) !important;
 
   /* --- DYNAMIC HEIGHT --- */
   /* Use the JS variable, fallback to your fixed height if variable isn't set */

@@ -100,25 +100,17 @@
 }
 
 /* ========================================================================= */
-/*  Zen Media Cover Art Styling (v7 - Isolated Clipping Container Method)    */
+/*  Zen Media Cover Art Styling*/
 /* ========================================================================= */
 
-/* 
-  Make the toolbar item a positioning context for its pseudo-elements.
-  We will also make its background slightly more transparent to let the
-  artwork's color blend through nicely.
-*/
+
 #zen-media-controls-toolbar > toolbaritem {
  
   isolation: isolate !important;
  
 }
 
-/* 
-  STEP 1: Create the Clipping Frame.
-  This pseudo-element's ONLY job is to clip its child (`::after`).
-  It's an invisible frame that sits behind the buttons.
-*/
+
 #zen-media-controls-toolbar > toolbaritem::before {
   content: "";
   position: absolute;
@@ -132,11 +124,7 @@ border: 1px solid rgba(128, 128, 128, var(--media-border-filter_opacity));
   border-radius: 12px;
 }
 
-/* 
-  STEP 2: The Artwork.
-  This is positioned relative to the clipping frame (`::before`).
-  We make it oversized to contain the blur spill.
-*/
+
 #zen-media-controls-toolbar > toolbaritem::after {
   content: "";
   position: absolute;
@@ -179,17 +167,17 @@ border: 1px solid rgba(128, 128, 128, var(--media-border-filter_opacity));
   align-self: center !important;
   justify-self: center !important;
 
-  /* Neo Zen dark background color */
+
   background: light-dark(rgba(220, 220, 220, 1), rgba(10, 10, 10, 1)) !important;
 border-radius: 13px !important;
   width: 97%;
   height: 111px;
-  bottom: 36px; /* Simulates var(--zen-toolbox-padding) */
+  bottom: 36px;
   left: auto;
   right: auto;
   top: auto;
 
-  border-radius: 12px; /* Matches Neo-Border-Radius */
+  border-radius: 12px;
   opacity: 0;
   visibility: visible !important;
 
@@ -289,7 +277,7 @@ margin-bottom: -8px !important;
 /*-------------------------------------------------------------------------------------------------------*/
 
 /* === SVG Separator Line === */
-.vertical-pinned-tabs-container-separator {
+.pinned-tabs-container-separator {
     background: none !important; /* Remove original background line */
     height: 16px !important; /* Set fixed height */
     max-height: none !important; /* Remove max-height restriction */
@@ -307,7 +295,7 @@ margin-bottom: -8px !important;
   
   
   
-  .vertical-pinned-tabs-container-separator svg {
+  .pinned-tabs-container-separator svg {
     width: 100% !important; /* Set width explicitly to account for padding */
     height: 1px; /* Reduced from 2px to make thinner line */
     min-height: 1.5px !important;
@@ -320,12 +308,12 @@ margin-bottom: -8px !important;
   }
   
   /* Shrink SVG width on separator hover */
-  .vertical-pinned-tabs-container-separator:hover svg {
+  .pinned-tabs-container-separator:hover svg {
      width: calc(100% - 100px) !important; 
   }
   
   /* Update SVG line selectors to path */
-  .vertical-pinned-tabs-container-separator svg path {
+  .pinned-tabs-container-separator svg path {
     stroke: light-dark(rgba(1, 1, 1, 0.13), rgba(255, 255, 255, 0.2)) !important; /* Line color */
     stroke-width: 1px !important; /* Reduced from 1.5px to make thinner line */
     vector-effect: non-scaling-stroke; /* Keep stroke width consistent on scaling */
@@ -335,15 +323,15 @@ margin-bottom: -8px !important;
   }
   
   /* Optional: Change path color slightly on hover */
-  .vertical-pinned-tabs-container-separator:hover svg path {
+  .pinned-tabs-container-separator:hover svg path {
       stroke: light-dark(rgba(1, 1, 1, 0.3), rgba(255, 255, 255, 0.4));
   }
   
   /* --- End SVG Path Animation --- */
   
   /* Sort & Clear Button Styling & Animation */
-  .vertical-pinned-tabs-container-separator #sort-button,
-  .vertical-pinned-tabs-container-separator #clear-button {
+  .pinned-tabs-container-separator #sort-button,
+  .pinned-tabs-container-separator #clear-button {
       /* Inherits font-size, color from tab_sort.uc.js */
       flex-shrink: 0; /* Prevent button from shrinking */
       min-width: 0; /* Ensure it can shrink to zero */
@@ -358,8 +346,8 @@ margin-bottom: -8px !important;
       border-radius: 4px; /* Match hover state */
   }
   
-  .vertical-pinned-tabs-container-separator:hover #sort-button,
-  .vertical-pinned-tabs-container-separator:hover #clear-button {
+  .pinned-tabs-container-separator:hover #sort-button,
+  .pinned-tabs-container-separator:hover #clear-button {
       max-width: 45px !important; /* Reduced from 55px to make buttons smaller */
       opacity: 1; /* Fade in */
       pointer-events: auto; /* Become interactive */
@@ -370,7 +358,7 @@ margin-bottom: -8px !important;
   
   /* Hide the line if the separator is meant to be hidden (e.g., no sortable tabs) */
   #vertical-pinned-tabs-container .zen-workspace-tabs-section[hide-separator] .vertical-pinned-tabs-container-separator,
-  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs {
+  .pinned-tabs-container-separator.has-no-sortable-tabs {
       max-height: 0 !important;
       margin: 0 auto !important;
       padding: 0 !important; /* Remove padding when hidden */
@@ -379,9 +367,9 @@ margin-bottom: -8px !important;
       gap: 0 !important; /* Remove gap when hidden */
   }
   
-  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs svg,
-  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs #sort-button,
-  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs #clear-button {
+  .pinned-tabs-container-separator.has-no-sortable-tabs svg,
+  .pinned-tabs-container-separator.has-no-sortable-tabs #sort-button,
+  .pinned-tabs-container-separator.has-no-sortable-tabs #clear-button {
       display: none !important; /* Specifically hide the SVG and buttons */
       width: 0 !important;
       opacity: 0 !important;
@@ -457,7 +445,7 @@ margin-bottom: -8px !important;
   }
   
   /* Shrink SVG width on separator hover when no buttons are visible */
-  .vertical-pinned-tabs-container-separator:hover svg {
+  .pinned-tabs-container-separator:hover svg {
      /* Calculate width relative to the base width */
      width: calc(100% - 
        (100px * 
@@ -469,15 +457,15 @@ margin-bottom: -8px !important;
   }
   
   /* Hide the buttons entirely when they're hidden */
-  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs #sort-button,
-  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs #clear-button {
+  .pinned-tabs-container-separator.has-no-sortable-tabs #sort-button,
+  .pinned-tabs-container-separator.has-no-sortable-tabs #clear-button {
       display: none !important; /* Specifically hide the buttons */
       width: 0 !important;
       opacity: 0 !important;
   }
   
   /* The separator is always visible, even if buttons are hidden */
-  .vertical-pinned-tabs-container-separator {
+  .pinned-tabs-container-separator {
       display: flex !important;
       flex-direction: row !important;
       align-items: center !important;
