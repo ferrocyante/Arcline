@@ -18,3 +18,14 @@ src: url(data:application/octet-stream;base64,AAEAAAAQAQAABAAAQkFTRUvqdCEABp8IAA
         font-family: var(--mod-arcline-font) !important;
     }
 }
+
+
+
+*{
+    font-family: "SF Pro Text" !important;
+    font-size: auto !important;
+  font-weight: 400 !important;
+ 
+}
+
+
