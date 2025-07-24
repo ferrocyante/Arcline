@@ -203,10 +203,34 @@
 }
 /*---------open url bar end----------------------------*/
 
+  @media  (-moz-pref("arcline.url.bar.border", 1)) {
+    
+#urlbar[zen-floating-urlbar="true"] #urlbar-background {
+  
+ 
+  outline: none !important;
+   box-shadow: 
+  
+      /* Layer 2: The Inner Light Glow (TOP) */
+    inset 0 0 0 var(--url-bar-in-border_width, 1px) var(--url-bar-in-border_opacity, 0.2),
+    
+    /* Layer 1: The Outer Dark Frame (MIDDLE) */
+    0 0 0 var(--url-bar-out-border_width, 0.5px) var(--url-bar-out-border_opacity, 1),
+    
+    
+    /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
+8px 5px 125px 0 rgba(0, 0, 0, 0.5), 0px  30px 50px #00000069 !important;
+ 
+     
+   
+  
+  }
+}
+  
 /* Acrylic/Mica floating Urlbar */
 #urlbar[zen-floating-urlbar="true"] #urlbar-background {
     background: rgba(20, 20, 20, 0.69) !important;
-   border-radius: 1.7rem !important;
+   border-radius:  var(--url-bar-border_radius, 1.7rem) !important;
     backdrop-filter: blur(64px) brightness(1) saturate(1.1) contrast(1.1) !important;
 }
 
