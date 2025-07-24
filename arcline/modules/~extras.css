@@ -118,10 +118,10 @@
 #zen-media-controls-toolbar > toolbaritem::before {
  box-shadow: 
     /* Layer 2: The Inner Light Glow (TOP) */
-    inset 0 0 0 var(--media-player-in-border_width) var(--media-player-in-border_opacity),
+    inset 0 0 0 var(--media-player-in-border_width , 1px) var(--media-player-in-border_opacity , 0.15),
     
     /* Layer 1: The Outer Dark Frame (MIDDLE) */
-    0 0 0 var(--media-player-out-border_width) var(--media-player-out-border_opacity),
+    0 0 0 var(--media-player-out-border_width , 0.5px) var(--media-player-out-border_opacity , 1),
     
     /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
     0 10px 40px rgba(0, 0, 0, 0.35) !important;
