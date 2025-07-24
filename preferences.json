@@ -116,6 +116,13 @@
     ],
     "force": true
   },
+   {
+    "property": "url.bar.border_radius",
+    "label": "url bar roundness",
+    "type": "string",
+    "defaultValue": "1.7rem",
+    "placeholder": "1.7rem"
+  },
   {
   "property": "url.bar.position_top",
   "label": " position of  url bar from top ",
@@ -127,6 +134,46 @@
   "label": "position of url bar psuedo layer from top",
   "type": "string",
   "defaultValue": "52px"
+  },
+   {
+    "property": "arcline.url.bar.border",
+    "label": "Enable arcline url bar border",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 1,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
+    ]
+  },
+   {
+    "property": "url.bar.in.border_width",
+    "label": "inner border width",
+    "type": "string",
+    "defaultValue": "1px",
+    "placeholder": "1px"
+  },
+   {
+    "property": "url.bar.in.border_opacity",
+    "label": "inner border appearance",
+    "type": "string",
+    "defaultValue": "rgba(255, 255, 255, 0.2)",
+    "placeholder": "rgba(255, 255, 255, 0.2)"
+  },
+  {
+    "property": "url.bar.out.border_width",
+    "label": "outer border width",
+    "type": "string",
+    "defaultValue": "0.5px",
+    "placeholder": "0.5px"
+  },
+  {
+    "property": "url.bar.out.border_opacity",
+    "label": "outer border appearance",
+    "type": "string",
+    "defaultValue": "rgba(0, 0, 0, 1)",
+    "placeholder": "rgba(0, 0, 0, 1)"
   },
   {
     "property": "arcline.url.bar",
@@ -428,8 +475,8 @@
     "property": "media.player.out.border_opacity",
     "label": "outer border appearance",
     "type": "string",
-    "defaultValue": "rgba(0, 0, 0, 1.3)",
-    "placeholder": "rgba(0, 0, 0, 1.3)"
+    "defaultValue": "rgba(0, 0, 0, 1)",
+    "placeholder": "rgba(0, 0, 0, 1)"
   },
   {
   "property": "media.default.filter_opacity",
