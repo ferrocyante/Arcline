@@ -229,10 +229,9 @@
 
 
 /* Compact layout (two-toolbar mode active) */
-:root:not([zen-single-toolbar="true"])[zen-compact-mode="true"] #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
-  opacity: 1 !important;
+body:has([zen-compact-mode="true"]) #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
+  opacity: 0 !important;
 }
-
 
 
 
