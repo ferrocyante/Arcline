@@ -1,4 +1,4 @@
-
+@media  (-moz-pref("arcline.find.bar", 1)) {
 /* ==== Findbar ==== */
 
 @keyframes initial-animation {
@@ -206,7 +206,7 @@
 }
 
 
-
+}
 
 
 
