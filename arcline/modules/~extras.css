@@ -190,27 +190,43 @@
   align-self: center !important;
   justify-self: center !important;
 
-
   background: light-dark(rgba(220, 220, 220, 1), rgba(10, 10, 10, 1)) !important;
-border-radius: 13px !important;
   width: 97%;
-  height: 111px;
-  bottom: 36px;
-  left: auto;
-  right: auto;
-  top: auto;
-
   border-radius: 12px;
-  opacity: 0;
   visibility: visible !important;
+  
+  /* --- Initial State --- */
+  height: 38px; 
+  bottom: 36px;
+  opacity: 0;
 
-  transition: bottom 0.3s ease 100ms, height 0.8s ease, opacity 0.3s ease;
+  /* 
+    ====================================================================
+    ==> TIMING CONTROLS MATCHED TO ZEN THEME <==
+    ====================================================================
+    This uses the same duration (0.2s) and timing function ('ease')
+    as the Zen player's internal hover effects.
+  */
+  transition-property: height, opacity;
+  transition-duration: 0.2s, 0.2s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s; /* No delay for a synchronized feel */
 }
 
-
-:root:not([zen-compact-mode="true"]) #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
+/* 
+  Activation Rule:
+  When you hover the media player, the background animates to its full state.
+*/
+#navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
+   height: 111px;
   opacity: 1 !important;
 }
+/* Compact layout (two-toolbar mode active) */
+:root:not([zen-single-toolbar="true"])[zen-compact-mode="true"] #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
+  height: 111px; 
+  opacity: 1 !important;
+}
+
 
 /* Compact layout (two-toolbar mode active) */
 :root:not([zen-single-toolbar="true"])[zen-compact-mode="true"] #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
