@@ -392,16 +392,50 @@
     ]
   },
    {
+    "property": "arcline.media.player.border",
+    "label": "Enable arcline media player",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 1,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
+    ]
+  },
+   {
+    "property": "media.player.in.border_width",
+    "label": "inner border width",
+    "type": "string",
+    "defaultValue": "1px",
+    "placeholder": "1px"
+  },
+   {
+    "property": "media.player.in.border_opacity",
+    "label": "inner border appearance",
+    "type": "string",
+    "defaultValue": "rgba(255, 255, 255, 0.15)",
+    "placeholder": "rgba(255, 255, 255, 0.15)"
+  },
+  {
+    "property": "media.player.out.border_width",
+    "label": "outer border width",
+    "type": "string",
+    "defaultValue": "0.5px",
+    "placeholder": "0.5px"
+  },
+  {
+    "property": "media.player.out.border_opacity",
+    "label": "outer border appearance",
+    "type": "string",
+    "defaultValue": "rgba(0, 0, 0, 1.3)",
+    "placeholder": "rgba(0, 0, 0, 1.3)"
+  },
+  {
   "property": "media.default.filter_opacity",
   "label": "Zen media default background (black) opacity",
   "type": "string",
   "defaultValue": "0.47"
-  },
-  {
-  "property": "media.border.filter_opacity",
-  "label": "Border opacity",
-  "type": "string",
-  "defaultValue": "0.4"
   },
   {
   "property": "media.player.filter_blur",
