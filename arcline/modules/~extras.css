@@ -111,6 +111,31 @@
 }
 
 
+
+  
+  @media  (-moz-pref("arcline.media.player.border", 1)) {
+  
+#zen-media-controls-toolbar > toolbaritem::before {
+ box-shadow: 
+    /* Layer 2: The Inner Light Glow (TOP) */
+    inset 0 0 0 var(--media-player-in-border_width) var(--media-player-in-border_opacity),
+    
+    /* Layer 1: The Outer Dark Frame (MIDDLE) */
+    0 0 0 var(--media-player-out-border_width) var(--media-player-out-border_opacity),
+    
+    /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
+    0 10px 40px rgba(0, 0, 0, 0.35) !important;
+  
+  }
+  
+  
+  
+  }
+
+
+
+
+  
 #zen-media-controls-toolbar > toolbaritem::before {
   content: "";
   position: absolute;
@@ -118,10 +143,8 @@
   z-index: -1; /* Sits behind the buttons, but on top of ::after */
   border-radius: 12px !important;
   /* The key: This clips the artwork, but does NOT affect the music notes */
-border: 1px solid rgba(128, 128, 128, var(--media-border-filter_opacity));
-  outline: 1px solid rgba(10, 10, 10, 1) !important;
-  /* Match the theme's corner rounding */
-  border-radius: 12px;
+
+
 }
 
 
