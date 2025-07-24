@@ -496,43 +496,50 @@
   "property": "media.default.filter_opacity",
   "label": "Zen media default background (black) opacity",
   "type": "string",
-  "defaultValue": "0.47"
+  "defaultValue": "0.47",
+  "placeholder": "0.47"
   },
   {
   "property": "media.player.filter_blur",
   "label": "Media player blur",
   "type": "string",
-  "defaultValue": "5px"
+  "defaultValue": "5px",
+   "placeholder": "5px"
   },
   {
   "property": "art.work.filter_blur",
   "label": "Art work blur",
   "type": "string",
-  "defaultValue": "65px"
+  "defaultValue": "65px",
+  "placeholder": "65px"
   },
   {
   "property": "art.work.filter_brightness",
   "label": "Art work brightness",
   "type": "string",
-  "defaultValue": "0.5"
+  "defaultValue": "0.5",
+   "placeholder": "0.5"
   },
   {
   "property": "art.work.filter_saturate",
   "label": "Art work saturation",
   "type": "string",
-  "defaultValue": "1"
+  "defaultValue": "1.1",
+  "placeholder": "1.1"
   },
   {
   "property": "art.work.filter_contrast",
   "label": "Art work contrast",
   "type": "string",
-  "defaultValue": "0.9"
+  "defaultValue": "0.9",
+  "placeholder": "0.9"
   },
    {
   "property": "art.work.filter_opacity",
   "label": "Art work opacity",
   "type": "string",
-  "defaultValue": "0.8"
+  "defaultValue": "0.8",
+  "placeholder": "0.8"
   },
   
 
