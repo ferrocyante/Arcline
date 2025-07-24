@@ -466,7 +466,7 @@
   },
    {
     "property": "arcline.media.player.border",
-    "label": "Enable arcline media player",
+    "label": "Enable arcline media player border",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
