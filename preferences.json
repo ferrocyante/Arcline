@@ -304,10 +304,24 @@
     "default": 0,
     "options": [
       { "value": 0, "label": "Disabled" },
-      { "value": 1, "label": "Dynamic" },
+      { "value": 1, "label": "auto" },
       { "value": 2, "label": "Dual" },
-      { "value": 3, "label": "Faded" }
+      { "value": 3, "label": "manual" }
     ]
+  },
+   {
+    "property": "window.border_opacity",
+    "label": "border appearance",
+    "type": "string",
+    "defaultValue": "rgba(255, 255, 255, 0.5)",
+    "placeholder": "rgba(255, 255, 255, 0.5)"
+  },
+  {
+    "property": "window.border_width",
+    "label": "border width",
+    "type": "string",
+    "defaultValue": "1.7px",
+    "placeholder": "1.7px"
   },
   {
     "property": "arcline.force.blur",
