@@ -8,10 +8,7 @@
     inset 0 0 0 var(--compact-sidebar-in-border_width , 1px) var(--compact-sidebar-in-border_opacity , 0.15),
     
     /* Layer 1: The Outer Dark Frame (MIDDLE) */
-    0 0 0 var(--compact-sidebar-out-border_width , 0.5px) var(--compact-sidebar-out-border_opacity , 1),
-    
-    /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
-    0 2.5px 10px rgba(0, 0, 0, 0.35) !important;
+    0 0 0 var(--compact-sidebar-out-border_width , 0.5px) var(--compact-sidebar-out-border_opacity , 1) !important;
   
   }
   
