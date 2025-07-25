@@ -26,7 +26,7 @@
 
 @media not (-moz-pref("arcline.compact.mode.full.screen.mode", 1)) {
 
-@media (-moz-pref("arcline.compact.sidebar.position", 1)){
+@media (-moz-pref("arcline.compact.sidebar.position", 1)) {
 
 
 
