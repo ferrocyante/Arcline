@@ -593,7 +593,13 @@
   "defaultValue": "0.8",
   "placeholder": "0.8"
   },
-  
+  {
+  "property": "media.player.psuedo_bg",
+  "label": "puedo background color",
+  "type": "string",
+  "defaultValue": "light-dark(rgba(220, 220, 220, 1), rgba(10, 10, 10, 1))",
+  "placeholder": "light-dark(rgba(220, 220, 220, 1), rgba(10, 10, 10, 1))"
+  },
 
 
   {
