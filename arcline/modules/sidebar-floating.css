@@ -138,3 +138,8 @@ height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
 }
       
 }
+
+
+
+@media (-moz-pref("arcline.compact.sidebar.position", 4)) {
+}
