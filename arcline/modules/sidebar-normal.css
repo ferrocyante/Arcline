@@ -127,4 +127,5 @@
        
 
       
-  
+  @media (-moz-pref("arcline.compact.sidebar.bg", 4)) {
+}
