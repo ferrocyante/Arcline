@@ -232,6 +232,46 @@
       { "value": 1, "label": "Floating" }
     ]
   },
+    {
+    "property": "arcline.compact.sidebar.border",
+    "label": "Enable arcline compact sidebar border",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 1,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
+    ]
+  },
+   {
+    "property": "compact.sidebar.in.border_width",
+    "label": "inner border width",
+    "type": "string",
+    "defaultValue": "1px",
+    "placeholder": "1px"
+  },
+   {
+    "property": "compact.sidebar.in.border_opacity",
+    "label": "inner border appearance",
+    "type": "string",
+    "defaultValue": "rgba(255, 255, 255, 0.2)",
+    "placeholder": "rgba(255, 255, 255, 0.2)"
+  },
+  {
+    "property": "compact.sidebar.out.border_width",
+    "label": "outer border width",
+    "type": "string",
+    "defaultValue": "0.5px",
+    "placeholder": "0.5px"
+  },
+  {
+    "property": "compact.sidebar.out.border_opacity",
+    "label": "outer border appearance",
+    "type": "string",
+    "defaultValue": "rgba(0, 0, 0, 1)",
+    "placeholder": "rgba(0, 0, 0, 1)"
+  },
   {
     "property": "arcline.essential.always.four.in.a.row",
     "label": "Force essentials to always be four in a row",
