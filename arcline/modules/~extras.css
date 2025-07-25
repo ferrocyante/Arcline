@@ -192,7 +192,7 @@
   align-self: center !important;
   justify-self: center !important;
 
-  background: light-dark(rgba(220, 220, 220, 1), rgba(10, 10, 10, 1)) !important;
+  background: var(--media-player-psuedo_bg) !important;
   width: 97%;
   border-radius: 12px;
   visibility: visible !important;
