@@ -27,11 +27,10 @@
     "force": true
   },
   {
-    "property": "browser.uidensity",
-    "label": "Browser density (0=Normal, 1=Compact, 2=Touch)",
-    "type": "string",
-    "value": "number",
-    "default": 2,
+    "property": "browser.search.suggest.enabled",
+    "label": "Enable web search suggestions in url bar",
+    "default": true,
+    "type": "checkbox",
     "force": true
   },
   {
@@ -40,6 +39,14 @@
     "type": "string",
     "value": "number",
     "default": 5,
+    "force": true
+  },
+  {
+    "property": "browser.uidensity",
+    "label": "Browser density (0=Normal, 1=Compact, 2=Touch)",
+    "type": "string",
+    "value": "number",
+    "default": 2,
     "force": true
   },
   {
