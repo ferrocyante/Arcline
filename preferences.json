@@ -562,7 +562,7 @@
   "property": "art.work.filter_blur",
   "label": "Art work blur ( 0px for clear art work) ",
   "type": "string",
-  "defaultValue": "65px",
+  "defaultValue": "0px",
   "placeholder": "65px"
   },
   {
