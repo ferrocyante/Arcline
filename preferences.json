@@ -597,8 +597,8 @@
   "property": "media.player.psuedo_bg",
   "label": "puedo background color",
   "type": "string",
-  "defaultValue": "light-dark(rgba(220, 220, 220, 1), rgba(10, 10, 10, 1))",
-  "placeholder": "light-dark(rgba(220, 220, 220, 1), rgba(10, 10, 10, 1))"
+  "defaultValue": "rgba(30, 30, 30, 1)",
+  "placeholder": "rgba(30, 30, 30, 1)"
   },
 
 
