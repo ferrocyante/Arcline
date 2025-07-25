@@ -66,14 +66,6 @@
     "force": true
   },
   {
-    "property": "widget.windows.mica.toplevel-backdrop",
-    "label": "Windows Mica backdrop style (1=light(default) 0=darkened)",
-    "type": "string",
-    "value": "number",
-    "default": 1,
-    "force": true
-  },
-  {
     "property": "browser.urlbar.scotchBonnet.enableOverride",
     "label": "Enable ability to search directly through any search engine",
     "default": false,
