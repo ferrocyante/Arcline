@@ -9,16 +9,7 @@
 }
 
 
-  #navigator-toolbox:not([animate='true']) #titlebar {
-     
-        &::before {
-       
-          background: transparent !important;
-      
-          
-     
-         
-    }}
+ 
 
 
 
