@@ -30,8 +30,8 @@
   "property": "browser.chrome.toolbar_tips",
   "label": "Disable tab title preview on hover",
   "type": "checkbox",
-  "value": false,
   "default": true,
+  "value": false,
   "force": true
 },
  {
