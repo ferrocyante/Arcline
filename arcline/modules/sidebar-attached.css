@@ -21,7 +21,7 @@
 
        
    top: calc(var(--zen-element-separation) / 2)  !important;
-  margin-left: calc(var(--zen-element-separation) / 1.7)  !important;
+  margin-left: calc(var(--zen-element-separation) / 2)  !important;
   
  
   
@@ -30,7 +30,7 @@
 scale: 1 !important;
   padding: 8px !important;
     
-height: calc(100% - (var(--zen-element-separation) * 1)) !important;
+height: calc(100% - (var(--zen-element-separation) * 0.9)) !important;
 
   
   .titlebar-buttonbox {
