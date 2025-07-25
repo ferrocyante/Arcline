@@ -143,13 +143,15 @@
   "property": "url.bar.position_top",
   "label": " position of  url bar from top ",
   "type": "string",
-  "defaultValue": "50px"
+  "defaultValue": "50px",
+  "placeholder": "50px"
   },
   {
   "property": "url.psuedo.position_top",
   "label": "position of url bar psuedo layer from top",
   "type": "string",
-  "defaultValue": "52px"
+  "defaultValue": "45px",
+  "placeholder": "50px"
   },
    {
     "property": "arcline.url.bar.border",
