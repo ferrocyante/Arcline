@@ -1,3 +1,29 @@
+ @media  (-moz-pref("arcline.compact.sidebar.border", 1)) {
+#navigator-toolbox:not([animate='true']) #titlebar {
+     
+        &::before {
+          outline: none !important;
+           box-shadow: 
+    /* Layer 2: The Inner Light Glow (TOP) */
+    inset 0 0 0 var(--compact-sidebar-in-border_width , 1px) var(--compact-sidebar-in-border_opacity , 0.15),
+    
+    /* Layer 1: The Outer Dark Frame (MIDDLE) */
+    0 0 0 var(--compact-sidebar-out-border_width , 0.5px) var(--compact-sidebar-out-border_opacity , 1),
+    
+    /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
+    0 2.5px 10px rgba(0, 0, 0, 0.35) !important;
+  
+  }
+  
+  }
+
+}
+
+
+
+
+
+
 @media not (-moz-pref("arcline.compact.mode.full.screen.mode", 1)) {
 
 @media (-moz-pref("arcline.compact.sidebar.position", 1)){
@@ -7,14 +33,22 @@
 #navigator-toolbox:not([animate='true']) #titlebar {
      
         &::before {
-        border-radius: 12px !important;
-          background: transparent !important;}}
+        
+  
+  }
+        border-radius: 8px !important;
+          background: transparent !important;
+  
+  }
+  
+  
+  }
 
 
 
 /* === BLUR COMPACT SIDEBAR ================================================================================================ */
 /* Compact sidebar with blurred transparent background */
-body:has([zen-compact-mode="true"]) #titlebar {
+:root[zen-compact-mode="true"] #titlebar {
  
    
 
@@ -25,7 +59,7 @@ body:has([zen-compact-mode="true"]) #titlebar {
  
    
   min-width: 15px !important;
-  border-radius: 11px !important;
+  border-radius: 12px !important;
 
  
     
@@ -53,7 +87,7 @@ height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
       
    
 
-#browser::after {
+ #browser::after {
   
    content: "" !important; /* <<<< ----- THIS IS THE CRITICAL FIX ----- */
   position: absolute !important; /* Recommended for pseudo-elements positioned with top/left/etc. */
@@ -65,7 +99,7 @@ height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
   border-radius: 11px !important;
   
   margin-right: calc(var(--zen-element-separation)/2) 0 !important;
-   margin-left: calc((var(--zen-element-separation) / 2) * 1.12) !important;
+   margin-left: calc((var(--zen-element-separation) / 2) * 1.4) !important;
    margin-top: calc(var(--zen-element-separation)/0.7) !important;
    margin-bottom: calc(var(--zen-element-separation)) !important;
   height: calc(100% - (var(--zen-element-separation) * 3.6)) !important;
@@ -76,7 +110,7 @@ height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
   top: calc(var(--zen-element-separation) / 2) !important;
 }
 
-body:has([zen-compact-mode="true"]) {
+:root[zen-compact-mode="true"] {
     &:has(
       #navigator-toolbox[zen-has-hover="true"],
       #navigator-toolbox[zen-user-show],
@@ -92,10 +126,7 @@ body:has([zen-compact-mode="true"]) {
       left: var(--zen-element-separation) !important;
     }
 
-    /* Optional: Hide pseudo background when sidebar is inactive */
-    &:has(#navigator-toolbox[zen-has-empty-tab]) #browser::after {
-      opacity: 0 !important;
-    }
+ 
   }
   
 

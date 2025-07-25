@@ -124,7 +124,7 @@
     0 0 0 var(--media-player-out-border_width , 0.5px) var(--media-player-out-border_opacity , 1),
     
     /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
-    0 10px 40px rgba(0, 0, 0, 0.35) !important;
+    0 2.5px 10px rgba(0, 0, 0, 0.35) !important;
   
   }
   
@@ -160,6 +160,8 @@
   background-size: cover;
   background-position: center;
    clip-path: inset(0 round 12px);
+    overflow: hidden;
+ border-radius: 12px !important;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 
@@ -229,7 +231,7 @@
 
 
 /* Compact layout (two-toolbar mode active) */
-body:has([zen-compact-mode="true"]) #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
+:root[zen-compact-mode="true"] #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
   opacity: 0 !important;
 }
 

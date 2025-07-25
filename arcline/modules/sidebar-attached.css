@@ -15,7 +15,7 @@
 
 /* === BLUR COMPACT SIDEBAR ================================================================================================ */
 /* Compact sidebar with blurred transparent background */
-body:has([zen-compact-mode="true"]) #titlebar {
+:root[zen-compact-mode="true"] #titlebar {
  
    
 
@@ -76,7 +76,7 @@ height: calc(100% - (var(--zen-element-separation) * 1)) !important;
   top: calc(var(--zen-element-separation) / 2) !important;
 }
 
-body:has([zen-compact-mode="true"]) {
+:root[zen-compact-mode="true"] {
     &:has(
       #navigator-toolbox[zen-has-hover="true"],
       #navigator-toolbox[zen-user-show],
