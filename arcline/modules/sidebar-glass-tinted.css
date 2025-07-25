@@ -107,6 +107,14 @@
 
 /* === BLUR COMPACT SIDEBAR ================================================================================================ */
 /* Compact sidebar with blurred transparent background */
+
+  #navigator-toolbox:not([animate='true']) #titlebar {
+     
+        &::before {
+
+          background: transparent !important;}}
+      
+    
 :root[zen-compact-mode="true"] #navigator-toolbox:not([animate='true']) #titlebar {
  
  
