@@ -865,7 +865,7 @@ tab-group:not([split-view-group]) {
 }
 
 
-@media (-moz-pref("arcline.tab.grps", 3)) {
+@media (-moz-pref("arcline.tab.grps", 2)) {
 
 }
 
