@@ -785,7 +785,7 @@ findbar{
 
 
 
-
+@media (-moz-pref("arcline.remove.white.tint", 1)) {
 
 /* Remove new tab background color white tint in 1.8b+ */
 .browserStack browser {
@@ -793,7 +793,7 @@ findbar{
  
 }
 
-
+}
 
 
 
