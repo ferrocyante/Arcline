@@ -622,44 +622,12 @@ scale: 2.1 !important;
 }
 
 
-/* --- Back Button --- */
 #back-button {
-  /* 1. This is the key: The 'fill' property provides the color for 'context-fill' in the SVG. */
-  fill: var(--toolbox-textcolor) !important;
-  
-  /* 2. Keep the original background-image that uses 'context-fill' */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-6 -6 30 20' fill='context-fill' fill-opacity='context-fill-opacity'%3E%3Cpath d='M14.375 8 3.048 8l4.308-4.308a.626.626 0 0 0-.885-.885L1 8.281l0 .689 5.472 5.473a.623.623 0 0 0 .884 0 .628.628 0 0 0 0-.885L3.048 9.25l11.327 0a.625.625 0 0 0 0-1.25z'/%3E%3C/svg%3E") !important;
-top: 0px !important;
-  position: relative !important;
-  /* --- Cleanup and Layout --- */
-  filter: none !important; /* Remove the old filter */
-  list-style-image: none !important;
-  background-repeat: no-repeat !important;
-  background-size: contain !important;
- transform: translate(0%, 31%) !important;
-  padding-bottom: 48px !important;
-
+  list-style-image: url("chrome://browser/skin/back.svg") !important;
 }
 
-
-/* --- Forward Button --- */
 #forward-button {
-  /* Same as the back button, the 'fill' property provides the color. */
-  fill: var(--toolbox-textcolor) !important;
-
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -5 29 29' fill='context-fill' fill-opacity='context-fill-opacity'%3E%3Cpath transform='rotate(180 9.5 8.7)' d='M14.375 8 3.048 8l4.308-4.308a.626.626 0 0 0-.885-.885L1 8.281l0 .689 5.472 5.473a.623.623 0 0 0 .884 0 .628.628 0 0 0 0-.885L3.048 9.25l11.327 0a.625.625 0 0 0 0-1.25z'/%3E%3C/svg%3E") !important;
-  /*  --- Cleanup and Layout --- */
-  filter: none !important;
-  position: relative !important;
-  top: 1px !important;
-  list-style-image: none !important;
-  background-repeat: no-repeat !important;
-  background-size: contain !important;
- margin-left: -1px !important;
-  column-fill: none !important; /* This property isn't standard for buttons */
- transform: translate(0%, 0%) !important;
-  /* The rotation is preserved to flip the arrow */
-  padding-top: 2px !important;
+  list-style-image: url("chrome://browser/skin/forward.svg") !important;
 }
 
 
