@@ -150,7 +150,7 @@
   "property": "url.psuedo.position_top",
   "label": "position of url bar psuedo layer from top",
   "type": "string",
-  "defaultValue": "45px",
+  "defaultValue": "52px",
   "placeholder": "50px"
   },
    {
