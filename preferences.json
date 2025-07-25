@@ -26,7 +26,15 @@
     "type": "checkbox",
     "force": true
   },
-  {
+{
+  "property": "browser.chrome.toolbar_tips",
+  "label": "Disable tab title preview on hover",
+  "type": "checkbox",
+  "value": false,
+  "default": true,
+  "force": true
+},
+ {
     "property": "browser.search.suggest.enabled",
     "label": "Enable web search suggestions in url bar",
     "default": true,
@@ -69,7 +77,8 @@
     "property": "browser.urlbar.scotchBonnet.enableOverride",
     "label": "Enable ability to search directly through any search engine",
     "default": false,
-    "type": "checkbox"
+    "type": "checkbox",
+    "force": true
   },
 
   {
