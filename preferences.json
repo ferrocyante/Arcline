@@ -28,9 +28,9 @@
   },
 {
   "property": "browser.chrome.toolbar_tips",
-  "label": "Disable tab title preview on hover",
+  "label": " Enable tab title preview on hover",
   "type": "checkbox",
-  "default": true,
+  "default": false,
   "value": false,
   "force": true
 },
@@ -625,7 +625,7 @@
   },
   {
   "property": "media.player.psuedo_bg",
-  "label": "puedo background color",
+  "label": "Psuedo background color",
   "type": "string",
   "defaultValue": "rgba(30, 30, 30, 1)",
   "placeholder": "rgba(30, 30, 30, 1)"
