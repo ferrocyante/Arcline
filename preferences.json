@@ -540,7 +540,7 @@
       {"if":{"property":"arch.fonts.sf-pro","value":0}}
     ]
   },
-
+   
   
   {
     "type": "text",
@@ -605,56 +605,80 @@
   "label": "Zen media default background (black) opacity",
   "type": "string",
   "defaultValue": "0.47",
-  "placeholder": "0.47"
+  "placeholder": "0.47",
+  "conditions": [
+      {"if": {"property": "arcline.media.player", "value": 1}}
+    ]
   },
   {
   "property": "media.player.filter_blur",
   "label": "Media player blur",
   "type": "string",
   "defaultValue": "5px",
-   "placeholder": "5px"
+   "placeholder": "5px"'
+   "conditions": [
+      {"if": {"property": "arcline.media.player", "value": 1}}
+    ]
   },
   {
   "property": "art.work.filter_blur",
   "label": "Art work blur ( 0px for clear art work) ",
   "type": "string",
   "defaultValue": "0px",
-  "placeholder": "65px"
+  "placeholder": "65px",
+     "conditions": [
+      {"if": {"property": "arcline.media.player", "value": 1}}
+    ]
   },
   {
   "property": "art.work.filter_brightness",
   "label": "Art work brightness",
   "type": "string",
   "defaultValue": "0.5",
-   "placeholder": "0.5"
+   "placeholder": "0.5",
+     "conditions": [
+      {"if": {"property": "arcline.media.player", "value": 1}}
+    ]
   },
   {
   "property": "art.work.filter_saturate",
   "label": "Art work saturation",
   "type": "string",
   "defaultValue": "1.1",
-  "placeholder": "1.1"
+  "placeholder": "1.1",
+     "conditions": [
+      {"if": {"property": "arcline.media.player", "value": 1}}
+    ]
   },
   {
   "property": "art.work.filter_contrast",
   "label": "Art work contrast",
   "type": "string",
   "defaultValue": "0.9",
-  "placeholder": "0.9"
+  "placeholder": "0.9",
+     "conditions": [
+      {"if": {"property": "arcline.media.player", "value": 1}}
+    ]
   },
    {
   "property": "art.work.filter_opacity",
   "label": "Art work opacity",
   "type": "string",
   "defaultValue": "0.8",
-  "placeholder": "0.8"
+  "placeholder": "0.8",
+ "conditions": [
+      {"if": {"property": "arcline.media.player", "value": 1}}
+    ]
   },
   {
   "property": "media.player.psuedo_bg",
   "label": "Psuedo background color",
   "type": "string",
   "defaultValue": "rgba(30, 30, 30, 1)",
-  "placeholder": "rgba(30, 30, 30, 1)"
+  "placeholder": "rgba(30, 30, 30, 1)",
+   "conditions": [
+      {"if": {"property": "arcline.media.player", "value": 1}}
+    ]
   },
 
 
