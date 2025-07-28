@@ -26,13 +26,6 @@
     "type": "checkbox",
     "force": true
   },
-  {
-    "property": "browser.tabs.closeTabByDblclick",
-    "label": "Enable closing of tabs by double clicking on them",
-    "default": true,
-    "type": "checkbox",
-    "force": true
-  },
 {
   "property": "browser.chrome.toolbar_tips",
   "label": " Enable tab title preview on hover",
@@ -349,6 +342,7 @@
     "placeholder": false,
     "value": "number",
     "default": 1,
+    "restart": true,
     "options": [
       { "value": 0, "label": "Disabled" },
       { "value": 1, "label": "floating player style" },
