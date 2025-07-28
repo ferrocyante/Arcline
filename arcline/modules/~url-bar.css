@@ -1,3 +1,13 @@
+/* Hides the container info in url-bar to fix buttons positioning on hover with Copy URL addon. */
+#urlbar #userContext-label {
+  display: none !important;
+}
+#urlbar #userContext-indicator {
+  display: none !important;
+}
+#urlbar #userContext-icons {
+  display: none !important;
+}
 
 
 @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
