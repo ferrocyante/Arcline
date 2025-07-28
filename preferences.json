@@ -336,8 +336,22 @@
     "force": true
   },
   {
+    "property": "arcline.pip",
+    "label": "Enable Arcline picture in picture player styling ",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 1,
+    "restart": true,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "floating player style" },
+      { "value": 2, "label": "floating buttons style" }
+    ]
+  },
+  {
     "property": "arcline.container",
-    "label": "Enable Arc-line container tab styling",
+    "label": "Enable Arcline container tab styling",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
