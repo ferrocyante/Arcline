@@ -10,7 +10,7 @@
   @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
     /*noinspection CssInvalidFunction*/
     * {
-      --natsumi-primary-color: #a0d490;
+      --natsumi-primary-color: var(--pip-accent_color);
       --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
       --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%);
 
@@ -477,7 +477,7 @@
   
   
   * {
-      --natsumi-primary-color: #a0d490;
+      --natsumi-primary-color: var(--pip-accent_color);
       --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
       --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%);
 
