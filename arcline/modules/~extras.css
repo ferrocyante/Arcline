@@ -201,10 +201,15 @@
     as the Zen player's internal hover effects.
   */
   transition-property: height, opacity;
-  transition-duration: 0.1s, 0.1s;
+  transition-duration: 0.16s, 0.16s;
   transition-timing-function: ease, ease;
   transition-delay: 0s, 0s; /* No delay for a synchronized feel */
 }
+
+/* 
+  Activation Rule:
+  When you hover the media player, the background animates to its full state.
+*/
 
 /* 
   Activation Rule:
@@ -214,25 +219,22 @@
    height:  calc(var(--zen-media-player-peak-height, 111px) + 1px);
   opacity: 1 !important;
 }
-/* 
-  Helper class for the MediaPlayerPeakHeight script.
-  When this class is added, it forces the player's "on-hover"
-  elements to become visible instantly, but with zero height and opacity,
-  so we can measure the final layout without a visual flash.
-  Crucially, it disables the transition.
-*/
-#zen-media-controls-toolbar > toolbaritem.measure-peak-height .show-on-hover {
-  transition: none !important; /* Disable animation during measurement */
-  max-height: 50px !important;   /* Use the final max-height value */
-  opacity: 1 !important;         /* Keep it invisible to the user */
-  pointer-events: none;
-}
 
 
 /* Compact layout (two-toolbar mode active) */
 :root[zen-compact-mode="true"] #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
   opacity: 0 !important;
 }
+
+
+:root:not([zen-compact-mode="true"]) #navigator-toolbox:has(#zen-media-controls-toolbar > toolbaritem:hover)::before {
+    /* 
+      We just need this rule to exist to trigger the transition.
+      The mask will get its new value from the CSS variable automatically.
+    */
+}
+
+
 
 
 
