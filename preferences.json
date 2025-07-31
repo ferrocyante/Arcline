@@ -274,8 +274,8 @@
     "property": "compact.sidebar.in.border_opacity",
     "label": "inner border appearance",
     "type": "string",
-    "defaultValue": "rgba(255, 255, 255, 0.2)",
-    "placeholder": "rgba(255, 255, 255, 0.2)"
+    "defaultValue": "rgba(255, 255, 255, 0.25)",
+    "placeholder": "rgba(255, 255, 255, 0.25)"
   },
   {
     "property": "compact.sidebar.out.border_width",
