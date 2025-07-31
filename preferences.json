@@ -281,8 +281,8 @@
     "property": "compact.sidebar.out.border_width",
     "label": "outer border width",
     "type": "string",
-    "defaultValue": "0.5px",
-    "placeholder": "0.5px"
+    "defaultValue": "0.8px",
+    "placeholder": "0.8px"
   },
   {
     "property": "compact.sidebar.out.border_opacity",
