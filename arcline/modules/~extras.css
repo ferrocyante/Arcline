@@ -211,13 +211,21 @@
   When you hover the media player, the background animates to its full state.
 */
 #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
-   height: 111px;
+   height:  calc(var(--zen-media-player-peak-height, 111px) + 1px);
   opacity: 1 !important;
 }
-/* Compact layout (two-toolbar mode active) */
-:root:not([zen-single-toolbar="true"])[zen-compact-mode="true"] #navigator-toolbox:has(#zen-media-controls-toolbar:hover) #TabsToolbar::before {
-  height: 111px; 
-  opacity: 1 !important;
+/* 
+  Helper class for the MediaPlayerPeakHeight script.
+  When this class is added, it forces the player's "on-hover"
+  elements to become visible instantly, but with zero height and opacity,
+  so we can measure the final layout without a visual flash.
+  Crucially, it disables the transition.
+*/
+#zen-media-controls-toolbar > toolbaritem.measure-peak-height .show-on-hover {
+  transition: none !important; /* Disable animation during measurement */
+  max-height: 50px !important;   /* Use the final max-height value */
+  opacity: 1 !important;         /* Keep it invisible to the user */
+  pointer-events: none;
 }
 
 
