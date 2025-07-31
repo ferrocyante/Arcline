@@ -175,15 +175,15 @@
     "property": "url.bar.in.border_opacity",
     "label": "inner border appearance",
     "type": "string",
-    "defaultValue": "rgba(255, 255, 255, 0.2)",
-    "placeholder": "rgba(255, 255, 255, 0.2)"
+    "defaultValue": "rgba(255, 255, 255, 0.25)",
+    "placeholder": "rgba(255, 255, 255, 0.25)"
   },
   {
     "property": "url.bar.out.border_width",
     "label": "outer border width",
     "type": "string",
-    "defaultValue": "0.5px",
-    "placeholder": "0.5px"
+    "defaultValue": "0.8px",
+    "placeholder": "0.8px"
   },
   {
     "property": "url.bar.out.border_opacity",
