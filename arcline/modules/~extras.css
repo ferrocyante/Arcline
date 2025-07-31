@@ -201,7 +201,7 @@
     as the Zen player's internal hover effects.
   */
   transition-property: height, opacity;
-  transition-duration: 0.2s, 0.2s;
+  transition-duration: 0.1s, 0.1s;
   transition-timing-function: ease, ease;
   transition-delay: 0s, 0s; /* No delay for a synchronized feel */
 }
