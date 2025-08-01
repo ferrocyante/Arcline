@@ -355,13 +355,6 @@
       { "value": 2, "label": "floating buttons style" }
     ]
   },
-    {
-    "property": "pip.accent_color",
-    "label": "picture in picture accent color",
-    "type": "string",
-    "defaultValue": "var(--zen-primary-color)",
-    "placeholder": "var(--zen-primary-color)"
-  },
   {
     "property": "arcline.container",
     "label": "Enable Arcline container tab styling",
