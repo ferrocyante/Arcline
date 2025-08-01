@@ -362,7 +362,7 @@
   "type": "string",
   "defaultValue": "#a0d490",
   "placeholder": "#a0d490"
-}
+},
   {
     "property": "arcline.container",
     "label": "Enable Arcline container tab styling",
