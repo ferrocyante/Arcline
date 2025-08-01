@@ -356,12 +356,13 @@
     ]
   },
     {
-    "property": "arcline.primary.color",
-    "label": "picture in picture accent color",
-    "type": "string",
-    "defaultValue": "var(--zen-primary-color)",
-    "placeholder": "var(--zen-primary-color)"
-  },
+  "property": "arcline.pip.primary_color",
+  "label": "Picture-in-picture Accent Color",
+  "description": "Sets the PiP accent color. This will automatically sync with your main theme's primary color on browser start.",
+  "type": "string",
+  "defaultValue": "#a0d490",
+  "placeholder": "#a0d490"
+}
   {
     "property": "arcline.container",
     "label": "Enable Arcline container tab styling",
