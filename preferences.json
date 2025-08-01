@@ -521,7 +521,7 @@
   {
     "property": "arcline.fonts.sf-pro",
     "type": "dropdown",
-    "label": "Use SF Pro font (if installed)",
+    "label": "Enable ability to use installed system font as zen font (choose installed font in zen settings)",
     "placeholder": false,
     "value": "number",
     "default": 1,
