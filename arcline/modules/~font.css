@@ -1,0 +1,18 @@
+
+@media (-moz-pref("arcline.fonts.sf-pro", 1)) {
+
+}
+
+
+
+:root {
+  font-family: "My Custom SF Pro"  !important;
+}
+
+}
+
+@media (-moz-pref("arcline.fonts.sf-pro", 0)) {
+    :root {
+               font-family: var(--mod-arcline-font) !important;
+    }
+}
