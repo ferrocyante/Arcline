@@ -2,7 +2,7 @@
 /* ==== STYLE 1 ==== */
 /* ============================================================================================================================================================================ */
 
-@media (-moz-pref("arcline.pip", 1)){
+@media (-moz-pref("arcline.pip", 1)) {
 
 
 
@@ -10,33 +10,21 @@
   @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
     /*noinspection CssInvalidFunction*/
     * {
-      --natsumi-primary-color: #a0d490;
-      --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
-      --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%);
+     
+      --arcline-colors-primary: color-mix(in srgb, var(--arcline-primary-color) 20%, #1d1d1d 80%);
+      --arcline-colors-secondary: color-mix(in srgb, var(--arcline-primary-color) 30%, #1d1d1d 70%);
 
-      @media (prefers-color-scheme: dark) {
-        --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 20%, #1d1d1d 80%);
-        --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 30%, #1d1d1d 70%);
-      }
+      --arcline-mat-hz-background: rgba(0, 0, 0, 0.8);
+      --arcline-mat-hz-background-tinted: color-mix(in srgb, var(--arcline-colors-secondary) 40%, rgba(0, 0, 0, 0.8));
+      --arcline-mat-hz-blur-radius: 100px;
 
-      /* Material: Haze */
-      --natsumi-mat-hz-background: rgba(255, 255, 255, 0.8);
-      --natsumi-mat-hz-background-tinted: color-mix(in srgb, var(--natsumi-primary-color) 30%, rgba(255, 255, 255, 0.8));
-      --natsumi-mat-hz-blur-radius: 100px;
+      --arcline-mat-ga-background: color-mix(in srgb, var(--arcline-colors-secondary) 75%, transparent);
+      --arcline-mat-ga-shadow-color: color-mix(in srgb, var(--arcline-colors-secondary) 75%, white);
+      --toolbarbutton-hover-background: color-mix(in srgb, #ebebeb 10%, transparent 90%);
+      --toolbarbutton-active-background: rgba(255, 255, 255, 0.11);
 
-      @media (prefers-color-scheme: dark) {
-        --natsumi-mat-hz-background: rgba(0, 0, 0, 0.8);
-        --natsumi-mat-hz-background-tinted: color-mix(in srgb, var(--natsumi-colors-secondary) 40%, rgba(0, 0, 0, 0.8));
-      }
-
-      /* Material: Glass */
-      --natsumi-mat-ga-background: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, transparent);
-      --natsumi-mat-ga-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, light-dark(black, white));
-      --toolbarbutton-hover-background: color-mix(in srgb, light-dark(#1d1d1d, #ebebeb) 10%, transparent 90%);
-      --toolbarbutton-active-background: light-dark(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0.11));
-
-      @media (-moz-bool-pref: "natsumi.theme.force-dark-shadows") {
-        --natsumi-mat-ga-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, black);
+      @media (-moz-bool-pref: "arcline.theme.force-dark-shadows") {
+        --arcline-mat-ga-shadow-color: color-mix(in srgb, var(--arcline-colors-secondary) 75%, black);
       }
     }
 
@@ -45,12 +33,10 @@
         background-color: transparent;
         scale: 0.8;
       }
-
       99% {
         background-color: transparent;
         scale: 1;
       }
-
       100% {
         background-color: black;
       }
@@ -61,24 +47,18 @@
         filter: blur(30px);
         opacity: 0;
       }
-
       70% {
         filter: blur(5px);
       }
-
       100% {
         filter: blur(0);
         opacity: 1;
       }
     }
 
-    @media (-moz-bool-pref: "natsumi.pip.rounded") {
-      /* This won't work on Linux (sadly), might be just a Gnome thing. */
-      /* If you're seeing this, create an issue if it does indeed work */
-
+    @media (-moz-bool-pref: "arcline.pip.rounded") {
       @media (-moz-platform: windows) {
         window, html, body {
-          /* Share same radius as macOS for the sake of simplicity later */
           border-radius: 9px !important;
         }
       }
@@ -102,15 +82,16 @@
         top: 0 !important;
         filter: blur(5px);
         border-radius: 6px !important;
-        transition: opacity 0.3s ease, top 0.3s ease, filter 0.3s ease, background-color 0.2s ease !important;
-        backdrop-filter: saturate(var(--natsumi-mat-hz-saturation)) contrast(var(--natsumi-mat-hz-contrast)) blur(var(--natsumi-mat-hz-blur-radius)) !important;
+        /* CHANGE 1: background-color transition removed */
+        transition: opacity 0.3s ease, top 0.3s ease, filter 0.3s ease !important;
+        backdrop-filter: saturate(var(--arcline-mat-hz-saturation)) contrast(var(--arcline-mat-hz-contrast)) blur(var(--arcline-mat-hz-blur-radius)) !important;
         background-image: none !important;
-        background-color: var(--natsumi-mat-hz-background) !important;
+        background-color: var(--arcline-mat-hz-background) !important;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.5) !important;
-        border: 2px solid light-dark(rgba(20, 20, 20, 0.1), rgba(235, 235, 235, 0.1)) !important;
+        border: 2px solid rgba(235, 235, 235, 0.1) !important;
 
-        @media (-moz-bool-pref: "natsumi.pip.tinted-haze") {
-          background-color: var(--natsumi-mat-hz-background-tinted) !important;
+        @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+          background-color: var(--arcline-mat-hz-background-tinted) !important;
         }
 
         &::before {
@@ -126,10 +107,6 @@
           align-content: center;
           justify-content: center;
           fill: white !important;
-
-          @media (prefers-color-scheme: light) {
-            fill: black !important;
-          }
         }
 
         &#close::before {
@@ -145,11 +122,7 @@
         }
 
         &:hover {
-          background-color: color-mix(in srgb, var(--natsumi-mat-ga-background) 80%, white) !important;
-
-          @media (prefers-color-scheme: light) {
-            background-color: color-mix(in srgb, var(--natsumi-mat-ga-background) 80%, black) !important;
-          }
+          background-color: color-mix(in srgb, var(--arcline-mat-ga-background) 80%, white) !important;
         }
       }
 
@@ -161,32 +134,27 @@
       #controls-bottom {
         opacity: 0 !important;
         bottom: -5px !important;
-        background-color: var(--natsumi-mat-hz-background) !important;
+        background-color: var(--arcline-mat-hz-background) !important;
         border-radius: 10px !important;
         padding: 10px 15px !important;
         margin: 0 5px !important;
         width: calc(100% - 10px) !important;
         box-sizing: border-box !important;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.5) !important;
-        backdrop-filter: saturate(3) contrast(2) blur(var(--natsumi-mat-hz-blur-radius)) !important;
+        backdrop-filter: saturate(3) contrast(2) blur(var(--arcline-mat-hz-blur-radius)) !important;
         filter: blur(10px);
         transition: opacity 0.3s ease, bottom 0.3s ease, filter 0.3s ease !important;
-        border: 2px solid light-dark(rgba(20, 20, 20, 0.1), rgba(235, 235, 235, 0.1)) !important;
+        border: 2px solid rgba(235, 235, 235, 0.1) !important;
 
-        @media (-moz-bool-pref: "natsumi.pip.tinted-haze") {
-          background-color: var(--natsumi-mat-hz-background-tinted) !important;
+        @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+          background-color: var(--arcline-mat-hz-background-tinted) !important;
         }
 
-        @media (-moz-bool-pref: "natsumi.pip.native-border-radius") {
-          /* For the sake of adding native radius, we'll reduce the margin of the controls here */
+        @media (-moz-bool-pref: "arcline.pip.native-border-radius") {
           width: 100% !important;
           margin: 0 !important;
           bottom: -10px !important;
 
-          /*
-          For now this config is available on macOS only, this'll be added to Windows and Linux
-          once curved PiP for those platforms moves out of experiment status
-          */
           @media (-moz-platform: macos) {
             border-radius: 5px !important;
           }
@@ -200,7 +168,7 @@
           /*noinspection CssInvalidFunction*/
           #timestamp {
             font-size: 12px !important;
-            color: light-dark(black, white) !important;
+            color: white !important;
           }
         }
 
@@ -213,17 +181,17 @@
 
           /*noinspection CssInvalidFunction*/
           &::-moz-range-progress {
-            background: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
+            background: var(--arcline-primary-color) !important;
           }
 
           /*noinspection CssInvalidFunction*/
           &::-moz-range-track {
-            background-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)) !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
           }
 
           /*noinspection CssInvalidFunction*/
           &::-moz-range-thumb {
-            background-color: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
+            background-color: var(--arcline-primary-color) !important;
             width: 12px !important;
             height: 12px !important;
             border: none !important;
@@ -240,7 +208,7 @@
 
         #audio-scrubber {
           &::-moz-range-thumb {
-            width: 8px !important;
+            width: 8px !importan
             height: 8px !important;
             opacity: 1 !important;
           }
@@ -255,9 +223,10 @@
           width: 28px !important;
           height: 28px !important;
           border-radius: 6px !important;
-          transition: background-color 0.2s ease !important;
+          /* CHANGE 2: background-color transition removed */
+          transition: ease !important; /* Kept ease for any other implicit transitions, but specific property is gone */
           -moz-context-properties: fill;
-          fill: light-dark(black, white) !important;
+          fill: white !important;
 
           &[disabled] {
             cursor: default !important;
@@ -357,30 +326,30 @@
         /*noinspection CssInvalidFunction*/
         label, legend {
           font-family: system-ui !important;
-          color: light-dark(black, white) !important;
+          color: white !important;
         }
 
         /*noinspection CssInvalidFunction*/
         .slider {
           background-color: rgba(0, 0, 0, 0.07) !important;
-          outline: 1px solid light-dark(#8f8f9d, #bfbfc9) !important;
+          outline: 1px solid #bfbfc9 !important;
 
           /*noinspection CssInvalidFunction*/
           &::before {
-            background-color: light-dark(#8f8f9d, #bfbfc9) !important;
+            background-color: #bfbfc9 !important;
           }
         }
 
         input {
           /*noinspection CssInvalidFunction*/
           &:checked {
-            border-color: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
+            border-color: var(--arcline-primary-color) !important;
           }
 
           /*noinspection CssInvalidFunction*/
           &:checked + .slider {
-            background-color: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
-            outline-color: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
+            background-color: var(--arcline-primary-color) !important;
+            outline-color: var(--arcline-primary-color) !important;
 
             &::before {
               background-color: white !important;
@@ -390,12 +359,12 @@
 
         /*noinspection CssInvalidFunction*/
         & > .panel-fieldset {
-          background-color: var(--natsumi-mat-ga-background) !important;
+          background-color: var(--arcline-mat-ga-background) !important;
           backdrop-filter: blur(15px);
           filter: blur(0);
           transition: backdrop-filter 0.3s ease, filter 0.3s ease;
-          border: 1px solid light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
-          box-shadow: 0 0 10px var(--natsumi-mat-ga-shadow-color) !important;
+          border: 1px solid rgba(235, 235, 235, 0.3) !important;
+          box-shadow: 0 0 10px var(--arcline-mat-ga-shadow-color) !important;
           padding: 0 !important;
         }
 
@@ -403,7 +372,7 @@
         .grey-line {
           width: calc(100% - 10px) !important;
           margin: 0 auto !important;
-          background-color: light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
+          background-color: rgba(235, 235, 235, 0.3) !important;
         }
 
         &.hide {
@@ -446,7 +415,7 @@
           bottom: 5px !important;
           filter: blur(0);
 
-          @media (-moz-bool-pref: "natsumi.pip.native-border-radius") {
+          @media (-moz-bool-pref: "arcline.pip.native-border-radius") {
             bottom: 0 !important;
           }
         }
@@ -466,7 +435,6 @@
 
 
 }
-
 /* ============================================================================================================================================================================ */
 /* ==== STYLE 2 ==== */
 /* ============================================================================================================================================================================ */
@@ -477,41 +445,23 @@
   
   
   * {
-      --natsumi-primary-color: #a0d490;
-      --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
-      --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%);
+      
+      --arcline-colors-primary: color-mix(in srgb, var(--arcline-primary-color) 20%, #1d1d1d 80%);
+      --arcline-colors-secondary: color-mix(in srgb, var(--arcline-primary-color) 30%, #1d1d1d 70%);
 
-      @media (prefers-color-scheme: dark) {
-        --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 20%, #1d1d1d 80%);
-        --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 30%, #1d1d1d 70%);
-      }
+      --arcline-mat-hz-background: rgba(0, 0, 0, 0.8);
+      --arcline-mat-hz-background-tinted: color-mix(in srgb, var(--arcline-colors-secondary) 40%, rgba(0, 0, 0, 0.8));
+      --arcline-mat-hz-blur-radius: 100px;
 
-      /* Material: Haze */
-      --natsumi-mat-hz-background: rgba(255, 255, 255, 0.8);
-      --natsumi-mat-hz-background-tinted: color-mix(in srgb, var(--natsumi-primary-color) 30%, rgba(255, 255, 255, 0.8));
-      --natsumi-mat-hz-blur-radius: 100px;
+      --arcline-mat-ga-background: color-mix(in srgb, var(--arcline-colors-secondary) 75%, transparent);
+      --arcline-mat-ga-shadow-color: color-mix(in srgb, var(--arcline-colors-secondary) 75%, white);
+      --toolbarbutton-hover-background: color-mix(in srgb, #ebebeb 10%, transparent 90%);
+      --toolbarbutton-active-background: rgba(255, 255, 255, 0.11);
 
-      @media (prefers-color-scheme: dark) {
-        --natsumi-mat-hz-background: rgba(0, 0, 0, 0.8);
-        --natsumi-mat-hz-background-tinted: color-mix(in srgb, var(--natsumi-colors-secondary) 40%, rgba(0, 0, 0, 0.8));
-      }
-
-      /* Material: Glass */
-      --natsumi-mat-ga-background: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, transparent);
-      --natsumi-mat-ga-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, light-dark(black, white));
-      --toolbarbutton-hover-background: color-mix(in srgb, light-dark(#1d1d1d, #ebebeb) 10%, transparent 90%);
-      --toolbarbutton-active-background: light-dark(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0.11));
-
-      @media (-moz-bool-pref: "natsumi.theme.force-dark-shadows") {
-        --natsumi-mat-ga-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, black);
+      @media (-moz-bool-pref: "arcline.theme.force-dark-shadows") {
+        --arcline-mat-ga-shadow-color: color-mix(in srgb, var(--arcline-colors-secondary) 75%, black);
       }
     }
-
-
-
-
-/* ==== Picture-in-picture ==== */
-
 
   @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
     /*noinspection CssInvalidFunction*/
@@ -521,12 +471,10 @@
         background-color: transparent;
         scale: 0.8;
       }
-
       99% {
         background-color: transparent;
         scale: 1;
       }
-
       100% {
         background-color: black;
       }
@@ -537,24 +485,18 @@
         filter: blur(30px);
         opacity: 0;
       }
-
       70% {
         filter: blur(5px);
       }
-
       100% {
         filter: blur(0);
         opacity: 1;
       }
     }
 
-    @media -moz-pref("natsumi.pip.rounded") {
-      /* This won't work on Linux (sadly), might be just a Gnome thing. */
-      /* If you're seeing this, create an issue if it does indeed work */
-
+    @media (-moz-bool-pref: "arcline.pip.rounded") {
       @media (-moz-platform: windows) {
         window, html, body {
-          /* Share same radius as macOS for the sake of simplicity later */
           border-radius: 9px !important;
         }
       }
@@ -577,29 +519,26 @@
         opacity: 0 !important;
         top: 0 !important;
         border-radius: 50% !important;
-        transition: opacity 0.3s ease, top 0.3s ease, background-color 0.2s ease !important;
-        backdrop-filter: saturate(var(--natsumi-mat-hz-saturation)) contrast(var(--natsumi-mat-hz-contrast)) blur(var(--natsumi-mat-hz-blur-radius)) !important;
-        background-color: var(--natsumi-mat-hz-background) !important;
+        /* CHANGE 1: background-color transition removed */
+        transition: opacity 0.3s ease, top 0.3s ease !important;
+        backdrop-filter: saturate(var(--arcline-mat-hz-saturation)) contrast(var(--arcline-mat-hz-contrast)) blur(var(--arcline-mat-hz-blur-radius)) !important;
+        background-color: var(--arcline-mat-hz-background) !important;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.5) !important;
         background-size: 16px !important;
-        border: 2px solid light-dark(rgba(20, 20, 20, 0.1), rgba(235, 235, 235, 0.1)) !important;
+        border: 2px solid rgba(235, 235, 235, 0.1) !important;
 
         &:hover {
-          background-color: color-mix(in srgb, var(--natsumi-mat-ga-background) 80%, white) !important;
-
-          @media (prefers-color-scheme: light) {
-            background-color: color-mix(in srgb, var(--natsumi-mat-ga-background) 80%, black) !important;
-          }
+          background-color: color-mix(in srgb, var(--arcline-mat-ga-background) 80%, white) !important;
         }
 
-        @media -moz-pref("natsumi.pip.tinted-haze") {
-          background-color: var(--natsumi-mat-hz-background-tinted) !important;
+        @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+          background-color: var(--arcline-mat-hz-background-tinted) !important;
         }
       }
 
-      #close, #unpip {
+      #close, #minimize, #unpip {
         -moz-context-properties: fill;
-        fill: light-dark(black, white) !important;
+        fill: white !important;
       }
 
       /*noinspection CssInvalidFunction*/
@@ -617,14 +556,14 @@
 
         .start-controls, .center-controls, .end-controls {
           border-radius: 18px !important;
-          background-color: var(--natsumi-mat-hz-background) !important;
-          border: 2px solid light-dark(rgba(20, 20, 20, 0.1), rgba(235, 235, 235, 0.1)) !important;
-          backdrop-filter: saturate(3) contrast(2) blur(var(--natsumi-mat-hz-blur-radius)) !important;
+          background-color: var(--arcline-mat-hz-background) !important;
+          border: 2px solid rgba(235, 235, 235, 0.1) !important;
+          backdrop-filter: saturate(3) contrast(2) blur(var(--arcline-mat-hz-blur-radius)) !important;
           gap: 0 !important;
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.3) !important;
 
-          @media -moz-pref("natsumi.pip.tinted-haze") {
-            background-color: var(--natsumi-mat-hz-background-tinted) !important;
+          @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+            background-color: var(--arcline-mat-hz-background-tinted) !important;
           }
         }
 
@@ -667,7 +606,7 @@
           /*noinspection CssInvalidFunction*/
           #timestamp {
             font-size: 12px !important;
-            color: light-dark(black, white) !important;
+            color: white !important;
           }
         }
 
@@ -680,17 +619,17 @@
 
           /*noinspection CssInvalidFunction*/
           &::-moz-range-progress {
-            background: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
+            background: var(--arcline-primary-color) !important;
           }
 
           /*noinspection CssInvalidFunction*/
           &::-moz-range-track {
-            background-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)) !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
           }
 
           /*noinspection CssInvalidFunction*/
           &::-moz-range-thumb {
-            background-color: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
+            background-color: var(--arcline-primary-color) !important;
             width: 12px !important;
             height: 12px !important;
             border: none !important;
@@ -702,13 +641,13 @@
           width: calc(100% - 4px) !important;
           height: 6px !important;
           padding: 0 !important;
-          border: 2px solid light-dark(rgba(20, 20, 20, 0.1), rgba(235, 235, 235, 0.1)) !important;
-          background-color: var(--natsumi-mat-hz-background) !important;
-          backdrop-filter: saturate(3) contrast(2) blur(var(--natsumi-mat-hz-blur-radius)) !important;
+          border: 2px solid rgba(235, 235, 235, 0.1) !important;
+          background-color: var(--arcline-mat-hz-background) !important;
+          backdrop-filter: saturate(3) contrast(2) blur(var(--arcline-mat-hz-blur-radius)) !important;
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.3) !important;
 
-          @media -moz-pref("natsumi.pip.tinted-haze") {
-            background-color: var(--natsumi-mat-hz-background-tinted) !important;
+          @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+            background-color: var(--arcline-mat-hz-background-tinted) !important;
           }
 
           &::-moz-range-track {
@@ -724,11 +663,11 @@
           }
 
           &::-moz-range-thumb {
-            border: 4px solid var(--natsumi-mat-hz-background) !important;
-            backdrop-filter: saturate(3) contrast(2) blur(var(--natsumi-mat-hz-blur-radius)) !important;
+            border: 4px solid var(--arcline-mat-hz-background) !important;
+            backdrop-filter: saturate(3) contrast(2) blur(var(--arcline-mat-hz-blur-radius)) !important;
 
-            @media -moz-pref("natsumi.pip.tinted-haze") {
-              border-color: var(--natsumi-mat-hz-background-tinted) !important;
+            @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+              border-color: var(--arcline-mat-hz-background-tinted) !important;
             }
           }
         }
@@ -743,9 +682,10 @@
 
         /*noinspection CssInvalidFunction*/
         button {
-          transition: background-color 0.2s ease, box-shadow 0.2s ease !important;
+          /* CHANGE 2: background-color transition removed */
+          transition: box-shadow 0.2s ease !important;
           -moz-context-properties: fill;
-          fill: light-dark(black, white) !important;
+          fill: white !important;
           border-radius: 6px !important;
           opacity: 1 !important;
 
@@ -760,11 +700,11 @@
 
           &:not([disabled]) {
             &:hover {
-              background-color: var(--natsumi-button-hover-color) !important;
+              background-color: var(--arcline-button-hover-color) !important;
             }
 
             &:active, &[aria-expanded="true"] {
-              background-color: var(--natsumi-button-active-color) !important;
+              background-color: var(--arcline-button-active-color) !important;
               box-shadow: 0 0 4px rgba(0, 0, 0, 0.3) !important;
             }
           }
@@ -804,30 +744,30 @@
         /*noinspection CssInvalidFunction*/
         label, legend {
           font-family: system-ui !important;
-          color: light-dark(black, white) !important;
+          color: white !important;
         }
 
         /*noinspection CssInvalidFunction*/
         .slider {
           background-color: rgba(0, 0, 0, 0.07) !important;
-          outline: 1px solid light-dark(#8f8f9d, #bfbfc9) !important;
+          outline: 1px solid #bfbfc9 !important;
 
           /*noinspection CssInvalidFunction*/
           &::before {
-            background-color: light-dark(#8f8f9d, #bfbfc9) !important;
+            background-color: #bfbfc9 !important;
           }
         }
 
         input {
           /*noinspection CssInvalidFunction*/
           &:checked {
-            border-color: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
+            border-color: var(--arcline-primary-color) !important;
           }
 
           /*noinspection CssInvalidFunction*/
           &:checked + .slider {
-            background-color: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
-            outline-color: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
+            background-color: var(--arcline-primary-color) !important;
+            outline-color: var(--arcline-primary-color) !important;
 
             &::before {
               background-color: white !important;
@@ -837,15 +777,15 @@
 
         /*noinspection CssInvalidFunction*/
         & > .panel-fieldset {
-          background-color: var(--natsumi-mat-hz-background) !important;
+          background-color: var(--arcline-mat-hz-background) !important;
           backdrop-filter: blur(15px);
-          backdrop-filter: saturate(var(--natsumi-mat-hz-saturation)) contrast(var(--natsumi-mat-hz-contrast)) blur(var(--natsumi-mat-hz-blur-radius)) !important;
-          border: 1px solid light-dark(rgba(20, 20, 20, 0.1), rgba(235, 235, 235, 0.1)) !important;
+          backdrop-filter: saturate(var(--arcline-mat-hz-saturation)) contrast(var(--arcline-mat-hz-contrast)) blur(var(--arcline-mat-hz-blur-radius)) !important;
+          border: 1px solid rgba(235, 235, 235, 0.1) !important;
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.5) !important;
           padding: 0 !important;
 
-          @media -moz-pref("natsumi.pip.tinted-haze") {
-            background-color: var(--natsumi-mat-hz-background-tinted) !important;
+          @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+            background-color: var(--arcline-mat-hz-background-tinted) !important;
           }
         }
 
@@ -855,7 +795,7 @@
           margin: 0 auto !important;
           height: 2px !important;
           border-radius: 2px !important;
-          background-color: light-dark(rgba(20, 20, 20, 0.1), rgba(235, 235, 235, 0.1)) !important;
+          background-color: rgba(235, 235, 235, 0.1) !important;
         }
 
         &.hide {
