@@ -356,7 +356,7 @@
     ]
   },
     {
-    "property": "pip.accent_color",
+    "property": "arcline.primary.color",
     "label": "picture in picture accent color",
     "type": "string",
     "defaultValue": "var(--zen-primary-color)",
