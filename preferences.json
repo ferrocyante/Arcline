@@ -585,15 +585,15 @@
     "property": "media.player.in.border_opacity",
     "label": "inner border appearance",
     "type": "string",
-    "defaultValue": "rgba(255, 255, 255, 0.15)",
-    "placeholder": "rgba(255, 255, 255, 0.15)"
+    "defaultValue": "rgba(255, 255, 255, 0.2)",
+    "placeholder": "rgba(255, 255, 255, 0.2)"
   },
   {
     "property": "media.player.out.border_width",
     "label": "outer border width",
     "type": "string",
-    "defaultValue": "0.5px",
-    "placeholder": "0.5px"
+    "defaultValue": "0.8px",
+    "placeholder": "0.8px"
   },
   {
     "property": "media.player.out.border_opacity",
