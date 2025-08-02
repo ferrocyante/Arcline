@@ -548,16 +548,18 @@
     "margin": "30px 0 30px 0",
     "size": "20px"
   },
-  {
+   {
     "property": "arcline.media.player",
-    "label": "Enable arcline media player",
+    "label": "choose sytle of media player",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
     "default": 1,
     "options": [
       { "value": 0, "label": "Disabled" },
-      { "value": 1, "label": "Enabled" }
+      { "value": 1, "label": "Normal" },
+      { "value": 2, "label": "reversed-right" },
+      { "value": 3, "label": "reversed-left" }
     ]
   },
    {
