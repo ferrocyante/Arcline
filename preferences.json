@@ -20,6 +20,13 @@
     "force": true
   },
   {
+    "property": "zen.theme.gradient.show-custom-colors",
+    "label": "Enable custom color picker",
+    "default": true,
+    "type": "checkbox",
+    "force": true
+  },
+  {
     "property": "browser.tabs.groups.enabled",
     "label": "Enable browser tab groups",
     "default": true,
