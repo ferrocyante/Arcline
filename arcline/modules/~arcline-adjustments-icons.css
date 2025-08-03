@@ -179,6 +179,7 @@ height: 34px !important;
     overflow: hidden !important;
   }
 
+
 #urlbar[open][zen-floating-urlbar="true"] {
   #urlbar-container:has(&) {
     position: relative !important;
@@ -212,6 +213,33 @@ mask-image:   url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3
     background-position: center;
   }
 }
+
+
+
+#urlbar[open][zen-floating-urlbar="true"] {
+  #urlbar-container:has(&) {
+     border-radius: 12px !important;
+   
+    left:  0px !important;
+   
+
+    height: 34.5px !important;
+    min-height: 34px !important;
+
+    min-width: 25px !important;
+    max-width: 98% !important;
+    width: 90% !important;
+   
+    margin-top: 3.5px !important;
+  background: var(--zen-toolbar-element-bg) !important;
+  }
+}
+
+
+
+
+
+	
 
 #urlbar[open][zen-floating-urlbar="true"] {
   #urlbar-container:has(&) {
