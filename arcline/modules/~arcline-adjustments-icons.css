@@ -173,6 +173,10 @@ height: 34px !important;
 
 
 
+
+
+
+
 #urlbar[open][zen-floating-urlbar="true"] {
   #urlbar-container:has(&) {
     position: relative !important;
@@ -187,8 +191,8 @@ height: 34px !important;
     height: 300px;
     z-index: 999;
     
-    filter: brightness(70%);
-    transform: translate(15.5%,0%)!important;
+    filter: brightness(85%);
+    transform: translate(15%,0%)!important;
     pointer-events: none;
 scale: 1.48 !important;
     transform: translateX(-50%);
@@ -196,7 +200,7 @@ scale: 1.48 !important;
     pointer-events: none;
 
  background-color: var(--toolbox-textcolor);
-  
+    opacity: 0.7 !important;
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -206,6 +210,10 @@ mask-image:   url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3
     background-position: center;
   }
 }
+
+
+
+
 
 
 #urlbar[open][zen-floating-urlbar="true"] {
@@ -223,9 +231,13 @@ mask-image:   url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3
     width: 90% !important;
    
     margin-top: 3.5px !important;
-    background: var(--toolbarbutton-hover-background);
+  background: var(--zen-toolbar-element-bg) !important;
   }
 }
+
+
+
+
 
 
 
