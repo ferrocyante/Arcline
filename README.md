@@ -48,41 +48,11 @@ https://github.com/user-attachments/assets/a1b63b7a-e32d-4d84-9132-584bff56f6bd
 
 ### 1. Profile Preparation  
 - Works best on **new profiles** or profiles without conflicting CSS modifications
-- Compatible with most content-blocking extensions
+- maybe or mayne not be Compatible with other sine mods
 
-### 2. Window Control Alignment  
-- In `about:config`, set:  
-  `zen.view.experimental-force-window-controls-left = true`  
-  *(requires browser restart)*
-
-### 3. Interface Optimization  
-1. Right-click tabs area → **Customize Toolbar** → Set **Density** to **Touch**
-![Screenshot 2025-04-16 172014](https://github.com/user-attachments/assets/f2197a98-3332-4db0-823b-ea666968634e)
-2. Enable **Single Toolbar Mode** in Zen Settings → Look & Feel
-3. Set `zen.theme.content-element-separation = 10` in `about:config`
-
-### 4. Tab Groups Activation  
-- In `about:config`, set:  
-  `browser.tabs.groups.enabled = true`
-
-### 5. Performance Considerations  
+### 2. Performance Considerations  
 - Hardware acceleration recommended for best animation performance
 - URL bar animations automatically disable during media playback
-
-### 6. Preferences
-- In `about:config` , make these prefernces according to your wish
-- `arch.traffic.lights` to get mac os like title bar button on windows
-- `arch.borders` for adding a white border around the browser
-- `arch.urlbar.scale` for adding scaling effect url bar search results
-- `arch.usable.blur.sidebar` to add a psuedo background behind tabs section(navigator tool box) in compact mode to ensure blur , you will need to adjust width according to you system
-- `arch.four.essen` for making essential always stay in 4x grid style
-- `arch.workspace.transition` very initial stage and can cause lagging very resource intensive
-- `arch.workspace.buttons` for making  inactive workspace button into circles arc style has some limitions can only work for 3 workspaces and width of tabs section should be fixed accordingly                   
-### Tutorial of setting preferences
-
-
-https://github.com/user-attachments/assets/29eaf351-5d33-4d09-8717-64eac22b3fd2
-
 
 
 <h2 align="left">💿 Installation</h2>
@@ -91,7 +61,24 @@ https://github.com/user-attachments/assets/29eaf351-5d33-4d09-8717-64eac22b3fd2
 
 <h4 align="left">1. Theme Installation</h4>
 
+1. Install latest version of [Sine](https://github.com/CosmoCreeper/Sine/releases/tag/v1.1.8) by following all prompted instructions.
+2. Restart Zen Browser.
+3. Open settings and go the the "Sine" tab.
+4. Locate the local installation section.
+5. Install `ferrocyante/Arcline`.
+6. Restart Zen Browser.
+7. Customize the settings to match your prefrences.
+8. Enjoy!
+
+
 ###
+
+###
+
+<h4 align="left">2. Visual Enhancements (Windows 11)</h4>
+
+###
+
 
 <p align="left">1. Install <a href="https://github.com/MicaForEveryone/MicaForEveryone">MicaForEveryone</a><br>
 2. Add process rule for Zen with:<br>
@@ -107,15 +94,7 @@ https://github.com/user-attachments/assets/29eaf351-5d33-4d09-8717-64eac22b3fd2
 <p align="left">• <a href="https://github.com/lukeyou05/tacky-borders">Tacky Borders</a> - Preconfigured rules included<br>
 • <a href="https://addons.mozilla.org/en-US/firefox/addon/zen-internet/">Zen Internet Extension</a> - For page transparency</p>
 
-## Simple Installation
-1. Install latest version of [Sine](https://github.com/CosmoCreeper/Sine/releases/tag/v1.1.8) by following all prompted instructions.
-2. Restart Zen Browser.
-3. Open settings and go the the "Sine" tab.
-4. Locate the local installation section.
-5. Install `ferrocyante/Arcline`.
-6. Restart Zen Browser.
-7. Customize the settings to match your prefrences.
-8. Enjoy!
+
 
 ## 🙏 Acknowledgments  
 Special thanks to **Mr. Green**, creator of the **Natsumi Browser**, for inspiring this project.  
