@@ -93,22 +93,6 @@ https://github.com/user-attachments/assets/29eaf351-5d33-4d09-8717-64eac22b3fd2
 
 ###
 
-<p align="left">1. Follow Zen's <a href="https://docs.zen-browser.app/guides/live-editing">Live Editing Guide</a> to create chrome folder<br>
-2. Download latest release from <a href="https://github.com/[yourusername]/arc-h/releases">Releases page</a><br>
-3. Extract these into your chrome folder:<br>
-   - arc-h folder<br>
-   - arc-h-config.css<br>
-   - userChrome.css<br>
-   - userContent.css<br>
-4. Restart browser and enable:<br>
-   `browser.tabs.allow_transparent_browser = true` in about:config</p>
-
-###
-
-<h4 align="left">2. Visual Enhancements (Windows 11)</h4>
-
-###
-
 <p align="left">1. Install <a href="https://github.com/MicaForEveryone/MicaForEveryone">MicaForEveryone</a><br>
 2. Add process rule for Zen with:<br>
    - Backdrop Type: Acrylic<br>
