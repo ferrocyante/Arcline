@@ -1,35 +1,18 @@
 
-#tabbrowser-tabs {
-      .tabbrowser-tab {
-        #tab-label-input,
-        .tab-label {
-          font-size: 13.7px !important;
-        }}}
 
 
-#urlbar-zoom-button {
-  appearance: none;
-  margin-right: 0px !important;
-   margin-top: 6px !important;
 
-  font-size: 0.7em !important;
- padding-left: 8px !important;
-  padding-top: 4px !important;
-    padding-bottom: 4px !important;
-  padding-right: 7px !important;
-  border-radius: var(--urlbar-icon-border-radius);
-  background: none !important;
-  background-color: light-dark(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)) !important;
-  color: var(--urlbar-box-text-color);
-  margin-block: calc((var(--urlbar-min-height) - 20px) / 2 - 1px - var(--urlbar-container-padding));
-  overflow: hidden;
-}
 
 
 /* === Custom Tab Height for Touch Density === */
 :root[uidensity="touch"] {
-  --tab-min-height: 37.5px !important; /* Default is 41px - Change 50px to your desired height */
+  --tab-min-height: 37px !important; /* Default is 41px - Change 50px to your desired height */
 }
+
+
+
+
+
  
 
 
@@ -38,7 +21,7 @@
   margin-left: -2px !important;
   margin-right: -255px !important;
   fill: white !important;
- 
+
   transform: translate(18px , 1.3px) scale(0.95) !important; /* Combined scale */
   filter: brightness(820%) !important;
 transform-origin: center !important;
@@ -85,6 +68,53 @@ transform-origin: center !important;
   overflow: hidden !important;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root[zen-single-toolbar='true'] {
+
+  
+  
+  #tabbrowser-tabs {
+      .tabbrowser-tab {
+        #tab-label-input,
+        .tab-label {
+          font-size: 13.7px !important;
+        }}}
+
+
+#urlbar-zoom-button {
+  appearance: none;
+  margin-right: 0px !important;
+   margin-top: 6px !important;
+
+  font-size: 0.7em !important;
+ padding-left: 8px !important;
+  padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  padding-right: 7px !important;
+  border-radius: var(--urlbar-icon-border-radius);
+  background: none !important;
+  background-color: light-dark(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)) !important;
+  color: var(--urlbar-box-text-color);
+  margin-block: calc((var(--urlbar-min-height) - 20px) / 2 - 1px - var(--urlbar-container-padding));
+  overflow: hidden;
+}
 
 
 
@@ -147,22 +177,17 @@ transform-origin: center !important;
  
 
 
+
+
 /*adjust height of toolbar */
-#nav-bar {
-height: 34px !important;
-  min-height: 0px !important;
-  margin-top: 2px !important;
-  margin-left: 0px !important;
-  margin-bottom: 10px !important;
-  
-}
-  
+
+
 
 #urlbar:not([open]) {
   #urlbar-background { border-radius: 12px !important;
     height: 88% !important;
     left:  0px !important;
-    width: 99% !important;
+    width: 98.8% !important;
     margin-bottom: 0px !important;
     height: 35px !important;
     margin-right: 0px !important;
@@ -242,12 +267,6 @@ mask-image:   url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3
 
 
 
-.zen-essentials-container{
-  margin-top: -6px !important;
-  margin-bottom: 3px !important;
- 
-}
-
 
 
 
@@ -322,12 +341,11 @@ zen-workspace {
 
 
 
-:root[zen-single-toolbar='true'] {
+
    .urlbar-addon-page-action {
     display: inherit !important;
  
   }
-}
 
 
 
@@ -525,21 +543,21 @@ zen-workspace {
   /* 1. Make the pseudo-element an empty, styleable box. */
   content: '' !important;
   display: block !important; /* Allows it to have a background/mask */
-
+position: relative !important;
   /* 2. Set the background color using your variable. This provides the icon's color. */
-  background-color: var(--toolbox-textcolor);
+  background: color-mix(in oklch, var(--toolbox-textcolor) 100%, black 0%);
 
+background-position:  center !important;
+left: -25px !important;
   /* 3. Apply the icon's SHAPE as a mask. This cuts out the background color. */
-  -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='43' height='20' viewBox='-1 -4.5 69 30' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='extension button.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath opacity='0.7' d='M 26.059 18.418 L 40.42 18.418 C 42.163 18.418 43.026 17.554 43.026 15.844 L 43.026 5.709 C 43.026 3.999 42.163 3.136 40.42 3.136 L 26.059 3.136 C 24.324 3.136 23.453 3.991 23.453 5.709 L 23.453 15.844 C 23.453 17.563 24.324 18.418 26.059 18.418 Z M 26.076 17.081 C 25.246 17.081 24.789 16.641 24.789 15.778 L 24.789 5.775 C 24.789 4.912 25.246 4.472 26.076 4.472 L 29.778 4.472 L 29.778 17.081 L 26.076 17.081 Z M 40.403 4.472 C 41.225 4.472 41.69 4.912 41.69 5.775 L 41.69 15.778 C 41.69 16.641 41.225 17.081 40.403 17.081 L 31.081 17.081 L 31.081 4.472 L 40.403 4.472 Z M 28.184 7.552 C 28.433 7.552 28.657 7.328 28.657 7.087 C 28.657 6.838 28.433 6.622 28.184 6.622 L 26.399 6.622 C 26.15 6.622 25.935 6.838 25.935 7.087 C 25.935 7.328 26.15 7.552 26.399 7.552 L 28.184 7.552 Z M 28.184 9.702 C 28.433 9.702 28.657 9.478 28.657 9.229 C 28.657 8.98 28.433 8.772 28.184 8.772 L 26.399 8.772 C 26.15 8.772 25.935 8.98 25.935 9.229 C 25.935 9.478 26.15 9.702 26.399 9.702 L 28.184 9.702 Z M 28.184 11.843 C 28.433 11.843 28.657 11.636 28.657 11.387 C 28.657 11.138 28.433 10.922 28.184 10.922 L 26.399 10.922 C 26.15 10.922 25.935 11.138 25.935 11.387 C 25.935 11.636 26.15 11.843 26.399 11.843 L 28.184 11.843 Z' fill='%23F1F1F1'/%3E%3C/svg%3E");
-  /* --- Sizing and Positioning --- */
-  /* We must give the pseudo-element a size */
-  width: 100% !important;
-  height: 100% !important;
-scale: 2.1 !important;
+  -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='43' height='19' viewBox='0 -5 69 30' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='extension button.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath opacity='0.7' d='M 26.059 18.418 L 40.42 18.418 C 42.163 18.418 43.026 17.554 43.026 15.844 L 43.026 5.709 C 43.026 3.999 42.163 3.136 40.42 3.136 L 26.059 3.136 C 24.324 3.136 23.453 3.991 23.453 5.709 L 23.453 15.844 C 23.453 17.563 24.324 18.418 26.059 18.418 Z M 26.076 17.081 C 25.246 17.081 24.789 16.641 24.789 15.778 L 24.789 5.775 C 24.789 4.912 25.246 4.472 26.076 4.472 L 29.778 4.472 L 29.778 17.081 L 26.076 17.081 Z M 40.403 4.472 C 41.225 4.472 41.69 4.912 41.69 5.775 L 41.69 15.778 C 41.69 16.641 41.225 17.081 40.403 17.081 L 31.081 17.081 L 31.081 4.472 L 40.403 4.472 Z M 28.184 7.552 C 28.433 7.552 28.657 7.328 28.657 7.087 C 28.657 6.838 28.433 6.622 28.184 6.622 L 26.399 6.622 C 26.15 6.622 25.935 6.838 25.935 7.087 C 25.935 7.328 26.15 7.552 26.399 7.552 L 28.184 7.552 Z M 28.184 9.702 C 28.433 9.702 28.657 9.478 28.657 9.229 C 28.657 8.98 28.433 8.772 28.184 8.772 L 26.399 8.772 C 26.15 8.772 25.935 8.98 25.935 9.229 C 25.935 9.478 26.15 9.702 26.399 9.702 L 28.184 9.702 Z M 28.184 11.843 C 28.433 11.843 28.657 11.636 28.657 11.387 C 28.657 11.138 28.433 10.922 28.184 10.922 L 26.399 10.922 C 26.15 10.922 25.935 11.138 25.935 11.387 C 25.935 11.636 26.15 11.843 26.399 11.843 L 28.184 11.843 Z' fill='%23F1F1F1'/%3E%3C/svg%3E");
+height: 83px !important;
+  width: 83px !important;
+scale: 0.8 !important;
   /* Keep all your original positioning styles */
   position: absolute !important;
  
-
+  filter: drop-shadow(0 0 2px white);
   pointer-events: none !important;
 
   /* --- Mask properties and cleanup --- */
@@ -549,18 +567,16 @@ scale: 2.1 !important;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
-  fill: none !important; /* Clean up old property */
+
 }
 
 
   #PanelUI-button{
-    position: relative !important;
+   
     filter: grayscale(0) brightness(160%) contrast(990%) !important;
   }
 
 
-
-  
 
   
   
@@ -595,7 +611,7 @@ scale: 2.1 !important;
   content: '';
   display: block !important;
   width: 22px !important;
-  height: 24px !important;
+  height: 25px !important;
   background-color: var(--toolbox-textcolor) !important;
 
   mask-image:  url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='43' height='20' viewBox='0 4.1 20.335 9.648' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:bx='https://boxy-svg.com' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cbx:export%3E%3Cbx:file format='svg' path='small arrow downwards.svg'/%3E%3C/bx:export%3E%3C/defs%3E%3Cpath opacity='0.6' d='M 9.907 11.279 C 10.157 11.279 10.348 11.189 10.551 10.986 L 13.368 8.103 C 13.516 7.958 13.582 7.787 13.582 7.58 C 13.582 7.158 13.239 6.806 12.821 6.806 C 12.614 6.806 12.418 6.892 12.258 7.06 L 9.914 9.494 L 7.559 7.06 C 7.399 6.896 7.204 6.806 6.993 6.806 C 6.575 6.806 6.231 7.158 6.231 7.58 C 6.231 7.787 6.301 7.955 6.446 8.107 L 9.266 10.986 C 9.469 11.193 9.664 11.279 9.907 11.279 Z' style='fill: currentcolor;'/%3E%3C/svg%3E");
@@ -631,19 +647,7 @@ scale: 2.1 !important;
 }
 
 
-/*
-  =======================================================
-  Step 1: Define Your Color Variable
-  This is the only line you need to edit to change the icon's color.
-  =======================================================
-*/
 
-/*
-  =======================================================
-  Step 2: Style the Icon with the NEW SVG Shape
-  This block uses your updated SVG as a mask.
-  =======================================================
-*/
 #downloads-indicator-anchor {
   /* Color the icon using the variable from above */
   background-color: var(--toolbox-textcolor);
@@ -674,34 +678,109 @@ scale: 2.1 !important;
 }
 
 
+
 #back-button {
-  list-style-image: url("chrome://browser/skin/back.svg") !important;
-}
-
-#forward-button {
-  list-style-image: url("chrome://browser/skin/forward.svg") !important;
-}
-
-
-/* --- Reload Button --- */
-#reload-button {
-  /* The fill and fill-opacity properties will provide the color and opacity */
-  fill: var(--toolbox-textcolor) !important;
-  fill-opacity: 0.8 !important; /* Matches the original SVG's opacity */
-  
-  /* The SVG has been modified to use 'context-fill' and 'context-fill-opacity' */
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='2 -3 12 35' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.57617 1.01987C8.31099 0.701658 7.83807 0.658665 7.51986 0.923838C7.20165 1.18901 7.15866 1.66193 7.42383 1.98014L8.49597 3.2667C8.33208 3.25563 8.1667 3.25 8 3.25C3.99594 3.25 0.75 6.49594 0.75 10.5C0.75 14.5041 3.99594 17.75 8 17.75C12.0041 17.75 15.25 14.5041 15.25 10.5C15.25 10.2183 15.0143 10 14.7326 10H14.2292C13.9599 10 13.75 10.2308 13.75 10.5C13.75 13.6756 11.1756 16.25 8 16.25C4.82436 16.25 2.25 13.6756 2.25 10.5C2.25 7.32437 4.82436 4.75 8 4.75C8.34186 4.75 8.67674 4.77984 9.0022 4.83704C9.08019 4.85075 9.15841 4.85357 9.23486 4.84664L7.42383 7.01987C7.15866 7.33807 7.20165 7.811 7.51986 8.07617C7.83807 8.34134 8.31099 8.29835 8.57617 7.98014L11.0762 4.98014C11.3079 4.70201 11.3079 4.298 11.0762 4.01987L8.57617 1.01987Z'/%3E%3C/svg%3E ") !important;
-
-  /* --- Cleanup and Layout --- */
-  filter: none !important;
-  list-style-image: none !important; /* Changed to background-image for reliability */
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-padding-bottom: 12px !important;
-  transform: translate(0%, 12%) !important;
+  /* This is now your primary color control. */
   position: relative !important;
-  top: 0px !important;
+  margin-right: -15px !important;
+
+  margin-left: 2px !important;
+
+ list-style-image: none !important;
+}
+
+
+
+#back-button::after {
+  content: '' !important;
+  display: block !important;
+  position: relative !important;
+  /* The color is inherited from the parent button's 'fill' property. */
+  background: currentColor !important;
+
+  /* The shape is your SVG mask. */
+  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='8.5018 9.614 14.9964 12.2907' width='14.9964px' height='12.2907px'%3E%3Cpath d='M8.50183 15.7633C8.50183 15.5147 8.59705 15.2978 8.78748 15.1127L14.0084 9.89966C14.1036 9.80444 14.2041 9.73303 14.3099 9.68542C14.4157 9.63782 14.5268 9.61401 14.6432 9.61401C14.8865 9.61401 15.0902 9.69336 15.2542 9.85205C15.4181 10.0107 15.5001 10.2091 15.5001 10.4471C15.5001 10.5741 15.4763 10.6905 15.4287 10.7963C15.3811 10.8968 15.3176 10.9867 15.2383 11.066L13.4609 12.8672L10.5093 15.5729L10.2236 15.0571L12.9769 14.8905H22.6174C22.8819 14.8905 23.0935 14.9725 23.2522 15.1365C23.4162 15.2952 23.4982 15.5041 23.4982 15.7633C23.4982 16.0172 23.4162 16.2262 23.2522 16.3901C23.0935 16.5488 22.8819 16.6282 22.6174 16.6282H12.9769L10.2236 16.4695L10.5093 15.9617L13.4609 18.6594L15.2383 20.4526C15.3176 20.532 15.3811 20.6246 15.4287 20.7303C15.4763 20.8361 15.5001 20.9499 15.5001 21.0715C15.5001 21.3096 15.4181 21.5079 15.2542 21.6666C15.0902 21.8253 14.8865 21.9047 14.6432 21.9047C14.4104 21.9047 14.2015 21.8147 14.0164 21.6349L8.78748 16.4139C8.59705 16.2288 8.50183 16.0119 8.50183 15.7633Z' style='fill-opacity: 1; fill: black;' id='object-0' transform='matrix(1, 0, 0, 1, 1.7763568394002505e-15, 1.7763568394002505e-15)'/%3E%3C/svg%3E") !important;
+
+  mask-repeat: no-repeat !important;
+  mask-position: center !important;
+  mask-size: contain !important;
+
+  /* We shrink the icon slightly so it doesn't touch the edges of the hover highlight. */
+  width: 14px !important;
+  height: 15px !important;
+
+  /* This is the key trick: we use margins to push the icon into the center
+     of the button's space, instead of using 'position: absolute'. */
+  right: 20px!important;
+}
+  
+  
+  
+  #forward-button {
+   
+
+    margin-right: -14px !important;
+margin-left: 1px !important;
+  /* This is now your primary color control. */
+ list-style-image: none !important;
+}
+
+
+
+#forward-button::after {
+  content: '' !important;
+  display: block !important;
+  position: relative !important;
+  /* The color is inherited from the parent button's 'fill' property. */
+  background: currentColor !important;
+
+  /* The shape is your SVG mask. */
+  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='8.5018 9.614 14.9964 12.2907' width='14.9964px' height='12.2907px'%3E%3Cpath d='M8.50183 15.7633C8.50183 15.5147 8.59705 15.2978 8.78748 15.1127L14.0084 9.89966C14.1036 9.80444 14.2041 9.73303 14.3099 9.68542C14.4157 9.63782 14.5268 9.61401 14.6432 9.61401C14.8865 9.61401 15.0902 9.69336 15.2542 9.85205C15.4181 10.0107 15.5001 10.2091 15.5001 10.4471C15.5001 10.5741 15.4763 10.6905 15.4287 10.7963C15.3811 10.8968 15.3176 10.9867 15.2383 11.066L13.4609 12.8672L10.5093 15.5729L10.2236 15.0571L12.9769 14.8905H22.6174C22.8819 14.8905 23.0935 14.9725 23.2522 15.1365C23.4162 15.2952 23.4982 15.5041 23.4982 15.7633C23.4982 16.0172 23.4162 16.2262 23.2522 16.3901C23.0935 16.5488 22.8819 16.6282 22.6174 16.6282H12.9769L10.2236 16.4695L10.5093 15.9617L13.4609 18.6594L15.2383 20.4526C15.3176 20.532 15.3811 20.6246 15.4287 20.7303C15.4763 20.8361 15.5001 20.9499 15.5001 21.0715C15.5001 21.3096 15.4181 21.5079 15.2542 21.6666C15.0902 21.8253 14.8865 21.9047 14.6432 21.9047C14.4104 21.9047 14.2015 21.8147 14.0164 21.6349L8.78748 16.4139C8.59705 16.2288 8.50183 16.0119 8.50183 15.7633Z' style='fill-opacity: 1; fill: black;' id='object-0' transform='matrix(1, 0, 0, 1, 1.7763568394002505e-15, 1.7763568394002505e-15)'/%3E%3C/svg%3E") !important;
+  mask-repeat: no-repeat !important;
+  mask-position: center !important;
+  mask-size: contain !important;
+transform:  scaleX(-1) !important;
+  /* We shrink the icon slightly so it doesn't touch the edges of the hover highlight. */
+  width: 14px !important;
+  height: 15px !important;
+
+  /* This is the key trick: we use margins to push the icon into the center
+     of the button's space, instead of using 'position: absolute'. */
+ right: 21px !important;
+}
+  
+  
+
+    #reload-button {
+   
+margin-left: 1px !important;
+margin-right: -15px !important;
+  /* This is now your primary color control. */
+ list-style-image: none !important;
+}
+
+
+
+#reload-button::after {
+  content: '' !important;
+  display: block !important;
+  position: relative !important;
+  /* The color is inherited from the parent button's 'fill' property. */
+  background: currentColor !important;
+
+  /* The shape is your SVG mask. */
+  mask-image:  url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='9.4144 6.1704 14.1712 17.2577' width='14.1712px' height='17.2577px'%3E%3Cpath d='M9.41443 16.3505C9.41443 15.3719 9.59692 14.4541 9.96191 13.5972C10.3322 12.7402 10.84 11.9865 11.4854 11.3358C12.136 10.6852 12.8898 10.1774 13.7467 9.81238C14.6036 9.44739 15.5214 9.26489 16.5 9.26489C16.701 9.26489 16.8967 9.27547 17.0872 9.29663C17.2829 9.3125 17.4654 9.33895 17.6346 9.37598L15.7224 7.47961C15.6536 7.41085 15.6007 7.3315 15.5637 7.24158C15.5267 7.15165 15.5082 7.05644 15.5082 6.95593C15.5082 6.73376 15.5796 6.54862 15.7224 6.40051C15.8705 6.24711 16.0504 6.17041 16.262 6.17041C16.4894 6.17041 16.6746 6.24447 16.8174 6.39258L20.0706 9.70923C20.2345 9.87321 20.3165 10.0636 20.3165 10.2805C20.3165 10.3863 20.2954 10.4868 20.2531 10.582C20.216 10.6772 20.1552 10.7672 20.0706 10.8518L16.8094 14.1367C16.6613 14.2795 16.4788 14.351 16.262 14.351C16.0504 14.351 15.8705 14.2769 15.7224 14.1288C15.5796 13.9807 15.5082 13.7982 15.5082 13.5813C15.5082 13.4808 15.524 13.3882 15.5558 13.3036C15.5928 13.2137 15.651 13.1317 15.7303 13.0576L17.8647 10.9391C17.669 10.8968 17.4548 10.865 17.222 10.8439C16.9946 10.8227 16.7539 10.8121 16.5 10.8121C15.7383 10.8121 15.0215 10.955 14.3497 11.2406C13.6832 11.5262 13.0961 11.923 12.5883 12.4308C12.0857 12.9386 11.689 13.5284 11.3981 14.2002C11.1124 14.8667 10.9696 15.5808 10.9696 16.3425C10.9696 17.1042 11.1124 17.821 11.3981 18.4928C11.689 19.1593 12.0857 19.7465 12.5883 20.2543C13.0961 20.7568 13.6832 21.1509 14.3497 21.4365C15.0215 21.7222 15.7383 21.865 16.5 21.865C17.2617 21.865 17.9758 21.7222 18.6423 21.4365C19.3141 21.1509 19.9013 20.7568 20.4038 20.2543C20.9116 19.7465 21.3083 19.1593 21.594 18.4928C21.8796 17.821 22.0225 17.1042 22.0225 16.3425C22.0225 16.1045 22.0912 15.9114 22.2288 15.7633C22.3716 15.6152 22.5567 15.5411 22.7842 15.5411C23.0222 15.5411 23.2153 15.6152 23.3634 15.7633C23.5115 15.9114 23.5856 16.1071 23.5856 16.3505C23.5856 17.3291 23.4004 18.2468 23.0302 19.1038C22.6652 19.9554 22.1573 20.7065 21.5067 21.3572C20.8561 22.0078 20.1023 22.5156 19.2454 22.8806C18.3937 23.2456 17.4786 23.4281 16.5 23.4281C15.5214 23.4281 14.6036 23.2456 13.7467 22.8806C12.8898 22.5156 12.136 22.0078 11.4854 21.3572C10.84 20.7065 10.3322 19.9554 9.96191 19.1038C9.59692 18.2468 9.41443 17.3291 9.41443 16.3505Z' style='fill-opacity: 1; fill: currentcolor;' id='object-0'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat !important;
+  mask-position: center !important;
+  mask-size: contain !important;
+
+  /* We shrink the icon slightly so it doesn't touch the edges of the hover highlight. */
+  width: 15px !important;
+  height: 16.5px !important;
+bottom: 1px !important;
+  /* This is the key trick: we use margins to push the icon into the center
+     of the button's space, instead of using 'position: absolute'. */
+ right: 21px !important;
 }
   
   
@@ -710,10 +789,7 @@ padding-bottom: 12px !important;
   
   
   
-  
-  
-  
-  
+
 
 
 
@@ -990,7 +1066,7 @@ findbar{
 
   
   
-  
+}
   
   
   
