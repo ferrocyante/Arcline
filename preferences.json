@@ -242,6 +242,7 @@
       { "value": 1, "label": "Dark" },
       { "value": 2, "label": "Dark Tinted" },
       { "value": 3, "label": "Glass Tinted" },
+      { "value": 5, "label": "Glass" },
       { "value": 4, "label": "Default" }
     ]
   },
