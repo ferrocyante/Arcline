@@ -1,3 +1,11 @@
+
+
+.tab-audio-button {
+  display: none !important;
+}
+
+
+
 :root[zen-single-toolbar='true'] {
 
 
