@@ -126,3 +126,31 @@
        
   
 }
+
+
+
+
+@media (-moz-pref("arcline.compact.sidebar.bg", 4)) {
+
+
+  #navigator-toolbox:not([animate='true']) #titlebar {
+     
+        &::before {
+
+          background: transparent !important;}
+  
+  
+  }
+      
+    
+:root[zen-compact-mode="true"] #navigator-toolbox:not([animate='true']) #titlebar {
+ 
+ 
+    background: #0009 !important;
+
+  backdrop-filter: blur(30px) saturate(1) contrast(1)    !important;
+ 
+ 
+}
+       
+}
