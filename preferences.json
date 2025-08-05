@@ -68,7 +68,7 @@
     "label": "Browser density (0=Normal, 1=Compact, 2=Touch)",
     "type": "string",
     "value": "number",
-    "default": 2,
+    "default": 0,
     "force": true
   },
   {
