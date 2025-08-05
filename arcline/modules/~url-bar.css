@@ -22,7 +22,7 @@
 }
 
 .urlbar-input {
-  padding-top: 2.7px !important;
+ 
     font-size: 13px !important;
    /* color: #FFFFFF !important;*/
   /*  padding-right: 12px !important;*/
@@ -34,7 +34,7 @@
 }
 
   #urlbar-searchmode-switcher {
-  margin-top: 4.7px !important;
+
     height: 2rem !important;
     margin-right: -2px !important;
     
@@ -132,10 +132,10 @@
   fill: none !important;
   
   /* --- Keep all your original layout styles --- */
-  scale: 0.65 !important;
-  margin-top: 1.2px !important;
-  height: 32px !important;
-  width: 33px !important;
+  scale: 1 !important;
+
+  height: 25.5px !important;
+  width: 20px !important;
   margin-right: -4px !important;
 }
 
