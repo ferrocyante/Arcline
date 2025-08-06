@@ -564,7 +564,7 @@ scale: 0.8 !important;
   /* Keep all your original positioning styles */
   position: absolute !important;
  
-  filter: drop-shadow(0 0 2px white);
+   filter: drop-shadow(0 0 2px var(--tab-selected-textcolor));
   pointer-events: none !important;
 
   /* --- Mask properties and cleanup --- */
