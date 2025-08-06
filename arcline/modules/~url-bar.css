@@ -179,6 +179,10 @@
   min-width: 57rem !important;
 
   
+  #permissions-granted-icon{
+transform: translate(47.3rem,0px) !important;
+  }
+
 
 
 .urlbar-input:root {
