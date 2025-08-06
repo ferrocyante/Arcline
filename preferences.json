@@ -385,9 +385,9 @@
     "default": 0,
     "options": [
       { "value": 0, "label": "Disabled" },
-      { "value": 1, "label": "auto" },
+      { "value": 1, "label": "manual" },
       { "value": 2, "label": "Dual" },
-      { "value": 3, "label": "manual" }
+      { "value": 3, "label": "faded" }
     ]
   },
    {
@@ -559,7 +559,7 @@
   },
    {
     "property": "arcline.media.player",
-    "label": "choose sytle of media player",
+    "label": "choose style of media player",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
