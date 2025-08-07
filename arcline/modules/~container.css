@@ -204,3 +204,75 @@ tab[usercontextid="1"] .tab-background {
     }
 }
 }
+
+
+@media (-moz-pref("arcline.container", 3)) {
+
+
+
+.tabbrowser-tab[usercontextid] .tab-background .tab-context-line {
+    display: none !important;
+}
+
+.tabbrowser-tab[usercontextid] .tab-background::after {
+    content: "";
+    position: absolute !important;
+    top: 16px !important;
+right: 12px !important;
+  scale: 1.4 !important;
+    width: 6px !important;
+    height: 6px !important;
+    opacity: 0.5 !important;
+    border-radius: 2.5px !important;
+
+    background: var(--identity-tab-color) !important;
+}
+
+
+
+.tabbrowser-tab[usercontextid]  .tab-text{
+  width: 88% !important;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 1 !important;
+  
+  
+  
+}
+  
+  .tabbrowser-tab[usercontextid]:hover  .tab-text{
+  width: 100% !important;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 1 !important;
+  
+ 
+  
+}
+  
+  
+  .tabbrowser-tab[usercontextid]:hover .tab-background::after {
+    opacity: 1 !important;
+    height: 5px !important;
+    width: 5px !important;
+    display: none !important;
+  
+}
+  
+.tabbrowser-tab[usercontextid] .tab-background::after {
+    opacity: 1 !important;
+    height: 5px !important;
+    width: 5px !important;
+  
+}
+
+@media (-moz-bool-pref: "lacuna.tab.no-container-indicator") {
+    .tabbrowser-tab[usercontextid] .tab-background::after {
+        display: none !important;
+    }
+}
+}
