@@ -27,13 +27,6 @@
     "force": true
   },
   {
-    "property": "browser.tabs.groups.enabled",
-    "label": "Enable browser tab groups",
-    "default": true,
-    "type": "checkbox",
-    "force": true
-  },
-  {
     "property": "browser.tabs.closeTabByDblclick",
     "label": "Enable closing of tabs by double clicking on them",
     "default": true,
@@ -373,7 +366,8 @@
     "options": [
       { "value": 0, "label": "Disabled" },
       { "value": 1, "label": "skewed lined tab" },
-      { "value": 2, "label": "pulsating dot" }
+      { "value": 2, "label": "pulsating dot" },
+      { "value": 3, "label": "simple dot" }
     ]
   },
   {
@@ -505,18 +499,6 @@
     "options": [
       { "value": 0, "label": "Disabled" },
       { "value": 2, "label": "Enabled" }
-    ]
-  },
-  {
-    "property": "arcline.tab.grps",
-    "label": "Enable RWX animated tab group icons support",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      { "value": 0, "label": "Disabled" },
-      { "value": 1, "label": "Enabled" }
     ]
   },
   
