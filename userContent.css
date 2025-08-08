@@ -78,6 +78,7 @@ groupbox {
 
 @-moz-document regexp("about:(?!reader).*") {
   :root {
-    font-family: "SF Pro", "Nunito", var(--mod-arcline-font), system-ui !important;
+    font-family: "SF Pro", "Nunito", var(--mod-arcline-font, system-ui) !important;
   }
 }
+
