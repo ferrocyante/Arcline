@@ -5,7 +5,7 @@ zen-folder {
       position: absolute;
       top: 2px;
       left: 0px !important;
-      width: calc(100% - 0px) !important;
+      width: calc(100% - 2px) !important;
       height: calc(100% - 4px) !important;
       background-color: transparent;
       border-radius: 12px !important;
