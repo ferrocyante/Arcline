@@ -1,29 +1,27 @@
-@-moz-document url-prefix(chrome:) {
-  @media -moz-pref("arcline.font", 0) {
-    :root {
-      font-family: var(--mod-arcline-font) !important;
-    }
+@media -moz-pref("arcline.font", 0) {
+  :root {
+    font-family: var(--mod-arcline-font) !important;
+  }
+}
+
+@media -moz-pref("arcline.font", 1) {
+  @font-face {
+    font-family: "SF Pro";
+    src: url("./arcline/fonts/SF-Pro.ttf");
   }
 
-  @media -moz-pref("arcline.font", 1) {
-    @font-face {
-      font-family: "SF Pro";
-      src: url("./arcline/fonts/SF-Pro.ttf");
-    }
+  :root {
+    font-family: "SF Pro" !important;
+  }
+}
 
-    :root {
-      font-family: "SF Pro" !important;
-    }
+@media -moz-pref("arcline.font", 2) {
+  @font-face {
+    font-family: "Nunito";
+    src: url("./arcline/fonts/Nunito-VariableFont_wght.ttf");
   }
 
-  @media -moz-pref("arcline.font", 2) {
-    @font-face {
-      font-family: "Nunito";
-      src: url("./arcline/fonts/Nunito-VariableFont_wght.ttf");
-    }
-
-    :root {
-      font-family: "Nunito" !important;
-    }
+  :root {
+    font-family: "Nunito" !important;
   }
 }
