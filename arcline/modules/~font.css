@@ -7,7 +7,7 @@
 @media -moz-pref("arcline.font", 1) {
   @font-face {
     font-family: "SF Pro";
-    src: url("./arcline/fonts/SF-Pro.ttf");
+    src: url("../fonts/SF-Pro.ttf");
   }
 
   :root {
@@ -18,7 +18,7 @@
 @media -moz-pref("arcline.font", 2) {
   @font-face {
     font-family: "Nunito";
-    src: url("./arcline/fonts/Nunito-VariableFont_wght.ttf");
+    src: url("../fonts/Nunito-VariableFont_wght.ttf");
   }
 
   :root {
