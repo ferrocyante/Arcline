@@ -510,15 +510,16 @@
     "size": "20px"
   },
   {
-    "property": "arcline.fonts.sf-pro",
+    "property": "arcline.font",
     "type": "dropdown",
-    "label": "Enable ability to use installed system font as zen font (choose installed font in zen settings)",
+    "label": "Your browser font.",
     "placeholder": false,
     "value": "number",
     "default": 1,
     "options": [
-      { "value": 0, "label": "Disabled" },
-      { "value": 1, "label": "Enabled" }
+      { "value": 0, "label": "Custom" },
+      { "value": 1, "label": "SF Pro" },
+      { "value": 2, "label": "Nunito (Arc default)" }
     ]
   },
   {
@@ -528,7 +529,7 @@
     "placeholder": "Font name installed on your computer",
     "label": "Custom display font name",
     "conditions": [
-      {"if":{"property":"arch.fonts.sf-pro","value":0}}
+      {"if":{"property":"arcline.font","value":0}}
     ]
   },
 

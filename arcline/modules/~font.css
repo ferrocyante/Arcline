@@ -1,18 +1,17 @@
-
-@media (-moz-pref("arcline.fonts.sf-pro", 1)) {
-
+@media -moz-pref("arcline.font", 1) {
+  @font-face {
+    font-family: "SF Pro";
+    src: url("./arcline/fonts/SF-Pro.ttf");
+  }
 }
 
-
-
+@media -moz-pref("arcline.font", 2) {
+  @font-face {
+    font-family: "Nunito";
+    src: url("./arcline/fonts/Nunito-VariableFont_wght.ttf");
+  }
+}
+    
 :root {
-  font-family: "My Custom SF Pro"  !important;
-}
-
-}
-
-@media (-moz-pref("arcline.fonts.sf-pro", 0)) {
-    :root {
-               font-family: var(--mod-arcline-font) !important;
-    }
+  font-family: "SF Pro", "Nunito", var(--mod-arcline-font), system-ui !important;
 }
