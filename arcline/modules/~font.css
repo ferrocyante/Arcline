@@ -11,7 +11,9 @@
     src: url("./arcline/fonts/Nunito-VariableFont_wght.ttf");
   }
 }
-    
-:root {
-  font-family: "SF Pro", "Nunito", var(--mod-arcline-font), system-ui !important;
+
+@-moz-document url-prefix(chrome:) {
+  :root {
+    font-family: "SF Pro", "Nunito", var(--mod-arcline-font), system-ui !important;
+  }
 }
