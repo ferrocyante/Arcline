@@ -212,10 +212,10 @@
     background-color: transparent !important;
     color: var(--toolbar-field-focus-color);
     border-color: transparent;
-  border-radius: 5px !important
+  border-radius: 1px !important;
     outline: none !important;
     outline-offset: var(--focus-outline-inset);
-    outline-color: var(--toolbar-field-focus-border-color);
+    outline-color: transparent !important;
     box-shadow: none !important;
   opacity: 0 !important;
   }
@@ -226,6 +226,7 @@
   
 
 }
+
 
 
 
