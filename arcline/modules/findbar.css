@@ -217,6 +217,7 @@
     outline-offset: var(--focus-outline-inset);
     outline-color: var(--toolbar-field-focus-border-color);
     box-shadow: none !important;
+  opacity: 0 !important;
   }
 }
 
@@ -225,6 +226,7 @@
   
 
 }
+
 
 
 
