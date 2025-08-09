@@ -9,7 +9,7 @@ as they use the correct format.
 
 * {
   /* Accent color */
-  --natsumi-pages-accent-color: #19728b;
+  --natsumi-pages-accent-color: #19728b; 
 
   /* Natsumi Glass Effect */
   --glass-blur-radius: 30px;
@@ -153,7 +153,7 @@ Edit the natsumi-config.css file instead.
       #toolbarContainer, #sidebarContainer {
         background: var(--natsumi-glass-background) !important;
         backdrop-filter: blur(25px);
-        border-radius: 10px;
+        border-radius: 15px;
       }
 
       #toolbarContainer {
@@ -163,12 +163,18 @@ Edit the natsumi-config.css file instead.
         transform: translate(-50%, 0);
         width: calc(100% - 10px) !important;
         max-width: min(var(--natsumi-pdfjs-topbar-max-width), calc(100% - 10px)) !important;
-        border-radius: 10px;
+        border-radius: 15px;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
         height: calc(var(--toolbar-height) + 10px) !important;
         border: 1px solid rgba(20, 20, 20, 0.2) !important;
-        box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
+        outline: 1px solid rgba(0, 0, 0, 1) !important;
+         box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color),
+  
+    
+    
+    /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
+8px 5px 125px 0 rgba(0, 0, 0, 0.5), 0px  30px 50px #00000069 !important;
         animation: pdfjs-appear 0.3s ease;
         overflow: hidden !important;
 
@@ -193,7 +199,13 @@ Edit the natsumi-config.css file instead.
           backdrop-filter: blur(25px);
           border-radius: 11px !important;
           border: 1px solid rgba(20, 20, 20, 0.2) !important;
-          box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
+          outline: 1px solid rgba(0, 0, 0, 1) !important;
+           box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color),
+  
+    
+    
+    /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
+8px 5px 125px 0 rgba(0, 0, 0, 0.5), 0px  30px 50px #00000069 !important;
           animation: secondary-appear 0.3s ease;
 
           &.hidden {
@@ -229,14 +241,20 @@ Edit the natsumi-config.css file instead.
       }
 
       #sidebarContainer {
-        height: calc(100% - 62px) !important;
+        height: calc(100% - 76px) !important;
         left: -5px !important;
         top: auto !important;
         bottom: 5px !important;
         opacity: 0 !important;
         transition: left 0.2s ease, opacity 0.2s ease, filter 0.2s ease !important;
         border: 1px solid rgba(20, 20, 20, 0.2) !important;
-        box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
+        outline: 1px solid rgba(0, 0, 0, 1) !important;
+         box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color),
+  
+    
+    
+    /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
+8px 5px 125px 0 rgba(0, 0, 0, 0.5), 0px  30px 50px #00000069 !important;
         filter: blur(5px);
 
         @media (prefers-color-scheme: dark) {
@@ -367,6 +385,7 @@ Edit the natsumi-config.css file instead.
         background: var(--natsumi-glass-background) !important;
         backdrop-filter: blur(5px);
         border-radius: 10px !important;
+        outline: 1px solid rgba(0, 0, 0, 1) !important;
         border: 1px solid rgba(20, 20, 20, 0.2) !important;
         box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
 
@@ -462,22 +481,23 @@ Edit the natsumi-config.css file instead.
   transform: translate(-50%, 0);
   width: calc(100% - 10px) !important;
   max-width: min(var(--natsumi-pdfjs-topbar-max-width), calc(100% - 10px)) !important;
-  border-radius: 10px;
+  border-radius: 15px;
   padding-top: 5px !important;
   padding-bottom: 5px !important;
   height: calc(var(--toolbar-height)) !important;
   z-index: -10000 !important;
+
 }
 
 .sidebarOpen::before {
   content: '';
   background: var(--pdf-js-pseudobg-bg) !important;
   position: absolute !important;
-  height: calc(100% - 62px) !important;
+  height: calc(100% - 76px) !important;
   left: 5px !important;
   top: auto !important;
   bottom: 5px !important;
-  border-radius: 10px !important;
+  border-radius: 15px !important;
   width: var(--sidebar-width) !important;
 
 }
