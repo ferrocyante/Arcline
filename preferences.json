@@ -489,18 +489,7 @@
       { "value": 1, "label": "Disabled" }
     ]
   },
-  {
-    "property": "arcline.tab.grps",
-    "label": "Enable advanced tab group mod support",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      { "value": 0, "label": "Disabled" },
-      { "value": 2, "label": "Enabled" }
-    ]
-  },
+ 
   
 
   {
