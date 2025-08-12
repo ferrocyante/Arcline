@@ -17,18 +17,12 @@
     "label": "Allow browser to be transparent",
     "default": true,
     "type": "checkbox",
-    "force": true
+    "force": true,
+   "restart": true
   },
   {
     "property": "zen.theme.gradient.show-custom-colors",
     "label": "Enable custom color picker",
-    "default": true,
-    "type": "checkbox",
-    "force": true
-  },
-  {
-    "property": "browser.tabs.groups.enabled",
-    "label": "Enable browser tab groups",
     "default": true,
     "type": "checkbox",
     "force": true
@@ -68,7 +62,7 @@
     "label": "Browser density (0=Normal, 1=Compact, 2=Touch)",
     "type": "string",
     "value": "number",
-    "default": 2,
+    "default": 0,
     "force": true
   },
   {
@@ -142,8 +136,8 @@
     "property": "url.bar.border_radius",
     "label": "url bar roundness",
     "type": "string",
-    "defaultValue": "1.7rem",
-    "placeholder": "1.7rem"
+    "defaultValue": "1.4rem",
+    "placeholder": "1.4rem"
   },
   {
   "property": "url.bar.position_top",
@@ -350,18 +344,6 @@
     "default": 10,
     "force": true
   },
-   {
-    "property": "arcline.folder.popup",
-    "label": "Enable folder seach menu popup on hover ",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 1,
-    "options": [
-      { "value": 0, "label": "Disabled" },
-      { "value": 1, "label": "Enabled" }
-    ]
-  },
   {
     "property": "arcline.pip",
     "label": "Enable Arcline picture in picture player styling ",
@@ -376,6 +358,18 @@
     ]
   },
   {
+    "property": "arcline.folder.popup",
+    "label": "Removes folder seach menu popup on hover ",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 1,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
+    ]
+  },
+  {
     "property": "arcline.container",
     "label": "Enable Arcline container tab styling",
     "type": "dropdown",
@@ -385,7 +379,8 @@
     "options": [
       { "value": 0, "label": "Disabled" },
       { "value": 1, "label": "skewed lined tab" },
-      { "value": 2, "label": "pulsating dot" }
+      { "value": 2, "label": "pulsating dot" },
+      { "value": 3, "label": "simple dot" }
     ]
   },
   {
@@ -397,9 +392,9 @@
     "default": 0,
     "options": [
       { "value": 0, "label": "Disabled" },
-      { "value": 1, "label": "auto" },
+      { "value": 1, "label": "manual" },
       { "value": 2, "label": "Dual" },
-      { "value": 3, "label": "manual" }
+      { "value": 3, "label": "faded" }
     ]
   },
    {
@@ -507,30 +502,7 @@
       { "value": 1, "label": "Disabled" }
     ]
   },
-  {
-    "property": "arcline.tab.grps",
-    "label": "Enable advanced tab group mod support",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      { "value": 0, "label": "Disabled" },
-      { "value": 2, "label": "Enabled" }
-    ]
-  },
-  {
-    "property": "arcline.tab.grps",
-    "label": "Enable RWX animated tab group icons support",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      { "value": 0, "label": "Disabled" },
-      { "value": 1, "label": "Enabled" }
-    ]
-  },
+ 
   
 
   {
@@ -572,7 +544,7 @@
   },
    {
     "property": "arcline.media.player",
-    "label": "choose sytle of media player",
+    "label": "choose style of media player",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
