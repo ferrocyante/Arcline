@@ -350,6 +350,18 @@
     "default": 10,
     "force": true
   },
+   {
+    "property": "arcline.folder.popup",
+    "label": "Enable folder seach menu popup on hover ",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 1,
+    "options": [
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
+    ]
+  },
   {
     "property": "arcline.pip",
     "label": "Enable Arcline picture in picture player styling ",
