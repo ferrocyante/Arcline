@@ -17,7 +17,8 @@
     "label": "Allow browser to be transparent",
     "default": true,
     "type": "checkbox",
-    "force": true
+    "force": true,
+   "restart": true
   },
   {
     "property": "zen.theme.gradient.show-custom-colors",
