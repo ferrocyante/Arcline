@@ -135,8 +135,8 @@
     "property": "url.bar.border_radius",
     "label": "url bar roundness",
     "type": "string",
-    "defaultValue": "1.7rem",
-    "placeholder": "1.7rem"
+    "defaultValue": "1.4rem",
+    "placeholder": "1.4rem"
   },
   {
   "property": "url.bar.position_top",
