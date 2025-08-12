@@ -19,8 +19,9 @@ zen-folder {
       color: var(--sidebar-text-color) !important;
       margin: 0 !important;
       font-weight: 500 !important;
-      font-size: 13.5px !important;
+      font-size: 13.8px !important;
       display: flex;
+    margin-top: 1px !important;
     margin-left: 2px !important;
       align-items: center;
       height: 100% !important;
@@ -49,6 +50,7 @@ zen-folder {
       align-content: center;
       pointer-events: none;
       position: absolute;
+
       pointer-events: none;
 
       :root[zen-sidebar-expanded] & {
@@ -61,3 +63,8 @@ zen-folder {
         fill: var(--zen-folder-stroke);
       }
     }
+
+@media  (-moz-pref("arcline.folder.popup", 1)) {
+#zen-folder-tabs-popup{
+  display: none !important;
+  }}
