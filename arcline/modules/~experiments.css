@@ -64,7 +64,3 @@ zen-folder {
       }
     }
 
-@media  (-moz-pref("arcline.folder.popup", 1)) {
-#zen-folder-tabs-popup{
-  display: none !important;
-  }}
