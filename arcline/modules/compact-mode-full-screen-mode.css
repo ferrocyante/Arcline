@@ -50,12 +50,12 @@
 
 /* === BLUR COMPACT SIDEBAR ================================================================================================ */
 /* Compact sidebar with blurred transparent background */
-:root[zen-compact-mode="true"] #titlebar {
+:root[zen-compact-mode="true"] #navigator-toolbox:not([animate='true']) #titlebar {
  
    
 
        
-   top: -5px   !important;
+   top: -4px   !important;
   margin-left: -4px  !important;
   
  
@@ -65,7 +65,7 @@
 scale: 1 !important;
  
     
-min-height: calc(100% + (var(--zen-element-separation) * 1)) !important;
+min-height: calc(100% + (var(--zen-element-separation) * 1) - 2px) !important;
 
   
 
@@ -138,7 +138,7 @@ min-height: calc(100% + (var(--zen-element-separation) * 1)) !important;
 
 /* === BLUR COMPACT SIDEBAR ================================================================================================ */
 /* Compact sidebar with blurred transparent background */
-:root[zen-compact-mode="true"] #titlebar {
+:root[zen-compact-mode="true"]  #navigator-toolbox:not([animate='true']) #titlebar {
  
    
 

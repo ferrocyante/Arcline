@@ -18,7 +18,7 @@
 
 
 #zen-media-controls-toolbar > toolbaritem {
- 
+
   isolation: isolate !important;
  
 }
@@ -133,7 +133,7 @@
   When you hover the media player, the background animates to its full state.
 */
 #TabsToolbar:has(#zen-media-controls-toolbar:hover)::before {
-   height:  calc(var(--zen-media-player-peak-height, 111px) + 1px);
+   height:  calc(var(--zen-media-player-peak-height, 111px) - 2px);
   opacity: 1 !important;
 }
 
@@ -162,7 +162,7 @@
 
 #zen-media-controls-toolbar toolbaritem {
   border-radius: 12px !important; 
-margin-bottom: -8px !important;
+margin-bottom: -7px !important;
   background-color: var(--media-control-bg) !important;
 backdrop-filter: saturate(1) contrast(1) blur(var(--media-player-filter_blur)) !important;
 }
@@ -179,7 +179,7 @@ backdrop-filter: saturate(1) contrast(1) blur(var(--media-player-filter_blur)) !
 
 #zen-media-controls-toolbar toolbaritem {
   border-radius: 12px !important; 
-margin-bottom: -8px !important;
+margin-bottom: -7px !important;
 
 }
 

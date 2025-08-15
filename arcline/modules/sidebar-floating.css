@@ -27,13 +27,13 @@
 
 
 
-#navigator-toolbox:not([animate='true']) #titlebar {
+#navigator-toolbox:not([animate='true'])  #navigator-toolbox:not([animate='true'])  #titlebar {
      
         &::before {
         
   
   }
-        border-radius: 8px !important;
+        border-radius: 1px !important;
          
   
   }
@@ -45,7 +45,7 @@
 
 /* === BLUR COMPACT SIDEBAR ================================================================================================ */
 /* Compact sidebar with blurred transparent background */
-:root[zen-compact-mode="true"] #titlebar {
+:root[zen-compact-mode="true"]  #navigator-toolbox:not([animate='true'])  #titlebar {
  
    
 

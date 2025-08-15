@@ -4,8 +4,8 @@ zen-folder {
       content: '';
       position: absolute;
       top: 2px;
-      left: 0px !important;
-      width: calc(100% - 2px) !important;
+      left: 1px !important;
+      width: calc(100% - 3px) !important;
       height: calc(100% - 4px) !important;
       background-color: transparent;
       border-radius: 12px !important;
@@ -50,7 +50,7 @@ zen-folder {
       align-content: center;
       pointer-events: none;
       position: absolute;
-
+left: 3px !important;
       pointer-events: none;
 
       :root[zen-sidebar-expanded] & {
@@ -64,3 +64,12 @@ zen-folder {
       }
     }
 
+
+@media  (-moz-pref("arcline.folder.popup", 1)) {
+
+#zen-folder-tabs-popup{
+height: 0 !important;
+  }
+
+  
+}
