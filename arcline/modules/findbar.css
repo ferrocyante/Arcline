@@ -40,6 +40,7 @@
     border-radius: 15px;
     background: var(--natsumi-mat-ga-background) !important;
     backdrop-filter: blur(25px);
+    outline: 1px solid rgba(0, 0, 0, 1) !important;
     border: 1px solid light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
     opacity: 1;
     transition: background 0.2s ease, opacity 0.2s ease, visibility 0.2s ease, top 0.2s ease, box-shadow 0.2s ease !important;
@@ -206,7 +207,28 @@
 }
 
 
+.findbar-textbox {
+  &:focus {
+    background-color: transparent !important;
+    color: var(--toolbar-field-focus-color);
+    border-color: transparent;
+  border-radius: 1px !important;
+    outline: none !important;
+    outline-offset: var(--focus-outline-inset);
+    outline-color: transparent !important;
+    box-shadow: none !important;
+  opacity: 0 !important;
+  }
 }
+
+
+
+  
+
+}
+
+
+
 
 
 

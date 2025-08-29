@@ -10,16 +10,17 @@
    
    
    
-  
+
    
    
    
    /* Move Window Control Buttons to Left Side (macOS Style) */
   .titlebar-buttonbox {
-    margin-right: -4px !important;
-    margin-left: -2px !important;
-    margin-top: 1px !important;
-    gap: 2.3px !important;
+    margin-right: -2px !important;
+    margin-left: -4px !important;
+    scale: 0.85 !important;
+transform: translate(0px,0px) !important;
+    gap: 5px !important;
   }
 
   .titlebar-button {
@@ -49,16 +50,16 @@ content: none !important;
     background-color: var(--zen-toolbar-element-bg) !important;
 
 content: none !important;
-    scale: 0.9 !important;
+  scale: 1 !important;
     border: 1.1px solid var(--zen-toolbar-element-bg) !important;
     /*border: 0px solid #8B8000 !important;*/
   }
 
   .titlebar-max,
   .titlebar-restore {
-    scale: 0.9 !important;
+   
     content: none !important;
-    margin-left: 0.8px !important;
+   scale: 1 !important;
     background-color: var(--zen-toolbar-element-bg) !important;
     border: 1.1px solid var(--zen-toolbar-element-bg) !important;
     /* background-color: #28D33F !important; border: 0px solid  #3e6a40 !important;*/
@@ -68,10 +69,10 @@ content: none !important;
   .titlebar-close {
     content: none !important;
     /*  background-color: #FE6254 !important;*/
-    margin-left: -2px !important;
+   scale: 1 !important;
     border: 0.1px solid var(--zen-toolbar-element-bg) !important;
     background-color: var(--zen-toolbar-element-bg) !important;
-    scale: 0.9 !important;
+
 
     /* border: 0px solid #f44336 !important;
       /* For SVG icons */
@@ -163,7 +164,7 @@ content: none !important;
   .titlebar-max,
   .titlebar-close {
 
-    margin-right: 7px !important;
+    margin-right: 5px !important;
   }
 
 

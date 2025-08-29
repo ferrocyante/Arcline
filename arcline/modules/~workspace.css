@@ -29,8 +29,13 @@
 
 
 .zen-current-workspace-indicator-icon{
- margin-bottom: 9px !important;
-  scale: 1 !important;
+ margin-bottom: 3px !important;
+  scale: 1.15 !important;
+  fill-opacity: 0.65 !important;
+  margin-left: -1px !important;
+  filter: brightness(5) contrast(2) saturate(2) !important;
+  color: var(--zen-primary-color) !important;
+
 }
 }
 
@@ -55,8 +60,8 @@
 .zen-current-workspace-indicator-name {
   filter: brightness(75%) !important;
   margin-left: 0px !important;
-  margin-top: -8px !important;
-  font-size: 13.5px !important; /* Default: small (~11px) */
+
+  font-size: 13.9px !important; /* Default: small (~11px) */
   font-weight: 550 !important;
   opacity: 0.8 !important;
 }

@@ -1,10 +1,11 @@
 
-
 @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
   html {
     border-radius: 60px !important;
   }
 }
+
+:root[zen-single-toolbar='true'] {
 
 /*--------------------------------------------------------*/
 #urlbar-label-box {
@@ -20,7 +21,7 @@
 }
 
 .urlbar-input {
-  padding-top: 2.7px !important;
+ 
     font-size: 13px !important;
    /* color: #FFFFFF !important;*/
   /*  padding-right: 12px !important;*/
@@ -31,9 +32,8 @@
   
 }
 
-
   #urlbar-searchmode-switcher {
-  margin-top: 4.7px !important;
+
     height: 2rem !important;
     margin-right: -2px !important;
     
@@ -64,7 +64,7 @@
 
 
 
-
+}
 
 
 
@@ -131,10 +131,10 @@
   fill: none !important;
   
   /* --- Keep all your original layout styles --- */
-  scale: 0.65 !important;
-  margin-top: 1.2px !important;
-  height: 32px !important;
-  width: 33px !important;
+  scale: 1 !important;
+
+  height: 25.5px !important;
+  width: 20px !important;
   margin-right: -4px !important;
 }
 
@@ -178,17 +178,22 @@
   min-width: 57rem !important;
 
   
+  #permissions-granted-icon{
+transform: translate(47.3rem,0px) !important;
+  }
 
 
-.urlbar-input:root {
-    font-size: 14px !important;
+
+
+.urlbar-input {
+    font-size: 17px !important;
    /* color: #FFFFFF !important;*/
  
    max-width:  85% !important;
   /*  padding-right: 12px !important;*/
    font-weight: 510 !important;
 /* padding-top: 0px !important;*/
-  filter: brightness(75%) !important;
+  filter: brightness(88%) !important;
 
    overflow: hidden !important;
   display: inline-block !important;
@@ -196,6 +201,7 @@
   white-space: nowrap !important;
   opacity: 1 !important;
 }
+
 
 
 
@@ -229,9 +235,11 @@
   
 /* Acrylic/Mica floating Urlbar */
 #urlbar[zen-floating-urlbar="true"] #urlbar-background {
-    background: rgba(20, 20, 20, 0.69) !important;
+    background: rgba(25, 25, 25, 0.69) !important;
+   backdrop-filter: blur(64px) brightness(1) saturate(1.1) contrast(1.1) !important;
+  
    border-radius:  var(--url-bar-border_radius, 1.7rem) !important;
-    backdrop-filter: blur(64px) brightness(1) saturate(1.1) contrast(1.1) !important;
+   
 }
 
 .urlbarView-row {
@@ -245,6 +253,9 @@
 
 .urlbarView-body-inner {
   #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
+transform: translate(0px, 2px) !important;
+    margin-top: -5px !important;
+    margin-bottom: 3px !important;
     border-top: 2px solid rgba(255,255,255,0.1) !important;
   }
 }

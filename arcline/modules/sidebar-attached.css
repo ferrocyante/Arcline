@@ -11,11 +11,13 @@
         border-radius: 2px !important;
         }}
     
-        
+           :root[zen-compact-mode="true"]   .titlebar-buttonbox {
+    top: 1px !important;
+   }
 
 /* === BLUR COMPACT SIDEBAR ================================================================================================ */
 /* Compact sidebar with blurred transparent background */
-:root[zen-compact-mode="true"] #titlebar {
+:root[zen-compact-mode="true"] #navigator-toolbox:not([animate='true']) #titlebar {
  
    
 
@@ -28,7 +30,7 @@
   min-width: 15px !important;
   border-radius: 2px !important;
 scale: 1 !important;
-  padding: 8px !important;
+  padding: 7px !important;
     
 height: calc(100% - (var(--zen-element-separation) * 0.9)) !important;
 
