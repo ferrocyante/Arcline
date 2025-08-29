@@ -319,14 +319,15 @@
   },
   {
     "property": "arcline.workspace.icon",
-    "label": "display workspace icon before workspace name",
+    "label": "workspace icons style",
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
     "default": 0,
     "options": [
-      { "value": 0, "label": "Disabled" },
-      { "value": 1, "label": "Enabled" }
+      { "value": 0, "label": "dont show" },
+      { "value": 1, "label": "show" },
+      { "value": 2, "label": "show with workspace color filled in" }
     ]
   },
 
