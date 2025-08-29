@@ -43,7 +43,7 @@
 }
 }
 
-@media  (-moz-pref("arcline.workspace.icon", 3)) {
+@media  (-moz-pref("arcline.workspace.icon", 2)) {
 
 
 .zen-current-workspace-indicator-icon{
