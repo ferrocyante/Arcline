@@ -31,10 +31,7 @@
 .zen-current-workspace-indicator-icon{
  margin-bottom: 3px !important;
   scale: 1.15 !important;
-  fill-opacity: 0.65 !important;
-  margin-left: -1px !important;
-  filter: brightness(5) contrast(2) saturate(2) !important;
-  color: var(--zen-primary-color) !important;
+  
 
 }
 }
@@ -46,7 +43,19 @@
 }
 }
 
+@media  (-moz-pref("arcline.workspace.icon", 3)) {
 
+
+.zen-current-workspace-indicator-icon{
+ margin-bottom: 3px !important;
+  scale: 1.15 !important;
+  fill-opacity: 0.65 !important;
+  margin-left: -1px !important;
+  filter: brightness(5) contrast(2) saturate(2) !important;
+  color: var(--zen-primary-color) !important;
+
+}
+}
 
 
 /*******LIGHT ENDS****************************/
