@@ -48,31 +48,31 @@
   src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/Roboto-VariableFont_wdth,wght.ttf");
 }
 
-@media (-moz-pref("arcline.font", "SF-Pro")) {
+@media (-moz-pref("arcline-font", "SF-Pro")) {
   :root{
     --arcline-font: "SF-Pro";
   }
 }
 
-@media (-moz-pref("arcline.font", "SF-Symbols")) {
+@media (-moz-pref("arcline-font", "SF-Symbols")) {
   :root{
     --arcline-font: "SF-Symbols";
   }
 }
 
-@media (-moz-pref("arcline.font", "Nunito")) {
+@media (-moz-pref("arcline-font", "Nunito")) {
   :root{
     --arcline-font: "Nunito";
   }
 }
 
-@media (-moz-pref("arcline.font", "Suse")) {
+@media (-moz-pref("arcline-font", "Suse")) {
   :root{
     --arcline-font: "Suse";
   }
 }
 
-@media (-moz-pref("arcline.font", "Roboto")) {
+@media (-moz-pref("arcline-font", "Roboto")) {
   :root{
     --arcline-font: "Roboto";
   }
