@@ -705,7 +705,7 @@
   },
      {
         "type": "dropdown",
-        "property": "arcline.font",
+        "property": "arcline-font",
         "label": "Select the font for Arcline.",
         "defaultValue": "Nunito",
         "options": [
