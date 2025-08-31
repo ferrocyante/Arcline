@@ -3,14 +3,14 @@
     "type": "text",
     "label": "⚙️ Arc-line Theme Settings",
     "margin": "20px 0 25px 0",
-    "size": "24px"
+    "size": "29px"
   },
 
   {
     "type": "text",
     "label": "🔧 Core Firefox Behavior",
     "margin": "30px 0 30px 0",
-    "size": "20px"
+    "size": "25px"
   },
   {
     "property": "browser.tabs.allow_transparent_browser",
@@ -108,8 +108,8 @@
   {
     "type": "text",
     "label": "🎮 Control buttons layout",
-    "margin": "30px 0 30px 0",
-    "size": "20px"
+    "margin": "32px 0 32px 0",
+    "size": "25px"
   },
   {
     "property": "zen.view.experimental-force-window-controls-left",
@@ -118,6 +118,9 @@
     "type": "checkbox",
     "force": true,
     "restart": true
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "arcline.control.button",
@@ -135,14 +138,17 @@
   {
     "type": "text",
     "label": "🌐 URL Bar",
-    "margin": "30px 0 30px 0",
-    "size": "20px"
+    "margin": "32px 0 32px 0",
+    "size": "25px"
   },
   {
     "type": "text",
     "label": " ⚠️ For icons to align, url link copy addon :ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ https://addons.mozilla.org/en-US/firefox/addon/arc-like-copy-link/   ",
     "size": "18px",
     "margin": "0 0 15px 0"
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "zen.urlbar.behavior",
@@ -156,6 +162,9 @@
     ],
     "force": true
   },
+  {
+    "type": "separator"
+  },
    {
     "property": "url.bar.border_radius",
     "label": "url bar roundness",
@@ -163,12 +172,18 @@
     "defaultValue": "1.4rem",
     "placeholder": "1.4rem"
   },
+  {
+    "type": "separator"
+  },
    {
     "property": "url.bar.filter_bg",
     "label": "accent color of url bar",
     "type": "string",
     "defaultValue": "rgba(25, 25, 25, 0.69)",
     "placeholder": "rgba(25, 25, 25, 0.69)"
+  },
+  {
+    "type": "separator"
   },
    {
     "property": "url.bar.filter_blur",
@@ -178,6 +193,9 @@
     "placeholder": "64px"
   },
   {
+    "type": "separator"
+  },
+  {
   "property": "url.bar.position_top",
   "label": " position of  url bar from top ",
   "type": "string",
@@ -185,11 +203,17 @@
   "placeholder": "50px"
   },
   {
+    "type": "separator"
+  },
+  {
   "property": "url.psuedo.position_top",
   "label": "position of url bar psuedo layer from top",
   "type": "string",
   "defaultValue": "52px",
   "placeholder": "50px"
+  },
+  {
+    "type": "separator"
   },
    {
     "property": "arcline.url.bar.border",
@@ -203,12 +227,18 @@
       { "value": 1, "label": "Enabled" }
     ]
   },
+  {
+    "type": "separator"
+  },
    {
     "property": "url.bar.in.border_width",
     "label": "inner border width",
     "type": "string",
     "defaultValue": "1px",
     "placeholder": "1px"
+  },
+  {
+    "type": "separator"
   },
    {
     "property": "url.bar.in.border_opacity",
@@ -218,6 +248,9 @@
     "placeholder": "rgba(255, 255, 255, 0.25)"
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "url.bar.out.border_width",
     "label": "outer border width",
     "type": "string",
@@ -225,11 +258,17 @@
     "placeholder": "0.8px"
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "url.bar.out.border_opacity",
     "label": "outer border appearance",
     "type": "string",
     "defaultValue": "rgba(0, 0, 0, 1)",
     "placeholder": "rgba(0, 0, 0, 1)"
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "arcline.url.bar",
@@ -242,6 +281,9 @@
       { "value": 0, "label": "Disabled" },
       { "value": 1, "label": "Enabled" }
     ]
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "arcline.url.bar.scale",
@@ -260,7 +302,7 @@
     "type": "text",
     "label": "📑 Sidebar",
     "margin": "30px 0 15px 0",
-    "size": "20px"
+    "size": "25px"
   },
   {
     "property": "arcline.compact.sidebar.bg",
@@ -279,6 +321,9 @@
     ]
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "arcline.compact.sidebar.position",
     "label": "Compact sidebar position",
     "type": "dropdown",
@@ -291,12 +336,18 @@
       { "value": 2, "label": "Default" }
     ]
   },
+  {
+    "type": "separator"
+  },
    {
     "property": "compact.sidebar.filter_blur",
     "label": "blur value of sidebar in compact mode",
     "type": "string",
     "defaultValue": "100px",
     "placeholder": "100px"
+  },
+  {
+    "type": "separator"
   },
     {
     "property": "arcline.compact.sidebar.border",
@@ -310,12 +361,18 @@
       { "value": 1, "label": "Enabled" }
     ]
   },
+  {
+    "type": "separator"
+  },
    {
     "property": "compact.sidebar.in.border_width",
     "label": "inner border width",
     "type": "string",
     "defaultValue": "1px",
     "placeholder": "1px"
+  },
+  {
+    "type": "separator"
   },
    {
     "property": "compact.sidebar.in.border_opacity",
@@ -325,6 +382,9 @@
     "placeholder": "rgba(255, 255, 255, 0.25)"
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "compact.sidebar.out.border_width",
     "label": "outer border width",
     "type": "string",
@@ -332,11 +392,17 @@
     "placeholder": "0.8px"
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "compact.sidebar.out.border_opacity",
     "label": "outer border appearance",
     "type": "string",
     "defaultValue": "rgba(0, 0, 0, 1)",
     "placeholder": "rgba(0, 0, 0, 1)"
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "arcline.essential.always.four.in.a.row",
@@ -351,6 +417,9 @@
     ]
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "arcline.workspace.bottom.icon",
     "label": "display workspace icons on bottom instead dots",
     "type": "dropdown",
@@ -361,6 +430,9 @@
       { "value": 0, "label": "Disabled" },
       { "value": 1, "label": "Enabled" }
     ]
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "arcline.workspace.icon",
@@ -379,8 +451,8 @@
   {
     "type": "text",
     "label": "🎨 General Styles & Effects",
-    "margin": "30px 0 30px 0",
-    "size": "20px"
+    "margin": "32px 0 32px 0",
+    "size": "25px"
   },
   {
     "property": "zen.theme.content-element-separation",
@@ -389,6 +461,9 @@
     "value": "number",
     "default": 10,
     "force": true
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "arcline.pip",
@@ -404,6 +479,9 @@
     ]
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "arcline.folder.popup",
     "label": "Removes folder seach menu popup on hover ",
     "type": "dropdown",
@@ -414,6 +492,9 @@
       { "value": 0, "label": "Disabled" },
       { "value": 1, "label": "Enabled" }
     ]
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "arcline.container",
@@ -430,6 +511,9 @@
     ]
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "arcline.borders",
     "label": "zen browser window border style",
     "type": "dropdown",
@@ -443,6 +527,9 @@
       { "value": 3, "label": "faded" }
     ]
   },
+  {
+    "type": "separator"
+  },
    {
     "property": "window.border_opacity",
     "label": " zen browser window border appearance",
@@ -451,11 +538,17 @@
     "placeholder": "rgba(255, 255, 255, 0.5)"
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "window.border_width",
     "label": "zen browser window border width",
     "type": "string",
     "defaultValue": "1.7px",
     "placeholder": "1.7px"
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "arcline.force.blur",
@@ -470,6 +563,9 @@
     ]
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "arcline.addon.visible",
     "label": "Make addon/extension button invisible (but still clickable)",
     "type": "dropdown",
@@ -482,6 +578,9 @@
     ]
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "arcline.compact.mode.full.screen.mode",
     "label": "Enable marginless fullscreen compact mode",
     "type": "dropdown",
@@ -492,6 +591,9 @@
       { "value": 0, "label": "Disabled" },
       { "value": 1, "label": "Enabled" }
     ]
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "arcline.remove.white.tint",
@@ -509,8 +611,8 @@
   {
     "type": "text",
     "label": "🧩 External Mod Support",
-    "margin": "30px 0 30px 0",
-    "size": "20px"
+    "margin": "32px 0 32px 0",
+    "size": "25px"
   },
   {
     "property": "arcline.superpin",
@@ -525,6 +627,9 @@
     ]
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "arcline.pinned.extensions",
     "label": "Enable Pinned Extensions mod support (disable if none are pinned)",
     "type": "dropdown",
@@ -535,6 +640,9 @@
       { "value": 0, "label": "Disabled" },
       { "value": 1, "label": "Enabled" }
     ]
+  },
+  {
+    "type": "separator"
   },
    {
     "property": "arcline.find.bar",
@@ -554,8 +662,8 @@
   {
     "type": "text",
     "label": "🔤 Fonts",
-    "margin": "30px 0 30px 0",
-    "size": "20px"
+    "margin": "32px 0 32px 0",
+    "size": "25px"
   },
   {
     "property": "arcline.font",
@@ -569,6 +677,9 @@
       { "value": 1, "label": "SF Pro" },
       { "value": 2, "label": "Nunito (Arc default)" }
     ]
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "mod.arcline.font",
@@ -585,8 +696,8 @@
   {
     "type": "text",
     "label": "🎴 Media Player",
-    "margin": "30px 0 30px 0",
-    "size": "20px"
+    "margin": "32px 0 32px 0",
+    "size": "25px"
   },
    {
     "property": "arcline.media.player",
@@ -602,6 +713,9 @@
       { "value": 3, "label": "reversed-left" }
     ]
   },
+  {
+    "type": "separator"
+  },
    {
     "property": "arcline.media.player.border",
     "label": "Enable arcline media player border",
@@ -614,12 +728,18 @@
       { "value": 1, "label": "Enabled" }
     ]
   },
+  {
+    "type": "separator"
+  },
    {
     "property": "media.player.in.border_width",
     "label": "inner border width",
     "type": "string",
     "defaultValue": "1px",
     "placeholder": "1px"
+  },
+  {
+    "type": "separator"
   },
    {
     "property": "media.player.in.border_opacity",
@@ -629,11 +749,17 @@
     "placeholder": "rgba(255, 255, 255, 0.2)"
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "media.player.out.border_width",
     "label": "outer border width",
     "type": "string",
     "defaultValue": "0.8px",
     "placeholder": "0.8px"
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "media.player.out.border_opacity",
@@ -643,11 +769,17 @@
     "placeholder": "rgba(0, 0, 0, 1)"
   },
   {
+    "type": "separator"
+  },
+  {
   "property": "media.default.filter_opacity",
   "label": "Zen media default background (black) opacity",
   "type": "string",
   "defaultValue": "0.47",
   "placeholder": "0.47"
+  },
+  {
+    "type": "separator"
   },
   {
   "property": "media.player.filter_blur",
@@ -657,11 +789,17 @@
    "placeholder": "5px"
   },
   {
+    "type": "separator"
+  },
+  {
   "property": "art.work.filter_blur",
   "label": "Art work blur ( 0px for clear art work) ",
   "type": "string",
   "defaultValue": "0px",
   "placeholder": "65px"
+  },
+  {
+    "type": "separator"
   },
   {
   "property": "art.work.filter_brightness",
@@ -671,11 +809,17 @@
    "placeholder": "0.5"
   },
   {
+    "type": "separator"
+  },
+  {
   "property": "art.work.filter_saturate",
   "label": "Art work saturation",
   "type": "string",
   "defaultValue": "1.1",
   "placeholder": "1.1"
+  },
+  {
+    "type": "separator"
   },
   {
   "property": "art.work.filter_contrast",
@@ -684,12 +828,18 @@
   "defaultValue": "0.9",
   "placeholder": "0.9"
   },
+  {
+    "type": "separator"
+  },
    {
   "property": "art.work.filter_opacity",
   "label": "Art work opacity",
   "type": "string",
   "defaultValue": "0.8",
   "placeholder": "0.8"
+  },
+  {
+    "type": "separator"
   },
   {
   "property": "media.player.psuedo_bg",
