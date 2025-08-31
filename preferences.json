@@ -30,6 +30,74 @@
     "size": "18px",
     "margin": "0 0 15px 0"
   },
+    {
+    "property": "change.logs.enabled",
+    "label": "Show Changelogs",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Hidden" },
+      { "value": 1, "label": "Show" }
+    ]
+  },
+   {
+    "type": "text",
+    "label": "1️⃣ added opition to change blur values of compact mode sidebar",
+    "size": "18px",
+    "margin": "0 0 15px 0",
+     "conditions": [
+      {
+        "if": {
+          "property": "change.logs.enabled",
+          "value": 1
+        }
+      }
+    ] 
+  },
+     {
+    "type": "text",
+    "label": "2️⃣ added opition to change color of workspace icon",
+    "size": "18px",
+    "margin": "0 0 15px 0",
+     "conditions": [
+      {
+        "if": {
+          "property": "change.logs.enabled",
+          "value": 1
+        }
+      }
+    ] 
+  },
+     {
+    "type": "text",
+    "label": "3️⃣ added opition to change accent color and blur values of url bar",
+    "size": "18px",
+    "margin": "0 0 15px 0",
+     "conditions": [
+      {
+        "if": {
+          "property": "change.logs.enabled",
+          "value": 1
+        }
+      }
+    ] 
+  },
+  {
+    "type": "text",
+    "label": " 🎫 Tip: you can enter var(--zen-primary-color) in rgba(x,x,x,x) type place holder to set its color to currect workspace color",
+    "size": "18px",
+    "margin": "0 0 15px 0",
+     "conditions": [
+      {
+        "if": {
+          "property": "change.logs.enabled",
+          "value": 1
+        }
+      }
+    ] 
+  },
  
  
   {
