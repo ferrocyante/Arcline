@@ -10,49 +10,77 @@
 
 
 
-@media -moz-pref("arcline.font", 1) {
+
 @font-face {
   font-family: "SF-Pro";
   src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/SF-Pro.ttf");
 }
-}
 
 
-@media -moz-pref("arcline.font", 2) {
+
+
 @font-face {
   font-family: "SF-Symbols";
   src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/SF-Symbols.ttf");
 }
-}
 
 
-@media -moz-pref("arcline.font", 3) {
+
+
   @font-face {
     font-family: "Nunito";
     src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/Nunito-VariableFont_wght.ttf");
     font-weight: 600;
     font-style: normal;
 }
-}
 
-@media -moz-pref("arcline.font", 4) {
+
+
 @font-face {
   font-family: "Suse";
   src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/SUSE-VariableFont_wght.ttf");
 }
-}
 
-@media -moz-pref("arcline.font", 5) {
+
+
 @font-face {
   font-family: "Roboto";
   src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/Roboto-VariableFont_wdth,wght.ttf");
 }
+
+@media (-moz-pref("arcline.font", "SF-Pro")) {
+  :root{
+    --arcline-font: "SF-Pro";
+  }
+}
+
+@media (-moz-pref("arcline.font", "SF-Symbols")) {
+  :root{
+    --arcline-font: "SF-Symbols";
+  }
+}
+
+@media (-moz-pref("arcline.font", "Nunito")) {
+  :root{
+    --arcline-font: "Nunito";
+  }
+}
+
+@media (-moz-pref("arcline.font", "Suse")) {
+  :root{
+    --arcline-font: "Suse";
+  }
+}
+
+@media (-moz-pref("arcline.font", "Roboto")) {
+  :root{
+    --arcline-font: "Roboto";
+  }
 }
 
 
-
+* {
+  font-family: var(--arcline-font), sans-serif; 
+}
 
     
-* {
-  font-family: "SF Pro", "SF-Symbols", "Nunito", "Suse" , "Roboto" ,  var(--mod-arcline-font), system-ui !important;
-}
