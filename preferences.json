@@ -14,90 +14,23 @@
   },
    {
     "type": "text",
-    "label": " ⚠️ Enabling arcline styling features which are Using heavy CSS filters like blur or such as making whole browser windows translucent may decrease your browser performance.  ",
+    "label": " ⚠️   Enabling arcline styling features which are Using heavy CSS filters like blur or such as making whole browser windows translucent may decrease your browser performance.  ",
     "size": "18px",
     "margin": "0 0 15px 0"
   },
    {
     "type": "text",
-    "label": " ☠️ some icons allignment maybe be broken becuase of scaling of your windows 11 or monitor resolution . although all icons are perfect on my machine at 125% scale of windows 11 and 1920 × 1080 screen resolution  ",
+    "label": " ☠️   some icons allignment maybe be broken becuase of scaling of your windows 11 or monitor resolution . although all icons are perfect on my machine at 125% scale of windows 11 and 1920 × 1080 screen resolution  ",
     "size": "18px",
     "margin": "0 0 15px 0"
   },
    {
     "type": "text",
-    "label": " 🧪 your can report issues on sine discord server or at github repo   ",
+    "label": " 🧪   your can report issues on sine discord server or at github repo   ",
     "size": "18px",
     "margin": "0 0 15px 0"
   },
-    {
-    "property": "change.logs.enabled",
-    "label": "Show Changelogs",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      { "value": 0, "label": "Hidden" },
-      { "value": 1, "label": "Show" }
-    ]
-  },
-   {
-    "type": "text",
-    "label": "1️⃣ added opition to change blur values of compact mode sidebar",
-    "size": "18px",
-    "margin": "0 0 15px 0",
-     "conditions": [
-      {
-        "if": {
-          "property": "change.logs.enabled",
-          "value": 1
-        }
-      }
-    ] 
-  },
-     {
-    "type": "text",
-    "label": "2️⃣ added opition to change color of workspace icon",
-    "size": "18px",
-    "margin": "0 0 15px 0",
-     "conditions": [
-      {
-        "if": {
-          "property": "change.logs.enabled",
-          "value": 1
-        }
-      }
-    ] 
-  },
-     {
-    "type": "text",
-    "label": "3️⃣ added opition to change accent color and blur values of url bar",
-    "size": "18px",
-    "margin": "0 0 15px 0",
-     "conditions": [
-      {
-        "if": {
-          "property": "change.logs.enabled",
-          "value": 1
-        }
-      }
-    ] 
-  },
-  {
-    "type": "text",
-    "label": " 🎫 Tip: you can enter var(--zen-primary-color) in rgba(x,x,x,x) type place holder to set its color to currect workspace color",
-    "size": "18px",
-    "margin": "0 0 15px 0",
-     "conditions": [
-      {
-        "if": {
-          "property": "change.logs.enabled",
-          "value": 1
-        }
-      }
-    ] 
-  },
+    
  
  
   {
@@ -956,4 +889,80 @@
     "type": "string",
     "placeholder": "API Key"
   }
+
+  {
+    "property": "change.logs.enabled",
+    "label": "Show Changelogs",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Hidden" },
+      { "value": 1, "label": "Show" }
+    ]
+  },
+   {
+    "type": "text",
+    "label": "1️⃣ added opition to change blur values of compact mode sidebar",
+    "size": "18px",
+    "margin": "0 0 15px 0",
+     "conditions": [
+      {
+        "if": {
+          "property": "change.logs.enabled",
+          "value": 1
+        }
+      }
+    ] 
+  },
+     {
+    "type": "text",
+    "label": "2️⃣ added opition to change color of workspace icon",
+    "size": "18px",
+    "margin": "0 0 15px 0",
+     "conditions": [
+      {
+        "if": {
+          "property": "change.logs.enabled",
+          "value": 1
+        }
+      }
+    ] 
+  },
+     {
+    "type": "text",
+    "label": "3️⃣ added opition to change accent color and blur values of url bar",
+    "size": "18px",
+    "margin": "0 0 15px 0",
+     "conditions": [
+      {
+        "if": {
+          "property": "change.logs.enabled",
+          "value": 1
+        }
+      }
+    ] 
+  },
+  {
+    "type": "text",
+    "label": " 🎫 Tip: you can enter var(--zen-primary-color) in rgba(x,x,x,x) type place holder to set its color to currect workspace color",
+    "size": "18px",
+    "margin": "0 0 15px 0",
+     "conditions": [
+      {
+        "if": {
+          "property": "change.logs.enabled",
+          "value": 1
+        }
+      }
+    ] 
+  },
+
+
+
+
+
+
+  
 ]
