@@ -703,22 +703,34 @@
     "margin": "32px 0 32px 0",
     "size": "25px"
   },
-  {
-    "property": "arcline.font",
-    "type": "dropdown",
-    "label": "Your browser font.",
-    "placeholder": false,
-    "value": "number",
-    "default": 1,
-    "options": [
-      { "value": 0, "label": "Custom" },
-      { "value": 1, "label": "SF Pro" },
-      { "value": 2, "label": "SF Pro Symbols" },
-      { "value": 3, "label": "Nunito (Arc default)" },
-      { "value": 4, "label": "Suse" },
-      { "value": 5, "label": "Roboto" }
-    ]
-  },
+     {
+        "type": "dropdown",
+        "property": "arcline-font",
+        "label": "Select the font for Arcline.",
+        "defaultValue": "Nunito",
+        "options": [
+            {
+                "label": "Nunito",
+                "value": "Nunito"
+            },
+            {
+                "label": "SF Pro",
+                "value": "SF-Pro"
+            },
+            {   
+                "label": "SF Symbols",
+                "value": "SF-Symbols"
+            },
+            {
+                "label": "Suse",
+                "value": "Suse"
+            },
+            {   
+                "label": "Roboto",
+                "value": "Roboto"
+            }
+        ]
+    },
   {
     "type": "separator"
   },
