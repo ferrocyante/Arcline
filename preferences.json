@@ -8,6 +8,31 @@
 
   {
     "type": "text",
+    "label": "📔 Note",
+    "margin": "30px 0 30px 0",
+    "size": "25px"
+  },
+   {
+    "type": "text",
+    "label": " ⚠️ Enabling arcline styling features which are Using heavy CSS filters like blur or such as making whole browser windows translucent may decrease your browser performance.  ",
+    "size": "18px",
+    "margin": "0 0 15px 0"
+  },
+   {
+    "type": "text",
+    "label": " ☠️ some icons allignment maybe be broken becuase of scaling of your windows 11 or monitor resolution . although all icons are perfect on my machine at 125% scale of windows 11 and 1920 × 1080 screen resolution  ",
+    "size": "18px",
+    "margin": "0 0 15px 0"
+  },
+   {
+    "type": "text",
+    "label": " 🧪 your can report issues on sine discord server or at github repo   ",
+    "size": "18px",
+    "margin": "0 0 15px 0"
+  },
+  
+  {
+    "type": "text",
     "label": "🔧 Core Firefox Behavior",
     "margin": "30px 0 30px 0",
     "size": "25px"
