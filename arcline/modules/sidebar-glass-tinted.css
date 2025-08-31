@@ -148,7 +148,7 @@
  
     background: #0009 !important;
 
-  backdrop-filter: blur(30px) saturate(1) contrast(1)    !important;
+  backdrop-filter: blur(var(--compact-sidebar-filter_blur)) saturate(1) contrast(1)    !important;
  
  
 }
