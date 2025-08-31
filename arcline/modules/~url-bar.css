@@ -235,7 +235,7 @@ transform: translate(47.3rem,0px) !important;
   
 /* Acrylic/Mica floating Urlbar */
 #urlbar[zen-floating-urlbar="true"] #urlbar-background {
-    background: var(var(--url-bar-filter_bg)) !important;
+    background: var(--url-bar-filter_bg) !important;
    backdrop-filter: blur(var(--url-bar-filter_blur)) brightness(1) saturate(1.1) contrast(1.1) !important;
   
    border-radius:  var(--url-bar-border_radius, 1.7rem) !important;
