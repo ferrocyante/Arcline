@@ -14,19 +14,19 @@
   },
    {
     "type": "text",
-    "label": " ⚠️   Enabling arcline styling features which are Using heavy CSS filters like blur or such as making whole browser windows translucent may decrease your browser performance.  ",
+    "label": " ⚠️ 1.)  Enabling arcline styling features which are Using heavy CSS filters like blur or such as making whole browser windows translucent may decrease your browser performance.  ",
     "size": "18px",
     "margin": "0 0 15px 0"
   },
    {
     "type": "text",
-    "label": " ☠️   some icons allignment maybe be broken becuase of scaling of your windows 11 or monitor resolution . although all icons are perfect on my machine at 125% scale of windows 11 and 1920 × 1080 screen resolution  ",
+    "label": " ☠️ 2.)  some icons allignment maybe be broken becuase of scaling of your windows 11 or monitor resolution . although all icons are perfect on my machine at 125% scale of windows 11 and 1920 × 1080 screen resolution  ",
     "size": "18px",
     "margin": "0 0 15px 0"
   },
    {
     "type": "text",
-    "label": " 🧪   your can report issues on sine discord server or at github repo   ",
+    "label": " 🧪 2.)  your can report issues on sine discord server or at github repo   ",
     "size": "18px",
     "margin": "0 0 15px 0"
   },
@@ -73,6 +73,17 @@
 {
   "property": "browser.chrome.toolbar_tips",
   "label": " Enable tab title preview on hover",
+  "type": "checkbox",
+  "default": false,
+  "value": false,
+  "force": true
+},
+  {
+    "type": "separator"
+  },
+  {
+  "property": "nglayout.enable_drag_images",
+  "label": " Enable tab preview while dragging and dropping the tab",
   "type": "checkbox",
   "default": false,
   "value": false,
