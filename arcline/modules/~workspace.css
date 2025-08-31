@@ -620,77 +620,15 @@ toolbarbutton[zen-workspace-id="{3a41c5b7-ec17-4682-82fa-5a1eaf5a4ce4}"].subview
 
 /*-----------------------------------split veiw modifications-----------------------------------*/
 
-tab-group[split-view-group] {
-  display: flex;
-  flex-wrap: nowrap;
+
+
+
+tab-group[split-view-group] .tab-group-container {
+
+
+width: 100% !important;
   border-radius: 12px !important;
-  padding: 0 2px;
-  margin-inline: var(--tab-block-margin);
-  margin-block: var(--tab-block-margin);
-  min-height: var(--tab-min-height);
-  outline: var(--tab-outline);
-  outline-offset: var(--tab-outline-offset);
-  outline-color: var(--tab-selected-outline-color);
-  transition: scale 0.1s ease;
-  align-items: center;
-  --zen-split-view-active-tab-bg: color-mix(in srgb, var(--zen-toolbar-element-bg), transparent 40%);
 
-  :root:not([zen-sidebar-expanded='true']) & {
-    padding: 0 2px;
-    --tab-min-height: 30px;
-    --tab-collapsed-width: 38px;
-    margin: 0 auto;
-    --tab-min-width: 34px;
-  }
+}
 
-  & > .tabbrowser-tab {
-    --tab-selected-bgcolor: var(--zen-split-view-active-tab-bg);
-    --tab-hover-background-color: transparent;
-    --tab-selected-shadow: none;
-    --border-radius-medium: var(--tab-border-radius);
-    --zen-active-tab-scale: 1;
-
-    :root[zen-sidebar-expanded='true'] & {
-      --tab-min-height: 28px;
-    }
-
-    container-type: inline-size;
-    container-name: browser-tab;
-
-    flex: 1 !important;
-    padding-inline: 2px !important;
-    overflow: clip;
-
-    &:not(:last-child)::after {
-      content: '';
-      width: 1px;
-      height: 16px;
-      background-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    :root:not([zen-sidebar-expanded='true']) &:not(:last-child)::after {
-      width: 16px;
-      height: 1px;
-      top: auto;
-      bottom: 0;
-      right: 50%;
-      transform: translateX(50%);
-    }
-
-    & .tab-content {
-      min-width: 62px !important;
-     margin-left: -2px !important;
-      :root[zen-sidebar-expanded='true'] & {
-        justify-content: unset !important;
-      }
-    }
-  }
-  
-  
-
-    }
   
