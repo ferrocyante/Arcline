@@ -1,17 +1,46 @@
+
+
+
+
+
+
+
+
+
+
+
+
 @media -moz-pref("arcline.font", 1) {
-  @font-face {
-    font-family: "SF Pro";
-    src: url("./arcline/fonts/SF-Pro.ttf");
-  }
+@font-face {
+  font-family: "SF-Pro";
+  src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/SF-Pro.ttf");
+}
 }
 
+
 @media -moz-pref("arcline.font", 2) {
+@font-face {
+  font-family: "SF-Symbols";
+  src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/SF-Symbols.ttf");
+}
+}
+
+
+@media -moz-pref("arcline.font", 3) {
   @font-face {
     font-family: "Nunito";
-    src: url("./arcline/fonts/Nunito-VariableFont_wght.ttf");
-  }
+    src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/Nunito-VariableFont_wght.ttf");
+    font-weight: 600;
+    font-style: normal;
 }
+}
+
+
+
+
+
+
     
 :root {
-  font-family: "SF Pro", "Nunito", var(--mod-arcline-font), system-ui !important;
+  font-family: "SF Pro", "SF-Symbols", "Nunito",  var(--mod-arcline-font), system-ui !important;
 }
