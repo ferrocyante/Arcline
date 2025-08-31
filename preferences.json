@@ -21,6 +21,9 @@
    "restart": true
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "zen.theme.gradient.show-custom-colors",
     "label": "Enable custom color picker",
     "default": true,
@@ -28,11 +31,17 @@
     "force": true
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "browser.tabs.closeTabByDblclick",
     "label": "Enable closing of tabs by double clicking on them",
     "default": true,
     "type": "checkbox",
     "force": true
+  },
+  {
+    "type": "separator"
   },
 {
   "property": "browser.chrome.toolbar_tips",
@@ -42,12 +51,18 @@
   "value": false,
   "force": true
 },
+  {
+    "type": "separator"
+  },
  {
     "property": "browser.search.suggest.enabled",
     "label": "Enable web search suggestions in url bar",
     "default": true,
     "type": "checkbox",
     "force": true
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "browser.urlbar.maxRichResults",
@@ -58,6 +73,9 @@
     "force": true
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "browser.uidensity",
     "label": "Browser density (0=Normal, 1=Compact, 2=Touch)",
     "type": "string",
@@ -66,12 +84,18 @@
     "force": true
   },
   {
+    "type": "separator"
+  },
+  {
     "property": "widget.non-native-theme.scrollbar.size.override",
     "label": "Scrollbar size (-1 to remove completely)",
     "type": "string",
     "value": "number",
     "default": 0,
     "force": true
+  },
+  {
+    "type": "separator"
   },
   {
     "property": "browser.urlbar.scotchBonnet.enableOverride",
