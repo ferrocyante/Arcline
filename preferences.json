@@ -139,6 +139,13 @@
     "defaultValue": "1.4rem",
     "placeholder": "1.4rem"
   },
+   {
+    "property": "url.bar.filter_blur",
+    "label": "url bar background blur value",
+    "type": "string",
+    "defaultValue": "64px",
+    "placeholder": "64px"
+  },
   {
   "property": "url.bar.position_top",
   "label": " position of  url bar from top ",
