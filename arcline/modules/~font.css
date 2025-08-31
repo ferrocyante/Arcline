@@ -35,12 +35,24 @@
 }
 }
 
+@media -moz-pref("arcline.font", 4) {
+@font-face {
+  font-family: "Suse";
+  src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/SUSE-VariableFont_wght.ttf");
+}
+}
 
+@media -moz-pref("arcline.font", 5) {
+@font-face {
+  font-family: "Roboto";
+  src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/Roboto-VariableFont_wdth,wght.ttf");
+}
+}
 
 
 
 
     
 :root {
-  font-family: "SF Pro", "SF-Symbols", "Nunito",  var(--mod-arcline-font), system-ui !important;
+  font-family: "SF Pro", "SF-Symbols", "Nunito", "Suse" , "Roboto" ,  var(--mod-arcline-font), system-ui !important;
 }
