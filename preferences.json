@@ -253,6 +253,13 @@
       { "value": 2, "label": "Default" }
     ]
   },
+   {
+    "property": "compact.sidebar.filter_blur",
+    "label": "blur value of sidebar in compact mode",
+    "type": "string",
+    "defaultValue": "100px",
+    "placeholder": "100px"
+  },
     {
     "property": "arcline.compact.sidebar.border",
     "label": "Enable arcline compact sidebar border",
