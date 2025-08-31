@@ -53,6 +53,6 @@
 
 
     
-:root {
+* {
   font-family: "SF Pro", "SF-Symbols", "Nunito", "Suse" , "Roboto" ,  var(--mod-arcline-font), system-ui !important;
 }
