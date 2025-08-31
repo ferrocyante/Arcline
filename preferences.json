@@ -140,6 +140,13 @@
     "placeholder": "1.4rem"
   },
    {
+    "property": "url.bar.filter_bg",
+    "label": "accent color of url bar",
+    "type": "string",
+    "defaultValue": "rgba(25, 25, 25, 0.69)",
+    "placeholder": "rgba(25, 25, 25, 0.69)"
+  },
+   {
     "property": "url.bar.filter_blur",
     "label": "url bar background blur value",
     "type": "string",
