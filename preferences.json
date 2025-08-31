@@ -888,7 +888,7 @@
     "label": "Mistral API key for tab sorting button",
     "type": "string",
     "placeholder": "API Key"
-  }
+  },
 
   {
     "property": "change.logs.enabled",
@@ -957,7 +957,7 @@
         }
       }
     ] 
-  },
+  }
 
 
 
