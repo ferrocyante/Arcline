@@ -853,8 +853,8 @@
   {
     "type": "text",
     "label": "🤖 AI Features",
-    "margin": "30px 0 30px 0",
-    "size": "20px"
+    "margin": "35px 0 35px 0",
+    "size": "25px"
   },
   {
     "property": "extensions.tab_sort.mistral_api_key",
