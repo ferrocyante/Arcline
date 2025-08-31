@@ -713,8 +713,10 @@
     "options": [
       { "value": 0, "label": "Custom" },
       { "value": 1, "label": "SF Pro" },
-      { "value": 1, "label": "SF Pro Symbols" },
-      { "value": 2, "label": "Nunito (Arc default)" }
+      { "value": 2, "label": "SF Pro Symbols" },
+      { "value": 3, "label": "Nunito (Arc default)" },
+      { "value": 4, "label": "Suse" },
+      { "value": 5, "label": "Roboto" }
     ]
   },
   {
