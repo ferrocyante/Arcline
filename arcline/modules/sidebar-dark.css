@@ -119,7 +119,7 @@
 :root[zen-compact-mode="true"] #navigator-toolbox:not([animate='true']) #titlebar {
  
  
-     backdrop-filter: saturate(3) contrast(2) blur(100px) !important;
+     backdrop-filter: saturate(3) contrast(2) blur(var(--compact-sidebar-filter_blur)) !important;
        
         background-color: var(--natsumi-mat-hz-background) !important;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) !important;
