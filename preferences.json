@@ -34,7 +34,7 @@
     "property": "change.logs.enabled",
     "label": "Show Changelogs",
     "type": "checkbox",
-    "default": false
+    "default": true
   },
    {
     "type": "text",
@@ -93,7 +93,6 @@
     ] 
   },
  
-  
   {
     "type": "text",
     "label": "🔧 Core Firefox Behavior",
