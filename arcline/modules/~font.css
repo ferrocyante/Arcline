@@ -31,7 +31,11 @@
   }
 }
 
-
+@media (-moz-pref("arcline-font", "Bricolage")) {
+  :root{
+    --arcline-font: "Bricolage";
+  }
+}
 
 
 
@@ -78,6 +82,13 @@
 @font-face {
   font-family: "Roboto";
   src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/Roboto-VariableFont_wdth,wght.ttf");
+  font-weight: var(--arcline-font_weight) !important;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bricolage";
+  src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/BricolageGrotesque-Regular.ttf");
   font-weight: var(--arcline-font_weight) !important;
   font-style: normal;
 }
