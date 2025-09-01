@@ -550,10 +550,7 @@
     ]
   },
    {
-    "property": "mod.arcline.font",
-    "type": "string",
-    "defaultValue": "SF Pro",
-    "placeholder": "Font name installed on your computer",
+   "type": "separator",
     "label": "Custom display font name",
     "conditions": [
       {"if":{"property":"arcline.container","value":2}}
