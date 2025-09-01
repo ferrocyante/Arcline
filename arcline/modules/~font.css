@@ -1,7 +1,35 @@
 
 
 
+@media (-moz-pref("arcline-font", "SF-Pro")) {
+  :root{
+    --arcline-font: "SF-Pro";
+  }
+}
 
+@media (-moz-pref("arcline-font", "SF-Symbols")) {
+  :root{
+    --arcline-font: "SF-Symbols";
+  }
+}
+
+@media (-moz-pref("arcline-font", "Nunito")) {
+  :root{
+    --arcline-font: "Nunito";
+  }
+}
+
+@media (-moz-pref("arcline-font", "Suse")) {
+  :root{
+    --arcline-font: "Suse";
+  }
+}
+
+@media (-moz-pref("arcline-font", "Roboto")) {
+  :root{
+    --arcline-font: "Roboto";
+  }
+}
 
 
 
@@ -54,35 +82,7 @@
   font-style: normal;
 }
 
-@media (-moz-pref("arcline-font", "SF-Pro")) {
-  :root{
-    --arcline-font: "SF-Pro";
-  }
-}
 
-@media (-moz-pref("arcline-font", "SF-Symbols")) {
-  :root{
-    --arcline-font: "SF-Symbols";
-  }
-}
-
-@media (-moz-pref("arcline-font", "Nunito")) {
-  :root{
-    --arcline-font: "Nunito";
-  }
-}
-
-@media (-moz-pref("arcline-font", "Suse")) {
-  :root{
-    --arcline-font: "Suse";
-  }
-}
-
-@media (-moz-pref("arcline-font", "Roboto")) {
-  :root{
-    --arcline-font: "Roboto";
-  }
-}
 
 
 * {
