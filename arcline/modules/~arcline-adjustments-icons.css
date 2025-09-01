@@ -95,7 +95,8 @@ transform-origin: center !important;
       .tabbrowser-tab {
         #tab-label-input,
         .tab-label {
-          font-size: 13.7px !important;
+          font-size: var(--tab-font_size) !important;
+			font-weight: var(--tab-font_weight) !important;
         }}}
 
 
@@ -786,7 +787,7 @@ transform:  scaleX(-1) !important;
     #reload-button {
 transform: translate(-2px, 0px )!important;
 margin-left: 1px !important;
-margin-right: -17px !important;
+margin-right: -18px !important;
   /* This is now your primary color control. */
  list-style-image: none !important;
 }
