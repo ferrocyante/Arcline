@@ -728,6 +728,10 @@
             {   
                 "label": "Roboto",
                 "value": "Roboto"
+            },
+             {   
+                "label": "Bricolage Grotesque",
+                "value": "Bricolage"
             }
         ]
     },
