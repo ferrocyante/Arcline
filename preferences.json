@@ -735,13 +735,22 @@
     "type": "separator"
   },
    {
-    "property": "arcline.font.weight",
-    "label": "font weight",
+    "property": "tab.font_size",
+    "label": "  tab text font size",
     "type": "string",
-    "defaultValue": "400",
-    "placeholder": "600"
+    "defaultValue": "13.7px",
+    "placeholder": "13.7px"
   },
-  
+   {
+    "type": "separator"
+  },
+   {
+    "property": "tab.font_weight",
+    "label": "tab text font weight",
+    "type": "string",
+    "defaultValue": "500",
+    "placeholder": "500"
+  },
 
   
   {
