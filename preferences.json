@@ -30,6 +30,72 @@
     "size": "18px",
     "margin": "0 0 15px 0"
   },
+   {
+    "type": "separator"
+  },
+  {
+    "property": "change.logs.enabled",
+    "label": "Show Changelogs",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Hidden" },
+      { "value": 1, "label": "Shown" }
+    ]
+  },
+    {
+    "property": "chnage.log1",
+    "type": "string",
+    "defaultValue": "1️⃣",
+    "placeholder": "1️⃣",
+    "label": "added opition to change blur values of compact mode sidebar",
+    "conditions": [
+      {"if":{"property":"change.logs.enabled","value":1}}
+    ]
+  },
+     {
+    "property": "chnage.log2",
+    "type": "string",
+    "defaultValue": "2️⃣",
+    "placeholder": "2️⃣",
+    "label": "added opition to change color of workspace icon",
+    "conditions": [
+      {"if":{"property":"change.logs.enabled","value":1}}
+    ]
+  },
+   {
+    "property": "chnage.log3",
+    "type": "string",
+    "defaultValue": "3️⃣",
+    "placeholder": "3️⃣",
+    "label": "added opition to change accent color and blur values of url bar",
+    "conditions": [
+      {"if":{"property":"change.logs.enabled","value":1}}
+    ]
+  },
+  {
+    "property": "chnage.log4",
+    "type": "string",
+    "defaultValue": "4️⃣",
+    "placeholder": "4️⃣",
+    "label": "Tip: you can enter var(--zen-primary-color) in rgba(x,x,x,x) type place holder to set its color to currect workspace color",
+    "conditions": [
+      {"if":{"property":"change.logs.enabled","value":1}}
+    ]
+  },  
+
+
+
+
+
+
+
+
+
+
+  
  
  
  
@@ -547,13 +613,6 @@
       { "value": 1, "label": "skewed lined tab" },
       { "value": 2, "label": "pulsating dot" },
       { "value": 3, "label": "simple dot" }
-    ]
-  },
-   {
-   "type": "separator",
-    "label": "Custom display font name",
-    "conditions": [
-      {"if":{"property":"arcline.container","value":2}}
     ]
   },
   {
