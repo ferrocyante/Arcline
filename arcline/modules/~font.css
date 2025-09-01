@@ -42,7 +42,7 @@
 @font-face {
   font-family: "SF-Pro";
   src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/SF-Pro.ttf");
-    font-weight: 600;
+   font-weight: var(--arcline-font_weight) !important;
 }
 
 
@@ -51,7 +51,7 @@
 @font-face {
   font-family: "SF-Symbols";
   src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/SF-Symbols.ttf");
-  font-weight: 600;
+  font-weight: var(--arcline-font_weight) !important;
 }
 
 
@@ -60,7 +60,7 @@
   @font-face {
     font-family: "Nunito";
     src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/Nunito-VariableFont_wght.ttf");
-    font-weight: 600;
+    font-weight: var(--arcline-font_weight) !important;
     font-style: normal;
 }
 
@@ -69,7 +69,7 @@
 @font-face {
   font-family: "Suse";
   src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/SUSE-VariableFont_wght.ttf");
-  font-weight: 600;
+  font-weight: var(--arcline-font_weight) !important;
   font-style: normal;
 }
 
@@ -78,7 +78,7 @@
 @font-face {
   font-family: "Roboto";
   src: url("https://github.com/ferrocyante/Arcline/raw/refs/heads/main/arcline/fonts/Roboto-VariableFont_wdth,wght.ttf");
-  font-weight:  600;
+  font-weight: var(--arcline-font_weight) !important;
   font-style: normal;
 }
 
