@@ -124,20 +124,9 @@
     "conditions": [
       {"if":{"property":"change.logs.enabled","value":1}}
     ]
-  }
-
-
-
-
-
-
-
-
+  },
 
   
- 
- 
- 
   {
     "type": "text",
     "label": "🔧 Core Firefox Behavior",
