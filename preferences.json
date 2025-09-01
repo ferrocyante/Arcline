@@ -736,7 +736,7 @@
   },
    {
     "property": "arcline.font_weight",
-    "label": "font weight",
+    "label": "global font weight",
     "type": "string",
     "defaultValue": "400",
     "placeholder": "400"
