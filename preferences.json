@@ -731,6 +731,16 @@
             }
         ]
     },
+   {
+    "type": "separator"
+  },
+   {
+    "property": "arcline.font_weight",
+    "label": "font weight",
+    "type": "string",
+    "defaultValue": "400",
+    "placeholder": "400"
+  },
   {
     "type": "separator"
   },
