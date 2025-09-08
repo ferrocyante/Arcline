@@ -146,7 +146,7 @@
 :root[zen-compact-mode="true"] #navigator-toolbox:not([animate='true']) #titlebar {
  
  
-    background: #0009 !important;
+    background:  var(--compact-sidebar-filter_bg)  !important;
 
   backdrop-filter: blur(var(--compact-sidebar-filter_blur)) saturate(1) contrast(1)    !important;
  
