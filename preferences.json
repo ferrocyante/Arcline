@@ -948,7 +948,7 @@
    {
   "type": "checkbox",
   "property": "arcline.script2",
-  "defaultValue": true,
+  "defaultValue": false,
   "restart": true,
   "label": "Tab sorting and clear script"
 },
