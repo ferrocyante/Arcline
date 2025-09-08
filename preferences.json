@@ -968,7 +968,7 @@
     {
   "type": "checkbox",
   "property": "arcline.script5",
-  "defaultValue": true,
+  "defaultValue": false,
   "restart": true,
   "label": "media player cover art script"
 },
