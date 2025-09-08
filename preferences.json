@@ -953,7 +953,7 @@
   "label": "Tab sorting and clear script"
 },
   {
-    "type": "checkbox"
+    "type": "seprator"
   },
     {
   "type": "checkbox",
