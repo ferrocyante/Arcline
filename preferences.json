@@ -946,17 +946,17 @@
     "size": "25px"
   },
    {
-  "type": "boolean",
+  "type": "checkbox",
   "property": "arcline.script2",
   "defaultValue": true,
   "restart": true,
   "label": "Tab sorting and clear script"
 },
   {
-    "type": "separator"
+    "type": "checkbox"
   },
     {
-  "type": "boolean",
+  "type": "checkbox",
   "property": "arcline.script3",
   "defaultValue": false,
   "restart": true,
@@ -966,7 +966,7 @@
     "type": "separator"
   },
     {
-  "type": "boolean",
+  "type": "checkbox",
   "property": "arcline.script5",
   "defaultValue": true,
   "restart": true,
@@ -976,7 +976,7 @@
     "type": "separator"
   },
      {
-  "type": "boolean",
+  "type": "checkbox",
   "property": "arcline.script6",
   "defaultValue": false,
   "restart": true,
