@@ -956,7 +956,7 @@
     "type": "seprator"
   },
     {
-  "type": "checkbox",
+  "type": "checkbox", 
   "property": "arcline.script3",
   "defaultValue": false,
   "restart": true,
