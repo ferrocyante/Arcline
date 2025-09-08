@@ -1,5 +1,7 @@
 
 
+
+
 .tab-audio-button {
   display: none !important;
 }
@@ -346,7 +348,7 @@ browser {
 
 
 
-media (-moz-pref("arcline.script2")) {
+@media (-moz-pref("arcline.script2")) {
 
 /*-------------------------------------------------------------------------------------------------------*/
 
@@ -552,5 +554,40 @@ media (-moz-pref("arcline.script2")) {
 
 }
 
-media not (-moz-pref("arcline.script2")) {  }
+@media not (-moz-pref("arcline.script2")) {
+/* ==========================================================================
+   Pinned Tabs Separator
+   ========================================================================== */
+.pinned-tabs-container-separator {
+  background: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2)) !important;
+  margin: 8px auto;
+  border: none;
+  height: 2px !important;
+  max-height: 5px !important;
+ 
+  width: 95% !important; /* Slightly less than full width */
+  transition:
+    margin 0.1s ease-in-out,
+    background 0.1s ease-in-out,
+    max-height 0.1s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  opacity: 1;
+
+  #tabbrowser-tabs[movingtab] & {
+    transition:
+      margin 0.1s ease-in-out,
+      background 0.1s ease-in-out,
+      max-height 0.1s ease-in-out,
+      transform 0.1s ease-in-out;
+  }
+
+  .zen-workspace-pinned-tabs-section[hide-separator] & {
+    max-height: 0;
+    margin: 0 auto;
+  }
+}
+
+}
+
 
