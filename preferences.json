@@ -938,9 +938,57 @@
     "placeholder": "API Key"
   },
 
+
+  {
+    "type": "text",
+    "label": "🥀 Js script preferences",
+    "margin": "32px 0 32px 0",
+    "size": "25px"
+  },
    {
+  "type": "boolean",
+  "property": "arcline.script2",
+  "defaultValue": true,
+  "restart": true,
+  "label": "Tab sorting and clear script"
+},
+  {
     "type": "separator"
   },
+    {
+  "type": "boolean",
+  "property": "arcline.script3",
+  "defaultValue": false,
+  "restart": true,
+  "label": "tab closing poping animation script"
+},
+  {
+    "type": "separator"
+  },
+    {
+  "type": "boolean",
+  "property": "arcline.script5",
+  "defaultValue": true,
+  "restart": true,
+  "label": "media player cover art script"
+},
+  {
+    "type": "separator"
+  },
+     {
+  "type": "boolean",
+  "property": "arcline.script6",
+  "defaultValue": false,
+  "restart": true,
+  "label": "Workspace icon animation script"
+},
+  {
+    "type": "separator"
+  },
+ 
+
+
+  
   {
     "property": "change.logs.enabled",
     "label": "Show Changelogs",
