@@ -355,8 +355,18 @@
       { "value": 1, "label": "Dark" },
       { "value": 2, "label": "Dark Tinted" },
       { "value": 3, "label": "Glass Tinted" },
-      { "value": 5, "label": "Glass" },
+      { "value": 5, "label": "Custom" },
       { "value": 4, "label": "Default" }
+    ]
+  },
+  {
+    "property": "compact.sidebar.filter_bg",
+    "type": "string",
+    "defaultValue": "rgba(255,255,255,0.5)",
+    "placeholder": "var(--zen-primary-color)",
+    "label": "appearance of compact side bar background",
+    "conditions": [
+      {"if":{"property":"arcline.compact.sidebar.bg","value":5}}
     ]
   },
   {
