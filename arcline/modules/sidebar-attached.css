@@ -22,8 +22,8 @@
    
 
        
-   top: calc(var(--zen-element-separation) / 2)  !important;
-  margin-left: calc(var(--zen-element-separation) / 2)  !important;
+   top: calc(var(--zen-element-separation) / 1.5)  !important;
+  margin-left: calc(var(--zen-element-separation) / 2.1)  !important;
   
  
   
@@ -32,7 +32,7 @@
 scale: 1 !important;
   padding: 7px !important;
     
-height: calc(100% - (var(--zen-element-separation) * 0.9)) !important;
+height: calc(100% - (var(--zen-element-separation) * 1.2)) !important;
 
   
   .titlebar-buttonbox {
@@ -53,7 +53,7 @@ height: calc(100% - (var(--zen-element-separation) * 0.9)) !important;
   
 }
       
-   
+   @media (-moz-pref("browser.tabs.allow_transparent_browser")) {
 
 #browser::after {
   
@@ -100,7 +100,7 @@ height: calc(100% - (var(--zen-element-separation) * 0.9)) !important;
     }
   }
   
-      
+  }
       
   
 }
