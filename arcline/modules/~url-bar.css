@@ -168,12 +168,18 @@
   }
 }
 
-
-
-
-
+  
+  @media (-moz-pref("browser.tabs.allow_transparent_browser")) {
 #urlbar[open][zen-floating-urlbar='true'] {
-   top: calc(var(--my-global-zen-top) + var(--url-bar-position_top)) !important;
+ 
+  top: calc(var(--my-global-zen-top) + var(--url-bar-position_top)) !important;
+  }
+
+  }
+
+  
+  
+#urlbar[open][zen-floating-urlbar='true'] {
 
   min-width: 57rem !important;
 
@@ -261,7 +267,7 @@ transform: translate(0px, 2px) !important;
 }
 
 /* === In your userChrome.css === */
-
+@media (-moz-pref("browser.tabs.allow_transparent_browser")) {
 /* Make sure the #browser element is a positioning context */
 #browser {
   position: relative !important; /* Or absolute/fixed depending on context */
@@ -310,7 +316,7 @@ body:has(#urlbar[open]) #browser::before {
   opacity: 1 !important;
 }
 
-
+  }
 
 
 
@@ -355,13 +361,6 @@ body:has(#urlbar[open]) #browser::before {
 
 
 
-.urlbarView-row {
-  &:not([type="tip"], [type="dynamic"]) {
-    :root[uidensity="touch"] & {
-      padding-block: 4px !important;
-    }
-  }
-}
 
 #urlbar[breakout][breakout-extend] {
     & > .urlbar-input-container {
@@ -1229,4 +1228,6 @@ browser, .browserSidebarContainer.deck-selected {
   
   
   
+
+
 
