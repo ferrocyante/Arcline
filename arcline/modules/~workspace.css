@@ -1,27 +1,3 @@
-/* ==== Zen ‑ cleanup overrides ===================================== */
-
-/* 1️⃣  Nuke borders and outlines on the workspace buttons */
-#zen-workspaces-button toolbarbutton,
-.zen-current-workspace-indicator-icon,
-#zen-workspaces-button toolbarbutton[dragged='true'],
-#zen-workspace-creation .zen-workspace-creation-icon-label::before {
-  border: none !important;
-  outline: none !important;
-}
-
-
-
-/* 3️⃣  Remove the dashed “drop” outline shown while re‑ordering */
-#zen-workspaces-button toolbarbutton[dragged='true'] {
-  outline: none !important;
-}
-
-/* 4️⃣  Optional: turn off hover backdrop the pseudo‑elements sat on */
-#zen-workspaces-button toolbarbutton:hover,
-#zen-workspaces-button toolbarbutton[active='true'] {
-  background: transparent !important;
-}
-
 
 
 
@@ -58,8 +34,6 @@
 }
 
 
-/*******LIGHT ENDS****************************/
-
 /*---------------------------------------------------------------------------------------------------------*/
 
 
@@ -90,127 +64,8 @@
 }
 
 }
-.zen-current-workspace-indicator::before {
-  width: var(--zen-indicator-bg-width) !important;
-  height: var(--zen-indicator-bg-height) !important;
-  background: transparent !important;
-  opacity: 0 !important;
-  transition: none !important;
-}
-
-.tab-label-container {
-  overflow: hidden;
-
-  #tabbrowser-tabs:not([secondarytext-unsupported], [orient=vertical]) & {
-    height: 2.7em;
-  }
-
-  &[pinned] {
-    width: 0;
-  }
-
-  &[textoverflow] {
-    &[labeldirection=ltr],
-    &:not([labeldirection]):-moz-locale-dir(ltr),
-    &[labeldirection=rtl],
-    &:not([labeldirection]):-moz-locale-dir(rtl) {
-      mask-image: none !important; /* Remove fade gradient */
-      text-overflow: ellipsis; /* Show ellipsis instead of fade */
-    }
-  }
-}
-  
 
 
-
-
-/*-----------------------------------split veiw modifications-----------------------------------*/
-
-tab-group[split-view-group] {
-  display: flex;
-  flex-wrap: nowrap;
-  border-radius: 12px !important;
-  padding: 0 2px;
-  margin-inline: var(--tab-block-margin);
-  margin-block: var(--tab-block-margin);
-  min-height: var(--tab-min-height);
-  outline: var(--tab-outline);
-  outline-offset: var(--tab-outline-offset);
-  outline-color: var(--tab-selected-outline-color);
-  transition: scale 0.1s ease;
-  align-items: center;
-  --zen-split-view-active-tab-bg: color-mix(in srgb, var(--zen-toolbar-element-bg), transparent 40%);
-
-  :root:not([zen-sidebar-expanded='true']) & {
-    padding: 0 2px;
-    --tab-min-height: 30px;
-    --tab-collapsed-width: 38px;
-    margin: 0 auto;
-    --tab-min-width: 34px;
-  }
-
-  & > .tabbrowser-tab {
-    --tab-selected-bgcolor: var(--zen-split-view-active-tab-bg);
-    --tab-hover-background-color: transparent;
-    --tab-selected-shadow: none;
-    --border-radius-medium: var(--tab-border-radius);
-    --zen-active-tab-scale: 1;
-
-    :root[zen-sidebar-expanded='true'] & {
-      --tab-min-height: 28px;
-    }
-
-    container-type: inline-size;
-    container-name: browser-tab;
-
-    flex: 1 !important;
-    padding-inline: 2px !important;
-    overflow: clip;
-
-    &:not(:last-child)::after {
-      content: '';
-      width: 1px;
-      height: 16px;
-      background-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    :root:not([zen-sidebar-expanded='true']) &:not(:last-child)::after {
-      width: 16px;
-      height: 1px;
-      top: auto;
-      bottom: 0;
-      right: 50%;
-      transform: translateX(50%);
-    }
-
-    & .tab-content {
-      min-width: 62px !important;
-     margin-left: -6px !important;
-      :root[zen-sidebar-expanded='true'] & {
-        justify-content: unset !important;
-      }
-    }
-  }
-  
-  
-  
-  
-  
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-/*------------------------------------------------------------------------------------*/
-  
   
   
   
@@ -389,21 +244,15 @@ tab-group[split-view-group] {
 }
 
 
+
+
+
+
 /* --- YOUR CUSTOM ICON STYLES --- */
 /* These rules define the actual background images for your icons. */
 /* The visibility and display are handled by the generic rules above. */
 
 
-
-/*
-  =======================================================
-  Part 1: Define Your Color Variable (if not already defined)
-  This is the single source of truth for your icon colors.
-  =======================================================
-*/
-:root {
-  --toolbox-textcolor: #FFFFFF; /* <-- EDIT THIS COLOR (e.g., white) */
-}
 
 
 /*
@@ -573,51 +422,6 @@ toolbarbutton[zen-workspace-id="{3a41c5b7-ec17-4682-82fa-5a1eaf5a4ce4}"].subview
 /*---------------------------------------------------------------------------------------------------------*/
 
 
-
-
-
-
-:root {
-  /* Force override CSS variables */
-  --zen-indicator-bg-width: 0 !important;
-  --zen-indicator-bg-height: 0 !important;
-}
-
-
-.zen-current-workspace-indicator::before {
-  width: var(--zen-indicator-bg-width) !important;
-  height: var(--zen-indicator-bg-height) !important;
-  background: transparent !important;
-  opacity: 0 !important;
-  transition: none !important;
-}
-
-.tab-label-container {
-  overflow: hidden;
-
-  #tabbrowser-tabs:not([secondarytext-unsupported], [orient=vertical]) & {
-    height: 2.7em;
-  }
-
-  &[pinned] {
-    width: 0;
-  }
-
-  &[textoverflow] {
-    &[labeldirection=ltr],
-    &:not([labeldirection]):-moz-locale-dir(ltr),
-    &[labeldirection=rtl],
-    &:not([labeldirection]):-moz-locale-dir(rtl) {
-      mask-image: none !important; /* Remove fade gradient */
-      text-overflow: ellipsis; /* Show ellipsis instead of fade */
-    }
-  }
-}
-  
-
-
-
-
 /*-----------------------------------split veiw modifications-----------------------------------*/
 
 
@@ -625,10 +429,101 @@ toolbarbutton[zen-workspace-id="{3a41c5b7-ec17-4682-82fa-5a1eaf5a4ce4}"].subview
 
 tab-group[split-view-group] .tab-group-container {
 
-
+margin-left: -1px !important;
 width: 100% !important;
   border-radius: 12px !important;
 
 }
 
+  
+
+
+
+
+/*-----------------------------------split veiw modifications-----------------------------------*/
+
+tab-group[split-view-group] {
+  display: flex;
+  flex-wrap: nowrap;
+  border-radius: 12px !important;
+  padding: 0 2px;
+  margin-inline: var(--tab-block-margin);
+  margin-block: var(--tab-block-margin);
+  min-height: var(--tab-min-height);
+  outline: var(--tab-outline);
+  outline-offset: var(--tab-outline-offset);
+  outline-color: var(--tab-selected-outline-color);
+  transition: scale 0.1s ease;
+  align-items: center;
+  --zen-split-view-active-tab-bg: color-mix(in srgb, var(--zen-toolbar-element-bg), transparent 40%);
+
+  :root:not([zen-sidebar-expanded='true']) & {
+    padding: 0 2px;
+    --tab-min-height: 30px;
+    --tab-collapsed-width: 38px;
+    margin: 0 auto;
+    --tab-min-width: 34px;
+  }
+
+  & > .tabbrowser-tab {
+    --tab-selected-bgcolor: var(--zen-split-view-active-tab-bg);
+    --tab-hover-background-color: transparent;
+    --tab-selected-shadow: none;
+    --border-radius-medium: var(--tab-border-radius);
+    --zen-active-tab-scale: 1;
+
+    :root[zen-sidebar-expanded='true'] & {
+      --tab-min-height: 28px;
+    }
+
+    container-type: inline-size;
+    container-name: browser-tab;
+
+    flex: 1 !important;
+    padding-inline: 2px !important;
+    overflow: clip;
+
+    &:not(:last-child)::after {
+      content: '';
+      width: 1px;
+      height: 16px;
+      background-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    :root:not([zen-sidebar-expanded='true']) &:not(:last-child)::after {
+      width: 16px;
+      height: 1px;
+      top: auto;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    & .tab-content {
+      min-width: 62px !important;
+     margin-left: -6px !important;
+      :root[zen-sidebar-expanded='true'] & {
+        justify-content: unset !important;
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+/*------------------------------------------------------------------------------------*/
   
