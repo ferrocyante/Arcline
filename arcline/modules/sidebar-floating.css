@@ -42,9 +42,6 @@
   
 
 
-
-/* === BLUR COMPACT SIDEBAR ================================================================================================ */
-/* Compact sidebar with blurred transparent background */
 :root[zen-compact-mode="true"]  #navigator-toolbox:not([animate='true'])  #titlebar {
  
    
@@ -81,7 +78,7 @@ height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
   
 }
       
-   
+   @media (-moz-pref("browser.tabs.allow_transparent_browser")) {
 
  #browser::after {
   
@@ -126,7 +123,7 @@ height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
   }
   
 
-
+  }
 
 
 
@@ -139,3 +136,4 @@ height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
 
 @media (-moz-pref("arcline.compact.sidebar.position", 4)) {
 }
+
