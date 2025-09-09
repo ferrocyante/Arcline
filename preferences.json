@@ -958,7 +958,7 @@
    {
   "type": "checkbox",
   "property": "arcline.script2",
-  "defaultValue": false,
+  "defaultValue": true,
   "restart": true,
   "label": "Tab sorting and clear script"
 },
@@ -968,7 +968,7 @@
     {
   "type": "checkbox", 
   "property": "arcline.script3",
-  "defaultValue": false,
+  "defaultValue": true,
   "restart": true,
   "label": "tab closing poping animation script"
 },
@@ -978,7 +978,7 @@
     {
   "type": "checkbox",
   "property": "arcline.script5",
-  "defaultValue": false,
+  "defaultValue": true,
   "restart": true,
   "label": "media player cover art script"
 },
@@ -988,7 +988,7 @@
      {
   "type": "checkbox",
   "property": "arcline.script6",
-  "defaultValue": false,
+  "defaultValue": true,
   "restart": true,
   "label": "Workspace icon animation script"
 },
