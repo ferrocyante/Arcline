@@ -107,7 +107,7 @@
     "label": "URL bar search results count",
     "type": "string",
     "value": "number",
-    "default": 5,
+    "default": 25,
     "force": true
   },
   {
@@ -359,12 +359,15 @@
       { "value": 4, "label": "Default" }
     ]
   },
+   {
+    "type": "separator"
+  },
   {
     "property": "compact.sidebar.filter_bg",
     "type": "string",
     "defaultValue": "rgba(255,255,255,0.5)",
     "placeholder": "var(--zen-primary-color)",
-    "label": "appearance of compact side bar background",
+    "label": "appearance of compact side bar background(set above style to custom)",
     "conditions": [
       {"if":{"property":"arcline.compact.sidebar.bg","value":5}}
     ]
@@ -991,114 +994,5 @@
   "defaultValue": true,
   "restart": true,
   "label": "Workspace icon animation script"
-},
-  {
-    "type": "separator"
-  },
- 
-
-
-  
-  {
-    "property": "change.logs.enabled",
-    "label": "Show Changelogs",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 0,
-    "options": [
-      { "value": 0, "label": "Hidden" },
-      { "value": 1, "label": "Shown" }
-    ]
-  },
-  {
-    "property": "change.log1",
-    "type": "string",
-    "defaultValue": "You can use values like '50px', '10rem', or '0' to disable.",
-    "placeholder": "You can use values like '50px', '10rem', or '0' to disable.",
-    "label": "1️⃣ added opition to change blur values of compact mode sidebar",
-    "conditions": [
-      {"if":{"property":"change.logs.enabled","value":1}}
-    ]
-  },
-     {
-    "property": "change.log2",
-    "type": "string",
-    "defaultValue": "Try changing color through color picker to see the change",
-    "placeholder": "Try changing color through color picker to see the change",
-    "label": "2️⃣ added opition to set color of workspace icon same as of workpace",
-    "conditions": [
-      {"if":{"property":"change.logs.enabled","value":1}}
-    ]
-  },
-   {
-    "property": "change.log3",
-    "type": "string",
-    "defaultValue": "For color: `rgba(25, 25, 25, 0.7)`. For blur: `60px`.",
-    "placeholder": "For color: `rgba(25, 25, 25, 0.7)`. For blur: `60px`.",
-    "label": "3️⃣ added opition to change accent color and blur values of url bar",
-    "conditions": [
-      {"if":{"property":"change.logs.enabled","value":1}}
-    ]
-  },
-  {
-    "property": "change.log4",
-    "type": "string",
-    "defaultValue": "Example: color-mix(in srgb, var(--zen-primary-color) 70%, transparent)",
-    "placeholder": "Example: color-mix(in srgb, var(--zen-primary-color) 70%, transparent)",
-    "label": "4️⃣ Tip: you can enter var(--zen-primary-color) in rgba(x,x,x,x) type place holder to set its color to currect workspace color",
-    "conditions": [
-      {"if":{"property":"change.logs.enabled","value":1}}
-    ]
-  },
-   {
-    "property": "change.log5",
-    "type": "string",
-    "defaultValue": "Example: 13.7px, 1.1rem, 14px",
-    "placeholder": "Example: 13.7px, 1.1rem, 14px",
-    "label": "5️⃣ added option to customize tab text font size",
-    "conditions": [
-      {"if":{"property":"change.logs.enabled","value":1}}
-    ]
-  },
-   {
-    "property": "change.log6",
-    "type": "string",
-    "defaultValue": "Example: 'Nunito', 'SF-Pro', 'Roboto'",
-    "placeholder": "Example: 'Nunito', 'SF-Pro', 'Roboto'",
-    "label": "6️⃣ added new section to select different fonts for the theme",
-    "conditions": [
-      {"if":{"property":"change.logs.enabled","value":1}}
-    ]
-  },
-   {
-    "property": "change.log7",
-    "type": "string",
-    "defaultValue": "Example: 400 for Nunito, 600 for Suse",
-    "placeholder": "Example: 400 for Nunito, 600 for Suse",
-    "label": "7️⃣ added option to change global font weight",
-    "conditions": [
-      {"if":{"property":"change.logs.enabled","value":1}}
-    ]
-  },
-  {
-    "property": "change.log8",
-    "type": "string",
-    "defaultValue": "Example: 500 for normal tab text, 700 for bold",
-    "placeholder": "Example: 500 for normal tab text, 700 for bold",
-    "label": "8️⃣ added option to customize tab text font weight",
-    "conditions": [
-      {"if":{"property":"change.logs.enabled","value":1}}
-    ]
-  },
-  {
-    "property": "change.log9",
-    "type": "string",
-    "defaultValue": "Improved mute icon and playing from a tab playing any media",
-    "placeholder": "Qol",
-    "label": "9️⃣ added option to customize tab text font weight",
-    "conditions": [
-      {"if":{"property":"change.logs.enabled","value":1}}
-    ]
-  }
+}
 ]
