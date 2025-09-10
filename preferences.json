@@ -940,33 +940,9 @@
 
   {
     "type": "text",
-    "label": "🤖 AI Features",
-    "margin": "35px 0 35px 0",
-    "size": "25px"
-  },
-  {
-    "property": "extensions.tab_sort.mistral_api_key",
-    "label": "Mistral API key for tab sorting button",
-    "type": "string",
-    "placeholder": "API Key"
-  },
-
-
-  {
-    "type": "text",
     "label": "🥀 Js script preferences",
     "margin": "32px 0 32px 0",
     "size": "25px"
-  },
-   {
-  "type": "checkbox",
-  "property": "arcline.script2",
-  "defaultValue": true,
-  "restart": true,
-  "label": "Tab sorting and clear script"
-},
-  {
-    "type": "separator"
   },
     {
   "type": "checkbox", 
