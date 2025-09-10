@@ -5,6 +5,33 @@
   }
 }
 
+/* --- Global URL Bar Scroll Styling (Corrected) --- */
+
+#urlbar-results.zen-global-scrollable {
+  overflow-y: auto !important;
+  
+  /* CORRECTED: The max-height is now calculated for 5.5 items,
+     showing 5 full results and a hint of the 6th. */
+  max-height: calc(5.5 * 48px) !important;
+ 
+
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+    padding-top: 0px !important;
+    padding-bottom: 2px !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--zen-primary-color) transparent !important;
+}
+
+#urlbar-results.zen-global-scrollable .urlbarView-row {
+  
+  margin-block-end: 2px !important;
+}
+
+.urlbarView-button {
+ margin-right: 8px !important;
+}
+
 :root[zen-single-toolbar='true'] {
 
 /*--------------------------------------------------------*/
