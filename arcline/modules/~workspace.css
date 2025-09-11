@@ -1,4 +1,33 @@
+.zen-current-workspace-indicator::before {
+  width: var(--zen-indicator-bg-width) !important;
+  height: var(--zen-indicator-bg-height) !important;
+  background: transparent !important;
+  opacity: 0 !important;
+  transition: none !important;
+}
 
+.tab-label-container {
+  overflow: hidden;
+
+  #tabbrowser-tabs:not([secondarytext-unsupported], [orient=vertical]) & {
+    height: 2.7em;
+  }
+
+  &[pinned] {
+    width: 0;
+  }
+
+  &[textoverflow] {
+    &[labeldirection=ltr],
+    &:not([labeldirection]):-moz-locale-dir(ltr),
+    &[labeldirection=rtl],
+    &:not([labeldirection]):-moz-locale-dir(rtl) {
+      mask-image: none !important; /* Remove fade gradient */
+      text-overflow: ellipsis; /* Show ellipsis instead of fade */
+    }
+  }
+}
+  
 
 
 @media  (-moz-pref("arcline.workspace.icon", 1)) {
