@@ -154,6 +154,7 @@
     "property": "zen.view.experimental-force-window-controls-left",
     "label": "EXPERIMENTAL: Force window controls to the left",
     "default": true,
+    "value": true,
     "type": "checkbox",
     "force": true,
     "restart": true
@@ -167,7 +168,7 @@
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
-    "default": 2,
+    "default": 1,
     "options": [
       { "value": 1, "label": "Left" },
       { "value": 2, "label": "Right" }
@@ -493,7 +494,7 @@
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
-    "default": 0,
+    "default": 2,
     "options": [
       { "value": 0, "label": "dont show" },
       { "value": 1, "label": "show" },
@@ -540,7 +541,7 @@
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
-    "default": 1,
+    "default": 0,
     "options": [
       { "value": 0, "label": "Disabled" },
       { "value": 1, "label": "Enabled" }
