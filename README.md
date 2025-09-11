@@ -1,93 +1,95 @@
-<p align="center">
-    <h1 align="center">Arcline 🌌</h2>
-</p>
+<h1 align="center">
+  <img src="https://github.com/user-attachments/assets/a2d6fe15-4b14-49a8-bb18-3756430b8a22" width="62" height="62" />
+  <sup><sub>
+    <img src="https://github.com/user-attachments/assets/626f8d8d-6684-4648-96ea-b6ac78c08697" width="160" height="165" alt="Arcline"/>
+  </sub></sup>
+</h1>
 
-<p align="center">How I customize my zen browser 🌸</p>
+
+
+<p align="center">How I customize my zen browser </p>
 
 ![image](https://github.com/user-attachments/assets/150a3d3b-6484-4b5b-864e-aeba23096602)
 
 ###
 
-# 🍋‍🟩 Arcline Browser Theme  
-
-**A modern, minimalist browser theme inspired by organic architecture**  
 
 
 
-## 🌶️ Stable Release Coming Soon! ##
-
- **CSS UPLOADED IS NOT OF STABLE RELEASE**  it is of beta , waiting for tab folders to get implemented on zen for stable release
-_Please see bottom of readme for simple installation._
-## Stable Release Features
-
-- **URL-bar** with custom scaling animations
+# 🍋‍🟩 Features
 
 
+
+<details>
+<summary>Click to show list of features</summary>
+
+ ## **Light Mode and Dark Mode**  (nubulu mode coming soon)
+
+
+
+<img width="1163" height="833" alt="image" src="https://github.com/user-attachments/assets/8876c762-9978-4bb5-ad3b-627fffe71a3a" /> <img width="1192" height="863" alt="image" src="https://github.com/user-attachments/assets/d46f74dc-15d0-4f91-b9b0-0c1ded84f73d" />
+
+
+
+ ## **Arc-like url bar**  scroll for more search results
+
+ 
+https://github.com/user-attachments/assets/3e2eb112-e661-49cf-80f4-76d5791fa0b6
+
+
+    
+ ## **OG-URL-bar** with custom scaling animations (deprecated)
 
 https://github.com/user-attachments/assets/27ae1ab4-4ec8-4645-884f-98f808d4f06f
 
 
+</details>
 
-- **ARC like tidy tabs** with improved animations
 
-https://github.com/user-attachments/assets/a1b63b7a-e32d-4d84-9132-584bff56f6bd
-
-- **Pinned Extension** also supports pinning of extensions like essentials may have width conflict with `arch.four.essen` preference
-
-![image](https://github.com/user-attachments/assets/b31d35ec-af3e-49ef-a149-ae545b720683)
-
-- **Performance-optimized** CSS animations
-- **platform consistency** across Windows11
-- **Enhanced compatibility** with Zen Browser v3.2+
-
-<p align="left">Arc-h is a personal-grade theme for Zen browser that reimagines the browser interface with focus-preserving design principles.<br><br>This userChrome customization offers:<br>- Adaptive transparency effects<br>- Ergonomic spacing system<br>- Unified visual language<br>- Configurable accent colors</p>
-
-###
-
-## 🛠️ Setup Instructions  
+# 🛠️ Setup Instructions  
 
 ### 1. Profile Preparation  
-- Works best on **new profiles** or profiles without conflicting CSS modifications
-- maybe or mayne not be Compatible with other sine mods
+- First try on **new profiles** or profiles without conflicting CSS modifications
+- Other Sine mods may or may not be compatible
 
 ### 2. Performance Considerations  
-- Hardware acceleration recommended for best animation performance
-- URL bar animations automatically disable during media playback
+- heavy filter using effects or pref like making browser background transparent can lower down performance of the browser
+- Js scripts like for workspace aniamtion can also affect permformance you can turn themm off in arcline settings
 
 
-<h2 align="left">💿 Installation</h2>
-
-###
-
-<h4 align="left">1. Theme Installation</h4>
-
-1. Install latest version of [Sine](https://github.com/CosmoCreeper/Sine/releases/tag/v1.1.8) by following all prompted instructions.
-2. Restart Zen Browser.
-3. Open settings and go the the "Sine" tab.
-4. Locate the local installation section.
-5. Install `ferrocyante/Arcline`.
-6. Restart Zen Browser.
-7. Customize the settings to match your prefrences.
-8. Enjoy!
-
+# ⚙️ Installation (through sine)
 
 ###
 
+### 1. Theme Installation
+
+
+- Install latest version of [Sine](https://github.com/CosmoCreeper/Sine/releases/tag/v1.1.8) by following all prompted instructions.  
+- Restart Zen Browser.  
+- Open settings and go to the **"Sine"** tab.  
+- Locate the **Local Installation** section. 
+- Type `ferrocyante/Arcline` or paste the GitHub repo link itself  in the placeholder and click **Install**.  
+- A popup for restart should appear — click on that to restart Zen.  
+- 🎉 Enjoy your new theme!  
+
+
 ###
 
-<h4 align="left">2. Visual Enhancements (Windows 11)</h4>
+###
+
+### 2. Visual Enhancements (Windows 11)
 
 ###
 
 
-<p align="left">1. Install <a href="https://github.com/MicaForEveryone/MicaForEveryone">MicaForEveryone</a><br>
-2. Add process rule for Zen with:<br>
+- Install <a href="https://github.com/MicaForEveryone/MicaForEveryone">MicaForEveryone
+- Add process rule for Zen with:<br>
    - Backdrop Type: Acrylic<br>
    - Enable "Blur Behind" in advanced settings</p>
 
 ###
 
-<h4 align="left">3. Optional Components</h4>
+### 3. Optional Components
 
 ###
 
@@ -96,8 +98,6 @@ https://github.com/user-attachments/assets/a1b63b7a-e32d-4d84-9132-584bff56f6bd
 
 
 
-## 🙏 Acknowledgments  
-Special thanks to **Mr. Green**, creator of the **Natsumi Browser**, for inspiring this project.  
 
 
 ###
@@ -112,6 +112,4 @@ Special thanks to **Mr. Green**, creator of the **Natsumi Browser**, for inspiri
 
 ###
 
-<div align="center">
-  <img src="https://img.shields.io/github/release/[yourusername]/arc-h?style=for-the-badge&label=STABLE%20RELEASE">
-</div>
+
