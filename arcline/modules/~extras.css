@@ -355,7 +355,7 @@ browser {
   margin: 8px auto;
   border: none;
   height: 1.5px !important;
-  max-height: 5px !important;
+
  
   width: 95% !important; /* Slightly less than full width */
   transition:
