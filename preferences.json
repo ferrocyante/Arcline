@@ -96,6 +96,7 @@
     "property": "browser.search.suggest.enabled",
     "label": "Enable web search suggestions in url bar",
     "default": true,
+    "value": true,
     "type": "checkbox",
     "force": true
   },
@@ -107,7 +108,7 @@
     "label": "URL bar search results count",
     "type": "string",
     "value": "number",
-    "default": 25,
+    "default": 50,
     "force": true
   },
   {
@@ -129,7 +130,7 @@
     "label": "Scrollbar size (-1 to remove completely)",
     "type": "string",
     "value": "number",
-    "default": 0,
+    "default": -1,
     "force": true
   },
   {
