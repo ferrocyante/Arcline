@@ -42,7 +42,7 @@
   {
     "property": "browser.tabs.allow_transparent_browser",
     "label": "Allow browser to be transparent",
-    "default": true,
+    "default": false,
     "type": "checkbox",
     "force": true,
    "restart": true
