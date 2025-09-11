@@ -19,8 +19,8 @@
     margin-bottom: 8px !important;
     padding-top: 0px !important;
     padding-bottom: 2px !important;
-  scrollbar-width: thin !important;
-  scrollbar-color: var(--zen-primary-color) transparent !important;
+  scrollbar-width: none !important;
+  scrollbar-color: transparent !important;
 }
 
 #urlbar[searchmode] #urlbar-results {
