@@ -6,7 +6,16 @@
 }
 
 /* --- Global URL Bar Scroll Styling (Corrected) --- */
+/* ====================================================================================================
+// FINAL FIX: Attach Bookmark Star to its Row
+// ==================================================================================================== */
 
+/* This is the key fix. It establishes a new "positioning context" for each result row.
+   Now, any absolutely positioned children (like the bookmark star icon) will be
+   positioned relative to their own row, not a distant parent. */
+.urlbarView-row {
+  position: relative !important;
+}
 #urlbar[searchmode] #urlbar-results {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
