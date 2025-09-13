@@ -97,6 +97,7 @@
 
 
 * {
+    font-weight: var(--arcline-font_weight) !important;
   font-family: var(--arcline-font), sans-serif; 
 }
 
