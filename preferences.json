@@ -541,7 +541,7 @@
     "type": "dropdown",
     "placeholder": false,
     "value": "number",
-    "default": 0,
+    "default": 1,
     "options": [
       { "value": 0, "label": "Disabled" },
       { "value": 1, "label": "Enabled" }
@@ -800,6 +800,9 @@
     "type": "string",
     "defaultValue": "550",
     "placeholder": "550"
+  },
+   {
+    "type": "separator"
   },
   {
     "property": "url.font_size",
