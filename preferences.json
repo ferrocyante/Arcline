@@ -781,6 +781,26 @@
     "defaultValue": "500",
     "placeholder": "500"
   },
+   {
+    "type": "separator"
+  },
+   {
+    "property": "ws.font_size",
+    "label": " workspace text font size",
+    "type": "string",
+    "defaultValue": "13.9px",
+    "placeholder": "13.9px"
+  },
+   {
+    "type": "separator"
+  },
+   {
+    "property": "ws.font_weight",
+    "label": "workspace name text font weight",
+    "type": "string",
+    "defaultValue": "550",
+    "placeholder": "550"
+  },
 
   
   {
