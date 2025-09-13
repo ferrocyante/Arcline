@@ -560,4 +560,60 @@ tab-group[split-view-group] {
   
   
 /*------------------------------------------------------------------------------------*/
+@media  (-moz-pref("arcline.experiment1")) {
+
+
+/* --- CSS for Zen Workspace Content Animation --- */
+/* ====================================================================================================
+// CSS for Zen Workspace Slide Animation (FINAL - The Correct Way)
+// ==================================================================================================== */
+
+/* 1. The "Stage": This prepares the container that holds all the workspaces. */
+#tabbrowser-arrowscrollbox {
+  position: relative !important;
+  /* This is crucial: it prevents the sliding workspaces from creating scrollbars. */
+  overflow: hidden !important;
+}
+
+/* 2. The "Actors": This styles the individual workspace containers for animation. */
+zen-workspace {
+  /* This allows us to layer and slide the workspaces independently. */
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
   
+  /* The animation engine. It's fast, smooth, and GPU-accelerated. */
+  transition: transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              opacity 300ms ease-out !important;
+  
+  /* A performance hint for the browser. */
+  will-change: transform;
+}
+
+/* 3. The Animation States: These are the classes our script will apply. */
+
+/* --- Moving FORWARD (e.g., swipe left, shortcut right) --- */
+zen-workspace.is-entering-from-right {
+  z-index: 2 !important; /* The new workspace is on top. */
+  transform: translateX(100%);
+}
+zen-workspace.is-exiting-to-left {
+  z-index: 1 !important; /* The old workspace is behind. */
+  transform: translateX(-30%);
+  opacity: 0;
+}
+
+/* --- Moving BACKWARD (e.g., swipe right, shortcut left) --- */
+zen-workspace.is-entering-from-left {
+  z-index: 2 !important;
+  transform: translateX(-100%);
+}
+zen-workspace.is-exiting-to-right {
+  z-index: 1 !important;
+  transform: translateX(30%);
+  opacity: 0;
+}
+
+}
