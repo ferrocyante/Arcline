@@ -801,6 +801,23 @@
     "defaultValue": "550",
     "placeholder": "550"
   },
+  {
+    "property": "url.font_size",
+    "label": " url bar (in the side bar) text font size",
+    "type": "string",
+    "defaultValue": "13px",
+    "placeholder": "13px"
+  },
+   {
+    "type": "separator"
+  },
+   {
+    "property": "url.font_weight",
+    "label": "url bar (in the side bar) font weight",
+    "type": "string",
+    "defaultValue": "510",
+    "placeholder": "510"
+  },
 
   
   {
