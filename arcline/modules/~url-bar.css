@@ -58,14 +58,10 @@ transform: translate(0px, 2px) !important;
 
 .urlbar-input {
  
-    font-size: 13px !important;
-   /* color: #FFFFFF !important;*/
-  /*  padding-right: 12px !important;*/
-   font-weight: 510 !important;
-/* padding-top: 0px !important;*/
- 
+    font-size: var(--url-font_szie) !important;
   
-  
+   font-weight: var(--url-font_weight) !important;
+
 }
 
   #urlbar-searchmode-switcher {
