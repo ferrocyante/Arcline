@@ -1012,5 +1012,19 @@
   "defaultValue": true,
   "restart": true,
   "label": "Workspace icon animation script"
+},
+
+
+   {
+    "type": "text",
+    "label": "☠️ Experimental (might break/lag)",
+    "margin": "32px 0 32px 0",
+    "size": "25px"
+  },
+    {
+  "type": "checkbox", 
+  "property": "arcline.experiment1",
+  "defaultValue": true,
+  "label": "increase easing of workspace switching aniamtion might"
 }
 ]
