@@ -58,7 +58,7 @@ transform: translate(0px, 2px) !important;
 
 .urlbar-input {
  
-    font-size: var(--url-font_szie) !important;
+    font-size: var(--url-font_size) !important;
   
    font-weight: var(--url-font_weight) !important;
 
