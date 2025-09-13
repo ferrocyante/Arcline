@@ -63,18 +63,23 @@
 }
 
 
+.zen-current-workspace-indicator-name {
+
+  font-size: var(--ws-font_size) !important; 
+  font-weight: var(--ws-font_weight) !important;
+ 
+}
+
 /*---------------------------------------------------------------------------------------------------------*/
 
 
 
 @media not (-moz-pref("arcline.superpin", 1)) {
-/* Increase current workspace indicator text */
+
 .zen-current-workspace-indicator-name {
   filter: brightness(75%) !important;
   margin-left: 0px !important;
 
-  font-size: 13.9px !important; /* Default: small (~11px) */
-  font-weight: 550 !important;
   opacity: 0.8 !important;
 }
 
