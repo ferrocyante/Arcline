@@ -1024,7 +1024,7 @@
     {
   "type": "checkbox", 
   "property": "arcline.experiment1",
-  "defaultValue": true,
+  "defaultValue": false,
   "label": "increase easing of workspace switching aniamtion might"
 }
 ]
