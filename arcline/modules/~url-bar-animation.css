@@ -2,8 +2,7 @@
   /* This is CRITICAL: It tells Firefox to animate any change to the 'height' property */
   transition: height 180ms ease-in-out !important;
   
-  /* Hide overflow by default to prevent content from spilling during animations */
-  overflow: hidden !important;
+
 }
 
 
