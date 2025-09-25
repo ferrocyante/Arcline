@@ -62,7 +62,7 @@
   
   min-width: 15px !important;
   border-radius: 8px !important;
-scale: 1 !important;
+
  
     
 min-height: calc(100% + (var(--zen-element-separation) * 1) - 2px) !important;
@@ -150,7 +150,7 @@ min-height: calc(100% + (var(--zen-element-separation) * 1) - 2px) !important;
    
   min-width: 15px !important;
   border-radius: 11px !important;
-scale: 1 !important;
+
   padding: 8px !important;
     
 height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
