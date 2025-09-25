@@ -1,0 +1,128 @@
+/* In userChrome.css */
+#urlbar-results {
+  /* This is CRITICAL: It tells Firefox to animate any change to the 'height' property */
+  transition: height 180ms ease-in-out !important;
+  
+  /* Hide overflow by default to prevent content from spilling during animations */
+  overflow: hidden !important;
+}
+
+@media (-moz-pref("zen.urlbar.behavior", "float")) {
+            #urlbar {
+              
+                transition: top 0.5s ease,
+                    width 0.3s ease;
+            }
+            #urlbar[open][zen-floating-urlbar="true"] {
+                --urlbar-container-height: 4.5rem !important;
+                min-width: min(60%, 10rem) !important;
+               
+                width: min(70%, 57rem) !important;
+
+                
+                & #urlbar-background {
+                   
+                    
+                    transition: border-radius 0.4s ease !important;
+                }
+                
+                & .urlbarView {
+
+                    transition: 
+
+                        opacity 0.1s ease !important;
+                    
+                   
+                }
+            }
+        }
+
+
+
+/* =================================================================================== */
+/*  Zen Floating URL Bar - Initial Reveal Animation (Works with Animation Script)      */
+/* =================================================================================== */
+
+@media (-moz-pref("zen.urlbar.behavior", "float")) {
+  /*
+   * STATE 1: HIDDEN
+   * When the urlbar is open but the user IS NOT typing.
+   */
+  #urlbar[open]:not([usertyping=""]) > .urlbarView {
+    max-height: 0 !important;      /* Collapse the height */
+
+    overflow: hidden !important;   /* Crucial: hide the content inside */
+    
+    /* Define the animation for when it closes */
+    transition:
+      max-height 0.4s ease !important;
+
+  }
+
+  /*
+   * STATE 2: VISIBLE
+   * When the urlbar is open AND the user IS typing.
+   */
+  #urlbar[open][usertyping=""] > .urlbarView {
+    /*
+     * Use a max-height much larger than the panel will ever be.
+     * Our JavaScript's 'height' property will control the actual height,
+     * but this allows the panel to animate open from 0.
+     */
+    max-height: 500px !important;  /* Allow it to grow */
+   
+
+    /* Define the animation for when it opens */
+    transition:
+      max-height 0.3s ease !important;
+
+  }
+}
+
+
+
+
+
+
+@keyframes urlbar-bounce-and-shadow-pulse {
+  /* --- TIMELINE START --- */
+  0% {
+    scale: 1;
+    box-shadow: 0 0 20px 5px transparent; /* Glow is OFF */
+  }
+  
+  /* --- GLOW APPEARS --- */
+  25% {
+    /* The glow quickly fades in to full brightness */
+    box-shadow: 0 0 20px 5px color-mix(in srgb, var(--arcline-search-gradient-start) 60%, transparent); /* Glow is ON */
+  }
+
+  /* --- BOUNCE & GLOW HOLD --- */
+  50% {
+    scale: 0.93;
+    box-shadow: 0 0 80px 8px color-mix(in srgb, var(--arcline-search-gradient-start) 80%, transparent); /* Glow STAYS ON */
+  }
+  80% {
+    scale: 0.95;
+    box-shadow: 0 0 120px 8px color-mix(in srgb, var(--arcline-search-gradient-start) 80%, transparent); /* Glow STAYS ON */
+  }
+  
+  /* --- GLOW FADES OUT & BOUNCE SETTLES --- */
+  100% {
+    scale: 0.98;
+    box-shadow: 0 0 120px 8px transparent; /* Glow is OFF */
+  }
+}
+
+/* Part 2: Prepare the URL bar (no changes here) */
+#urlbar {
+  transform-origin: left !important;
+
+}
+
+/* Part 3: Trigger the animation (no changes here) */
+#urlbar[searchmode] {
+  /* You can also adjust the master duration here. Try 500ms for a slower overall effect. */
+  animation: urlbar-bounce-and-shadow-pulse 450ms ease-out forwards;
+    border-radius:   var(--url-bar-border_radius, 1.7rem) !important;
+}
