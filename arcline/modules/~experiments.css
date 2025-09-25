@@ -13,13 +13,14 @@ zen-folder {
     }
   
   & > label {
-      width: 100% !important;
+      width: 100% !important;         
+
       background: transparent !important;
       border: none !important;
       color: var(--sidebar-text-color) !important;
       margin: 0 !important;
-      font-weight: 500 !important;
-      font-size: 13.8px !important;
+      font-weight: calc(var(--tab-font_weight) + 10)  !important;
+      font-size: calc(var(--tab-font_size) + 0.5px) !important;
       display: flex;
     margin-top: 1px !important;
     margin-left: 2px !important;
@@ -42,27 +43,6 @@ zen-folder {
   
 }
 
-
-
-    .tab-group-folder-icon {
-      width: 30px !important;
-      height: 32px !important;
-      align-content: center;
-      pointer-events: none;
-      position: absolute;
-left: 3px !important;
-      pointer-events: none;
-
-      :root[zen-sidebar-expanded] & {
-        left: 2px;
-      }
-
-      & svg image {
-        fill-opacity: 0.9;
-        -moz-context-properties: fill, fill-opacity;
-        fill: var(--zen-folder-stroke);
-      }
-    }
 
 
 @media  (-moz-pref("arcline.folder.popup", 1)) {
