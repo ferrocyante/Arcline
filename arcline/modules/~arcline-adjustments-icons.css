@@ -654,9 +654,17 @@ scale: 0.8 !important;
   margin-right: -6px !important;
   margin-left: -6px !important;
 }
+ @media (-moz-pref("arcline.nav.icon", 1))  {
+#back-button {
+	list-style-image: url("chrome://browser/skin/back.svg") !important;
+}
 
+#forward-button {
+	list-style-image: url("chrome://browser/skin/forward.svg") !important;
+}
+ }
 
-
+	 @media (-moz-pref("arcline.nav.icon", 0))  {
 #back-button {
   /* This is now your primary color control. */
   position: relative !important;
@@ -728,7 +736,7 @@ transform:  scaleX(-1) !important;
  right: 21px !important;
 }
   
-  
+	 }
 
     #reload-button {
 transform: translate(-2px, 0px )!important;
