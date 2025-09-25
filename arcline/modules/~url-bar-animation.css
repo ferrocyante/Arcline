@@ -1,7 +1,7 @@
 #urlbar-results {
   /* This is CRITICAL: It tells Firefox to animate any change to the 'height' property */
   transition: height 180ms ease-in-out !important;
-  
+    overflow-y:  auto !important;
 
 }
 
