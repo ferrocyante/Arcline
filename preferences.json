@@ -672,8 +672,8 @@
     "value": "number",
     "default": 0,
     "options": [
-      { "value": 0, "label": "Enabled" },
-      { "value": 1, "label": "Disabled" }
+      { "value": 0, "label": "Disabled" },
+      { "value": 1, "label": "Enabled" }
     ]
   },
   {
