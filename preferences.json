@@ -665,6 +665,21 @@
     "type": "separator"
   },
   {
+    "property": "arcline.nav.icon",
+    "label": "Apply old zen navigation icon",
+    "type": "dropdown",
+    "placeholder": false,
+    "value": "number",
+    "default": 0,
+    "options": [
+      { "value": 0, "label": "Enabled" },
+      { "value": 1, "label": "Disabled" }
+    ]
+  },
+  {
+    "type": "separator"
+  },
+  {
     "property": "arcline.compact.mode.full.screen.mode",
     "label": "Enable marginless fullscreen compact mode",
     "type": "dropdown",
