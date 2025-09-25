@@ -1,4 +1,3 @@
-/* In userChrome.css */
 #urlbar-results {
   /* This is CRITICAL: It tells Firefox to animate any change to the 'height' property */
   transition: height 180ms ease-in-out !important;
@@ -6,6 +5,9 @@
   /* Hide overflow by default to prevent content from spilling during animations */
   overflow: hidden !important;
 }
+
+
+ @media (-moz-pref("arcline.url.bar.animation", 1))  {
 
 @media (-moz-pref("zen.urlbar.behavior", "float")) {
             #urlbar {
@@ -38,11 +40,13 @@
         }
 
 
-
+}
 /* =================================================================================== */
 /*  Zen Floating URL Bar - Initial Reveal Animation (Works with Animation Script)      */
 /* =================================================================================== */
 
+
+ @media (-moz-pref("arcline.url.bar.minimal", 1))  {
 @media (-moz-pref("zen.urlbar.behavior", "float")) {
   /*
    * STATE 1: HIDDEN
@@ -80,7 +84,7 @@
 }
 
 
-
+}
 
 
 
