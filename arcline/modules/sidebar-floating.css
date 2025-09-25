@@ -1,18 +1,36 @@
- @media  (-moz-pref("arcline.compact.sidebar.border", 1)) {
-#navigator-toolbox:not([animate='true']) #titlebar {
-     
-        &::before {
-          outline: none !important;
-           box-shadow: 
+
+  
+#main-window #navigator-toolbox #titlebar #zen-toolbar-background::before,
+#main-window #navigator-toolbox #titlebar #zen-toolbar-background::after {
+
+  background: transparent !important;
+}
+
+
+
+@media  (-moz-pref("arcline.compact.sidebar.border", 1)) {
+
+
+#main-window #navigator-toolbox #titlebar #zen-toolbar-background::before,
+#main-window #navigator-toolbox #titlebar #zen-toolbar-background::after {
+  outline: none !important;
+
+}
+
+
+#main-window #navigator-toolbox #titlebar #zen-toolbar-background {
+
+
+  
+  outline: none !important;
+
+  box-shadow: 
     /* Layer 2: The Inner Light Glow (TOP) */
     inset 0 0 0 var(--compact-sidebar-in-border_width , 1px) var(--compact-sidebar-in-border_opacity , 0.15),
     
     /* Layer 1: The Outer Dark Frame (MIDDLE) */
     0 0 0 var(--compact-sidebar-out-border_width , 0.5px) var(--compact-sidebar-out-border_opacity , 1) !important;
-  
-  }
-  
-  }
+}
 
 }
 
@@ -27,16 +45,6 @@
 
 
 
-#navigator-toolbox:not([animate='true'])  #navigator-toolbox:not([animate='true'])  #titlebar {
-     
-        &::before {
-        
-  
-  }
-        border-radius: 1px !important;
-         
-  
-  }
   
   
   
@@ -46,8 +54,7 @@
  
    
 
-       
-   top: calc(var(--zen-element-separation) / 0.8)  !important;
+         top: calc(var(--zen-element-separation) / 0.8)  !important;
   margin-left: calc(var(--zen-element-separation) / 0.83)  !important;
   
  
@@ -59,24 +66,29 @@
     
 height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
 
-  
+   
+
   .titlebar-buttonbox {
 
   margin-top: 1px !important;
 
   }
-
-  
-
-
-
-
-
-  
+ 
  
 
   
 }
+
+
+      
+  
+  
+  
+  
+  
+  
+  
+  
       
    @media (-moz-pref("browser.tabs.allow_transparent_browser")) {
 
@@ -136,4 +148,6 @@ height: calc(100% - (var(--zen-element-separation) * 2.43)) !important;
 
 @media (-moz-pref("arcline.compact.sidebar.position", 4)) {
 }
+
+
 

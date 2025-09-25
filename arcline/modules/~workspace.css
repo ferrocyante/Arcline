@@ -150,97 +150,6 @@
   /* --zen-dock-container-background: rgba(0,0,0,0.05); */ /* For debugging container area */
 }
 
-#zen-workspaces-button {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end; /* Aligns icons to bottom for upward scaling */
-  padding: var(--zen-dock-container-padding);
-  /* background-color: var(--zen-dock-container-background); */
-  -moz-box-direction: normal !important; /* Ensure horizontal layout for Zen */
- gap: var(--zen-dock-dynamic-gap) !important;/* JS adds margin to buttons, so gap isn't strictly needed here */
-}
-
-
-.subviewbutton {
-  /* ... your existing styles ... */
-  transition: transform 0.1s ease-out,
-              opacity 0.1s ease-out,
-              filter 0.1s ease-out,
-              /* Potentially add margin transition if not using gap and applying margins */
-              width 0.1s ease-out, /* If their perceived width changes affecting spacing */
-              height 0.1s ease-out;
-}
-
-#zen-workspaces-button .subviewbutton {
-  width: var(--zen-dock-icon-base-width);
-  height: var(--zen-dock-icon-base-height);
-  margin: var(--zen-dock-icon-margin);
-  padding: 0 !important;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative; /* For pseudo-elements and z-index */
-
-  background: none !important;
-  border-radius: var(--zen-dock-icon-border-radius) !important;
-
-  /* Default state for JS to override during animation */
-  transform: scale(1.0);
-  transform-origin: bottom center !important;
-
-  transition-property: transform, opacity, filter !important;
-  transition-duration: var(--zen-dock-transition-duration) !important;
-  transition-timing-function:
-    var(--zen-dock-transition-easing-transform), /* For transform */
-    var(--zen-dock-transition-easing-opacity),   /* For opacity */
-    var(--zen-dock-transition-easing-filter)    /* For filter */ !important;
-  z-index: 1;
-}
-
-/* --- Initial state controlled by JS, but these are fallbacks / base for active tab --- */
-#zen-workspaces-button .subviewbutton {
-  opacity: var(--zen-dock-icon-initial-opacity) !important;
-  filter: grayscale(var(--zen-dock-icon-initial-grayscale)) !important;
-}
-
-#zen-workspaces-button .subviewbutton[active="true"] {
-  opacity: var(--zen-dock-icon-active-opacity) !important;
-  filter: grayscale(var(--zen-dock-icon-active-grayscale)) !important;
-}
-
-@media  (-moz-pref("arcline.workspace.bottom.icon", 0)) {
-/* --- Styling for Inactive Workspace Buttons (Grey Dot) --- */
-#zen-workspaces-button .subviewbutton:not([active="true"]) .zen-workspace-icon {
-  /* Hide actual icon content by default for inactive, non-hovered buttons */
-  visibility: hidden;
-  opacity: 0;
-  transform: scale(0.8); /* Start slightly smaller if desired */
-  transition: opacity var(--zen-dock-transition-duration) ease-out,
-              visibility 0s var(--zen-dock-transition-duration), /* Delay hiding */
-              transform var(--zen-dock-transition-duration) var(--zen-dock-transition-easing-transform);
-}
-
-#zen-workspaces-button .subviewbutton:not([active="true"])::before {
-  content: "";
-  display: block;
-  width: var(--zen-dock-inactive-dot-size);
-  height: var(--zen-dock-inactive-dot-size);
-  background-color: var(--zen-dock-inactive-dot-color);
-  border-radius: 60%;
-  filter: brightness(80%) !important;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  transition: opacity var(--zen-dock-transition-duration) ease-out,
-              transform var(--zen-dock-transition-duration) ease-out,
-              background-color var(--zen-dock-transition-duration) ease-out;
-  pointer-events: none; /* So it doesn't interfere with button hover */
-}
-}
-
 
 
 
@@ -409,42 +318,7 @@ toolbarbutton[zen-workspace-id="{3a41c5b7-ec17-4682-82fa-5a1eaf5a4ce4}"].subview
   }
   
    
-/*
- * Your Custom CSS to override Zen Browser's default dock/workspace button styles
- * Goal: Always show actual icons, remove default "dot" indicators for inactive/overflowed states.
- */
 
-#zen-workspaces-button {
-  /* Ensure icons are always displayed by default within toolbarbuttons,
-     even if our JS makes them very dim/grayscale in 'dot' mode. */
-
-  /* Override overflow behavior to keep icons visible */
-  &[overflow] {
-    & toolbarbutton:not([active='true']),
-    & toolbarbutton[active='true']:has(~ toolbarbutton:hover), /* If active is to the left of hover */
-    &:has(toolbarbutton:hover) toolbarbutton[active='true']:not(:hover) /* If active is to the right of hover, or just any non-hovered active */
-    {
-      &:not(:hover) {
-        /* Keep the icon visible */
-        & .zen-workspace-icon {
-          display: flex !important; /* Or 'inline-flex', 'block' etc. */
-        }
-
-        /* Remove the dot pseudo-element */
-        &::after {
-          display: none !important;
-          content: none !important; /* Belt and suspenders */
-        }
-
-        /* You might still want them to shrink, but not turn into a dot */
-        /* The width rule can stay if you like the shrinking:
-           width: min(var(--zen-overflowed-workspace-button-width), 25px);
-           If not, you can override it or let your JS scale handle it.
-        */
-      }
-    }
-  }
-}
 
 
   

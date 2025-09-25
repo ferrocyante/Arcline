@@ -1,3 +1,7 @@
+
+
+
+
 @media (-moz-pref("arcline.compact.sidebar.bg", 3)){
     
       *{
@@ -105,25 +109,32 @@
     
         
 
-/* === BLUR COMPACT SIDEBAR ================================================================================================ */
-/* Compact sidebar with blurred transparent background */
 
-  #navigator-toolbox:not([animate='true']) #titlebar {
-     
-        &::before {
+       
+      :root[zen-compact-mode="true"]  #navigator-toolbox:not([animate='true']) #titlebar {
 
-          background: transparent !important;}}
-      
     
-:root[zen-compact-mode="true"] #navigator-toolbox:not([animate='true']) #titlebar {
- 
- 
+
+
+        & #zen-toolbar-background {
+
      backdrop-filter: saturate(3) contrast(2) blur(var(--compact-sidebar-filter_blur)) !important;
        
         background-color: var(--natsumi-mat-ga-background) !important;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) !important;
-}
-       
+
+
+        }
+      }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 }
 
@@ -133,24 +144,22 @@
 @media (-moz-pref("arcline.compact.sidebar.bg", 5)) {
 
 
-  #navigator-toolbox:not([animate='true']) #titlebar {
-     
-        &::before {
+   :root[zen-compact-mode="true"]  #navigator-toolbox:not([animate='true']) #titlebar {
 
-          background: transparent !important;}
-  
-  
-  }
       
-    
-:root[zen-compact-mode="true"] #navigator-toolbox:not([animate='true']) #titlebar {
- 
- 
+
+
+        & #zen-toolbar-background {
+
     background:  var(--compact-sidebar-filter_bg)  !important;
 
   backdrop-filter: blur(var(--compact-sidebar-filter_blur)) saturate(1) contrast(1)    !important;
  
  
-}
-       
+
+        }
+      }
+      
+    
+
 }

@@ -106,23 +106,28 @@
     
         
 
-/* === BLUR COMPACT SIDEBAR ================================================================================================ */
-/* Compact sidebar with blurred transparent background */
-  #navigator-toolbox:not([animate='true']) #titlebar {
      
-        &::before {
 
-          background: transparent !important;}}
-      
 
-     
-:root[zen-compact-mode="true"] #navigator-toolbox:not([animate='true']) #titlebar {
- 
- 
+  
+  
+        :root[zen-compact-mode="true"]  #navigator-toolbox:not([animate='true']) #titlebar {
+
+       
+
+
+        & #zen-toolbar-background {
+
      backdrop-filter: saturate(3) contrast(2) blur(var(--compact-sidebar-filter_blur)) !important;
        
         background-color: var(--natsumi-mat-hz-background-tinted) !important;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) !important;
+        }
+      }
+
+
+
+
 }
        
 

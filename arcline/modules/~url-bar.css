@@ -1,3 +1,111 @@
+ @media (-moz-pref("arcline.url.bar", 0))  {
+
+
+@media  (-moz-pref("arcline.url.bar.border", 1)) {
+    
+#main-window #urlbar[breakout-extend='true'] .urlbar-background {
+ 
+  outline: none !important;
+   box-shadow: 
+  
+      /* Layer 2: The Inner Light Glow (TOP) */
+    inset 0 0 0 var(--url-bar-in-border_width, 1px) var(--url-bar-in-border_opacity, 0.2),
+    
+    /* Layer 1: The Outer Dark Frame (MIDDLE) */
+    0 0 0 var(--url-bar-out-border_width, 0.5px) var(--url-bar-out-border_opacity, 1),
+    
+    
+    /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
+8px 5px 125px 0 rgba(0, 0, 0, 0.5), 0px  30px 50px #00000069 !important;
+ 
+     
+   
+  
+  }
+}
+  
+/* Acrylic/Mica floating Urlbar */
+#main-window #urlbar[breakout-extend='true'] .urlbar-background {
+    background: var(--url-bar-filter_bg) !important;
+   backdrop-filter: blur(var(--url-bar-filter_blur)) brightness(1) saturate(1.1) contrast(1.1) !important;
+  
+   border-radius:  var(--url-bar-border_radius, 1.7rem) !important;
+   
+}
+
+
+
+.urlbarView-row[has-action]:is([type="switchtab"], [type="remotetab"], [type="clipboard"]) {
+  & > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action {
+   
+    background: transparent !important;
+    border: none !important;
+  padding: none !important;
+      
+  }
+}
+
+.urlbarView-body-inner {
+  #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
+transform: translate(0px, 2px) !important;
+    margin-top: -5px !important;
+    margin-bottom: 3px !important;
+    border-top: 2px solid rgba(255,255,255,0.1) !important;
+  }
+}
+
+/* === In your userChrome.css === */
+@media (-moz-pref("browser.tabs.allow_transparent_browser")) {
+/* Make sure the #browser element is a positioning context */
+#browser {
+  position: relative !important; /* Or absolute/fixed depending on context */
+   isolation: isolate; /*might be useful too */
+}
+
+/* === SECOND PSEUDO-ELEMENT (::before - Your Floating Background) === */
+#browser::before {
+  /* Basic setup */
+  content: "";
+  position: absolute;
+  pointer-events: none !important;
+  
+padding-bottom: 5rem !important;
+  /* --- Appearance --- */
+  background-color: var(--toolbar-bgcolor, #f0f0f0) !important;
+  border-radius: 1.7rem !important;
+    background: linear-gradient(to right, light-dark(#eee, #666) 0px, light-dark(#eee, #666)) !important;
+
+    
+     
+
+  /* --- Positioning & Size --- */
+   top: calc(var(--my-global-zen-top) + var(--url-psuedo-position_top)) !important;
+ 
+  left: 50% !important;           /* Using left/transform for robustness */
+  transform: translateX(-50%) !important;
+  width: min(90%, 56.5em) !important;
+
+  /* --- DYNAMIC HEIGHT --- */
+  /* Use the JS variable, fallback to your fixed height if variable isn't set */
+  height: var(--urlbar-view-dynamic-height, 39rem) !important;
+transition: height 0.5s ease-in-out; /* or whatever duration/timing you like */
+  /* --- Stacking & Visibility --- */
+  z-index: -1 !important;
+  opacity: 0 !important; /* Start hidden */
+
+  /* --- Animation --- */
+  /* Transition opacity. Height changes might be instant or you could transition height too */
+  transition: opacity 0s ease-out !important;
+          /*    height 0.1s ease-out !important; /* Optional: animate height changes */
+}
+
+/* --- Trigger for ::before (When URL bar is open) --- */
+body:has(#urlbar[open]) #browser::before {
+  opacity: 1 !important;
+}
+
+  }
+
 
 @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
   html {
@@ -5,14 +113,7 @@
   }
 }
 
-/* --- Global URL Bar Scroll Styling (Corrected) --- */
-/* ====================================================================================================
-// FINAL FIX: Attach Bookmark Star to its Row
-// ==================================================================================================== */
 
-/* This is the key fix. It establishes a new "positioning context" for each result row.
-   Now, any absolutely positioned children (like the bookmark star icon) will be
-   positioned relative to their own row, not a distant parent. */
 .urlbarView-row {
   position: relative !important;
 }
@@ -32,10 +133,7 @@
   }
 }
 
-#urlbar-results.zen-global-scrollable .urlbarView-row {
-  
-  margin-block-end: 2px !important;
-}
+
 
 .urlbarView-button {
  margin-right: 8px !important;
@@ -82,16 +180,55 @@
 
    text-align: center !important;
 }
+  #urlbar[open][zen-floating-urlbar='true'] {
+ #urlbar-searchmode-switcher {
 
+    height: 2.6rem !important;
+    margin-right: -2px !important;
+    
+     
+  transform: translate(-18%, 5%) !important;
+    min-height: 2px !important;
+ border-radius: 9px !important;
+    padding-top: 15px !important;
+    padding-right: 8px !important;
+    padding-bottom: 15px !important;
+    padding-left: 8px !important;;
+    
+ background-color: light-dark(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.15)) !important;
 
-#searchmode-switcher-chicklet {
-   
+   text-align: center !important;
+    }}
 
+  .searchmode-switcher-close{
+  display: none !important;
 
-   
+  }
+  .searchmode-switcher-close:hover{
+    display: block ruby  !important;
+    opacity: 1 !important;}
+
+  
+  .searchmode-switcher-chicklet {
+  background: linear-gradient(
+    135deg, 
+    var(--arcline-search-gradient-start, #888), 
+    var(--arcline-search-gradient-end, #777)
+  )  !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+  margin-top: 1px !important;
  
-  display: none !important; 
+  scale: 0.89 !important;
+  margin-left: -6px !important;
+    border-radius: 18px !important;
+    padding: 17px 9px !important;
+    scale: 0.8 !important;
 }
+
+
+
+
 
 
 
@@ -108,7 +245,7 @@
 
 
 /*-------------------------------------------------------*/
-@media (-moz-pref("arcline.url.bar", 0))  {
+
 
  
 
@@ -216,15 +353,12 @@
   min-width: 57rem !important;
 
   
-  #permissions-granted-icon{
-transform: translate(47.3rem,0px) !important;
-  }
 
 
 
 
 .urlbar-input {
-    font-size: 17px !important;
+    font-size: 18px !important;
    /* color: #FFFFFF !important;*/
  
    max-width:  85% !important;
@@ -247,110 +381,7 @@ transform: translate(47.3rem,0px) !important;
 }
 /*---------open url bar end----------------------------*/
 
-  @media  (-moz-pref("arcline.url.bar.border", 1)) {
-    
-#urlbar[zen-floating-urlbar="true"] #urlbar-background {
-  
  
-  outline: none !important;
-   box-shadow: 
-  
-      /* Layer 2: The Inner Light Glow (TOP) */
-    inset 0 0 0 var(--url-bar-in-border_width, 1px) var(--url-bar-in-border_opacity, 0.2),
-    
-    /* Layer 1: The Outer Dark Frame (MIDDLE) */
-    0 0 0 var(--url-bar-out-border_width, 0.5px) var(--url-bar-out-border_opacity, 1),
-    
-    
-    /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
-8px 5px 125px 0 rgba(0, 0, 0, 0.5), 0px  30px 50px #00000069 !important;
- 
-     
-   
-  
-  }
-}
-  
-/* Acrylic/Mica floating Urlbar */
-#urlbar[zen-floating-urlbar="true"] #urlbar-background {
-    background: var(--url-bar-filter_bg) !important;
-   backdrop-filter: blur(var(--url-bar-filter_blur)) brightness(1) saturate(1.1) contrast(1.1) !important;
-  
-   border-radius:  var(--url-bar-border_radius, 1.7rem) !important;
-   
-}
-
-.urlbarView-row {
-  &[selected] {
-    & .urlbarView-favicon {
-      background: color-mix(in srgb, #fff 5%, var(--urlbarView-highlight-background) 95%) !important;
-    }
-  }
-}
-
-
-.urlbarView-body-inner {
-  #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
-transform: translate(0px, 2px) !important;
-    margin-top: -5px !important;
-    margin-bottom: 3px !important;
-    border-top: 2px solid rgba(255,255,255,0.1) !important;
-  }
-}
-
-/* === In your userChrome.css === */
-@media (-moz-pref("browser.tabs.allow_transparent_browser")) {
-/* Make sure the #browser element is a positioning context */
-#browser {
-  position: relative !important; /* Or absolute/fixed depending on context */
-   isolation: isolate; /*might be useful too */
-}
-
-/* === SECOND PSEUDO-ELEMENT (::before - Your Floating Background) === */
-#browser::before {
-  /* Basic setup */
-  content: "";
-  position: absolute;
-  pointer-events: none !important;
-  
-padding-bottom: 5rem !important;
-  /* --- Appearance --- */
-  background-color: var(--toolbar-bgcolor, #f0f0f0) !important;
-  border-radius: 1.7rem !important;
-    background: linear-gradient(to right, light-dark(#eee, #666) 0px, light-dark(#eee, #666)) !important;
-
-    
-     
-
-  /* --- Positioning & Size --- */
-   top: calc(var(--my-global-zen-top) + var(--url-psuedo-position_top)) !important;
- 
-  left: 50% !important;           /* Using left/transform for robustness */
-  transform: translateX(-50%) !important;
-  width: min(90%, 56.5em) !important;
-
-  /* --- DYNAMIC HEIGHT --- */
-  /* Use the JS variable, fallback to your fixed height if variable isn't set */
-  height: var(--urlbar-view-dynamic-height, 39rem) !important;
-transition: height 0.5s ease-in-out; /* or whatever duration/timing you like */
-  /* --- Stacking & Visibility --- */
-  z-index: -1 !important;
-  opacity: 0 !important; /* Start hidden */
-
-  /* --- Animation --- */
-  /* Transition opacity. Height changes might be instant or you could transition height too */
-  transition: opacity 0s ease-out !important;
-          /*    height 0.1s ease-out !important; /* Optional: animate height changes */
-}
-
-/* --- Trigger for ::before (When URL bar is open) --- */
-body:has(#urlbar[open]) #browser::before {
-  opacity: 1 !important;
-}
-
-  }
-
-
 
 #urlbar[zen-floating-urlbar="true"] {
     padding: 4px !important;
@@ -378,10 +409,7 @@ body:has(#urlbar[open]) #browser::before {
 
 
 .urlbar-input {
- 
-  filter: brightness(75%) !important;
-
-  
+   color: light-dark(rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0.8)) !important;
 }
 
 
@@ -393,45 +421,6 @@ body:has(#urlbar[open]) #browser::before {
 
 
 
-
-#urlbar[breakout][breakout-extend] {
-    & > .urlbar-input-container {
-        height: 54px !important;  
-    }
-}
-
-#urlbar-search-mode-indicator-close, #searchmode-switcher-close {
-    fill-opacity: 1 !important;
-}
-
-.urlbarView-row[has-action]:is([type="switchtab"], [type="remotetab"], [type="clipboard"]) {
-  & > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action {
-   
-    background: transparent !important;
-    border: none !important;
-  padding: none !important;
-      
-  }
-}
-
-.urlbarView-row[type='dynamic']{    
-    width: 100% !important;
-    display: block !important;
-    height: 0 !important;
-    position: relative !important;
-
-    .urlbarView-action-btn {
-        position: absolute !important;
-        right: 0% !important;
-        bottom: 0% !important;
-        transform: translateY(-13.5px) !important;
-       display:  none  !important;
-        color: color-mix(in srgb, var(--zen-primary-color) 50%, black 50%) !important;
-        background-color: #fff !important;
-        margin-inline-end: var(--space-large);
-        border-radius: 8px !important;
-    }
-}
   
 
 
