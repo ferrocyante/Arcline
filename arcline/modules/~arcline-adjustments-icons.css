@@ -4,37 +4,7 @@
 }
 
 
-/* Center the Extensions menu popup on its button */
-#unified-extensions-panel {
-  border-radius: 8.5px !important;
-  
-border: 2.1px solid black !important;
  
-    outline: none !important;
-   box-shadow: 
-  
-      /* Layer 2: The Inner Light Glow (TOP) */
-    inset 0 0 0 1px rgba(255,255,255,1),
-    
-    /* Layer 1: The Outer Dark Frame (MIDDLE) */
-    0 0 0 1px  rgba(15,15,15,1) !important;
-    
-    
-
-     
-}
-
- 
-
-
-
-
-
-
-
-
-
-
 
 
 
