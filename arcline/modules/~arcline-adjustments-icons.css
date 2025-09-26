@@ -404,7 +404,7 @@ scale: 1.1 !important;
 
  
  
-  transition: all 0.3s ease !important;
+  transition: transform 0.3s ease !important;
 }
 
 
