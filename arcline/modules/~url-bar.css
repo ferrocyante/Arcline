@@ -56,13 +56,14 @@ transform: translate(0px, 2px) !important;
 
 /* === In your userChrome.css === */
 @media (-moz-pref("browser.tabs.allow_transparent_browser")) {
-/* Make sure the #browser element is a positioning context */
+ 
 #browser {
   position: relative !important; /* Or absolute/fixed depending on context */
    isolation: isolate; /*might be useful too */
 }
 
-/* === SECOND PSEUDO-ELEMENT (::before - Your Floating Background) === */
+  @media  (-moz-pref("arcline.url.bar.minimal", 0))  {
+
 #browser::before {
   /* Basic setup */
   content: "";
@@ -83,7 +84,7 @@ padding-bottom: 5rem !important;
  
   left: 50% !important;           /* Using left/transform for robustness */
   transform: translateX(-50%) !important;
-  width: min(90%, 56.5em) !important;
+  width: 0 !important;
 
   /* --- DYNAMIC HEIGHT --- */
   /* Use the JS variable, fallback to your fixed height if variable isn't set */
@@ -95,14 +96,64 @@ transition: height 0.5s ease-in-out; /* or whatever duration/timing you like */
 
   /* --- Animation --- */
   /* Transition opacity. Height changes might be instant or you could transition height too */
-  transition: opacity 0s ease-out !important;
+transition: top 0.5s ease,
+                    width 0.3s ease !important;
           /*    height 0.1s ease-out !important; /* Optional: animate height changes */
 }
 
 /* --- Trigger for ::before (When URL bar is open) --- */
 body:has(#urlbar[open]) #browser::before {
   opacity: 1 !important;
+    width: min(90%, 56.5em) !important;
 }
+  
+  }
+  
+  @media (-moz-pref("arcline.url.bar.minimal", 1))  {
+ 
+#browser::before {
+  /* Basic setup */
+  content: "";
+  position: absolute;
+  pointer-events: none !important;
+  
+padding-bottom: 5rem !important;
+  background-color: var(--toolbar-bgcolor, #f0f0f0) !important;
+  border-radius: 1.7rem !important;
+    background: linear-gradient(to right, light-dark(#eee, #666) 0px, light-dark(#eee, #666)) !important;
+  /* --- Positioning & Size --- */
+   top: calc(var(--my-global-zen-top) + var(--url-psuedo-position_top)) !important;
+  left: 50% !important;           /* Using left/transform for robustness */
+  transform: translateX(-50%) !important;
+  width: min(90%, 56.5em) !important;
+  /* --- DYNAMIC HEIGHT --- */
+  /* Use the JS variable, fallback to your fixed height if variable isn't set */
+  height: var(--urlbar-view-dynamic-height, 0rem) !important;
+transition: height 0.5s ease-in-out; /* or whatever duration/timing you like */
+  /* --- Stacking & Visibility --- */
+  z-index: -1 !important;
+ width: 0px !important;
+opacity: 0 !important;
+  /* --- Animation --- */
+  /* Transition opacity. Height changes might be instant or you could transition height too */
+  transition: opacity 0.1s ease-out,
+    width 0.3s ease !important;
+          /*    height 0.1s ease-out !important; /* Optional: animate height changes */
+}
+
+/* --- Trigger for ::before (When URL bar is open) --- */
+body:has(#urlbar[open]) #browser::before {
+  opacity: 1 !important;
+   width: min(90%, 56.5em) !important;
+}
+
+  
+  
+  
+  }
+  
+
+	
 
   }
 
