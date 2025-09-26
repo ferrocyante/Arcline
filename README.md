@@ -34,7 +34,11 @@
  ## **Arc-like url bar**  scroll for more search results
 
  
-https://github.com/user-attachments/assets/3e2eb112-e661-49cf-80f4-76d5791fa0b6
+
+
+
+https://github.com/user-attachments/assets/587ccdd9-a530-4345-beb0-1df1d95d4e6d
+
 
 
     
