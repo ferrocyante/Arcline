@@ -97,6 +97,7 @@
   /* --- GLOW APPEARS --- */
   25% {
     /* The glow quickly fades in to full brightness */
+    scale: 0.95
     box-shadow: 0 0 20px 5px color-mix(in srgb, var(--arcline-search-gradient-start) 60%, transparent); /* Glow is ON */
   }
 
