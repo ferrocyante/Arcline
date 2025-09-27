@@ -113,7 +113,7 @@
   
   /* --- GLOW FADES OUT & BOUNCE SETTLES --- */
   100% {
-    scale: 0.98;
+    scale: 1;
     box-shadow: 0 0 120px 8px transparent; /* Glow is OFF */
   }
 }
