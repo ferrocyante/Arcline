@@ -14,10 +14,9 @@
     /* Layer 1: The Outer Dark Frame (MIDDLE) */
     0 0 0 var(--url-bar-out-border_width, 0.5px) var(--url-bar-out-border_opacity, 1),
     
-    
-    /* Layer 0: The Drop Shadow for Depth (BOTTOM) */
-8px 5px 125px 0 rgba(0, 0, 0, 0.5), 0px  30px 50px #00000069 !important;
- 
+
+     
+   0px 30px 140px -15px light-dark(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)) !important;
      
    
   
@@ -47,9 +46,8 @@
 
 .urlbarView-body-inner {
   #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
-transform: translate(0px, 2px) !important;
-    margin-top: -5px !important;
-    margin-bottom: 3px !important;
+
+
     border-top: 2px solid rgba(255,255,255,0.1) !important;
   }
 }
@@ -165,24 +163,8 @@ body:has(#urlbar[open]) #browser::before {
 }
 
 
-.urlbarView-row {
-  position: relative !important;
-}
-#urlbar[searchmode] #urlbar-results {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-}
 
-#urlbar[searchmode] .urlbarView-body-inner {
-  #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
 
-    margin-top: -5px !important;
-    margin-bottom: 5px !important;
-    border-top: 0px solid rgba(255,255,255,0.1) !important;
-  }
-}
 
 
 
@@ -213,72 +195,6 @@ body:has(#urlbar[open]) #browser::before {
 
 }
 
-  #urlbar-searchmode-switcher {
-
-    height: 2rem !important;
-    margin-right: -2px !important;
-    
-     
-  transform: translate(-18%, -1%) !important;
-    min-height: 2px !important;
- border-radius: 9px !important;
-    padding-top: 13px !important;
-    padding-right: 5px !important;
-    padding-bottom: 13px !important;
-    padding-left: 5px !important;;
-    scale: 0.8 !important;
- background-color: light-dark(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.15)) !important;
-
-   text-align: center !important;
-}
-  #urlbar[open][zen-floating-urlbar='true'] {
- #urlbar-searchmode-switcher {
-
-    height: 2.6rem !important;
-    margin-right: -2px !important;
-    
-     
-  transform: translate(-18%, 5%) !important;
-    min-height: 2px !important;
- border-radius: 9px !important;
-    padding-top: 15px !important;
-    padding-right: 8px !important;
-    padding-bottom: 15px !important;
-    padding-left: 8px !important;;
-    
- background-color: light-dark(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.15)) !important;
-
-   text-align: center !important;
-    }}
-
-  .searchmode-switcher-close{
-  display: none !important;
-
-  }
-  .searchmode-switcher-close:hover{
-    display: block ruby  !important;
-    opacity: 1 !important;}
-
-  
-  .searchmode-switcher-chicklet {
-  background: linear-gradient(
-    135deg, 
-    var(--arcline-search-gradient-start, #888), 
-    var(--arcline-search-gradient-end, #777)
-  )  !important;
-    font-weight: 600 !important;
-    color: #fff !important;
-  margin-top: 1px !important;
- 
-  scale: 0.89 !important;
-  margin-left: -6px !important;
-    border-radius: 18px !important;
-    padding: 17px 9px !important;
-    scale: 0.8 !important;
-}
-
-
-
 
 
 
@@ -289,104 +205,7 @@ body:has(#urlbar[open]) #browser::before {
 
 
 
-
-
-
-
-
-
-/*-------------------------------------------------------*/
-
-
- 
-
-
-
-
-
-/*------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
-  
-  
-  
-  
-/*
-  =======================================================
-  The Correct and Fully Dynamic Style for the Revert Button
-  =======================================================
-*/
-.urlbar-revert-button {
-  /* 1. Set the background color using your variable. This provides the icon's color. */
-  background-color: var(--toolbox-textcolor);
-
-  /* 2. Apply the icon's SHAPE as a mask. This cuts out the background color. */
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='52 40 35 35' fill='black' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 79.333 52.766 C 79.951 54.14 79.742 62.673 79.374 61.856 C 79.682 64.781 77.666 67.257 74.386 66.594 C 74.386 67.084 65.698 67.668 65.698 66.844 C 62.491 67.434 60.687 64.663 60.96 61.773 C 60.02 61.896 59.172 53.097 60.752 52.891 C 60 50.79 61.408 49.653 62.911 49.017 C 61.256 49.908 60.6 51.643 60.604 54.565 C 60.604 54.81 60.612 60.977 60.612 60.565 C 61.666 64.546 62.267 66.796 66.871 66.752 L 72.871 66.692 C 77.481 66.645 79.119 64.989 79.112 60.379 L 79.104 54.379 C 79.099 51.406 78.415 49.675 76.694 48.833 C 78.388 49.671 79.517 51.074 79.333 52.766 Z M 72.873 68.192 L 66.873 68.252 C 61.444 68.307 59.12 66.01 59.112 60.58 L 59.104 54.58 C 59.096 49.15 61.413 46.807 66.843 46.752 L 72.843 46.692 C 78.272 46.637 80.596 48.934 80.604 54.364 L 80.612 60.364 C 80.62 65.794 78.303 68.137 72.873 68.192 Z M 76.983 61.287 C 76.982 60.877 76.642 60.54 76.232 60.545 L 72.332 60.584 C 71.922 60.588 71.583 60.931 71.583 61.341 C 71.584 61.751 71.924 62.088 72.334 62.084 L 76.234 62.045 C 76.644 62.04 76.984 61.697 76.983 61.287 Z M 65.931 61.398 L 65.931 61.397 C 65.931 60.378 66.76 59.541 67.778 59.531 C 68.797 59.52 69.629 60.342 69.63 61.362 C 69.632 62.382 68.803 63.22 67.783 63.231 C 66.764 63.241 65.934 62.41 65.931 61.4 C 65.931 61.399 65.931 61.399 65.931 61.398 Z M 63.23 60.675 C 62.82 60.68 62.481 61.023 62.481 61.433 C 62.482 61.843 62.822 62.18 63.232 62.175 L 64.516 62.162 C 64.859 63.648 66.193 64.747 67.785 64.731 C 69.635 64.712 71.133 63.187 71.13 61.347 C 71.127 59.497 69.625 58.012 67.775 58.031 C 66.184 58.046 64.854 59.17 64.515 60.662 L 63.23 60.675 Z M 76.972 54.127 C 76.971 53.717 76.631 53.38 76.221 53.385 L 74.937 53.398 C 74.594 51.912 73.26 50.815 71.668 50.83 C 69.818 50.849 68.32 52.364 68.323 54.214 C 68.326 56.064 69.828 57.549 71.678 57.53 C 73.27 57.515 74.601 56.39 74.94 54.898 L 76.223 54.885 C 76.633 54.88 76.972 54.547 76.972 54.127 Z M 73.522 54.162 C 73.522 54.173 73.522 54.184 73.523 54.195 C 73.506 55.2 72.684 56.02 71.675 56.03 C 70.656 56.041 69.824 55.229 69.823 54.199 C 69.821 53.179 70.65 52.341 71.67 52.33 C 72.679 52.32 73.503 53.124 73.523 54.129 C 73.522 54.14 73.522 54.151 73.522 54.162 Z M 67.871 54.219 C 67.87 53.809 67.53 53.472 67.12 53.476 L 63.22 53.515 C 62.81 53.52 62.47 53.863 62.471 54.273 C 62.472 54.683 62.812 55.02 63.222 55.015 L 67.122 54.976 C 67.532 54.972 67.871 54.639 67.871 54.219 Z'/%3E%3C/svg%3E") !important;
-  mask-image: url("data:image/svg+xml,...");
-
-  /* --- Mask properties and cleanup --- */
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-image: none !important;
-  list-style-image: none !important;
-  fill: none !important;
-  
-  /* --- Keep all your original layout styles --- */
-  scale: 1 !important;
-
-  height: 25.5px !important;
-  width: 20px !important;
-  margin-right: -4px !important;
-}
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .urlbarView-row {
-  &[rich-suggestion][type="search"] {
-    :root:not([uidensity="touch"]) & {
-      min-height: 26px !important;
-      max-height: 45px !important;
-    }
-  }
-}
-
-.urlbarView-row {
-  &:not([type="tip"], [type="dynamic"]) {
-    :root[uidensity="touch"] & {
-      padding-block: 5px !important;
-      
-      
-    }
-  }
-}
 
   
   @media (-moz-pref("browser.tabs.allow_transparent_browser")) {
@@ -409,7 +228,7 @@ body:has(#urlbar[open]) #browser::before {
 
 
 .urlbar-input {
-    font-size: 18px !important;
+    font-size: 19px !important;
    /* color: #FFFFFF !important;*/
  
    max-width:  85% !important;
@@ -430,33 +249,10 @@ body:has(#urlbar[open]) #browser::before {
 
   
 }
-/*---------open url bar end----------------------------*/
+
 
  
 
-#urlbar[zen-floating-urlbar="true"] {
-    padding: 4px !important;
-    #identity-box[pageproxystate="invalid"] {
-        & #identity-icon {
-            scale: 0.9 !important;
-          margin-top: 0px !important;
-            fill-opacity: 1 !important;
-        }
-    }
-    
-    .urlbar-input-container {
-        display: flex !important;
-        align-items: center !important;
-    }
-    
-    .urlbarView-row {
-        padding: 0 0px !important;
-        &:not([type="tip"], [type="dynamic"]) {
-            padding-block: 0px !important;
-         
-        }
-    }
-}
 
 
 .urlbar-input {

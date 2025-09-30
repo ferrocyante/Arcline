@@ -131,20 +131,6 @@
 
 
 
-browser {
-    will-change: transform;
-}
-
-
-
-
-
-
-
-
-
-
-
 /* Transparent glance styling */
 .zen-glance-background > vbox {
   mask-image: linear-gradient(

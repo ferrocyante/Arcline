@@ -33,6 +33,8 @@
  box-shadow: 
     /* Layer 2: The Inner Light Glow (TOP) */
      inset 0 0 0 var(--window-border_width , 1.7px) var(--window-border_opacity , 0.8) !important;
+   
+ 
     
     
     

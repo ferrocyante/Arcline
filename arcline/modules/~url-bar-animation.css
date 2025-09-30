@@ -1,9 +1,10 @@
-#urlbar-results {
+#urlbar-results:not([type="tip"], [type="dynamic"]) {
   /* This is CRITICAL: It tells Firefox to animate any change to the 'height' property */
-  transition: height 180ms ease-in-out !important;
+  transition: height 300ms cubic-bezier(0.1, 1, 0.2, 1) !important;
     overflow-y:  auto !important;
 
 }
+
 
 
  @media (-moz-pref("arcline.url.bar.animation", 1))  {
@@ -15,7 +16,13 @@
                     width 0.3s ease;
             }
             #urlbar[open][zen-floating-urlbar="true"] {
-                --urlbar-container-height: 4.5rem !important;
+              
+                --urlbar-container-height: 4.8rem !important;
+                      & #identity-icon {
+            scale: 1.1 !important;
+
+          
+        }
                 min-width: min(60%, 10rem) !important;
                
                 width: min(70%, 57rem) !important;
@@ -85,48 +92,3 @@
 
 }
 
-
-
-@keyframes urlbar-bounce-and-shadow-pulse {
-  /* --- TIMELINE START --- */
-  0% {
-    scale: 1;
-    box-shadow: 0 0 20px 5px transparent; /* Glow is OFF */
-  }
-  
-  /* --- GLOW APPEARS --- */
-  25% {
-    /* The glow quickly fades in to full brightness */
-    scale: 0.95
-    box-shadow: 0 0 20px 5px color-mix(in srgb, var(--arcline-search-gradient-start) 60%, transparent); /* Glow is ON */
-  }
-
-  /* --- BOUNCE & GLOW HOLD --- */
-  50% {
-    scale: 0.93;
-    box-shadow: 0 0 80px 8px color-mix(in srgb, var(--arcline-search-gradient-start) 80%, transparent); /* Glow STAYS ON */
-  }
-  80% {
-    scale: 0.95;
-    box-shadow: 0 0 120px 8px color-mix(in srgb, var(--arcline-search-gradient-start) 80%, transparent); /* Glow STAYS ON */
-  }
-  
-  /* --- GLOW FADES OUT & BOUNCE SETTLES --- */
-  100% {
-    scale: 1;
-    box-shadow: 0 0 120px 8px transparent; /* Glow is OFF */
-  }
-}
-
-/* Part 2: Prepare the URL bar (no changes here) */
-#urlbar {
-  transform-origin: left !important;
-
-}
-
-/* Part 3: Trigger the animation (no changes here) */
-#urlbar[searchmode] {
-  /* You can also adjust the master duration here. Try 500ms for a slower overall effect. */
-  animation: urlbar-bounce-and-shadow-pulse 450ms ease-out forwards;
-    border-radius:   var(--url-bar-border_radius, 1.7rem) !important;
-}
