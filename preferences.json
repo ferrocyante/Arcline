@@ -30,7 +30,12 @@
     "size": "18px",
     "margin": "0 0 15px 0"
   },
-  
+     {
+    "type": "text",
+    "label": " 🚧 DISABLE PREF FOR SEARCH THROUGH MUTIPLE SEARCH ENGINE browser.urlbar.scotchBonnet.enableOverride in  about:config  panel. it is now  natively added by zen",
+    "size": "22px",
+    "margin": "0 0 15px 0"
+  },
 
   
   {
@@ -104,17 +109,6 @@
     "type": "separator"
   },
   {
-    "property": "browser.urlbar.maxRichResults",
-    "label": "URL bar search results count",
-    "type": "string",
-    "value": "number",
-    "default": 50,
-    "force": true
-  },
-  {
-    "type": "separator"
-  },
-  {
     "property": "browser.uidensity",
     "label": "Browser density (0=Normal, 1=Compact, 2=Touch)",
     "type": "string",
@@ -133,16 +127,7 @@
     "default": -1,
     "force": true
   },
-  {
-    "type": "separator"
-  },
-  {
-    "property": "browser.urlbar.scotchBonnet.enableOverride",
-    "label": "Enable ability to search directly through any search engine",
-    "default": false,
-    "type": "checkbox",
-    "force": true
-  },
+  
 
   {
     "type": "text",
@@ -1048,16 +1033,7 @@
   "restart": true,
   "label": "media player cover art script"
 },
-  {
-    "type": "separator"
-  },
-     {
-  "type": "checkbox",
-  "property": "arcline.script6",
-  "defaultValue": true,
-  "restart": true,
-  "label": "Workspace icon animation script"
-},
+
 
 
    {
