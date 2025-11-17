@@ -1,0 +1,850 @@
+
+/*
+ * =================================================================
+ *  Arc-Line - Sync Main Theme Color to Picture-in-Picture
+ * =================================================================
+ * This rule sets the PiP theme's primary color variable to be the
+ * same as the main browser's primary color variable.
+ */
+:root {
+  --arcline-primary-color: #00FFFF !important;
+}
+
+
+
+
+
+
+/* ============================================================================================================================================================================ */
+/* ==== STYLE 1 ==== */
+/* ============================================================================================================================================================================ */
+
+@media (-moz-pref("arcline.pip", 1)) {
+
+
+
+
+  @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
+    /*noinspection CssInvalidFunction*/
+    * {
+     
+      --arcline-colors-primary: color-mix(in srgb, var(--arcline-primary-color) 20%, #1d1d1d 80%);
+      --arcline-colors-secondary: color-mix(in srgb, var(--arcline-primary-color) 30%, #1d1d1d 70%);
+
+      --arcline-mat-hz-background: rgba(0, 0, 0, 0.8);
+      --arcline-mat-hz-background-tinted: color-mix(in srgb, var(--arcline-colors-secondary) 40%, rgba(0, 0, 0, 0.8));
+      --arcline-mat-hz-blur-radius: 100px;
+
+      --arcline-mat-ga-background: color-mix(in srgb, var(--arcline-colors-secondary) 75%, transparent);
+      --arcline-mat-ga-shadow-color: color-mix(in srgb, var(--arcline-colors-secondary) 75%, white);
+      --toolbarbutton-hover-background: color-mix(in srgb, #ebebeb 10%, transparent 90%);
+      --toolbarbutton-active-background: rgba(255, 255, 255, 0.11);
+
+      @media (-moz-bool-pref: "arcline.theme.force-dark-shadows") {
+        --arcline-mat-ga-shadow-color: color-mix(in srgb, var(--arcline-colors-secondary) 75%, black);
+      }
+    }
+
+    @keyframes pip-fadein-html {
+      0% {
+        background-color: transparent;
+        scale: 0.8;
+      }
+      99% {
+        background-color: transparent;
+        scale: 1;
+      }
+      100% {
+        background-color: black;
+      }
+    }
+
+    @keyframes pip-fadein-player {
+      0% {
+        filter: blur(30px);
+        opacity: 0;
+      }
+      70% {
+        filter: blur(5px);
+      }
+      100% {
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+
+    @media (-moz-bool-pref: "arcline.pip.rounded") {
+      @media (-moz-platform: windows) {
+        window, html, body {
+          border-radius: 9px !important;
+        }
+      }
+    }
+
+    html {
+      animation: pip-fadein-html 0.5s ease !important;
+    }
+
+    .player-holder {
+      animation: pip-fadein-player 0.5s ease !important;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    #controls {
+      opacity: 1 !important;
+
+      /*noinspection CssInvalidFunction*/
+      & > button {
+        opacity: 0 !important;
+        top: 0 !important;
+        filter: blur(5px);
+        border-radius: 6px !important;
+        /* CHANGE 1: background-color transition removed */
+        transition: opacity 0.3s ease, top 0.3s ease, filter 0.3s ease !important;
+        backdrop-filter: saturate(var(--arcline-mat-hz-saturation)) contrast(var(--arcline-mat-hz-contrast)) blur(var(--arcline-mat-hz-blur-radius)) !important;
+        background-image: none !important;
+        background-color: var(--arcline-mat-hz-background) !important;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5) !important;
+        border: 2px solid rgba(235, 235, 235, 0.1) !important;
+
+        @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+          background-color: var(--arcline-mat-hz-background-tinted) !important;
+        }
+
+        &::before {
+          content: "";
+          width: 16px;
+          height: 16px;
+          padding: 2px;
+          display: flex;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          align-content: center;
+          justify-content: center;
+          fill: white !important;
+        }
+
+        &#close::before {
+          content: url("chrome://browser/skin/zen-icons/close.svg") !important;
+        }
+
+        &#minimize::before {
+          content: url("chrome://browser/skin/zen-icons/unpin.svg") !important;
+        }
+
+        &#unpip::before {
+          content: url("chrome://browser/skin/zen-icons/screen.svg") !important;
+        }
+
+        &:hover {
+          background-color: color-mix(in srgb, var(--arcline-mat-ga-background) 80%, white) !important;
+        }
+      }
+
+      #controls-bottom-gradient {
+        display: none !important;
+      }
+
+      /*noinspection CssInvalidFunction*/
+      #controls-bottom {
+        opacity: 0 !important;
+        bottom: -5px !important;
+        background-color: var(--arcline-mat-hz-background) !important;
+        border-radius: 10px !important;
+        padding: 10px 15px !important;
+        margin: 0 5px !important;
+        width: calc(100% - 10px) !important;
+        box-sizing: border-box !important;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5) !important;
+        backdrop-filter: saturate(3) contrast(2) blur(var(--arcline-mat-hz-blur-radius)) !important;
+        filter: blur(10px);
+        transition: opacity 0.3s ease, bottom 0.3s ease, filter 0.3s ease !important;
+        border: 2px solid rgba(235, 235, 235, 0.1) !important;
+
+        @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+          background-color: var(--arcline-mat-hz-background-tinted) !important;
+        }
+
+        @media (-moz-bool-pref: "arcline.pip.native-border-radius") {
+          width: 100% !important;
+          margin: 0 !important;
+          bottom: -10px !important;
+
+          @media (-moz-platform: macos) {
+            border-radius: 5px !important;
+          }
+        }
+
+        .start-controls {
+          @media (width > 300px) {
+            display: flex !important;
+          }
+
+          /*noinspection CssInvalidFunction*/
+          #timestamp {
+            font-size: 12px !important;
+            color: white !important;
+          }
+        }
+
+        .end-controls {
+          display: flex !important;
+        }
+
+        #scrubber, #audio-scrubber {
+          margin: 0 !important;
+
+          /*noinspection CssInvalidFunction*/
+          &::-moz-range-progress {
+            background: var(--arcline-primary-color) !important;
+          }
+
+          /*noinspection CssInvalidFunction*/
+          &::-moz-range-track {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+          }
+
+          /*noinspection CssInvalidFunction*/
+          &::-moz-range-thumb {
+            background-color: var(--arcline-primary-color) !important;
+            width: 12px !important;
+            height: 12px !important;
+            border: none !important;
+            scale: 1;
+            transition: scale 0.2s ease;
+          }
+
+          &:hover {
+            &::-moz-range-thumb {
+              opacity: 1;
+            }
+          }
+        }
+
+        #audio-scrubber {
+          &::-moz-range-thumb {
+            width: 8px !importan
+            height: 8px !important;
+            opacity: 1 !important;
+          }
+        }
+
+        /*noinspection CssInvalidFunction*/
+        button {
+          opacity: 1 !important;
+          position: relative;
+          padding: 6px !important;
+          background-size: 16px !important;
+          width: 28px !important;
+          height: 28px !important;
+          border-radius: 6px !important;
+          /* CHANGE 2: background-color transition removed */
+          transition: ease !important; /* Kept ease for any other implicit transitions, but specific property is gone */
+          -moz-context-properties: fill;
+          fill: white !important;
+
+          &[disabled] {
+            cursor: default !important;
+            fill-opacity: 0.4 !important;
+
+            &::after {
+              display: none !important;
+            }
+          }
+
+          &:not([disabled]) {
+            &:hover {
+              background-color: var(--toolbarbutton-hover-background) !important;
+            }
+
+            &:active {
+              background-color: var(--toolbarbutton-active-background) !important;
+            }
+          }
+
+          &#playpause {
+            background-image: url("chrome://browser/skin/zen-icons/media-play.svg") !important;
+          }
+
+          &#audio {
+            background-image: url("chrome://browser/skin/zen-icons/media-unmute.svg") !important;
+          }
+
+          &#seekBackward {
+            background-image: url("chrome://browser/skin/zen-icons/reload.svg") !important;
+            scale: -1 1;
+
+            &::before {
+              content: "5";
+              font-size: 8px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(50%, -50%);
+              scale: -1 1;
+            }
+
+            &::after {
+              scale: -1 1;
+            }
+          }
+
+          &#seekForward {
+            background-image: url("chrome://browser/skin/zen-icons/reload.svg") !important;
+
+            &::before {
+              content: "5";
+              font-size: 8px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          &#fullscreen {
+            background-image: url("chrome://browser/skin/zen-icons/fullscreen.svg") !important;
+          }
+        }
+
+        .controls-bottom-upper {
+          margin: 0 !important;
+          margin-bottom: 5px !important;
+          width: 100% !important;
+          height: fit-content !important;
+
+          .scrubber-no-drag {
+            margin: 0 !important;
+          }
+
+          &:has(#scrubber[hidden]) {
+            display: none !important;
+            margin: 0 !important;
+          }
+        }
+
+        .controls-bottom-lower {
+          margin: 0 !important;
+        }
+      }
+
+      #settings {
+        bottom: 80px !important;
+        right: 0 !important;
+        display: block !important;
+        transition: opacity 0.3s ease, bottom 0.3s ease !important;
+
+        .arrow {
+          display: none !important;
+        }
+
+        /*noinspection CssInvalidFunction*/
+        label, legend {
+          font-family: system-ui !important;
+          color: white !important;
+        }
+
+        /*noinspection CssInvalidFunction*/
+        .slider {
+          background-color: rgba(0, 0, 0, 0.07) !important;
+          outline: 1px solid #bfbfc9 !important;
+
+          /*noinspection CssInvalidFunction*/
+          &::before {
+            background-color: #bfbfc9 !important;
+          }
+        }
+
+        input {
+          /*noinspection CssInvalidFunction*/
+          &:checked {
+            border-color: var(--arcline-primary-color) !important;
+          }
+
+          /*noinspection CssInvalidFunction*/
+          &:checked + .slider {
+            background-color: var(--arcline-primary-color) !important;
+            outline-color: var(--arcline-primary-color) !important;
+
+            &::before {
+              background-color: white !important;
+            }
+          }
+        }
+
+        /*noinspection CssInvalidFunction*/
+        & > .panel-fieldset {
+          background-color: var(--arcline-mat-ga-background) !important;
+          backdrop-filter: blur(15px);
+          filter: blur(0);
+          transition: backdrop-filter 0.3s ease, filter 0.3s ease;
+          border: 1px solid rgba(235, 235, 235, 0.3) !important;
+          box-shadow: 0 0 10px var(--arcline-mat-ga-shadow-color) !important;
+          padding: 0 !important;
+        }
+
+        /*noinspection CssInvalidFunction*/
+        .grey-line {
+          width: calc(100% - 10px) !important;
+          margin: 0 auto !important;
+          background-color: rgba(235, 235, 235, 0.3) !important;
+        }
+
+        &.hide {
+          bottom: 70px !important;
+          opacity: 0 !important;
+          pointer-events: none !important;
+
+          & > .panel-fieldset {
+            backdrop-filter: none !important;
+            filter: blur(5px);
+          }
+        }
+      }
+
+      &.muted {
+        #controls-bottom {
+          #audio {
+            background-image: url("chrome://browser/skin/zen-icons/media-mute.svg") !important;
+          }
+        }
+      }
+
+      &.playing {
+        #controls-bottom {
+          #playpause {
+            background-image: url("chrome://browser/skin/zen-icons/media-pause.svg") !important;
+          }
+        }
+      }
+
+      &:hover {
+        & > button {
+          opacity: 1 !important;
+          top: 10px !important;
+          filter: blur(0) !important;
+        }
+
+        #controls-bottom {
+          opacity: 1 !important;
+          bottom: 5px !important;
+          filter: blur(0);
+
+          @media (-moz-bool-pref: "arcline.pip.native-border-radius") {
+            bottom: 0 !important;
+          }
+        }
+      }
+    }
+
+    body:fullscreen {
+      #controls {
+        #controls-bottom {
+          #fullscreen {
+            background-image: url("chrome://browser/skin/zen-icons/fullscreen-exit.svg") !important;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+/* ============================================================================================================================================================================ */
+/* ==== STYLE 2 ==== */
+/* ============================================================================================================================================================================ */
+
+@media (-moz-pref("arcline.pip", 2)) {
+   
+  
+  
+  
+  * {
+      
+      --arcline-colors-primary: color-mix(in srgb, var(--arcline-primary-color) 20%, #1d1d1d 80%);
+      --arcline-colors-secondary: color-mix(in srgb, var(--arcline-primary-color) 30%, #1d1d1d 70%);
+
+      --arcline-mat-hz-background: rgba(0, 0, 0, 0.8);
+      --arcline-mat-hz-background-tinted: color-mix(in srgb, var(--arcline-colors-secondary) 40%, rgba(0, 0, 0, 0.8));
+      --arcline-mat-hz-blur-radius: 100px;
+
+      --arcline-mat-ga-background: color-mix(in srgb, var(--arcline-colors-secondary) 75%, transparent);
+      --arcline-mat-ga-shadow-color: color-mix(in srgb, var(--arcline-colors-secondary) 75%, white);
+      --toolbarbutton-hover-background: color-mix(in srgb, #ebebeb 10%, transparent 90%);
+      --toolbarbutton-active-background: rgba(255, 255, 255, 0.11);
+
+      @media (-moz-bool-pref: "arcline.theme.force-dark-shadows") {
+        --arcline-mat-ga-shadow-color: color-mix(in srgb, var(--arcline-colors-secondary) 75%, black);
+      }
+    }
+
+  @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
+    /*noinspection CssInvalidFunction*/
+
+    @keyframes pip-fadein-html {
+      0% {
+        background-color: transparent;
+        scale: 0.8;
+      }
+      99% {
+        background-color: transparent;
+        scale: 1;
+      }
+      100% {
+        background-color: black;
+      }
+    }
+
+    @keyframes pip-fadein-player {
+      0% {
+        filter: blur(30px);
+        opacity: 0;
+      }
+      70% {
+        filter: blur(5px);
+      }
+      100% {
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+
+    @media (-moz-bool-pref: "arcline.pip.rounded") {
+      @media (-moz-platform: windows) {
+        window, html, body {
+          border-radius: 9px !important;
+        }
+      }
+    }
+
+    html {
+      animation: pip-fadein-html 0.5s ease !important;
+    }
+
+    .player-holder {
+      animation: pip-fadein-player 0.5s ease !important;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    #controls {
+      opacity: 1 !important;
+
+      /*noinspection CssInvalidFunction*/
+      & > button {
+        opacity: 0 !important;
+        top: 0 !important;
+        border-radius: 50% !important;
+        /* CHANGE 1: background-color transition removed */
+        transition: opacity 0.3s ease, top 0.3s ease !important;
+        backdrop-filter: saturate(var(--arcline-mat-hz-saturation)) contrast(var(--arcline-mat-hz-contrast)) blur(var(--arcline-mat-hz-blur-radius)) !important;
+        background-color: var(--arcline-mat-hz-background) !important;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5) !important;
+        background-size: 16px !important;
+        border: 2px solid rgba(235, 235, 235, 0.1) !important;
+
+        &:hover {
+          background-color: color-mix(in srgb, var(--arcline-mat-ga-background) 80%, white) !important;
+        }
+
+        @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+          background-color: var(--arcline-mat-hz-background-tinted) !important;
+        }
+      }
+
+      #close, #minimize, #unpip {
+        -moz-context-properties: fill;
+        fill: white !important;
+      }
+
+      /*noinspection CssInvalidFunction*/
+      #controls-bottom {
+        opacity: 0 !important;
+        bottom: -5px !important;
+        padding: 10px 15px !important;
+        margin: 0 5px !important;
+        margin-bottom: 5px !important;
+        width: calc(100% - 10px) !important;
+        box-sizing: border-box !important;
+        transition: opacity 0.3s ease, bottom 0.3s ease !important;
+        left: calc(50% - 5px) !important;
+        transform: translateX(-50%) !important;
+
+        .start-controls, .center-controls, .end-controls {
+          border-radius: 18px !important;
+          background-color: var(--arcline-mat-hz-background) !important;
+          border: 2px solid rgba(235, 235, 235, 0.1) !important;
+          backdrop-filter: saturate(3) contrast(2) blur(var(--arcline-mat-hz-blur-radius)) !important;
+          gap: 0 !important;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.3) !important;
+
+          @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+            background-color: var(--arcline-mat-hz-background-tinted) !important;
+          }
+        }
+
+        #timestamp {
+          text-align: center !important;
+          width: 100% !important;
+          padding-inline: 12px !important;
+        }
+
+        #seekBackward, #audio {
+          border-radius: 16px 4px 4px 16px !important;
+        }
+
+        #playpause, #closed-caption {
+          border-radius: 4px !important;
+        }
+
+        #seekForward, #fullscreen {
+          border-radius: 4px 16px 16px 4px !important;
+        }
+
+        #playpause::after, #seekBackward::after, #seekForward::after, #audio::after, #closed-caption::after {
+          left: 50% !important;
+          translate: -50% 0 !important;
+        }
+
+        #seekForward::after, #seekBackward::after {
+          top: -54.5px !important;
+        }
+
+        .start-controls {
+          @media (width > 300px) {
+            display: flex !important;
+          }
+
+          @media (width <= 440px) {
+            border-width: 0 !important;
+          }
+
+          /*noinspection CssInvalidFunction*/
+          #timestamp {
+            font-size: 12px !important;
+            color: white !important;
+          }
+        }
+
+        .end-controls {
+          display: flex !important;
+        }
+
+        #scrubber, #audio-scrubber {
+          margin: 0 !important;
+
+          /*noinspection CssInvalidFunction*/
+          &::-moz-range-progress {
+            background: var(--arcline-primary-color) !important;
+          }
+
+          /*noinspection CssInvalidFunction*/
+          &::-moz-range-track {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+          }
+
+          /*noinspection CssInvalidFunction*/
+          &::-moz-range-thumb {
+            background-color: var(--arcline-primary-color) !important;
+            width: 12px !important;
+            height: 12px !important;
+            border: none !important;
+          }
+        }
+
+        #scrubber {
+          opacity: 1 !important;
+          width: calc(100% - 4px) !important;
+          height: 6px !important;
+          padding: 0 !important;
+          border: 2px solid rgba(235, 235, 235, 0.1) !important;
+          background-color: var(--arcline-mat-hz-background) !important;
+          backdrop-filter: saturate(3) contrast(2) blur(var(--arcline-mat-hz-blur-radius)) !important;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.3) !important;
+
+          @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+            background-color: var(--arcline-mat-hz-background-tinted) !important;
+          }
+
+          &::-moz-range-track {
+            height: 6px !important;
+            border-radius: 5px !important;
+            background: transparent !important;
+          }
+
+          &::-moz-range-progress {
+            height: 6px !important;
+            border-radius: 3px 0 0 3px !important;
+            width: 100px !important;
+          }
+
+          &::-moz-range-thumb {
+            border: 4px solid var(--arcline-mat-hz-background) !important;
+            backdrop-filter: saturate(3) contrast(2) blur(var(--arcline-mat-hz-blur-radius)) !important;
+
+            @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+              border-color: var(--arcline-mat-hz-background-tinted) !important;
+            }
+          }
+        }
+
+        #audio-scrubber {
+          &::-moz-range-thumb {
+            width: 8px !important;
+            height: 8px !important;
+            opacity: 1 !important;
+          }
+        }
+
+        /*noinspection CssInvalidFunction*/
+        button {
+          /* CHANGE 2: background-color transition removed */
+          transition: box-shadow 0.2s ease !important;
+          -moz-context-properties: fill;
+          fill: white !important;
+          border-radius: 6px !important;
+          opacity: 1 !important;
+
+          &[disabled] {
+            cursor: default !important;
+            fill-opacity: 0.4 !important;
+
+            &::after {
+              display: none !important;
+            }
+          }
+
+          &:not([disabled]) {
+            &:hover {
+              background-color: var(--arcline-button-hover-color) !important;
+            }
+
+            &:active, &[aria-expanded="true"] {
+              background-color: var(--arcline-button-active-color) !important;
+              box-shadow: 0 0 4px rgba(0, 0, 0, 0.3) !important;
+            }
+          }
+        }
+
+        .controls-bottom-upper {
+          margin: 0 !important;
+          margin-bottom: 5px !important;
+          width: 100% !important;
+          height: fit-content !important;
+
+          .scrubber-no-drag {
+            margin: 0 !important;
+          }
+
+          &:has(#scrubber[hidden]) {
+            display: none !important;
+            margin: 0 !important;
+          }
+        }
+
+        .controls-bottom-lower {
+          margin: 0 !important;
+        }
+      }
+
+      #settings {
+        bottom: 80px !important;
+        right: 0 !important;
+        display: block !important;
+        transition: opacity 0.3s ease, bottom 0.3s ease !important;
+
+        .arrow {
+          display: none !important;
+        }
+
+        /*noinspection CssInvalidFunction*/
+        label, legend {
+          font-family: system-ui !important;
+          color: white !important;
+        }
+
+        /*noinspection CssInvalidFunction*/
+        .slider {
+          background-color: rgba(0, 0, 0, 0.07) !important;
+          outline: 1px solid #bfbfc9 !important;
+
+          /*noinspection CssInvalidFunction*/
+          &::before {
+            background-color: #bfbfc9 !important;
+          }
+        }
+
+        input {
+          /*noinspection CssInvalidFunction*/
+          &:checked {
+            border-color: var(--arcline-primary-color) !important;
+          }
+
+          /*noinspection CssInvalidFunction*/
+          &:checked + .slider {
+            background-color: var(--arcline-primary-color) !important;
+            outline-color: var(--arcline-primary-color) !important;
+
+            &::before {
+              background-color: white !important;
+            }
+          }
+        }
+
+        /*noinspection CssInvalidFunction*/
+        & > .panel-fieldset {
+          background-color: var(--arcline-mat-hz-background) !important;
+          backdrop-filter: blur(15px);
+          backdrop-filter: saturate(var(--arcline-mat-hz-saturation)) contrast(var(--arcline-mat-hz-contrast)) blur(var(--arcline-mat-hz-blur-radius)) !important;
+          border: 1px solid rgba(235, 235, 235, 0.1) !important;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.5) !important;
+          padding: 0 !important;
+
+          @media (-moz-bool-pref: "arcline.pip.tinted-haze") {
+            background-color: var(--arcline-mat-hz-background-tinted) !important;
+          }
+        }
+
+        /*noinspection CssInvalidFunction*/
+        .grey-line {
+          width: calc(100% - 10px) !important;
+          margin: 0 auto !important;
+          height: 2px !important;
+          border-radius: 2px !important;
+          background-color: rgba(235, 235, 235, 0.1) !important;
+        }
+
+        &.hide {
+          bottom: 70px !important;
+          opacity: 0 !important;
+          pointer-events: none !important;
+
+          & > .panel-fieldset {
+            backdrop-filter: none !important;
+          }
+        }
+      }
+    }
+
+    body:fullscreen #controls[showing]:hover, body:not(:fullscreen) #controls:hover {
+      & > button {
+        opacity: 1 !important;
+        top: 10px !important;
+      }
+
+      #controls-bottom {
+        opacity: 1 !important;
+        bottom: 5px !important;
+      }
+    }
+
+    body:fullscreen {
+      &:has(#controls:not([showing])) {
+        cursor: none !important;
+      }
+    }
+  }
+
+
+}
