@@ -23,6 +23,13 @@
 <details>
 <summary>Click to show list of features</summary>
 
+ ## **Compact-mode Button**  merged comapct mode and 3 dot menu button
+
+
+<img width="543" height="229" alt="image" src="https://github.com/user-attachments/assets/ebcdd559-4fde-401d-a3b6-5e7019a9c927" />
+
+
+
  ## **Light Mode and Dark Mode**  (nubulu mode coming soon)
 
 
