@@ -360,47 +360,16 @@
     "size": "25px"
   },
  
-  {
-    "property": "arcline.compact.sidebar.bg",
-    "label": "Compact sidebar background style",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 4,
-    "options": [
-      { "value": 0, "label": "Normal" },
-      { "value": 1, "label": "Dark" },
-      { "value": 2, "label": "Dark Tinted" },
-      { "value": 3, "label": "Glass Tinted" },
-      { "value": 5, "label": "Custom" },
-      { "value": 4, "label": "Default" }
-    ]
-  },
+  
    {
     "type": "separator"
   },
   {
     "property": "compact.sidebar.filter_bg",
     "type": "string",
-    "defaultValue": "rgba(255,255,255,0.5)",
+    "defaultValue": "color-mix( in srgb , var(--natsumi-mat-ga-background)  90% , transparent)",
     "placeholder": "var(--zen-primary-color)",
     "label": "appearance of compact side bar background(set above style to custom)"
-  },
-  {
-    "type": "separator"
-  },
-  {
-    "property": "arcline.compact.sidebar.position",
-    "label": "Compact sidebar position",
-    "type": "dropdown",
-    "placeholder": false,
-    "value": "number",
-    "default": 2,
-    "options": [
-      { "value": 0, "label": "Attached" },
-      { "value": 1, "label": "Floating" },
-      { "value": 2, "label": "Default" }
-    ]
   },
   {
     "type": "separator"
